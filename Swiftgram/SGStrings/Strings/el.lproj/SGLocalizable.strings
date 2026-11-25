@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Υποστήριξη";
+"Ayu.SupportChannel" = "Κανάλι ενημερώσεων";
+"Ayu.SupportDeveloper" = "Επικοινωνία με τον προγραμματιστή";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Έλεγχος για ενημερώσεις";
+"Ayu.UpToDate" = "Έχετε την τελευταία έκδοση.";
+"Ayu.UpdateAvailable" = "Διαθέσιμη ενημέρωση";
+"Ayu.UpdateAvailableInfo" = "Κυκλοφόρησε η έκδοση %@. Ανοίξτε το κανάλι για λήψη.";
+"Ayu.UpdateIgnore" = "Παράβλεψη";
+"Ayu.UpdateOpen" = "Ενημέρωση";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "Για ενημέρωση, ανοίξτε το NETHERHILL σε λειτουργία Multitask (πατήστε παρατεταμένα την εφαρμογή μέσα στο LiveContainer) και δοκιμάστε ξανά.";
+"Ayu.NotificationsSection" = "Ειδοποιήσεις";
+"Ayu.BarkSetUp" = "Ρύθμιση ειδοποιήσεων Bark";
+"Ayu.BarkConnected" = "Ειδοποιήσεις Bark: ενεργές";
+"Ayu.BarkFooter" = "Μια εφαρμογή εγκατεστημένη με sideload δεν λαμβάνει ειδοποιήσεις από την Apple. Εγκαταστήστε το Bark από το App Store, αντιγράψτε εκεί το κλειδί σας και επικολλήστε το εδώ. Τα νέα μηνύματα θα φτάνουν μέσω του αναμεταδότη του NETHERHILL ως ειδοποιήσεις Bark.";
+"Ayu.BarkPrompt" = "Επικολλήστε το κλειδί Bark ή τον σύνδεσμο από την εφαρμογή Bark. Αφήστε κενό για να απενεργοποιήσετε τις ειδοποιήσεις.";
+"Ayu.BarkEnabled" = "Έτοιμο. Τα νέα μηνύματα θα φτάνουν ως ειδοποιήσεις Bark όσο το NETHERHILL είναι κλειστό.";
+"Ayu.BarkDisabled" = "Οι ειδοποιήσεις Bark είναι απενεργοποιημένες.";
+"Ayu.BarkInvalid" = "Αυτό δεν είναι κλειδί Bark. Αντιγράψτε το κλειδί ή έναν σύνδεσμο από την εφαρμογή Bark.";
+"Ayu.BarkFailed" = "Το Telegram δεν αποδέχτηκε τη συνδρομή: %@";
+"Ayu.BarkFixTitle" = "Διόρθωση ειδοποιήσεων";
+"Ayu.BarkFixInstall" = "Εγκαταστήστε το Bark από το App Store";
+"Ayu.BarkFixConnect" = "Συνδέστε το Bark για να λαμβάνετε ειδοποιήσεις";
+"Ayu.BarkEnterKey" = "Εισαγωγή κλειδιού";
+"Ayu.BarkHowTo" = "1. Εγκαταστήστε το Bark από το App Store και ανοίξτε το.\n2. Αντιγράψτε τη διεύθυνση https://api.day.app/… από την κύρια οθόνη του.\n3. Επιστρέψτε, πατήστε «Εισαγωγή κλειδιού» και επικολλήστε τη.";
+"Ayu.ExportChat" = "Εξαγωγή συνομιλίας";
+"Ayu.ExportChatMedia" = "Ολόκληρη η συνομιλία αποθηκεύεται ως αρχείο που μπορεί να εισαγάγει το Telegram. Να συμπεριληφθούν φωτογραφίες, βίντεο, φωνητικά μηνύματα και αρχεία; Η λήψη τους μπορεί να διαρκέσει πολύ.";
+"Ayu.ExportChatWithMedia" = "Με πολυμέσα";
+"Ayu.ExportChatTextOnly" = "Μόνο κείμενο";
+"Ayu.ExportChatLoading" = "Φόρτωση μηνυμάτων: %@";
+"Ayu.ExportChatDownloading" = "Λήψη πολυμέσων: %@";
+"Ayu.ExportChatSaving" = "Δημιουργία αρχείου…";
+"Ayu.ExportChatEmpty" = "Δεν υπάρχουν μηνύματα για εξαγωγή.";
+"Ayu.ChatTransferSection" = "Μεταφορά συνομιλιών";
+"Ayu.ImportChat" = "Εισαγωγή συνομιλίας";
+"Ayu.ImportChatFooter" = "Εισαγάγετε σε μία από τις συνομιλίες σας μια συνομιλία που εξήχθη από WhatsApp, LINE, KakaoTalk ή με την «Εξαγωγή συνομιλίας» στο NETHERHILL (αρχείο ZIP ή TXT).";
+"Ayu.ImportChatInvalid" = "Αυτό το αρχείο δεν είναι υποστηριζόμενη εξαγωγή συνομιλίας.";
+"Ayu.HistorySaveAudio" = "Αποθήκευση ήχου";
+"Ayu.HistoryDeleteEntry" = "Διαγραφή από το ιστορικό";
+"Ayu.DeletedChats" = "Διαγραμμένες συνομιλίες";
+"Ayu.DeletedChatsInfo" = "Συνομιλίες των οποίων όλο το ιστορικό διαγράφηκε. Ό,τι κράτησε το NETHERHILL δεν διαγράφεται ποτέ αυτόματα.";
+"Ayu.DeletedChatSave" = "Αποθήκευση ως αρχείο";
+"Ayu.DeletedChatRemove" = "Αφαίρεση από τη λίστα";
+"Ayu.DeletedChatDelete" = "Διαγραφή κρατημένων μηνυμάτων";
+"Ayu.HistorySubtitle" = "Διαγραμμένα και επεξεργασμένα μηνύματα από τις επιλεγμένες συνομιλίες, μόνο σε αυτή τη συσκευή.";
+"Ayu.HistoryAll" = "Όλα";
+"Ayu.HistoryEdited" = "Επεξεργάστηκε";
+"Ayu.HistoryNow" = "Τώρα";
+"Ayu.HistoryShowMessage" = "Εμφάνιση στη συνομιλία";
+"Ayu.HistoryOpenChat" = "Άνοιγμα συνομιλίας";
+"Ayu.HistoryStopSaving" = "Διακοπή αποθήκευσης αυτής της συνομιλίας";
+"Ayu.HistoryNoChats" = "Επιλέξτε συνομιλίες για το ιστορικό. Δεν αποθηκεύεται τίποτα μέχρι να προσθέσετε τουλάχιστον μία.";
+"Ayu.HistoryEmptyInfo" = "Τα διαγραμμένα και επεξεργασμένα μηνύματα θα εμφανίζονται εδώ.";
+"Ayu.AddAccountHelp" = "Μπορείτε να προσθέσετε έως 500 λογαριασμούς με διαφορετικούς αριθμούς τηλεφώνου.";
+"Ayu.HeroGhostOn" = "Η λειτουργία φάντασμα είναι ενεργή";
+"Ayu.HeroGhostOff" = "Η λειτουργία φάντασμα είναι ανενεργή";
+"Ayu.HeroHidden" = "Κρυφά: %@ από %@";
+"Ayu.GhostSubtitle" = "Σε σύνδεση, ανάγνωση, πληκτρολόγηση, εγγραφή, αποστολή και ιστορίες";
+"Ayu.GhostFooter" = "Η λειτουργία φάντασμα ενεργοποιεί όλους τους διακόπτες παρακάτω και διατηρεί τις δικές τους τιμές.";
+"Ayu.HideSection" = "Τι να κρύβεται";
+"Ayu.BehaviorSection" = "Συμπεριφορά";
+"Ayu.OfflineAfterSending" = "Εκτός σύνδεσης μετά την αποστολή";
+"Ayu.OfflineAfterSendingInfo" = "Αναφορά εκτός σύνδεσης αμέσως μετά από κάθε μήνυμα";
+"Ayu.ReadOnSend" = "Ανάγνωση συνομιλίας κατά την απάντηση";
+"Ayu.ReadOnSendInfo" = "Ένα σταλμένο μήνυμα σημειώνει τη συνομιλία ως αναγνωσμένη";
+"Ayu.QuickToggle" = "Διακόπτης στην καρτέλα Συνομιλίες";
+"Ayu.QuickToggleInfo" = "Πατήστε παρατεταμένα την καρτέλα Συνομιλίες για γρήγορη ενεργοποίηση ή απενεργοποίηση.";
+"Ayu.ContentSection" = "Περιεχόμενο";
+"Ayu.IgnoreProtection" = "Παράβλεψη προστασίας περιεχομένου";
+"Ayu.IgnoreProtectionInfo" = "Αποθήκευση, αντιγραφή και προώθηση από προστατευμένες συνομιλίες";
+"Ayu.AllowScreenshots" = "Να επιτρέπονται στιγμιότυπα";
+"Ayu.AllowScreenshotsInfo" = "Οι προστατευμένες και μυστικές συνομιλίες φαίνονται σε στιγμιότυπα και εγγραφές";
+"Ayu.ContentFooter" = "Τα μηνύματα από προστατευμένες συνομιλίες προωθούνται ως αντίγραφο χωρίς αποστολέα· τα πολυμέσα ανεβαίνουν ξανά. Η ρύθμιση στιγμιότυπων ισχύει για οθόνες που ανοίγουν ξανά.";
+"Ayu.SaveDeletedInfo" = "Μένουν σε κάθε συνομιλία· οι επιλεγμένες εμφανίζονται και στο ιστορικό";
+"Ayu.OpenHistory" = "Άνοιγμα ιστορικού";
+"Ayu.ClientSection" = "Πρόγραμμα";
+"Ayu.LocalPremiumInfo" = "Emoji και καταστάσεις Premium μόνο σε αυτή τη συσκευή";
+"Ayu.GhostEnable" = "Ενεργοποίηση λειτουργίας φάντασμα";
+"Ayu.GhostDisable" = "Απενεργοποίηση λειτουργίας φάντασμα";
+"Ayu.GhostEnabledToast" = "Η λειτουργία φάντασμα ενεργοποιήθηκε";
+"Ayu.GhostDisabledToast" = "Η λειτουργία φάντασμα απενεργοποιήθηκε";
+"Ayu.ChatListBackground" = "Φόντο λίστας συνομιλιών";
+"Ayu.ConversationBackground" = "Φόντο συνομιλιών";
+"Ayu.ChooseVideo" = "Επιλογή βίντεο";
+"Ayu.ShowBackground" = "Εμφάνιση φόντου";
+
+"Settings.ContentSettings" = "Ρυθμίσεις Περιεχομένου";
+
+"Settings.Tabs.Header" = "TABS";
+"Settings.Tabs.HideTabBar" = "Απόκρυψη γραμμής καρτελών";
+"Settings.Tabs.ShowContacts" = "Εμφάνιση Καρτέλας Επαφών";
+"Settings.Tabs.ShowNames" = "Show Tab Names";
+
+"Settings.Folders.BottomTab" = "Φάκελοι στο κάτω μέρος";
+"Settings.Folders.BottomTabStyle" = "Ύφος Κάτω Φακέλων";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Απόκρυψη \"%@\"";
+"Settings.Folders.RememberLast" = "Άνοιγμα Τελευταίου Φακέλου";
+"Settings.Folders.RememberLast.Notice" = "Το Swiftgram θα ανοίξει τον τελευταίο φάκελο όταν επανεκκινήσετε την εφαρμογή ή αλλάξετε λογαριασμούς.";
+
+"Settings.Folders.CompactNames" = "Μικρότερη απόσταση";
+"Settings.Folders.AllChatsTitle" = "\"Όλες οι συνομιλίες\" τίτλος";
+"Settings.Folders.AllChatsTitle.short" = "Σύντομο";
+"Settings.Folders.AllChatsTitle.long" = "Εκτενές";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Προεπιλογή";
+
+
+"Settings.ChatList.Header" = "ΚΑΤΑΛΟΓΟΣ ΤΥΠΟΥ";
+"Settings.CompactChatList" = "Συμπαγής Λίστα Συνομιλίας";
+
+"Settings.Profiles.Header" = "PROFILES";
+
+"Settings.Stories.Hide" = "Απόκρυψη Ιστοριών";
+"Settings.Stories.WarnBeforeView" = "Ερώτηση Πριν Την Προβολή";
+"Settings.Stories.DisableSwipeToRecord" = "Απενεργοποίηση ολίσθησης για εγγραφή";
+
+"Settings.Translation.QuickTranslateButton" = "Γρήγορη μετάφραση κουμπί";
+
+"Stories.Warning.Author" = "Συγγραφέας";
+"Stories.Warning.ViewStory" = "Προβολή Ιστορίας?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ ΘΑ ΠΡΕΠΕΙ ΝΑ ΒΛΕΠΕ ότι έχετε δει την Ιστορία τους.";
+"Stories.Warning.NoticeStealth" = "%@ δεν θα είναι σε θέση να δείτε ότι έχετε δει την Ιστορία τους.";
+
+"Settings.Photo.Quality.Notice" = "Ποιότητα των ανεβασμένων φωτογραφιών και ιστοριών.";
+"Settings.Photo.SendLarge" = "Αποστολή Μεγάλων Φωτογραφιών";
+"Settings.Photo.SendLarge.Notice" = "Αυξήστε το πλευρικό όριο στις συμπιεσμένες εικόνες στα 2560px.";
+
+"Settings.VideoNotes.Header" = "ΤΡΟΠΟΣ ΒΙΝΤΕΟ";
+"Settings.VideoNotes.StartWithRearCam" = "Έναρξη με πίσω κάμερα";
+
+"Settings.CustomColors.Header" = "ΧΡΩΜΑΤΑ ΛΟΓΑΡΙΑΣΜΟΥ";
+"Settings.CustomColors.Saturation" = "ΑΣΦΑΛΙΣΗ";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Ορίστε σε 0%% για να απενεργοποιήσετε τα χρώματα του λογαριασμού.";
+
+"Settings.UploadsBoost" = "Ενίσχυση Αποστολής";
+"Settings.DownloadsBoost" = "Ενίσχυση Λήψης";
+"Settings.DownloadsBoost.Notice" = "Αυξάνει τον αριθμό των παράλληλων συνδέσεων και το μέγεθος των κομματιών αρχείου. Σε περίπτωση που το δίκτυό σας δεν μπορεί να διαχειριστεί το φορτίο, δοκιμάστε διαφορετικές επιλογές που ταιριάζουν στη σύνδεσή σας.";
+"Settings.DownloadsBoost.none" = "Απενεργοποιημένο";
+"Settings.DownloadsBoost.medium" = "Μεσαίο";
+"Settings.DownloadsBoost.maximum" = "Μέγιστο";
+
+"Settings.ShowProfileID" = "Εμφάνιση Αναγνωριστικού Προφίλ";
+"Settings.ShowDC" = "Εμφάνιση Κέντρου Δεδομένων";
+"Settings.ShowCreationDate" = "Εμφάνιση Ημερομηνίας Δημιουργίας Συνομιλίας";
+"Settings.ShowCreationDate.Notice" = "Η ημερομηνία δημιουργίας μπορεί να είναι άγνωστη για μερικές συνομιλίες.";
+
+"Settings.ShowRegDate" = "Εμφάνιση Ημερομηνίας Εγγραφής";
+"Settings.ShowRegDate.Notice" = "Η ημερομηνία εγγραφής είναι κατά προσέγγιση.";
+
+"Settings.SendWithReturnKey" = "Αποστολή με κλειδί \"επιστροφή\"";
+"Settings.HidePhoneInSettingsUI" = "Απόκρυψη τηλεφώνου στις ρυθμίσεις";
+"Settings.HidePhoneInSettingsUI.Notice" = "Αυτό θα κρύψει μόνο τον αριθμό τηλεφώνου σας από τη διεπαφή ρυθμίσεων. Για να τον αποκρύψετε από άλλους, μεταβείτε στο Privacy and Security.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Εάν είναι μακριά για 5 δευτερόλεπτα";
+
+"ProxySettings.UseSystemDNS" = "Χρήση συστήματος DNS";
+"ProxySettings.UseSystemDNS.Notice" = "Χρησιμοποιήστε το σύστημα DNS για να παρακάμψετε το χρονικό όριο αν δεν έχετε πρόσβαση στο Google DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Du **brauchst kein** %@!";
+"Common.RestartRequired" = "Απαιτείται επανεκκίνηση";
+"Common.RestartNow" = "Επανεκκίνηση Τώρα";
+"Common.OpenTelegram" = "Άνοιγμα Telegram";
+"Common.UseTelegramForPremium" = "Παρακαλώ σημειώστε ότι για να πάρετε Telegram Premium, θα πρέπει να χρησιμοποιήσετε την επίσημη εφαρμογή Telegram. Μόλις λάβετε Telegram Premium, όλα τα χαρακτηριστικά του θα είναι διαθέσιμα στο Swiftgram.";
+
+"Message.HoldToShowOrReport" = "Κρατήστε για προβολή ή αναφορά.";
+
+"Auth.AccountBackupReminder" = "Βεβαιωθείτε ότι έχετε μια μέθοδο πρόσβασης αντιγράφων ασφαλείας. Κρατήστε μια SIM για SMS ή μια πρόσθετη συνεδρία συνδεδεμένη για να αποφύγετε να κλειδωθεί.";
+"Auth.UnofficialAppCodeTitle" = "Μπορείτε να πάρετε τον κωδικό μόνο με επίσημη εφαρμογή";
+
+"Settings.SmallReactions" = "Μικρές Αντιδράσεις";
+"Settings.HideReactions" = "Απόκρυψη Αντιδράσεων";
+
+"ContextMenu.SaveToCloud" = "Αποθήκευση στο σύννεφο";
+"ContextMenu.SelectFromUser" = "Επιλέξτε από τον Συγγραφέα";
+
+"Settings.ContextMenu" = "KONTEXTMENÜ";
+"Settings.ContextMenu.Notice" = "Deaktivierte Einträge sind im 'Swiftgram'-Untermenü verfügbar.";
+
+
+"Settings.ChatSwipeOptions" = "Επιλογές Συρσίματος Λίστας Συνομιλίας";
+"Settings.DeleteChatSwipeOption" = "Σύρετε για Διαγραφή Συνομιλίας";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Τραβήξτε στο επόμενο μη αναγνωσμένο κανάλι";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Τραβήξτε για το Επόμενο Θέμα";
+"Settings.GalleryCamera" = "Κάμερα στη Γκαλερί";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\" Κουμπί%@\"";
+"Settings.SnapDeletionEffect" = "Εφέ Διαγραφής Μηνύματος";
+
+"Settings.Stickers.Size" = "ΜΕΓΕΘΟΣ";
+"Settings.Stickers.Timestamp" = "Εμφάνιση Χρονοσήμανσης";
+
+"Settings.RecordingButton" = "Πλήκτρο Ηχογράφησης Φωνής";
+
+"Settings.DefaultEmojisFirst" = "Δώστε προτεραιότητα στα τυπικά emojis";
+"Settings.DefaultEmojisFirst.Notice" = "Εμφανίστε τυπικά emojis πριν από premium στο πληκτρολόγιο emojis";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "δημιουργήθηκε: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Εντάχθηκε στο %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Εγγεγραμμένος";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Διπλό Πάτημα για Επεξεργασία Μηνύματος";
+
+"Settings.wideChannelPosts" = "Πλατείες αναρτήσεις στα κανάλια";
+"Settings.ForceEmojiTab" = "Πληκτρολόγιο Emoji από προεπιλογή";
+
+"Settings.forceBuiltInMic" = "Εξαναγκασμός Μικροφώνου Συσκευής";
+"Settings.forceBuiltInMic.Notice" = "Εάν ενεργοποιηθεί, η εφαρμογή θα χρησιμοποιεί μόνο το μικρόφωνο της συσκευής ακόμα και αν είναι συνδεδεμένα ακουστικά.";
+
+"Settings.hideChannelBottomButton" = "Απόκρυψη Καναλιού Κάτω Πάνελ";
+
+"Settings.CallConfirmation" = "Επιβεβαίωση Κλήσης";
+"Settings.CallConfirmation.Notice" = "Η Swiftgram θα ζητήσει την επιβεβαίωσή σας πριν πραγματοποιήσει μια κλήση.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Να κάνω μια Κλήση;";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Να κάνω μια Βιντεοκλήση;";
+
+"MutualContact.Label" = "αμοιβαία επαφή";
+
+"Settings.swipeForVideoPIP" = "Βίντεο PIP με Swipe";
+"Settings.swipeForVideoPIP.Notice" = "Αν είναι ενεργοποιημένο, το σ swipe video θα το ανοίξει σε λειτουργία Εικόνα μέσα στην Εικόνα.";
+
+"Ayu.Ghost" = "Λειτουργία φαντάσματος";
+"Ayu.HideRead" = "Απόκρυψη αποδείξεων ανάγνωσης";
+"Ayu.HideOnline" = "Απόκρυψη σύνδεσης";
+"Ayu.HideTyping" = "Απόκρυψη πληκτρολόγησης";
+"Ayu.HideRecording" = "Απόκρυψη εγγραφής";
+"Ayu.HideUploading" = "Απόκρυψη αποστολών";
+"Ayu.HideStories" = "Απόκρυψη προβολών ιστοριών";
+"Ayu.History" = "Ιστορικό μηνυμάτων";
+"Ayu.SaveDeleted" = "Αποθήκευση διαγραμμένων μηνυμάτων";
+"Ayu.SavePhotos" = "Αποθήκευση φωτογραφιών";
+"Ayu.ClearHistory" = "Εκκαθάριση ιστορικού";
+"Ayu.EmptyHistory" = "Δεν υπάρχει ακόμη ιστορικό";
+"Ayu.SaveMedia" = "Αποθήκευση μέσων από την κρυφή μνήμη";
+"Ayu.BackgroundDimming" = "Σκοτεινότητα φόντου";
+"Ayu.BeforeEdit" = "Πριν την επεξεργασία";
+"Ayu.Deleted" = "Διαγράφηκε";
+"Ayu.ServerPresence" = "Στον διακομιστή: %@";
+"Ayu.ServerUnavailable" = "Η κατάσταση του διακομιστή δεν είναι διαθέσιμη";
+"Ayu.SendReadReceipt" = "Αποστολή επιβεβαίωσης ανάγνωσης";
+"Ayu.ViewWithoutReceipt" = "Προβολή χωρίς επιβεβαίωση";
+"Ayu.ReportPhotoView" = "Επιβεβαίωση προβολής φωτογραφίας";
+"Ayu.View" = "Προβολή";
+"Ayu.SendReceipt" = "Αποστολή";
+"Ayu.ReceiptSent" = "Η επιβεβαίωση στάλθηκε";
+"Ayu.ReceiptError" = "Δεν ήταν δυνατή η αποστολή της επιβεβαίωσης. Ελέγξτε τη σύνδεση και δοκιμάστε ξανά.";
+"Ayu.IconChangeUnavailable" = "Η επιλογή αποθηκεύτηκε στην εφαρμογή. Το iOS δεν μπόρεσε να αλλάξει το εικονίδιο στην αρχική οθόνη.";
+"Ayu.LocalPremium" = "Τοπικό Premium";
+"Ayu.Pins" = "Μέγιστος αριθμός καρφιτσωμένων συνομιλιών";
+"Ayu.LocalOnly" = "Μόνο σε αυτή τη συσκευή";
+"Ayu.HistoryInfo" = "Μόνο επιλεγμένες συνομιλίες. Φωτογραφίες στην κρυφή μνήμη και κείμενο: 30 ημέρες, έως 200 εγγραφές. Χωρίς μυστικά ή προσωρινά μηνύματα.";
+"Ayu.ReadWarning" = "Αποστολή απόδειξης ανάγνωσης της συνομιλίας έως αυτό το μήνυμα;";
+"Ayu.ViewWarning" = "Επιβεβαίωση προβολής και έναρξη χρονομέτρου προσωρινών πολυμέσων;";
+
+"Ayu.RowOpacity" = "Αδιαφάνεια γραμμών συνομιλιών";
+"Ayu.MediaImportError" = "Αδύνατη η εισαγωγή αρχείου. Μέγιστο: 100 MB.";
+"Ayu.SilentSending" = "Αποστολή χωρίς ήχο";
+"Ayu.SilentNever" = "Ποτέ";
+"Ayu.SilentInGhost" = "Σε λειτουργία φάντασμα";
+"Ayu.SilentAlways" = "Πάντα";
+"Ayu.ScheduleInGhost" = "Αποστολή ως προγραμματισμένο";
+"Ayu.ScheduleInGhostInfo" = "Σε λειτουργία φάντασμα τα μηνύματα φεύγουν προγραμματισμένα σε 12 δευτερόλεπτα, οπότε δεν εμφανίζεσαι ποτέ online";
+"Ayu.ChatsSection" = "Συνομιλίες";
+"Ayu.DisableAds" = "Απόκρυψη χορηγούμενων μηνυμάτων";
+"Ayu.DisableLinkWarning" = "Χωρίς προειδοποίηση για κρυφούς συνδέσμους";
+"Ayu.DisableGreeting" = "Χωρίς αυτοκόλλητο χαιρετισμού";
+"Ayu.DimDeleted" = "Ημιδιάφανα διαγραμμένα μηνύματα";
+"Ayu.RepeatMessage" = "Επανάληψη στο μενού μηνύματος";
+"Ayu.Repeat" = "Επανάληψη";
+"Ayu.ConfirmStickers" = "Επιβεβαίωση αποστολής αυτοκόλλητων";
+"Ayu.ConfirmGifs" = "Επιβεβαίωση αποστολής GIF";
+"Ayu.ConfirmSticker" = "Αποστολή αυτού του αυτοκόλλητου;";
+"Ayu.ConfirmGif" = "Αποστολή αυτού του GIF;";
+"Ayu.Send" = "Αποστολή";
+"Ayu.ImportLocally" = "Τοπική εισαγωγή";
+"Ayu.ImportLocallyInfo" = "Μπορείς να εισαγάγεις τη συνομιλία μόνο σε αυτή τη συσκευή: τα μηνύματα εμφανίζονται σε αυτή τη συνομιλία μόνο για σένα και δεν στέλνονται στο Telegram.";
+"Ayu.ImportLocallyDone" = "Εισαγόμενα μηνύματα: %@. Φαίνονται μόνο σε αυτή τη συσκευή.";
+"Ayu.ViewDeleted" = "Διαγραμμένα μηνύματα";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Συνομιλίες με διαγραμμένα μηνύματα που διατηρούνται σε αυτή τη συσκευή. Άνοιξε μία για να διαβάσεις τα διαγραμμένα μηνύματα ή όλη τη συνομιλία.";
+"Ayu.ViewDeletedEmpty" = "Δεν υπάρχουν ακόμη διαγραμμένα μηνύματα.";
+"Ayu.ConfirmReadReceipt" = "Επιβεβαίωση αποδείξεων ανάγνωσης";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

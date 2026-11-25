@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Podpora";
+"Ayu.SupportChannel" = "Kanál s aktualizacemi";
+"Ayu.SupportDeveloper" = "Kontaktovat vývojáře";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Zkontrolovat aktualizace";
+"Ayu.UpToDate" = "Máte nejnovější verzi.";
+"Ayu.UpdateAvailable" = "Dostupná aktualizace";
+"Ayu.UpdateAvailableInfo" = "Vyšla verze %@. Otevřete kanál a stáhněte ji.";
+"Ayu.UpdateIgnore" = "Ignorovat";
+"Ayu.UpdateOpen" = "Aktualizovat";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "Pro aktualizaci spusťte NETHERHILL v režimu Multitask (podržte aplikaci v LiveContaineru) a zkuste to znovu.";
+"Ayu.NotificationsSection" = "Oznámení";
+"Ayu.BarkSetUp" = "Nastavit oznámení Bark";
+"Ayu.BarkConnected" = "Oznámení Bark: zapnuto";
+"Ayu.BarkFooter" = "Aplikace nainstalovaná přes sideload nedostává oznámení od Apple. Nainstalujte Bark z App Store, zkopírujte v něm svůj klíč a vložte ho sem. Nové zprávy pak budou chodit přes relay NETHERHILL jako oznámení Bark.";
+"Ayu.BarkPrompt" = "Vložte klíč Bark nebo odkaz z aplikace Bark. Ponechte prázdné pro vypnutí oznámení.";
+"Ayu.BarkEnabled" = "Hotovo. Nové zprávy budou chodit jako oznámení Bark, když je NETHERHILL zavřený.";
+"Ayu.BarkDisabled" = "Oznámení Bark jsou vypnutá.";
+"Ayu.BarkInvalid" = "Toto není klíč Bark. Zkopírujte klíč nebo odkaz z aplikace Bark.";
+"Ayu.BarkFailed" = "Telegram nepřijal odběr: %@";
+"Ayu.BarkFixTitle" = "Opravit oznámení";
+"Ayu.BarkFixInstall" = "Nainstalujte Bark z App Store";
+"Ayu.BarkFixConnect" = "Připojte Bark, abyste dostávali oznámení";
+"Ayu.BarkEnterKey" = "Zadat klíč";
+"Ayu.BarkHowTo" = "1. Nainstalujte Bark z App Store a otevřete ho.\n2. Zkopírujte adresu https://api.day.app/… z jeho hlavní obrazovky.\n3. Vraťte se, klepněte na „Zadat klíč“ a vložte ji.";
+"Ayu.ExportChat" = "Exportovat chat";
+"Ayu.ExportChatMedia" = "Celý chat se uloží jako archiv, který Telegram umí importovat. Zahrnout fotky, videa, hlasové zprávy a soubory? Jejich stažení může trvat dlouho.";
+"Ayu.ExportChatWithMedia" = "S médii";
+"Ayu.ExportChatTextOnly" = "Jen text";
+"Ayu.ExportChatLoading" = "Načítání zpráv: %@";
+"Ayu.ExportChatDownloading" = "Stahování médií: %@";
+"Ayu.ExportChatSaving" = "Vytváření archivu…";
+"Ayu.ExportChatEmpty" = "Nejsou zde žádné zprávy k exportu.";
+"Ayu.ChatTransferSection" = "Přenos chatů";
+"Ayu.ImportChat" = "Importovat chat";
+"Ayu.ImportChatFooter" = "Importujte do některého ze svých chatů chat exportovaný z WhatsAppu, LINE, KakaoTalku nebo pomocí „Exportovat chat“ v NETHERHILLu (soubor ZIP nebo TXT).";
+"Ayu.ImportChatInvalid" = "Tento soubor není podporovaný export chatu.";
+"Ayu.HistorySaveAudio" = "Uložit zvuk";
+"Ayu.HistoryDeleteEntry" = "Odstranit z historie";
+"Ayu.DeletedChats" = "Smazané chaty";
+"Ayu.DeletedChatsInfo" = "Chaty, jejichž celá historie byla smazána. Co z nich NETHERHILL uchoval, se nikdy automaticky neodstraní.";
+"Ayu.DeletedChatSave" = "Uložit jako archiv";
+"Ayu.DeletedChatRemove" = "Odebrat ze seznamu";
+"Ayu.DeletedChatDelete" = "Smazat uchované zprávy";
+"Ayu.HistorySubtitle" = "Smazané a upravené zprávy z vybraných chatů, uložené jen v tomto zařízení.";
+"Ayu.HistoryAll" = "Vše";
+"Ayu.HistoryEdited" = "Upraveno";
+"Ayu.HistoryNow" = "Nyní";
+"Ayu.HistoryShowMessage" = "Zobrazit v chatu";
+"Ayu.HistoryOpenChat" = "Otevřít chat";
+"Ayu.HistoryStopSaving" = "Přestat ukládat tento chat";
+"Ayu.HistoryNoChats" = "Vyberte chaty pro historii. Dokud nepřidáte alespoň jeden, nic se neukládá.";
+"Ayu.HistoryEmptyInfo" = "Zde se zobrazí smazané a upravené zprávy.";
+"Ayu.AddAccountHelp" = "Můžete přidat až 500 účtů s různými telefonními čísly.";
+"Ayu.HeroGhostOn" = "Režim ducha je zapnutý";
+"Ayu.HeroGhostOff" = "Režim ducha je vypnutý";
+"Ayu.HeroHidden" = "Skryto: %@ z %@";
+"Ayu.GhostSubtitle" = "Online, přečtení, psaní, nahrávání, odesílání a příběhy";
+"Ayu.GhostFooter" = "Režim ducha zapne všechny přepínače níže a zachová jejich vlastní hodnoty.";
+"Ayu.HideSection" = "Co skrývat";
+"Ayu.BehaviorSection" = "Chování";
+"Ayu.OfflineAfterSending" = "Offline po odeslání";
+"Ayu.OfflineAfterSendingInfo" = "Hned po každé odeslané zprávě hlásit offline";
+"Ayu.ReadOnSend" = "Přečíst chat při odpovědi";
+"Ayu.ReadOnSendInfo" = "Odeslaná zpráva označí chat jako přečtený";
+"Ayu.QuickToggle" = "Přepínač na kartě Chaty";
+"Ayu.QuickToggleInfo" = "Podržením karty Chaty rychle zapnete nebo vypnete režim ducha.";
+"Ayu.ContentSection" = "Obsah";
+"Ayu.IgnoreProtection" = "Ignorovat ochranu obsahu";
+"Ayu.IgnoreProtectionInfo" = "Ukládání, kopírování a přeposílání z chráněných chatů";
+"Ayu.AllowScreenshots" = "Povolit snímky obrazovky";
+"Ayu.AllowScreenshotsInfo" = "Chráněné a tajné chaty jsou vidět na snímcích a záznamech";
+"Ayu.ContentFooter" = "Zprávy z chráněných chatů se přeposílají jako kopie bez autora; média se nahrají znovu. Nastavení snímků platí pro znovu otevřené obrazovky.";
+"Ayu.SaveDeletedInfo" = "Zůstávají v každém chatu; vybrané chaty jsou i v historii zpráv";
+"Ayu.OpenHistory" = "Otevřít historii";
+"Ayu.ClientSection" = "Klient";
+"Ayu.LocalPremiumInfo" = "Prémiové emoji a statusy jen v tomto zařízení";
+"Ayu.GhostEnable" = "Zapnout režim ducha";
+"Ayu.GhostDisable" = "Vypnout režim ducha";
+"Ayu.GhostEnabledToast" = "Režim ducha zapnut";
+"Ayu.GhostDisabledToast" = "Režim ducha vypnut";
+"Ayu.ChatListBackground" = "Pozadí seznamu chatů";
+"Ayu.ConversationBackground" = "Pozadí chatů";
+"Ayu.ChooseVideo" = "Vybrat video";
+"Ayu.ShowBackground" = "Zobrazit pozadí";
+
+"Settings.ContentSettings" = "Nastavení obsahu";
+
+"Settings.Tabs.Header" = "ZÁLOŽKY";
+"Settings.Tabs.HideTabBar" = "Skrýt záložku";
+"Settings.Tabs.ShowContacts" = "Zobrazit záložku kontaktů";
+"Settings.Tabs.ShowNames" = "Zobrazit názvy záložek";
+
+"Settings.Folders.BottomTab" = "Složky dole";
+"Settings.Folders.BottomTabStyle" = "Styl dolní složky";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Skrýt \"%@\"";
+"Settings.Folders.RememberLast" = "Otevřít poslední složku";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram otevře poslední použitou složku po restartu nebo přepnutí účtu.";
+
+"Settings.Folders.CompactNames" = "Menší vzdálenost";
+"Settings.Folders.AllChatsTitle" = "Název \"Všechny chaty\"";
+"Settings.Folders.AllChatsTitle.short" = "Krátký";
+"Settings.Folders.AllChatsTitle.long" = "Dlouhá";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Výchozí";
+
+
+"Settings.ChatList.Header" = "CHAT SEZNAM";
+"Settings.CompactChatList" = "Kompaktní seznam chatu";
+
+"Settings.Profiles.Header" = "PROFILES";
+
+"Settings.Stories.Hide" = "Skrýt příběhy";
+"Settings.Stories.WarnBeforeView" = "Upozornit před zobrazením";
+"Settings.Stories.DisableSwipeToRecord" = "Zakázat přejetí prstem pro nahrávání";
+
+"Settings.Translation.QuickTranslateButton" = "Tlačítko pro rychlý překlad";
+
+"Stories.Warning.Author" = "Autor";
+"Stories.Warning.ViewStory" = "Zobrazit příběh?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ BUDE VIDĚT, že jste si prohlédl jejich příběh.";
+"Stories.Warning.NoticeStealth" = "%@ bude moci vidět, že jste si prohlédl jejich příběh.";
+
+"Settings.Photo.Quality.Notice" = "Kvalita odchozích fotografií a foto-příběhů.";
+"Settings.Photo.SendLarge" = "Poslat velké fotografie";
+"Settings.Photo.SendLarge.Notice" = "Zvýšit limit velikosti komprimovaných obrázků na 2560px.";
+
+"Settings.VideoNotes.Header" = "KRUHOVÁ VIDEA";
+"Settings.VideoNotes.StartWithRearCam" = "Začít s zadní kamerou";
+
+"Settings.CustomColors.Header" = "BARVY ÚČTU";
+"Settings.CustomColors.Saturation" = "SYTOST";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Nastavit sytost na 0%% pro vypnutí barev účtu.";
+
+"Settings.UploadsBoost" = "Zrychlení nahrávání";
+"Settings.DownloadsBoost" = "Zrychlení stahování";
+"Settings.DownloadsBoost.Notice" = "Zvyšuje počet paralelních připojení a velikost částí souboru. Pokud vaše síť nezvládá zátěž, vyzkoušejte různé možnosti, které vyhovují vašemu připojení.";
+"Settings.DownloadsBoost.none" = "Vypnuto";
+"Settings.DownloadsBoost.medium" = "Střední";
+"Settings.DownloadsBoost.maximum" = "Maximální";
+
+"Settings.ShowProfileID" = "Zobrazit ID profilu";
+"Settings.ShowDC" = "Zobrazit Data Center";
+"Settings.ShowCreationDate" = "Zobrazit datum vytvoření chatu";
+"Settings.ShowCreationDate.Notice" = "Datum vytvoření chatu může být neznámé pro některé chaty.";
+
+"Settings.ShowRegDate" = "Zobrazit datum registrace";
+"Settings.ShowRegDate.Notice" = "Datum registrace je přibližné.";
+
+"Settings.SendWithReturnKey" = "Poslat klávesou \"enter\"";
+"Settings.HidePhoneInSettingsUI" = "Skrýt telefon v nastavení";
+"Settings.HidePhoneInSettingsUI.Notice" = "Toto skryje vaše telefonní číslo pouze v nastavení rozhraní. Chcete-li je skryt před ostatními, přejděte na Soukromí a bezpečnost.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Zamknout za 5 sekund";
+
+"ProxySettings.UseSystemDNS" = "Použít systémové DNS";
+"ProxySettings.UseSystemDNS.Notice" = "Použít systémové DNS k obejití časového limitu, pokud nemáte přístup k Google DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Nepotřebujete **%@**!";
+"Common.RestartRequired" = "Vyžadován restart";
+"Common.RestartNow" = "Restartovat nyní";
+"Common.OpenTelegram" = "Otevřít Telegram";
+"Common.UseTelegramForPremium" = "Vezměte prosím na vědomí, že abyste získali Premium, musíte použít oficiální aplikaci Telegram . Jakmile získáte Telegram Premium, všechny jeho funkce budou k dispozici ve Swiftgramu.";
+
+"Message.HoldToShowOrReport" = "Podržte pro zobrazení nebo nahlášení.";
+
+"Auth.AccountBackupReminder" = "Ujistěte se, že máte záložní přístupovou metodu. Uchovávejte SIM pro SMS nebo další přihlášenou relaci, abyste předešli zamčení.";
+"Auth.UnofficialAppCodeTitle" = "Kód můžete získat pouze s oficiální aplikací";
+
+"Settings.SmallReactions" = "Malé reakce";
+"Settings.HideReactions" = "Skrýt reakce";
+
+"ContextMenu.SaveToCloud" = "Uložit do cloudu";
+"ContextMenu.SelectFromUser" = "Vybrat od autora";
+
+"Settings.ContextMenu" = "KONTEXTOVÉ MENU";
+"Settings.ContextMenu.Notice" = "Zakázané položky budou dostupné v podmenu \"Swiftgram\".";
+
+
+"Settings.ChatSwipeOptions" = "Možnosti potáhnutí v seznamu chatu";
+"Settings.DeleteChatSwipeOption" = "Přejeďte pro smazání chatu";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Táhnout na další nepřečtený kanál";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Přetáhněte na další téma";
+"Settings.GalleryCamera" = "Fotoaparát v galerii";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "Tlačítko \"%@\"";
+"Settings.SnapDeletionEffect" = "Účinky odstranění zpráv";
+
+"Settings.Stickers.Size" = "VELIKOST";
+"Settings.Stickers.Timestamp" = "Zobrazit časové razítko";
+
+"Settings.RecordingButton" = "Tlačítko nahrávání hlasu";
+
+"Settings.DefaultEmojisFirst" = "Upřednostněte standardní emoji";
+"Settings.DefaultEmojisFirst.Notice" = "Zobrazit standardní emoji před prémiovými na klávesnici s emoji";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "vytvořeno: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Připojeno k %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Registrováno";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Dvojitým klepnutím upravte zprávu";
+
+"Settings.wideChannelPosts" = "Široké příspěvky ve skupinách";
+"Settings.ForceEmojiTab" = "Emoji klávesnice ve výchozím nastavení";
+
+"Settings.forceBuiltInMic" = "Vynutit vestavěný mikrofon zařízení";
+"Settings.forceBuiltInMic.Notice" = "Pokud je povoleno, aplikace použije pouze mikrofon zařízení, i když jsou připojeny sluchátka.";
+
+"Settings.hideChannelBottomButton" = "Skrýt panel dolního kanálu";
+
+"Settings.CallConfirmation" = "Potvrzení hovoru";
+"Settings.CallConfirmation.Notice" = "Swiftgram požádá o vaši potvrzení před uskutečněním hovoru.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Uskutečnit hovor?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Uskutečnit video hovor?";
+
+"MutualContact.Label" = "vzájemný kontakt";
+
+"Settings.swipeForVideoPIP" = "Video PIP s přetahováním";
+"Settings.swipeForVideoPIP.Notice" = "Pokud je povoleno, poslání videa jej otevře v režimu Obraz v obraze.";
+
+"Ayu.Ghost" = "Režim ducha";
+"Ayu.HideRead" = "Skrýt potvrzení o přečtení";
+"Ayu.HideOnline" = "Skrýt stav online";
+"Ayu.HideTyping" = "Skrýt psaní";
+"Ayu.HideRecording" = "Skrýt nahrávání";
+"Ayu.HideUploading" = "Skrýt odesílání";
+"Ayu.HideStories" = "Skrýt zobrazení příběhů";
+"Ayu.History" = "Historie zpráv";
+"Ayu.SaveDeleted" = "Ukládat smazané zprávy";
+"Ayu.SavePhotos" = "Ukládat fotografie";
+"Ayu.ClearHistory" = "Vymazat historii";
+"Ayu.EmptyHistory" = "Historie je zatím prázdná";
+"Ayu.SaveMedia" = "Ukládat média z mezipaměti";
+"Ayu.BackgroundDimming" = "Ztmavení pozadí";
+"Ayu.BeforeEdit" = "Před úpravou";
+"Ayu.Deleted" = "Smazáno";
+"Ayu.ServerPresence" = "Na serveru: %@";
+"Ayu.ServerUnavailable" = "Stav serveru není dostupný";
+"Ayu.SendReadReceipt" = "Odeslat potvrzení přečtení";
+"Ayu.ViewWithoutReceipt" = "Zobrazit bez potvrzení";
+"Ayu.ReportPhotoView" = "Potvrdit zobrazení fotky";
+"Ayu.View" = "Zobrazit";
+"Ayu.SendReceipt" = "Odeslat";
+"Ayu.ReceiptSent" = "Potvrzení odesláno";
+"Ayu.ReceiptError" = "Potvrzení se nepodařilo odeslat. Zkontrolujte připojení a zkuste to znovu.";
+"Ayu.IconChangeUnavailable" = "Volba je uložena v aplikaci. iOS nemohl změnit ikonu na ploše.";
+"Ayu.LocalPremium" = "Místní Premium";
+"Ayu.Pins" = "Maximum připnutých chatů";
+"Ayu.LocalOnly" = "Pouze na tomto zařízení";
+"Ayu.HistoryInfo" = "Pouze vybrané chaty. Fotografie z mezipaměti a text: 30 dní, nejvýše 200 záznamů. Bez tajných a mizejících zpráv.";
+"Ayu.ReadWarning" = "Odeslat potvrzení o přečtení chatu až po tuto zprávu?";
+"Ayu.ViewWarning" = "Potvrdit zobrazení a spustit časovač mizejících médií?";
+
+"Ayu.RowOpacity" = "Neprůhlednost řádků chatů";
+"Ayu.MediaImportError" = "Soubor nelze importovat. Nejvýše 100 MB.";
+"Ayu.SilentSending" = "Odesílat bez zvuku";
+"Ayu.SilentNever" = "Nikdy";
+"Ayu.SilentInGhost" = "V režimu ducha";
+"Ayu.SilentAlways" = "Vždy";
+"Ayu.ScheduleInGhost" = "Odesílat jako naplánované";
+"Ayu.ScheduleInGhostInfo" = "V režimu ducha odcházejí zprávy naplánované za 12 sekund, takže nikdy nejste online";
+"Ayu.ChatsSection" = "Chaty";
+"Ayu.DisableAds" = "Skrýt sponzorované zprávy";
+"Ayu.DisableLinkWarning" = "Bez varování u skrytých odkazů";
+"Ayu.DisableGreeting" = "Bez uvítací nálepky";
+"Ayu.DimDeleted" = "Průhledné smazané zprávy";
+"Ayu.RepeatMessage" = "Opakovat v nabídce zprávy";
+"Ayu.Repeat" = "Opakovat";
+"Ayu.ConfirmStickers" = "Potvrzovat odeslání nálepek";
+"Ayu.ConfirmGifs" = "Potvrzovat odeslání GIF";
+"Ayu.ConfirmSticker" = "Odeslat tuto nálepku?";
+"Ayu.ConfirmGif" = "Odeslat tento GIF?";
+"Ayu.Send" = "Odeslat";
+"Ayu.ImportLocally" = "Importovat místně";
+"Ayu.ImportLocallyInfo" = "Chat můžete importovat jen do tohoto zařízení: zprávy se v tomto chatu zobrazí jen vám a neodešlou se do Telegramu.";
+"Ayu.ImportLocallyDone" = "Importované zprávy: %@. Jsou vidět jen na tomto zařízení.";
+"Ayu.ViewDeleted" = "Smazané zprávy";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Chaty se smazanými zprávami uloženými v tomto zařízení. Otevřete chat a přečtěte si jeho smazané zprávy nebo celý chat.";
+"Ayu.ViewDeletedEmpty" = "Zatím žádné smazané zprávy.";
+"Ayu.ConfirmReadReceipt" = "Potvrzovat odeslání přečtení";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

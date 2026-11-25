@@ -1,0 +1,989 @@
+import { badgeStorage } from './badges.js';
+const INSTALL_TTL_MS = 60 * 24 * 60 * 60 * 1000;
+const REPORT_TTL_MS = 180 * 24 * 60 * 60 * 1000;
+const REPORTS_PER_DAY = 5;
+const REPORTS_PER_IP = 8;
+const REPORTS_PER_DAY_TOTAL = 300;
+const NEW_INSTALLS_PER_IP = 12;
+const NEW_INSTALLS_PER_DAY = 20000;
+const MAX_BODY = 4096;
+const MAX_ATTACHMENTS = 5;
+const ATTACH_TTL_MS = 2 * 60 * 60 * 1000;
+const ATTACH_TYPES = { 'image/jpeg': ['photo', 'jpg', 8 * 1024 * 1024], 'image/png': ['photo', 'png', 8 * 1024 * 1024], 'video/mp4': ['video', 'mp4', 21 * 1024 * 1024], 'video/quicktime': ['video', 'mov', 21 * 1024 * 1024] };
+
+const SOURCES = new Set(['sideload', 'enterprise', 'testflight', 'appstore', 'unknown']);
+const STATUSES = new Set(['official', 'modified', 'unknown', 'checking']);
+
+function text(value, max) {
+  if (typeof value !== 'string' && typeof value !== 'number') {
+    return '';
+  }
+  return String(value).replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, max);
+}
+
+export function cleanAccounts(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+  return [...new Set(value.filter((item) => typeof item === 'string' && /^[0-9a-f]{32}$/.test(item)))].slice(0, 8);
+}
+
+export async function accountHash(id) {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('ayugram-account|' + id));
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('').slice(0, 32);
+}
+
+export function cleanInstall(body, country, now) {
+  if (!body || typeof body !== 'object') {
+    return null;
+  }
+  const id = text(body.id, 64);
+  if (!/^[A-Za-z0-9-]{8,64}$/.test(id)) {
+    return null;
+  }
+  const source = text(body.source, 16);
+  const status = text(body.status, 16);
+  return {
+    id,
+    build: Number.parseInt(text(body.build, 12), 10) || 0,
+    variant: text(body.variant, 16),
+    source: SOURCES.has(source) ? source : 'unknown',
+    status: STATUSES.has(status) ? status : 'unknown',
+    team: text(body.team, 32),
+    teamName: text(body.teamName, 120),
+    cert: text(body.cert, 160),
+    profile: text(body.profile, 120),
+    bundle: text(body.bundle, 160),
+    os: text(body.os, 40),
+    device: text(body.device, 40),
+    devices: Math.min(Math.max(Number.parseInt(text(body.devices, 6), 10) || 0, 0), 100000),
+    accounts: cleanAccounts(body.accounts),
+    country: text(country, 4) || '??',
+    seen: now,
+  };
+}
+
+export const OFFICIAL_REPO = 'mapix3/AyuGram-iOS';
+
+export const BAN_REASONS = [['scam', 'Мошенничество'], ['resale', 'Продажа AyuGram'], ['abuse', 'Спам и злоупотребления'], ['other', 'Без причины']];
+export const COPY_REASONS = [['testflight', 'Раздача через TestFlight / App Store'], ['resale', 'Продажа AyuGram'], ['modified', 'Изменённая сборка'], ['fork', 'Неофициальный форк'], ['other', 'Без причины']];
+
+export function banReasonCode(value) {
+  return BAN_REASONS.some(([code]) => code === value) ? value : 'other';
+}
+
+export function copyReasonCode(value) {
+  return COPY_REASONS.some(([code]) => code === value) ? value : 'other';
+}
+
+export function reasonNote(value) {
+  return text(value, 400).replace(/\s+/g, ' ').trim().slice(0, 200);
+}
+
+export function reasonLabel(code, note) {
+  if (note) {
+    return note;
+  }
+  const found = [...BAN_REASONS, ...COPY_REASONS].find(([value]) => value === code);
+  return found ? found[1] : 'Без причины';
+}
+
+function reasonRecord(code, params) {
+  const note = reasonNote(params.get('note'));
+  return note ? { reason: 'custom', note } : { reason: code(params.get('reason')) };
+}
+
+function shownReason(value) {
+  if (value && value.note) {
+    return value.note;
+  }
+  return value && value.reason && value.reason !== 'other' && value.reason !== 'custom' ? value.reason : null;
+}
+const COPIES_PER_DAY = 20;
+const COPY_TTL_MS = 365 * 24 * 60 * 60 * 1000;
+
+function signature(value) {
+  return typeof value === 'string' && /^[0-9a-f]{32}$/.test(value) ? value : '';
+}
+
+export const PLATFORMS = { github: 'GitHub Actions', gitlab: 'GitLab CI', bitrise: 'Bitrise', codemagic: 'Codemagic', circleci: 'CircleCI', 'xcode-cloud': 'Xcode Cloud', ci: 'неизвестный CI', local: 'локально, не на CI' };
+
+export function originLines(record, details) {
+  const platform = details.platform || (record.repo ? 'github' : '');
+  if (!platform) {
+    return ['Где собрана: неизвестно (старая сборка или печать вырезана)'];
+  }
+  const own = record.repo === OFFICIAL_REPO;
+  const lines = ['Где собрана: ' + (PLATFORMS[platform] || platform) + (own ? ' (наш репозиторий)' : '')];
+  const server = details.server || (platform === 'github' ? 'https://github.com' : '');
+  if (record.repo && server) {
+    const base = server + '/' + record.repo;
+    const gitlab = platform === 'gitlab';
+    lines.push('Репозиторий: ' + base);
+    if (details.commit) {
+      lines.push('Коммит: ' + base + (gitlab ? '/-/commit/' : '/commit/') + details.commit);
+    }
+    if (details.run) {
+      lines.push('Сборка на CI: ' + base + (gitlab ? '/-/pipelines/' : '/actions/runs/') + details.run);
+    }
+  } else if (record.repo) {
+    lines.push('Репозиторий: ' + record.repo);
+  }
+  return lines;
+}
+
+export function cleanCheck(body, country, now) {
+  if (!body || body.check !== true) {
+    return null;
+  }
+  const install = cleanInstall(body, country, now);
+  if (!install) {
+    return null;
+  }
+  const repo = text(body.repo, 120);
+  const commit = text(body.commit, 40);
+  const run = text(body.run, 24);
+  return {
+    ...install,
+    repo: /^[A-Za-z0-9_.-]+(\/[A-Za-z0-9_.-]+)+$/.test(repo) ? repo : '',
+    platform: PLATFORMS[text(body.platform, 16)] ? text(body.platform, 16) : '',
+    server: /^https:\/\/[A-Za-z0-9.-]+(:[0-9]{1,5})?$/.test(text(body.server, 120)) ? text(body.server, 120) : '',
+    commit: /^[0-9a-f]{7,40}$/.test(commit) ? commit : '',
+    run: /^[0-9]{1,20}$/.test(run) ? run : '',
+    plistBuild: Number.parseInt(text(body.plistBuild, 12), 10) || 0,
+    tsig: signature(body.tsig),
+    bsig: signature(body.bsig),
+    official: body.official === true,
+  };
+}
+
+export function copyKind(check) {
+  if (!check) {
+    return null;
+  }
+  if (check.repo !== OFFICIAL_REPO) {
+    return 'fork';
+  }
+  if (check.status === 'modified') {
+    return 'modified';
+  }
+  if (['enterprise', 'testflight', 'appstore'].includes(check.source) || check.devices > 3) {
+    return 'distributor';
+  }
+  return null;
+}
+
+export function copyBlockKeys(copy) {
+  const keys = [];
+  if (copy.tsig) {
+    keys.push(['blk:t:' + copy.tsig, 'сертификату']);
+  }
+  if (copy.bsig && !copy.official) {
+    keys.push(['blk:b:' + copy.bsig, 'bundle id']);
+  }
+  if (copy.repo && copy.repo !== OFFICIAL_REPO) {
+    keys.push(['blk:r:' + copy.repo.toLowerCase(), 'репозиторию']);
+  }
+  return keys;
+}
+
+async function shortHash(value) {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('').slice(0, 12);
+}
+
+export async function reporterTag(id) {
+  return (await shortHash('ayugram-reporter|' + id)).slice(0, 6).toUpperCase();
+}
+
+export function cleanReport(body, country, now) {
+  if (!body || typeof body !== 'object') {
+    return null;
+  }
+  const id = text(body.id, 64);
+  const message = text(body.text, 600);
+  if (!/^[A-Za-z0-9-]{8,64}$/.test(id) || message.length < 2) {
+    return null;
+  }
+  const install = cleanInstall(body, country, now);
+  const target = text(body.target, 20);
+  return {
+    id,
+    text: message,
+    target: /^[1-9][0-9]{0,19}$/.test(target) ? target : '',
+    targetName: text(body.targetName, 160),
+    attachments: Math.min(Math.max(Number.parseInt(text(body.attachments, 2), 10) || 0, 0), MAX_ATTACHMENTS),
+    build: install ? install.build : 0,
+    source: install ? install.source : 'unknown',
+    status: install ? install.status : 'unknown',
+    team: install ? install.team : '',
+    teamName: install ? install.teamName : '',
+    country: text(country, 4) || '??',
+    time: now,
+  };
+}
+
+function bump(map, key) {
+  const name = key === '' || key === undefined ? '-' : String(key);
+  map[name] = (map[name] || 0) + 1;
+}
+
+function addUnique(list, value) {
+  if (value && !list.includes(value) && list.length < 10) {
+    list.push(value);
+  }
+}
+
+export function summarize(installs, reports, now) {
+  const summary = { total: 0, active7d: 0, bySource: {}, byStatus: {}, byBuild: {}, byCountry: {}, teams: [], reports: [] };
+  const teams = new Map();
+  for (const install of installs) {
+    summary.total += 1;
+    if (now - install.seen < 7 * 24 * 60 * 60 * 1000) {
+      summary.active7d += 1;
+    }
+    bump(summary.bySource, install.source);
+    bump(summary.byStatus, install.status);
+    bump(summary.byBuild, install.build);
+    bump(summary.byCountry, install.country);
+    const key = install.team || '-';
+    let team = teams.get(key);
+    if (!team) {
+      team = { team: key, installs: 0, devices: 0, names: [], certs: [], profiles: [], bundles: [], countries: {}, sources: {}, statuses: {}, builds: {}, lastSeen: 0 };
+      teams.set(key, team);
+    }
+    team.installs += 1;
+    team.devices = Math.max(team.devices, install.devices || 0);
+    addUnique(team.names, install.teamName);
+    addUnique(team.certs, install.cert);
+    addUnique(team.profiles, install.profile);
+    addUnique(team.bundles, install.bundle);
+    bump(team.countries, install.country);
+    bump(team.sources, install.source);
+    bump(team.statuses, install.status);
+    bump(team.builds, install.build);
+    team.lastSeen = Math.max(team.lastSeen, install.seen);
+  }
+  summary.teams = [...teams.values()].sort((a, b) => b.installs - a.installs || b.lastSeen - a.lastSeen);
+  summary.reports = [...reports].sort((a, b) => b.time - a.time).slice(0, 100).map((report) => ({
+    time: new Date(report.time).toISOString(),
+    text: report.text,
+    team: report.team,
+    teamName: report.teamName,
+    source: report.source,
+    status: report.status,
+    build: report.build,
+    country: report.country,
+    targetName: report.targetName || '',
+  }));
+  return summary;
+}
+
+export class Stats {
+  constructor(state) {
+    this.state = state;
+  }
+
+  async allowIp(request, prefix, perIp, total, now) {
+    const storage = this.state.storage;
+    const day = Math.floor(now / 86400000);
+    if ((await storage.get('limday')) !== day) {
+      for (const old of ['pip:', 'rip:', 'pall:', 'rall:', 'l:']) {
+        const keys = [...(await storage.list({ prefix: old })).keys()].filter((key) => !key.endsWith(':' + day));
+        for (let index = 0; index < keys.length; index += 128) {
+          await storage.delete(keys.slice(index, index + 128));
+        }
+      }
+      await storage.put('limday', day);
+    }
+    const allKey = prefix[0] + 'all:' + day;
+    const all = (await storage.get(allKey)) || 0;
+    if (all >= total) {
+      return false;
+    }
+    const tag = request.headers.get('x-ayugram-ip') || '';
+    if (/^[0-9a-f]{24}$/.test(tag)) {
+      const ipKey = prefix + ':' + tag + ':' + day;
+      const own = (await storage.get(ipKey)) || 0;
+      if (own >= perIp) {
+        return false;
+      }
+      await storage.put(ipKey, own + 1);
+    }
+    await storage.put(allKey, all + 1);
+    return true;
+  }
+
+  async fetch(request) {
+    const url = new URL(request.url);
+    const storage = this.state.storage;
+    const now = Date.now();
+    const badge = await badgeStorage(storage, request, url, now);
+    if (badge) {
+      return badge;
+    }
+    if (request.method === 'POST' && url.pathname === '/profile-guard') {
+      const body = await request.json();
+      if (!/^[1-9][0-9]{0,15}$/.test(String(body.id || ''))) {
+        return new Response('bad request\n', { status: 400 });
+      }
+      const ban = await storage.get('ban:' + (await accountHash(body.id)));
+      return Response.json({ banned: Boolean(ban) });
+    }
+    if (request.method === 'POST' && url.pathname === '/ping') {
+      const install = await request.json();
+      const previous = await storage.get('i:' + install.id);
+      if (!previous && !(await this.allowIp(request, 'pip', NEW_INSTALLS_PER_IP, NEW_INSTALLS_PER_DAY, now))) {
+        return new Response('limit\n', { status: 429 });
+      }
+      install.first = previous && previous.first ? previous.first : install.seen;
+      await storage.put('i:' + install.id, install);
+      return new Response('ok\n');
+    }
+    if (request.method === 'POST' && url.pathname === '/status') {
+      const body = await request.json();
+      let banned = false;
+      let warning = null;
+      for (const hash of cleanAccounts(body.accounts)) {
+        if (await storage.get('ban:' + hash)) {
+          banned = true;
+        }
+        const warn = await storage.get('warn:' + hash);
+        if (warn && (!warning || warn.time > warning.time)) {
+          warning = warn;
+        }
+      }
+      let banReason = null;
+      for (const hash of cleanAccounts(body.accounts)) {
+        const ban = await storage.get('ban:' + hash);
+        if (shownReason(ban)) {
+          banReason = shownReason(ban);
+        }
+      }
+      const check = body.check || null;
+      let blocked = false;
+      let blockReason = null;
+      let notify = null;
+      if (check) {
+        const keys = copyBlockKeys(check).map(([key]) => key);
+        if (keys.length) {
+          const found = await storage.get(keys);
+          for (const value of found.values()) {
+            if (value) {
+              blocked = true;
+              if (shownReason(value)) {
+                blockReason = shownReason(value);
+              }
+            }
+          }
+        }
+        const kind = copyKind(check);
+        if (kind) {
+          notify = await this.noteCopy(check, kind, now);
+        }
+      }
+      return Response.json({ banned, warning: warning ? warning.id : null, blocked, banReason: banned ? banReason : null, blockReason: blocked ? blockReason : null, notify });
+    }
+    if (request.method === 'POST' && url.pathname === '/pending') {
+      await storage.put('pend', { ...(await request.json()), time: now });
+      return new Response('ok\n');
+    }
+    if (request.method === 'POST' && url.pathname === '/pending/take') {
+      const pending = await storage.get('pend');
+      await storage.delete('pend');
+      return Response.json(pending && now - pending.time < 15 * 60 * 1000 ? pending : null);
+    }
+    if (request.method === 'GET' && url.pathname === '/bans') {
+      return Response.json(await this.bans());
+    }
+    if (request.method === 'POST' && url.pathname.startsWith('/ban-id/')) {
+      const [, , action, id] = url.pathname.split('/');
+      if (!/^[1-9][0-9]{0,19}$/.test(id || '')) {
+        return new Response('bad request\n', { status: 400 });
+      }
+      const hash = await accountHash(id);
+      if (action === 'ban') {
+        await storage.put('ban:' + hash, { time: now, id, ...reasonRecord(banReasonCode, url.searchParams) });
+      } else if (action === 'unban') {
+        await storage.delete('ban:' + hash);
+      } else {
+        return new Response('not found\n', { status: 404 });
+      }
+      let installs = 0;
+      for (const [, value] of await storage.list({ prefix: 'i:' })) {
+        if ((value.accounts || []).includes(hash)) {
+          installs += 1;
+        }
+      }
+      return Response.json({ ok: true, installs });
+    }
+    if (request.method === 'GET' && url.pathname.startsWith('/copy/')) {
+      const copy = await this.copy(url.pathname.slice(6));
+      return copy ? Response.json(copy) : new Response('not found\n', { status: 404 });
+    }
+    if (request.method === 'POST' && url.pathname.startsWith('/copy-moderate/')) {
+      const [, , action, cid] = url.pathname.split('/');
+      const copy = await this.copy(cid);
+      if (!copy) {
+        return new Response('not found\n', { status: 404 });
+      }
+      const keys = copyBlockKeys(copy.record).map(([key]) => key);
+      if (!keys.length) {
+        return new Response('nothing to block\n', { status: 409 });
+      }
+      if (action === 'block') {
+        const entries = {};
+        const reason = reasonRecord(copyReasonCode, url.searchParams);
+        for (const key of keys) {
+          entries[key] = { time: now, cid, ...reason };
+        }
+        await storage.put(entries);
+      } else if (action === 'unblock') {
+        await storage.delete(keys);
+      } else {
+        return new Response('not found\n', { status: 404 });
+      }
+      return Response.json(await this.copy(cid));
+    }
+    if (request.method === 'GET' && url.pathname.startsWith('/review/')) {
+      const review = await this.review(url.pathname.slice(8));
+      return review ? Response.json(review) : new Response('not found\n', { status: 404 });
+    }
+    if (request.method === 'POST' && url.pathname.startsWith('/moderate/')) {
+      const [, , action, rid] = url.pathname.split('/');
+      const review = await this.review(rid);
+      if (!review) {
+        return new Response('not found\n', { status: 404 });
+      }
+      if (!review.target) {
+        return new Response('no target\n', { status: 409 });
+      }
+      const hash = review.target.hash;
+      if (action === 'warn') {
+        await storage.put('warn:' + hash, { id: rid + '-' + now, time: now, rid });
+      } else if (action === 'ban') {
+        await storage.put('ban:' + hash, { time: now, rid, ...reasonRecord(banReasonCode, url.searchParams) });
+      } else if (action === 'unban') {
+        await storage.delete('ban:' + hash);
+      } else {
+        return new Response('not found\n', { status: 404 });
+      }
+      return Response.json(await this.review(rid));
+    }
+    if (request.method === 'POST' && url.pathname === '/report') {
+      const report = await request.json();
+      const day = Math.floor(now / 86400000);
+      const limitKey = 'l:' + report.id + ':' + day;
+      const count = (await storage.get(limitKey)) || 0;
+      if (count >= REPORTS_PER_DAY) {
+        return new Response('limit\n', { status: 429 });
+      }
+      if (!(await this.allowIp(request, 'rip', REPORTS_PER_IP, REPORTS_PER_DAY_TOTAL, now))) {
+        return new Response('limit\n', { status: 429 });
+      }
+      await storage.put(limitKey, count + 1);
+      report.rid = crypto.randomUUID().replace(/-/g, '').slice(0, 12);
+      const key = 'r:' + String(now).padStart(15, '0') + ':' + report.id + ':' + report.rid;
+      await storage.put(key, report);
+      await storage.put('q:' + report.rid, key);
+      const token = crypto.randomUUID().replace(/-/g, '');
+      await storage.put('t:' + report.rid, { token, used: 0, time: now });
+      return Response.json({ ok: true, rid: report.rid, token });
+    }
+    if (request.method === 'POST' && url.pathname.startsWith('/notice/')) {
+      const rid = url.pathname.slice(8);
+      const body = await request.json();
+      const ticket = await storage.get('t:' + rid);
+      if (ticket) {
+        ticket.notice = body.messageId;
+        await storage.put('t:' + rid, ticket);
+      }
+      return new Response('ok\n');
+    }
+    if (request.method === 'POST' && url.pathname.startsWith('/attach/')) {
+      const rid = url.pathname.slice(8);
+      const ticket = await storage.get('t:' + rid);
+      const token = request.headers.get('x-ayugram-token') || '';
+      if (!ticket || !token || ticket.token !== token || now - ticket.time > ATTACH_TTL_MS) {
+        return new Response('forbidden\n', { status: 403 });
+      }
+      if (ticket.used >= MAX_ATTACHMENTS) {
+        return new Response('limit\n', { status: 429 });
+      }
+      ticket.used += 1;
+      await storage.put('t:' + rid, ticket);
+      const key = await storage.get('q:' + rid);
+      const report = key ? await storage.get(key) : null;
+      return Response.json({ notice: ticket.notice || 0, index: ticket.used, targetName: report ? report.targetName || '' : '' });
+    }
+    if (request.method === 'GET' && url.pathname === '/summary') {
+      const installs = [];
+      const stale = [];
+      for (const [key, value] of await storage.list({ prefix: 'i:' })) {
+        if (now - value.seen > INSTALL_TTL_MS) {
+          stale.push(key);
+        } else {
+          installs.push(value);
+        }
+      }
+      const reports = [];
+      for (const [key, value] of await storage.list({ prefix: 'r:' })) {
+        if (now - value.time > REPORT_TTL_MS) {
+          stale.push(key);
+          if (value.rid) {
+            stale.push('q:' + value.rid, 't:' + value.rid);
+          }
+        } else {
+          reports.push(value);
+        }
+      }
+      for (const prefix of ['l:', 'lc:']) {
+        for (const [key] of await storage.list({ prefix })) {
+          if (Number(key.split(':').pop()) < Math.floor(now / 86400000) - 1) {
+            stale.push(key);
+          }
+        }
+      }
+      for (const [key, value] of await storage.list({ prefix: 'c:' })) {
+        if (now - value.seen > COPY_TTL_MS) {
+          stale.push(key);
+        }
+      }
+      for (let index = 0; index < stale.length; index += 128) {
+        await storage.delete(stale.slice(index, index + 128));
+      }
+      return Response.json(summarize(installs, reports, now));
+    }
+    return new Response('not found\n', { status: 404 });
+  }
+
+  async noteCopy(check, kind, now) {
+    const storage = this.state.storage;
+    const cid = await shortHash([kind, check.tsig, check.official ? '' : check.bsig, check.repo.toLowerCase(), check.team].join('|'));
+    const existing = await storage.get('c:' + cid);
+    const { id, accounts, ...details } = check;
+    const record = existing || { cid, kind, first: now, installs: [], notified: false };
+    record.seen = now;
+    record.details = details;
+    record.tsig = check.tsig;
+    record.bsig = check.bsig;
+    record.official = check.official;
+    record.repo = check.repo;
+    if (!record.installs.includes(id)) {
+      record.installs = [...record.installs, id].slice(-200);
+    }
+    let fresh = false;
+    if (!record.notified) {
+      const day = Math.floor(now / 86400000);
+      const limitKey = 'lc:' + day;
+      const count = (await storage.get(limitKey)) || 0;
+      if (count < COPIES_PER_DAY) {
+        await storage.put(limitKey, count + 1);
+        record.notified = true;
+        fresh = true;
+      }
+    }
+    await storage.put('c:' + cid, record);
+    return fresh ? await this.copy(cid) : null;
+  }
+
+  async bans() {
+    const storage = this.state.storage;
+    const accounts = [];
+    for (const [, value] of await storage.list({ prefix: 'ban:' })) {
+      const key = value && value.rid ? await storage.get('q:' + value.rid) : null;
+      const report = key ? await storage.get(key) : null;
+      const id = (value && value.id) || (report ? report.target : '');
+      accounts.push({ rid: (value && value.rid) || '', id, name: report && report.targetName ? report.targetName : (id ? 'ID ' + id : ''), time: value ? value.time : 0, reason: (value && value.reason) || 'other', note: (value && value.note) || '' });
+    }
+    accounts.sort((a, b) => b.time - a.time);
+    const seen = new Map();
+    for (const [, value] of await storage.list({ prefix: 'blk:' })) {
+      if (value && value.cid && !seen.has(value.cid)) {
+        seen.set(value.cid, { time: value.time, reason: value.reason || 'other', note: value.note || '' });
+      }
+    }
+    const copies = [];
+    for (const [cid, { time, reason, note }] of seen) {
+      const record = await storage.get('c:' + cid);
+      copies.push({ cid, kind: record ? record.kind : '', repo: record ? record.repo : '', team: record && record.details ? record.details.team : '', time, reason, note });
+    }
+    copies.sort((a, b) => b.time - a.time);
+    return { accounts, copies };
+  }
+
+  async copy(cid) {
+    if (!/^[0-9a-f]{12}$/.test(cid || '')) {
+      return null;
+    }
+    const storage = this.state.storage;
+    const record = await storage.get('c:' + cid);
+    if (!record) {
+      return null;
+    }
+    const keys = copyBlockKeys(record);
+    const found = keys.length ? await storage.get(keys.map(([key]) => key)) : new Map();
+    const blockedBy = keys.filter(([key]) => found.get(key)).map(([, label]) => label);
+    const firstBlock = keys.map(([key]) => found.get(key)).find(Boolean);
+    const { installs, ...rest } = record;
+    return { record: rest, installs: installs.length, blockable: keys.map(([, label]) => label), blockedBy, blockReason: firstBlock ? firstBlock.reason || 'other' : null, blockNote: firstBlock ? firstBlock.note || '' : '' };
+  }
+
+  async review(rid) {
+    if (!/^[0-9a-f]{12}$/.test(rid || '')) {
+      return null;
+    }
+    const storage = this.state.storage;
+    const key = await storage.get('q:' + rid);
+    const report = key ? await storage.get(key) : null;
+    if (!report) {
+      return null;
+    }
+    const reporter = (await storage.get('i:' + report.id)) || null;
+    const ticket = await storage.get('t:' + rid);
+    report.received = ticket ? ticket.used : 0;
+    let target = null;
+    if (report.target) {
+      const hash = await accountHash(report.target);
+      const installs = [];
+      for (const [, value] of await storage.list({ prefix: 'i:' })) {
+        if ((value.accounts || []).includes(hash)) {
+          installs.push(value);
+        }
+      }
+      installs.sort((a, b) => b.seen - a.seen);
+      target = {
+        id: report.target,
+        name: report.targetName || '',
+        hash,
+        installs: installs.map(({ id, accounts, ...rest }) => rest),
+        ban: (await storage.get('ban:' + hash)) || null,
+        warning: (await storage.get('warn:' + hash)) || null,
+      };
+    }
+    let reporterInstall = null;
+    const reporterAccounts = reporter ? reporter.accounts || [] : [];
+    if (reporter) {
+      const { id, accounts, ...rest } = reporter;
+      reporterInstall = rest;
+    }
+    const history = [];
+    for (const [, value] of await storage.list({ prefix: 'r:' })) {
+      if (value && value.id === report.id) {
+        history.push({ rid: value.rid, time: value.time, targetName: value.targetName || '', target: value.target || '' });
+      }
+    }
+    history.sort((a, b) => b.time - a.time);
+    let reporterBanned = false;
+    for (const hash of reporterAccounts) {
+      if (await storage.get('ban:' + hash)) {
+        reporterBanned = true;
+      }
+    }
+    const profile = {
+      tag: await reporterTag(report.id),
+      reports: history.length,
+      others: history.filter((item) => item.rid !== report.rid).slice(0, 5),
+      accounts: reporterAccounts.length,
+      banned: reporterBanned,
+      self: Boolean(target && reporterAccounts.includes(target.hash)),
+    };
+    const { id, ...publicReport } = report;
+    publicReport.tag = profile.tag;
+    publicReport.reports = profile.reports;
+    return { report: publicReport, reporter: reporterInstall, target, profile };
+  }
+}
+
+export function statsStub(env) {
+  return env && env.STATS ? env.STATS.get(env.STATS.idFromName('global')) : null;
+}
+
+async function readBody(request) {
+  const raw = await request.text();
+  if (raw.length > MAX_BODY) {
+    return null;
+  }
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+export async function ipTag(ip) {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('ayugram-ip|' + ip));
+  return [...new Uint8Array(digest).slice(0, 12)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+}
+
+async function forwardHeaders(request) {
+  const ip = request.headers.get('cf-connecting-ip') || '';
+  return ip ? { 'x-ayugram-ip': await ipTag(ip) } : {};
+}
+
+export function sameToken(a, b) {
+  if (typeof a !== 'string' || typeof b !== 'string' || a.length !== b.length || !a) {
+    return false;
+  }
+  let diff = 0;
+  for (let index = 0; index < a.length; index += 1) {
+    diff |= a.charCodeAt(index) ^ b.charCodeAt(index);
+  }
+  return diff === 0;
+}
+
+export function reportMessage(report) {
+  const lines = ['🚨 Жалоба на скам', '', report.text, ''];
+  if (report.attachments) {
+    lines.push('Вложений: ' + report.attachments + ' (придут ответом на это сообщение)');
+  }
+  if (report.target || report.targetName) {
+    lines.push('На кого: ' + (report.targetName || '-') + (report.target ? ' (ID ' + report.target + ')' : ''));
+  }
+  lines.push(['Сборка ' + (report.build || '?'), report.status, report.source, report.country].join(' · '));
+  if (report.tag) {
+    lines.push('Жалобщик: #' + report.tag + (report.reports > 1 ? ' · жалоб: ' + report.reports : ''));
+  }
+  if (report.team) {
+    lines.push('Сертификат: ' + report.team + (report.teamName ? ' (' + report.teamName + ')' : ''));
+  }
+  return lines.join('\n');
+}
+
+const kyivTime = new Intl.DateTimeFormat('ru-RU', { timeZone: 'Europe/Kyiv', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+function kyiv(time) {
+  return time ? kyivTime.format(new Date(time)) : '-';
+}
+
+const COPY_TITLES = { fork: '🍴 Форк AyuGram', modified: '✂️ Изменённая сборка AyuGram', distributor: '📤 Нашу сборку раздают' };
+
+export function copyMessage(copy) {
+  const record = copy.record;
+  const details = record.details || {};
+  const lines = [COPY_TITLES[record.kind] || '📦 Копия AyuGram', ''];
+  lines.push(...originLines(record, details));
+  const build = details.build || '?';
+  const plist = details.plistBuild && details.plistBuild !== details.build ? ' (в Info.plist ' + details.plistBuild + ')' : '';
+  lines.push(['Сборка ' + build + plist + (details.variant ? ' ' + details.variant : ''), details.status, details.source, details.country].filter(Boolean).join(' · '));
+  if (details.team || details.teamName || details.cert) {
+    lines.push('Сертификат: ' + [details.team, details.teamName, details.cert].filter(Boolean).join(' / '));
+  }
+  if (details.profile || details.bundle) {
+    lines.push('Профиль: ' + [details.profile, details.bundle].filter(Boolean).join(' / ') + (record.official ? ' (bundle id наш)' : ''));
+  }
+  if (details.devices) {
+    lines.push('Устройств в профиле: ' + details.devices);
+  }
+  if (details.device || details.os) {
+    lines.push('Устройство: ' + [details.device, details.os ? 'iOS ' + details.os : ''].filter(Boolean).join(' '));
+  }
+  lines.push('Установок: ' + (copy.installs || 0) + ', первая ' + kyiv(record.first) + ', последняя ' + kyiv(record.seen));
+  lines.push('');
+  if (copy.blockedBy && copy.blockedBy.length) {
+    lines.push('Статус: ⛔ заблокирована по ' + copy.blockedBy.join(', '));
+    lines.push('Причина: ' + reasonLabel(copy.blockReason, copy.blockNote));
+  } else if (copy.blockable && copy.blockable.length) {
+    lines.push('Статус: работает. Блок сработает по ' + copy.blockable.join(', '));
+  } else {
+    lines.push('Статус: работает. Заблокировать нечем: нет ни сертификата, ни чужого bundle id, ни репозитория');
+  }
+  return lines.join('\n').slice(0, 4000);
+}
+
+export function copyMenu(copy) {
+  const cid = copy.record.cid;
+  const rows = [];
+  if (copy.blockedBy && copy.blockedBy.length) {
+    rows.push([{ text: '✅ Разблокировать', callback_data: 'x:' + cid }]);
+  } else if (copy.blockable && copy.blockable.length) {
+    rows.push([{ text: '⛔ Заблокировать', callback_data: 'k:' + cid }]);
+  }
+  rows.push([{ text: '🔄 Обновить', callback_data: 'y:' + cid }]);
+  return { inline_keyboard: rows };
+}
+
+export async function notifyCopy(copy, env) {
+  if (!env || !env.REPORT_BOT_TOKEN || !env.REPORT_CHAT_ID || !copy || !copy.record) {
+    return false;
+  }
+  const response = await fetch('https://api.telegram.org/bot' + env.REPORT_BOT_TOKEN + '/sendMessage', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: env.REPORT_CHAT_ID,
+      text: copyMessage(copy),
+      link_preview_options: { is_disabled: true },
+      reply_markup: copyMenu(copy),
+    }),
+  });
+  if (!response.ok) {
+    console.log('copy not sent to Telegram: ' + response.status);
+  }
+  return response.ok;
+}
+
+export async function notifyReport(report, env) {
+  if (!env || !env.REPORT_BOT_TOKEN || !env.REPORT_CHAT_ID) {
+    return false;
+  }
+  const response = await fetch('https://api.telegram.org/bot' + env.REPORT_BOT_TOKEN + '/sendMessage', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: env.REPORT_CHAT_ID,
+      text: reportMessage(report),
+      link_preview_options: { is_disabled: true },
+      reply_markup: report.rid ? { inline_keyboard: [[{ text: '🔎 Рассмотреть жалобу', callback_data: 'v:' + report.rid }]] } : undefined,
+    }),
+  });
+  if (!response.ok) {
+    console.log('report not sent to Telegram: ' + response.status);
+    return false;
+  }
+  const sent = await response.json().catch(() => null);
+  const stub = statsStub(env);
+  if (stub && report.rid && sent && sent.result && sent.result.message_id) {
+    await stub.fetch('https://stats.ayugram.invalid/notice/' + report.rid, { method: 'POST', body: JSON.stringify({ messageId: sent.result.message_id }) });
+  }
+  return true;
+}
+
+async function forwardAttachment(env, kind, extension, type, bytes, info) {
+  const caption = '📎 Вложение ' + info.index + ' к жалобе' + (info.targetName ? ' на ' + info.targetName : '');
+  const send = async (method, field) => {
+    const form = new FormData();
+    form.append('chat_id', String(env.REPORT_CHAT_ID));
+    form.append('caption', caption);
+    if (info.notice) {
+      form.append('reply_parameters', JSON.stringify({ message_id: info.notice, allow_sending_without_reply: true }));
+    }
+    form.append(field, new Blob([bytes], { type }), 'attachment-' + info.index + '.' + extension);
+    const response = await fetch('https://api.telegram.org/bot' + env.REPORT_BOT_TOKEN + '/' + method, { method: 'POST', body: form });
+    if (!response.ok) {
+      console.log('attachment not sent with ' + method + ': ' + response.status);
+    }
+    return response.ok;
+  };
+  return (await send(kind === 'photo' ? 'sendPhoto' : 'sendVideo', kind)) || send('sendDocument', 'document');
+}
+
+let moderationKeyPromise = null;
+
+function moderationKey(env) {
+  if (!env || !env.MODERATION_KEY) {
+    return null;
+  }
+  if (!moderationKeyPromise) {
+    const der = Uint8Array.from(atob(env.MODERATION_KEY.trim()), (ch) => ch.charCodeAt(0));
+    moderationKeyPromise = crypto.subtle.importKey('pkcs8', der, 'Ed25519', false, ['sign']).catch(() => null);
+  }
+  return moderationKeyPromise;
+}
+
+async function moderationSignature(env, id, banned, blocked, now) {
+  const key = env && env.MODERATION_KEY ? await moderationKey(env) : null;
+  if (!key) {
+    return null;
+  }
+  const ts = Math.floor(now / 1000);
+  const message = new TextEncoder().encode('ayugram-mod|' + id + '|' + (banned ? 1 : 0) + '|' + (blocked ? 1 : 0) + '|' + ts);
+  const signature = new Uint8Array(await crypto.subtle.sign('Ed25519', key, message));
+  return { ts, sig: btoa(String.fromCharCode(...signature)) };
+}
+
+export async function handleStats(request, env, url, ctx) {
+  const stub = statsStub(env);
+  if (!stub) {
+    return new Response('stats unavailable\n', { status: 503 });
+  }
+  const country = request.cf && request.cf.country ? request.cf.country : '';
+  const now = Date.now();
+  if (request.method === 'POST' && url.pathname === '/stats/ping') {
+    const install = cleanInstall(await readBody(request), country, now);
+    if (!install) {
+      return new Response('bad request\n', { status: 400 });
+    }
+    return stub.fetch('https://stats.ayugram.invalid/ping', { method: 'POST', headers: await forwardHeaders(request), body: JSON.stringify(install) });
+  }
+  if (request.method === 'POST' && url.pathname === '/stats/report') {
+    const report = cleanReport(await readBody(request), country, now);
+    if (!report) {
+      return new Response('bad request\n', { status: 400 });
+    }
+    const response = await stub.fetch('https://stats.ayugram.invalid/report', { method: 'POST', headers: await forwardHeaders(request), body: JSON.stringify(report) });
+    if (response.ok) {
+      const stored = await response.clone().json().catch(() => ({}));
+      report.rid = stored.rid || '';
+      report.tag = await reporterTag(report.id);
+      const notify = notifyReport(report, env).catch((error) => console.log('report not sent to Telegram: ' + error));
+      if (ctx && typeof ctx.waitUntil === 'function') {
+        ctx.waitUntil(notify);
+      } else {
+        await notify;
+      }
+    }
+    return response;
+  }
+  if (request.method === 'POST' && url.pathname.startsWith('/stats/attach/')) {
+    const rid = url.pathname.slice(14);
+    const type = (request.headers.get('content-type') || '').split(';')[0].trim().toLowerCase();
+    const spec = ATTACH_TYPES[type];
+    if (!/^[0-9a-f]{12}$/.test(rid) || !spec) {
+      return new Response('bad request\n', { status: 400 });
+    }
+    if (!env.REPORT_BOT_TOKEN || !env.REPORT_CHAT_ID) {
+      return new Response('attachments unavailable\n', { status: 503 });
+    }
+    const declared = Number(request.headers.get('content-length') || 0);
+    if (declared > spec[2]) {
+      return new Response('too large\n', { status: 413 });
+    }
+    const bytes = await request.arrayBuffer();
+    if (!bytes.byteLength || bytes.byteLength > spec[2]) {
+      return new Response('too large\n', { status: 413 });
+    }
+    const checked = await stub.fetch('https://stats.ayugram.invalid/attach/' + rid, { method: 'POST', headers: { 'x-ayugram-token': request.headers.get('x-ayugram-token') || '' } });
+    if (!checked.ok) {
+      return new Response(await checked.text(), { status: checked.status });
+    }
+    const info = await checked.json();
+    const sent = await forwardAttachment(env, spec[0], spec[1], type, bytes, info);
+    return sent ? new Response('ok\n') : new Response('not delivered\n', { status: 502 });
+  }
+  if (request.method === 'POST' && url.pathname === '/stats/status') {
+    const body = await readBody(request);
+    if (!body || !/^[A-Za-z0-9-]{8,64}$/.test(text(body.id, 64))) {
+      return new Response('bad request\n', { status: 400 });
+    }
+    const check = cleanCheck(body, country, now);
+    const response = await stub.fetch('https://stats.ayugram.invalid/status', { method: 'POST', body: JSON.stringify({ accounts: cleanAccounts(body.accounts), check }) });
+    if (!response.ok) {
+      return response;
+    }
+    const { notify, ...result } = await response.json();
+    const signed = await moderationSignature(env, text(body.id, 64), result.banned, result.blocked, now);
+    if (signed) {
+      result.ts = signed.ts;
+      result.sig = signed.sig;
+    }
+    if (notify) {
+      const sent = notifyCopy(notify, env).catch((error) => console.log('copy not sent to Telegram: ' + error));
+      if (ctx && typeof ctx.waitUntil === 'function') {
+        ctx.waitUntil(sent);
+      } else {
+        await sent;
+      }
+    }
+    return Response.json(result);
+  }
+  if (request.method === 'GET' && url.pathname === '/stats/summary') {
+    const header = request.headers.get('authorization') || '';
+    const token = header.startsWith('Bearer ') ? header.slice(7) : '';
+    if (!sameToken(token, env.STATS_TOKEN)) {
+      return new Response('forbidden\n', { status: 403 });
+    }
+    return stub.fetch('https://stats.ayugram.invalid/summary');
+  }
+  return new Response('not found\n', { status: 404 });
+}

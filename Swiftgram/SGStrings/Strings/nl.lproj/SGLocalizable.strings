@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Ondersteuning";
+"Ayu.SupportChannel" = "Updatekanaal";
+"Ayu.SupportDeveloper" = "Contact met de ontwikkelaar";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Zoeken naar updates";
+"Ayu.UpToDate" = "Je hebt de nieuwste versie.";
+"Ayu.UpdateAvailable" = "Update beschikbaar";
+"Ayu.UpdateAvailableInfo" = "Versie %@ is uit. Open het kanaal om hem te downloaden.";
+"Ayu.UpdateIgnore" = "Negeren";
+"Ayu.UpdateOpen" = "Bijwerken";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "Start NETHERHILL om bij te werken in Multitask-modus (houd de app ingedrukt in LiveContainer) en probeer het opnieuw.";
+"Ayu.NotificationsSection" = "Meldingen";
+"Ayu.BarkSetUp" = "Bark-meldingen instellen";
+"Ayu.BarkConnected" = "Bark-meldingen: aan";
+"Ayu.BarkFooter" = "Een via sideload geïnstalleerde app krijgt geen meldingen van Apple. Installeer Bark uit de App Store, kopieer daar je sleutel en plak die hier. Nieuwe berichten komen dan via de NETHERHILL-relay binnen als Bark-meldingen.";
+"Ayu.BarkPrompt" = "Plak je Bark-sleutel of de link uit de Bark-app. Laat leeg om meldingen uit te zetten.";
+"Ayu.BarkEnabled" = "Klaar. Nieuwe berichten komen binnen als Bark-meldingen terwijl NETHERHILL gesloten is.";
+"Ayu.BarkDisabled" = "Bark-meldingen staan uit.";
+"Ayu.BarkInvalid" = "Dit is geen Bark-sleutel. Kopieer de sleutel of een link uit de Bark-app.";
+"Ayu.BarkFailed" = "Telegram heeft het abonnement niet geaccepteerd: %@";
+"Ayu.BarkFixTitle" = "Meldingen herstellen";
+"Ayu.BarkFixInstall" = "Installeer Bark uit de App Store";
+"Ayu.BarkFixConnect" = "Koppel Bark om meldingen te krijgen";
+"Ayu.BarkEnterKey" = "Sleutel invoeren";
+"Ayu.BarkHowTo" = "1. Installeer Bark uit de App Store en open het.\n2. Kopieer het adres https://api.day.app/… van het hoofdscherm.\n3. Kom terug, tik op ‘Sleutel invoeren’ en plak het.";
+"Ayu.ExportChat" = "Chat exporteren";
+"Ayu.ExportChatMedia" = "De hele chat wordt opgeslagen als een archief dat Telegram kan importeren. Foto’s, video’s, spraakberichten en bestanden meenemen? Het downloaden kan lang duren.";
+"Ayu.ExportChatWithMedia" = "Met media";
+"Ayu.ExportChatTextOnly" = "Alleen tekst";
+"Ayu.ExportChatLoading" = "Berichten laden: %@";
+"Ayu.ExportChatDownloading" = "Media downloaden: %@";
+"Ayu.ExportChatSaving" = "Archief maken…";
+"Ayu.ExportChatEmpty" = "Er zijn geen berichten om te exporteren.";
+"Ayu.ChatTransferSection" = "Chatoverdracht";
+"Ayu.ImportChat" = "Chat importeren";
+"Ayu.ImportChatFooter" = "Importeer een chat die is geëxporteerd uit WhatsApp, LINE, KakaoTalk of met ‘Chat exporteren’ in NETHERHILL (ZIP- of TXT-bestand) in een van je chats.";
+"Ayu.ImportChatInvalid" = "Dit bestand is geen ondersteunde chatexport.";
+"Ayu.HistorySaveAudio" = "Audio opslaan";
+"Ayu.HistoryDeleteEntry" = "Verwijderen uit geschiedenis";
+"Ayu.DeletedChats" = "Verwijderde chats";
+"Ayu.DeletedChatsInfo" = "Chats waarvan de hele geschiedenis is verwijderd. Wat NETHERHILL ervan heeft bewaard, wordt nooit automatisch verwijderd.";
+"Ayu.DeletedChatSave" = "Opslaan als archief";
+"Ayu.DeletedChatRemove" = "Uit lijst verwijderen";
+"Ayu.DeletedChatDelete" = "Bewaarde berichten verwijderen";
+"Ayu.HistorySubtitle" = "Verwijderde en bewerkte berichten uit gekozen chats, alleen op dit apparaat bewaard.";
+"Ayu.HistoryAll" = "Alle";
+"Ayu.HistoryEdited" = "Bewerkt";
+"Ayu.HistoryNow" = "Nu";
+"Ayu.HistoryShowMessage" = "Toon in chat";
+"Ayu.HistoryOpenChat" = "Chat openen";
+"Ayu.HistoryStopSaving" = "Deze chat niet meer bewaren";
+"Ayu.HistoryNoChats" = "Kies chats voor de geschiedenis. Er wordt niets bewaard tot je er minstens één toevoegt.";
+"Ayu.HistoryEmptyInfo" = "Verwijderde en bewerkte berichten verschijnen hier.";
+"Ayu.AddAccountHelp" = "Je kunt tot 500 accounts met verschillende telefoonnummers toevoegen.";
+"Ayu.HeroGhostOn" = "Spookmodus staat aan";
+"Ayu.HeroGhostOff" = "Spookmodus staat uit";
+"Ayu.HeroHidden" = "Verborgen: %@ van %@";
+"Ayu.GhostSubtitle" = "Online, lezen, typen, opnemen, uploaden en verhalen";
+"Ayu.GhostFooter" = "Spookmodus zet alle schakelaars hieronder aan en bewaart hun eigen waarden.";
+"Ayu.HideSection" = "Wat verbergen";
+"Ayu.BehaviorSection" = "Gedrag";
+"Ayu.OfflineAfterSending" = "Offline na verzenden";
+"Ayu.OfflineAfterSendingInfo" = "Direct na elk verzonden bericht offline melden";
+"Ayu.ReadOnSend" = "Chat lezen bij antwoorden";
+"Ayu.ReadOnSendInfo" = "Een verzonden bericht markeert de chat als gelezen";
+"Ayu.QuickToggle" = "Schakelaar in tabblad Chats";
+"Ayu.QuickToggleInfo" = "Houd het tabblad Chats ingedrukt om Spookmodus snel aan of uit te zetten.";
+"Ayu.ContentSection" = "Inhoud";
+"Ayu.IgnoreProtection" = "Inhoudsbeveiliging negeren";
+"Ayu.IgnoreProtectionInfo" = "Opslaan, kopiëren en doorsturen uit beveiligde chats";
+"Ayu.AllowScreenshots" = "Schermafbeeldingen toestaan";
+"Ayu.AllowScreenshotsInfo" = "Beveiligde en geheime chats verschijnen op schermafbeeldingen en opnames";
+"Ayu.ContentFooter" = "Berichten uit beveiligde chats worden als kopie zonder auteur doorgestuurd; media wordt opnieuw geüpload. De instelling voor schermafbeeldingen geldt voor opnieuw geopende schermen.";
+"Ayu.SaveDeletedInfo" = "Blijven in elke chat; gekozen chats staan ook in de berichtgeschiedenis";
+"Ayu.OpenHistory" = "Geschiedenis openen";
+"Ayu.ClientSection" = "Client";
+"Ayu.LocalPremiumInfo" = "Premium-emoji en statussen alleen op dit apparaat";
+"Ayu.GhostEnable" = "Spookmodus aanzetten";
+"Ayu.GhostDisable" = "Spookmodus uitzetten";
+"Ayu.GhostEnabledToast" = "Spookmodus aangezet";
+"Ayu.GhostDisabledToast" = "Spookmodus uitgezet";
+"Ayu.ChatListBackground" = "Achtergrond chatlijst";
+"Ayu.ConversationBackground" = "Chatachtergrond";
+"Ayu.ChooseVideo" = "Video kiezen";
+"Ayu.ShowBackground" = "Achtergrond tonen";
+
+"Settings.ContentSettings" = "Inhoudsinstellingen";
+
+"Settings.Tabs.Header" = "TABS";
+"Settings.Tabs.HideTabBar" = "Tabbladbalk verbergen";
+"Settings.Tabs.ShowContacts" = "Toon Contacten Tab";
+"Settings.Tabs.ShowNames" = "Show Tab Names";
+
+"Settings.Folders.BottomTab" = "Mappen onderaan";
+"Settings.Folders.BottomTabStyle" = "Onderste mappenstijl";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Verberg \"%@\"";
+"Settings.Folders.RememberLast" = "Laatste map openen";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram zal de laatst gebruikte map openen wanneer u de app herstart of van account wisselt.";
+
+"Settings.Folders.CompactNames" = "Kleinere afstand";
+"Settings.Folders.AllChatsTitle" = "\"Alle Chats\" titel";
+"Settings.Folders.AllChatsTitle.short" = "Kort";
+"Settings.Folders.AllChatsTitle.long" = "Lang";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Standaard";
+
+
+"Settings.ChatList.Header" = "CHAT LIJST";
+"Settings.CompactChatList" = "Compacte Chat Lijst";
+
+"Settings.Profiles.Header" = "PROFILES";
+
+"Settings.Stories.Hide" = "Verberg Verhalen";
+"Settings.Stories.WarnBeforeView" = "Vragen voor bekijken";
+"Settings.Stories.DisableSwipeToRecord" = "Swipe om op te nemen uitschakelen";
+
+"Settings.Translation.QuickTranslateButton" = "Snelle Vertaalknop";
+
+"Stories.Warning.Author" = "Auteur";
+"Stories.Warning.ViewStory" = "Bekijk Verhaal?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ ZAL KUNNEN ZIEN dat je hun Verhaal hebt bekeken.";
+"Stories.Warning.NoticeStealth" = "%@ zal niet kunnen zien dat je hun Verhaal hebt bekeken.";
+
+"Settings.Photo.Quality.Notice" = "Kwaliteit van geüploade foto's en verhalen.";
+"Settings.Photo.SendLarge" = "Verstuur grote foto's";
+"Settings.Photo.SendLarge.Notice" = "Verhoog de zijlimiet bij gecomprimeerde afbeeldingen naar 2560px.";
+
+"Settings.VideoNotes.Header" = "RONDE VIDEO'S";
+"Settings.VideoNotes.StartWithRearCam" = "Start met achtercamera";
+
+"Settings.CustomColors.Header" = "ACCOUNTKLEUREN";
+"Settings.CustomColors.Saturation" = "VERZADIGING";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Zet op 0%% om accountkleuren uit te schakelen.";
+
+"Settings.UploadsBoost" = "Upload Boost";
+"Settings.DownloadsBoost" = "Download Boost";
+"Settings.DownloadsBoost.Notice" = "Verhoogt het aantal gelijktijdige verbindingen en de grootte van bestandsgedeelten. Als uw netwerk de belasting niet aankan, probeer dan verschillende opties die geschikt zijn voor uw verbinding.";
+"Settings.DownloadsBoost.none" = "Uitgeschakeld";
+"Settings.DownloadsBoost.medium" = "Gemiddeld";
+"Settings.DownloadsBoost.maximum" = "Maximaal";
+
+"Settings.ShowProfileID" = "Toon profiel ID";
+"Settings.ShowDC" = "Toon datacentrum";
+"Settings.ShowCreationDate" = "Toon Chat Aanmaakdatum";
+"Settings.ShowCreationDate.Notice" = "De aanmaakdatum kan onbekend zijn voor sommige chatten.";
+
+"Settings.ShowRegDate" = "Toon registratiedatum";
+"Settings.ShowRegDate.Notice" = "De registratiedatum is ongeveer hetzelfde.";
+
+"Settings.SendWithReturnKey" = "Verstuur met 'return'-toets";
+"Settings.HidePhoneInSettingsUI" = "Verberg telefoon in Instellingen";
+"Settings.HidePhoneInSettingsUI.Notice" = "Dit verbergt alleen je telefoonnummer in de instellingen interface. Ga naar Privacy en Beveiliging om het voor anderen te verbergen.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Automatisch vergrendelen na 5 seconden";
+
+"ProxySettings.UseSystemDNS" = "Gebruik systeem DNS";
+"ProxySettings.UseSystemDNS.Notice" = "Gebruik systeem DNS om time-out te omzeilen als je geen toegang hebt tot Google DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Je hebt **geen %@ nodig**!";
+"Common.RestartRequired" = "Herstart vereist";
+"Common.RestartNow" = "Nu herstarten";
+"Common.OpenTelegram" = "Open Telegram";
+"Common.UseTelegramForPremium" = "Om Telegram Premium te krijgen moet je de officiële Telegram app gebruiken. Zodra je Telegram Premium hebt ontvangen, zullen alle functies ervan beschikbaar komen in Swiftgram.";
+
+"Message.HoldToShowOrReport" = "Houd vast om te Tonen of te Rapporteren.";
+
+"Auth.AccountBackupReminder" = "Zorg ervoor dat je een back-up toegangsmethode hebt. Houd een SIM voor SMS of een extra sessie ingelogd om buitensluiting te voorkomen.";
+"Auth.UnofficialAppCodeTitle" = "Je kunt de code alleen krijgen met de officiële app";
+
+"Settings.SmallReactions" = "Kleine reacties";
+"Settings.HideReactions" = "Verberg Reacties";
+
+"ContextMenu.SaveToCloud" = "Opslaan in de Cloud";
+"ContextMenu.SelectFromUser" = "Selecteer van Auteur";
+
+"Settings.ContextMenu" = "CONTEXTMENU";
+"Settings.ContextMenu.Notice" = "Uitgeschakelde items zijn beschikbaar in het 'Swiftgram'-submenu.";
+
+
+"Settings.ChatSwipeOptions" = "Veegopties voor chatlijst";
+"Settings.DeleteChatSwipeOption" = "Veeg om Chat te Verwijderen";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Trek naar het volgende ongelezen kanaal";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Trek naar Volgend Onderwerp";
+"Settings.GalleryCamera" = "Camera in Galerij";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" knop";
+"Settings.SnapDeletionEffect" = "Verwijderde Berichten Effecten";
+
+"Settings.Stickers.Size" = "GROOTTE";
+"Settings.Stickers.Timestamp" = "Tijdstempel weergeven";
+
+"Settings.RecordingButton" = "Spraakopname knop";
+
+"Settings.DefaultEmojisFirst" = "Standaardemoji's prioriteren";
+"Settings.DefaultEmojisFirst.Notice" = "Toon standaardemoji's vóór premium in emoji-toetsenbord";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "aangemaakt: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Lid geworden %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Geregistreerd";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Dubbelklik om bericht te bewerken";
+
+"Settings.wideChannelPosts" = "Brede berichten in kanalen";
+"Settings.ForceEmojiTab" = "Emoji-toetsenbord standaard";
+
+"Settings.forceBuiltInMic" = "Forceer Apparaatmicrofoon";
+"Settings.forceBuiltInMic.Notice" = "Indien ingeschakeld, zal de app alleen de apparaatmicrofoon gebruiken, zelfs als er hoofdtelefoons zijn aangesloten.";
+
+"Settings.hideChannelBottomButton" = "Verberg Kanaal Onderste Paneel";
+
+"Settings.CallConfirmation" = "Belbevestiging";
+"Settings.CallConfirmation.Notice" = "Swiftgram zal om uw bevestiging vragen voordat er een oproep wordt gedaan.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Een oproep maken?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Een video-oproep maken?";
+
+"MutualContact.Label" = "gemeenschappelijke contactpersoon";
+
+"Settings.swipeForVideoPIP" = "Video PIP met veeg";
+"Settings.swipeForVideoPIP.Notice" = "Als ingeschakeld, opent het swipen van video het in de modus Beeld-in-Beeld.";
+
+"Ayu.Ghost" = "Spookmodus";
+"Ayu.HideRead" = "Leesbevestigingen verbergen";
+"Ayu.HideOnline" = "Online-status verbergen";
+"Ayu.HideTyping" = "Typen verbergen";
+"Ayu.HideRecording" = "Opnemen verbergen";
+"Ayu.HideUploading" = "Uploads verbergen";
+"Ayu.HideStories" = "Verhaalweergaven verbergen";
+"Ayu.History" = "Berichtgeschiedenis";
+"Ayu.SaveDeleted" = "Verwijderde berichten bewaren";
+"Ayu.SavePhotos" = "Foto's bewaren";
+"Ayu.ClearHistory" = "Geschiedenis wissen";
+"Ayu.EmptyHistory" = "Nog geen geschiedenis";
+"Ayu.SaveMedia" = "Media uit de cache opslaan";
+"Ayu.BackgroundDimming" = "Achtergrond dimmen";
+"Ayu.BeforeEdit" = "Voor bewerking";
+"Ayu.Deleted" = "Verwijderd";
+"Ayu.ServerPresence" = "Op de server: %@";
+"Ayu.ServerUnavailable" = "Serverstatus niet beschikbaar";
+"Ayu.SendReadReceipt" = "Leesbevestiging sturen";
+"Ayu.ViewWithoutReceipt" = "Bekijken zonder bevestiging";
+"Ayu.ReportPhotoView" = "Bekijken van foto bevestigen";
+"Ayu.View" = "Bekijken";
+"Ayu.SendReceipt" = "Sturen";
+"Ayu.ReceiptSent" = "Bevestiging verstuurd";
+"Ayu.ReceiptError" = "De bevestiging kon niet worden verstuurd. Controleer je verbinding en probeer opnieuw.";
+"Ayu.IconChangeUnavailable" = "Je keuze is opgeslagen in de app. iOS kon het pictogram op het beginscherm niet wijzigen.";
+"Ayu.LocalPremium" = "Lokale Premium";
+"Ayu.Pins" = "Maximum vastgemaakte chats";
+"Ayu.LocalOnly" = "Alleen op dit apparaat";
+"Ayu.HistoryInfo" = "Alleen geselecteerde chats. Foto's in cache en tekst: 30 dagen, maximaal 200 items. Geen geheime of verdwijnende berichten.";
+"Ayu.ReadWarning" = "Leesbevestiging voor deze chat tot dit bericht versturen?";
+"Ayu.ViewWarning" = "Weergave bevestigen en de timer voor verdwijnende media starten?";
+
+"Ayu.RowOpacity" = "Dekking van chatrijen";
+"Ayu.MediaImportError" = "Kan bestand niet importeren. Maximaal 100 MB.";
+"Ayu.SilentSending" = "Verzenden zonder geluid";
+"Ayu.SilentNever" = "Nooit";
+"Ayu.SilentInGhost" = "In spookmodus";
+"Ayu.SilentAlways" = "Altijd";
+"Ayu.ScheduleInGhost" = "Verzenden als gepland";
+"Ayu.ScheduleInGhostInfo" = "In spookmodus gaan berichten gepland over 12 seconden, zodat je nooit online verschijnt";
+"Ayu.ChatsSection" = "Chats";
+"Ayu.DisableAds" = "Gesponsorde berichten verbergen";
+"Ayu.DisableLinkWarning" = "Geen waarschuwing bij verborgen links";
+"Ayu.DisableGreeting" = "Geen begroetingssticker";
+"Ayu.DimDeleted" = "Doorschijnende verwijderde berichten";
+"Ayu.RepeatMessage" = "Herhalen in berichtmenu";
+"Ayu.Repeat" = "Herhalen";
+"Ayu.ConfirmStickers" = "Verzenden van stickers bevestigen";
+"Ayu.ConfirmGifs" = "Verzenden van GIF's bevestigen";
+"Ayu.ConfirmSticker" = "Deze sticker verzenden?";
+"Ayu.ConfirmGif" = "Deze GIF verzenden?";
+"Ayu.Send" = "Verzenden";
+"Ayu.ImportLocally" = "Lokaal importeren";
+"Ayu.ImportLocallyInfo" = "Je kunt de chat alleen op dit apparaat importeren: de berichten verschijnen alleen voor jou in deze chat en worden niet naar Telegram verzonden.";
+"Ayu.ImportLocallyDone" = "Geïmporteerde berichten: %@. Ze zijn alleen op dit apparaat zichtbaar.";
+"Ayu.ViewDeleted" = "Verwijderde berichten";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Chats met verwijderde berichten die op dit apparaat bewaard zijn. Open er een om de verwijderde berichten of de hele chat te lezen.";
+"Ayu.ViewDeletedEmpty" = "Nog geen verwijderde berichten.";
+"Ayu.ConfirmReadReceipt" = "Leesbevestigingen bevestigen";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

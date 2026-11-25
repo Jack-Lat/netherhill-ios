@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Dukungan";
+"Ayu.SupportChannel" = "Kanal pembaruan";
+"Ayu.SupportDeveloper" = "Hubungi pengembang";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Periksa pembaruan";
+"Ayu.UpToDate" = "Anda memakai versi terbaru.";
+"Ayu.UpdateAvailable" = "Pembaruan tersedia";
+"Ayu.UpdateAvailableInfo" = "Versi %@ telah rilis. Buka kanal untuk mengunduhnya.";
+"Ayu.UpdateIgnore" = "Abaikan";
+"Ayu.UpdateOpen" = "Perbarui";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "Untuk memperbarui, buka NETHERHILL dalam mode Multitask (tekan lama aplikasi di dalam LiveContainer) lalu coba lagi.";
+"Ayu.NotificationsSection" = "Notifikasi";
+"Ayu.BarkSetUp" = "Atur Notifikasi Bark";
+"Ayu.BarkConnected" = "Notifikasi Bark: Aktif";
+"Ayu.BarkFooter" = "Aplikasi yang dipasang lewat sideload tidak menerima notifikasi dari Apple. Pasang Bark dari App Store, salin kunci Anda di sana lalu tempel di sini. Pesan baru akan datang melalui relai NETHERHILL sebagai notifikasi Bark.";
+"Ayu.BarkPrompt" = "Tempel kunci Bark atau tautan dari aplikasi Bark. Biarkan kosong untuk mematikan notifikasi.";
+"Ayu.BarkEnabled" = "Selesai. Pesan baru akan datang sebagai notifikasi Bark saat NETHERHILL tertutup.";
+"Ayu.BarkDisabled" = "Notifikasi Bark nonaktif.";
+"Ayu.BarkInvalid" = "Ini bukan kunci Bark. Salin kunci atau tautan dari aplikasi Bark.";
+"Ayu.BarkFailed" = "Telegram tidak menerima langganan: %@";
+"Ayu.BarkFixTitle" = "Perbaiki notifikasi";
+"Ayu.BarkFixInstall" = "Pasang Bark dari App Store";
+"Ayu.BarkFixConnect" = "Hubungkan Bark untuk menerima notifikasi";
+"Ayu.BarkEnterKey" = "Masukkan kunci";
+"Ayu.BarkHowTo" = "1. Pasang Bark dari App Store lalu buka.\n2. Salin alamat https://api.day.app/… dari layar utamanya.\n3. Kembali ke sini, ketuk “Masukkan kunci” dan tempel.";
+"Ayu.ExportChat" = "Ekspor Obrolan";
+"Ayu.ExportChatMedia" = "Seluruh obrolan disimpan sebagai arsip yang dapat diimpor Telegram. Sertakan foto, video, pesan suara, dan file? Mengunduhnya bisa memakan waktu lama.";
+"Ayu.ExportChatWithMedia" = "Dengan Media";
+"Ayu.ExportChatTextOnly" = "Hanya Teks";
+"Ayu.ExportChatLoading" = "Memuat pesan: %@";
+"Ayu.ExportChatDownloading" = "Mengunduh media: %@";
+"Ayu.ExportChatSaving" = "Membuat arsip…";
+"Ayu.ExportChatEmpty" = "Tidak ada pesan untuk diekspor.";
+"Ayu.ChatTransferSection" = "Transfer Obrolan";
+"Ayu.ImportChat" = "Impor Obrolan";
+"Ayu.ImportChatFooter" = "Impor obrolan yang diekspor dari WhatsApp, LINE, KakaoTalk, atau dengan “Ekspor Obrolan” di NETHERHILL (file ZIP atau TXT) ke salah satu obrolan Anda.";
+"Ayu.ImportChatInvalid" = "File ini bukan ekspor obrolan yang didukung.";
+"Ayu.HistorySaveAudio" = "Simpan audio";
+"Ayu.HistoryDeleteEntry" = "Hapus dari riwayat";
+"Ayu.DeletedChats" = "Obrolan Terhapus";
+"Ayu.DeletedChatsInfo" = "Obrolan yang seluruh riwayatnya dihapus. Apa yang disimpan NETHERHILL darinya tidak pernah dihapus otomatis.";
+"Ayu.DeletedChatSave" = "Simpan sebagai Arsip";
+"Ayu.DeletedChatRemove" = "Hapus dari Daftar";
+"Ayu.DeletedChatDelete" = "Hapus Pesan Tersimpan";
+"Ayu.HistorySubtitle" = "Pesan yang dihapus dan diedit dari obrolan pilihan, hanya disimpan di perangkat ini.";
+"Ayu.HistoryAll" = "Semua";
+"Ayu.HistoryEdited" = "Diedit";
+"Ayu.HistoryNow" = "Sekarang";
+"Ayu.HistoryShowMessage" = "Tampilkan di obrolan";
+"Ayu.HistoryOpenChat" = "Buka obrolan";
+"Ayu.HistoryStopSaving" = "Berhenti menyimpan obrolan ini";
+"Ayu.HistoryNoChats" = "Pilih obrolan untuk riwayat. Tidak ada yang disimpan sampai Anda menambahkan setidaknya satu.";
+"Ayu.HistoryEmptyInfo" = "Pesan yang dihapus dan diedit akan muncul di sini.";
+"Ayu.AddAccountHelp" = "Anda dapat menambahkan hingga 500 akun dengan nomor telepon berbeda.";
+"Ayu.HeroGhostOn" = "Mode Hantu aktif";
+"Ayu.HeroGhostOff" = "Mode Hantu nonaktif";
+"Ayu.HeroHidden" = "Disembunyikan: %@ dari %@";
+"Ayu.GhostSubtitle" = "Online, membaca, mengetik, merekam, mengunggah, dan cerita";
+"Ayu.GhostFooter" = "Mode Hantu mengaktifkan semua sakelar di bawah dan menyimpan nilainya sendiri.";
+"Ayu.HideSection" = "Yang disembunyikan";
+"Ayu.BehaviorSection" = "Perilaku";
+"Ayu.OfflineAfterSending" = "Offline setelah mengirim";
+"Ayu.OfflineAfterSendingInfo" = "Laporkan offline segera setelah setiap pesan terkirim";
+"Ayu.ReadOnSend" = "Baca obrolan saat membalas";
+"Ayu.ReadOnSendInfo" = "Pesan terkirim menandai obrolan sebagai dibaca";
+"Ayu.QuickToggle" = "Sakelar di tab Obrolan";
+"Ayu.QuickToggleInfo" = "Tekan lama tab Obrolan untuk menyalakan atau mematikan Mode Hantu dengan cepat.";
+"Ayu.ContentSection" = "Konten";
+"Ayu.IgnoreProtection" = "Abaikan perlindungan konten";
+"Ayu.IgnoreProtectionInfo" = "Simpan, salin, dan teruskan dari obrolan terlindungi";
+"Ayu.AllowScreenshots" = "Izinkan tangkapan layar";
+"Ayu.AllowScreenshotsInfo" = "Obrolan terlindungi dan rahasia terlihat di tangkapan dan rekaman layar";
+"Ayu.ContentFooter" = "Pesan dari obrolan terlindungi diteruskan sebagai salinan tanpa pengirim; media diunggah ulang. Pengaturan tangkapan layar berlaku untuk layar yang dibuka ulang.";
+"Ayu.SaveDeletedInfo" = "Tetap ada di setiap obrolan; obrolan pilihan juga tampil di riwayat pesan";
+"Ayu.OpenHistory" = "Buka riwayat";
+"Ayu.ClientSection" = "Klien";
+"Ayu.LocalPremiumInfo" = "Emoji dan status Premium hanya di perangkat ini";
+"Ayu.GhostEnable" = "Aktifkan Mode Hantu";
+"Ayu.GhostDisable" = "Nonaktifkan Mode Hantu";
+"Ayu.GhostEnabledToast" = "Mode Hantu diaktifkan";
+"Ayu.GhostDisabledToast" = "Mode Hantu dinonaktifkan";
+"Ayu.ChatListBackground" = "Latar daftar obrolan";
+"Ayu.ConversationBackground" = "Latar obrolan";
+"Ayu.ChooseVideo" = "Pilih video";
+"Ayu.ShowBackground" = "Tampilkan latar";
+
+"Settings.ContentSettings" = "Pengaturan Konten";
+
+"Settings.Tabs.Header" = "TABS";
+"Settings.Tabs.HideTabBar" = "Sembunyikan Tab bar";
+"Settings.Tabs.ShowContacts" = "Tampilkan Tab Kontak";
+"Settings.Tabs.ShowNames" = "Tampilkan Nama Tab";
+
+"Settings.Folders.BottomTab" = "Folder di bawah";
+"Settings.Folders.BottomTabStyle" = "Gaya folder bawah";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Sembunyikan \"%@\"";
+"Settings.Folders.RememberLast" = "Buka folder terakhir";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram akan membuka folder yang terakhir digunakan setelah restart atau pergantian akun";
+
+"Settings.Folders.CompactNames" = "Pemisahan yang Lebih Kecil";
+"Settings.Folders.AllChatsTitle" = "Judul \"Semua Obrolan\"";
+"Settings.Folders.AllChatsTitle.short" = "Pendek";
+"Settings.Folders.AllChatsTitle.long" = "Panjang";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Default";
+
+
+"Settings.ChatList.Header" = "DAFTAR OBROLAN";
+"Settings.CompactChatList" = "Daftar Obrolan Kompak";
+
+"Settings.Profiles.Header" = "PROFIL";
+
+"Settings.Stories.Hide" = "Sembunyikan Cerita";
+"Settings.Stories.WarnBeforeView" = "Tanyakan sebelum melihat";
+"Settings.Stories.DisableSwipeToRecord" = "Nonaktifkan geser untuk merekam";
+
+"Settings.Translation.QuickTranslateButton" = "Bottone di traduzione rapida";
+
+"Stories.Warning.Author" = "Penulis";
+"Stories.Warning.ViewStory" = "Lihat Cerita?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ AKAN TAHU bahwa Anda telah melihat Cerita mereka.";
+"Stories.Warning.NoticeStealth" = "%@ tidak akan tahu bahwa Anda telah melihat Cerita mereka.";
+
+"Settings.Photo.Quality.Notice" = "Kualitas foto keluar dan cerita foto";
+"Settings.Photo.SendLarge" = "Kirim foto berukuran besar";
+"Settings.Photo.SendLarge.Notice" = "Tingkatkan batas sisi pada gambar terkompresi menjadi 2560px";
+
+"Settings.VideoNotes.Header" = "VIDEO BULAT";
+"Settings.VideoNotes.StartWithRearCam" = "Mulai dengan kamera belakang";
+
+"Settings.CustomColors.Header" = "WARNA AKUN";
+"Settings.CustomColors.Saturation" = "SATURASI";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Setel saturasi menjadi 0%% untuk menonaktifkan warna akun";
+
+"Settings.UploadsBoost" = "Peningkatan Unggahan";
+"Settings.DownloadsBoost" = "Peningkatan Unduhan";
+"Settings.DownloadsBoost.Notice" = "Meningkatkan jumlah koneksi paralel dan ukuran potongan file. Jika jaringan Anda tidak dapat menangani bebannya, coba berbagai opsi yang sesuai dengan sambungan Anda.";
+"Settings.DownloadsBoost.none" = "Nonaktif";
+"Settings.DownloadsBoost.medium" = "Sedang";
+"Settings.DownloadsBoost.maximum" = "Maksimal";
+
+"Settings.ShowProfileID" = "Tampilkan ID Profil";
+"Settings.ShowDC" = "Tampilkan Pusat Data";
+"Settings.ShowCreationDate" = "Tampilkan Tanggal Pembuatan Obrolan";
+"Settings.ShowCreationDate.Notice" = "Tanggal pembuatan mungkin tidak diketahui untuk beberapa obrolan.";
+
+"Settings.ShowRegDate" = "Tampilkan Tanggal Pendaftaran";
+"Settings.ShowRegDate.Notice" = "Tanggal pendaftaran adalah perkiraan.";
+
+"Settings.SendWithReturnKey" = "Kirim dengan kunci \"kembali\"";
+"Settings.HidePhoneInSettingsUI" = "Sembunyikan nomor telepon di pengaturan";
+"Settings.HidePhoneInSettingsUI.Notice" = "Nomor Anda akan disembunyikan hanya di UI Pengaturan. Kunjungi Pengaturan Privasi untuk menyembunyikannya dari orang lain.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Jika menjauh selama 5 detik";
+
+"ProxySettings.UseSystemDNS" = "Gunakan DNS sistem";
+"ProxySettings.UseSystemDNS.Notice" = "Gunakan DNS sistem untuk menghindari timeout jika Anda tidak memiliki akses ke Google DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Anda **tidak memerlukan** %@!";
+"Common.RestartRequired" = "Diperlukan restart";
+"Common.RestartNow" = "Restart Sekarang";
+"Common.OpenTelegram" = "Buka Telegram";
+"Common.UseTelegramForPremium" = "Harap dicatat bahwa untuk mendapatkan Telegram Premium, Anda harus menggunakan aplikasi Telegram resmi. Setelah Anda mendapatkan Telegram Premium, semua fiturnya akan tersedia di Swiftgram.";
+
+"Message.HoldToShowOrReport" = "Tahan untuk Menampilkan atau Melaporkan.";
+
+"Auth.AccountBackupReminder" = "Pastikan Anda memiliki metode akses cadangan. Simpan SIM untuk SMS atau sesi tambahan yang masuk untuk menghindari terkunci.";
+"Auth.UnofficialAppCodeTitle" = "Anda hanya dapat mendapatkan kode dengan aplikasi resmi";
+
+"Settings.SmallReactions" = "Reaksi kecil";
+"Settings.HideReactions" = "Sembunyikan Reaksi";
+
+"ContextMenu.SaveToCloud" = "Simpan ke Cloud";
+"ContextMenu.SelectFromUser" = "Pilih dari Penulis";
+
+"Settings.ContextMenu" = "MENU KONTEKS";
+"Settings.ContextMenu.Notice" = "Entri yang dinonaktifkan akan tersedia di sub-menu \"Swiftgram\".";
+
+
+"Settings.ChatSwipeOptions" = "Opsi gesek daftar obrolan";
+"Settings.DeleteChatSwipeOption" = "Geser untuk Menghapus Obrolan";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Tarik untuk obrolan berikutnya";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Tarik ke Topik Berikutnya";
+"Settings.GalleryCamera" = "Kamera di galeri";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "Tombol \"%@\"";
+"Settings.SnapDeletionEffect" = "Efek penghapusan pesan";
+
+"Settings.Stickers.Size" = "UKURAN";
+"Settings.Stickers.Timestamp" = "Tampilkan Timestamp";
+
+"Settings.RecordingButton" = "Tombol Perekaman Suara";
+
+"Settings.DefaultEmojisFirst" = "Berikan prioritas pada emoji standar";
+"Settings.DefaultEmojisFirst.Notice" = "Tampilkan emoji standar sebelum emoji premium di papan tombol emoji";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "dibuat: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Bergabung %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Terdaftar";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Ketuk dua kali untuk mengedit pesan";
+
+"Settings.wideChannelPosts" = "Pos Luas di Saluran";
+"Settings.ForceEmojiTab" = "Papan emoji secara default";
+
+"Settings.forceBuiltInMic" = "Paksa Mikrofon Perangkat";
+"Settings.forceBuiltInMic.Notice" = "Jika diaktifkan, aplikasi akan menggunakan hanya mikrofon perangkat bahkan jika headphone terhubung.";
+
+"Settings.hideChannelBottomButton" = "Sembunyikan Panel Bawah Saluran";
+
+"Settings.CallConfirmation" = "Konfirmasi Panggilan";
+"Settings.CallConfirmation.Notice" = "Swiftgram akan meminta konfirmasi Anda sebelum melakukan panggilan.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Buat Panggilan?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Buat Panggilan Video?";
+
+"MutualContact.Label" = "kontak mutual";
+
+"Settings.swipeForVideoPIP" = "Video PIP dengan Geser";
+"Settings.swipeForVideoPIP.Notice" = "Jika diaktifkan, menggeser video akan membukanya dalam mode Gambar-dalam-Gambar.";
+
+"Ayu.Ghost" = "Mode hantu";
+"Ayu.HideRead" = "Sembunyikan tanda dibaca";
+"Ayu.HideOnline" = "Sembunyikan status online";
+"Ayu.HideTyping" = "Sembunyikan mengetik";
+"Ayu.HideRecording" = "Sembunyikan merekam";
+"Ayu.HideUploading" = "Sembunyikan unggahan";
+"Ayu.HideStories" = "Sembunyikan tayangan cerita";
+"Ayu.History" = "Riwayat pesan";
+"Ayu.SaveDeleted" = "Simpan pesan yang dihapus";
+"Ayu.SavePhotos" = "Simpan foto";
+"Ayu.ClearHistory" = "Hapus riwayat";
+"Ayu.EmptyHistory" = "Belum ada riwayat";
+"Ayu.SaveMedia" = "Simpan media dalam cache";
+"Ayu.BackgroundDimming" = "Peredupan latar";
+"Ayu.BeforeEdit" = "Sebelum diedit";
+"Ayu.Deleted" = "Dihapus";
+"Ayu.ServerPresence" = "Di server: %@";
+"Ayu.ServerUnavailable" = "Status server tidak tersedia";
+"Ayu.SendReadReceipt" = "Kirim tanda dibaca";
+"Ayu.ViewWithoutReceipt" = "Lihat tanpa tanda dibaca";
+"Ayu.ReportPhotoView" = "Konfirmasi foto dilihat";
+"Ayu.View" = "Lihat";
+"Ayu.SendReceipt" = "Kirim";
+"Ayu.ReceiptSent" = "Konfirmasi terkirim";
+"Ayu.ReceiptError" = "Tidak dapat mengirim konfirmasi. Periksa koneksi dan coba lagi.";
+"Ayu.IconChangeUnavailable" = "Pilihan disimpan di aplikasi. iOS tidak dapat mengubah ikon Layar Utama.";
+"Ayu.LocalPremium" = "Premium lokal";
+"Ayu.Pins" = "Maksimum obrolan disematkan";
+"Ayu.LocalOnly" = "Hanya di perangkat ini";
+"Ayu.HistoryInfo" = "Hanya obrolan terpilih. Foto dalam cache dan teks: 30 hari, hingga 200 entri. Tanpa pesan rahasia dan sementara.";
+"Ayu.ReadWarning" = "Kirim tanda dibaca untuk obrolan hingga pesan ini?";
+"Ayu.ViewWarning" = "Kirim tanda dilihat dan mulai penghitung media sementara?";
+
+"Ayu.RowOpacity" = "Opasitas baris obrolan";
+"Ayu.MediaImportError" = "Tidak dapat mengimpor berkas. Maksimum: 100 MB.";
+"Ayu.SilentSending" = "Kirim tanpa suara";
+"Ayu.SilentNever" = "Tidak pernah";
+"Ayu.SilentInGhost" = "Dalam Mode Hantu";
+"Ayu.SilentAlways" = "Selalu";
+"Ayu.ScheduleInGhost" = "Kirim sebagai terjadwal";
+"Ayu.ScheduleInGhostInfo" = "Dalam Mode Hantu pesan terkirim terjadwal 12 detik kemudian, jadi kamu tidak pernah terlihat online";
+"Ayu.ChatsSection" = "Obrolan";
+"Ayu.DisableAds" = "Sembunyikan pesan bersponsor";
+"Ayu.DisableLinkWarning" = "Tanpa peringatan tautan tersembunyi";
+"Ayu.DisableGreeting" = "Tanpa stiker sapaan";
+"Ayu.DimDeleted" = "Pesan terhapus tembus pandang";
+"Ayu.RepeatMessage" = "Ulangi di menu pesan";
+"Ayu.Repeat" = "Ulangi";
+"Ayu.ConfirmStickers" = "Konfirmasi kirim stiker";
+"Ayu.ConfirmGifs" = "Konfirmasi kirim GIF";
+"Ayu.ConfirmSticker" = "Kirim stiker ini?";
+"Ayu.ConfirmGif" = "Kirim GIF ini?";
+"Ayu.Send" = "Kirim";
+"Ayu.ImportLocally" = "Impor secara lokal";
+"Ayu.ImportLocallyInfo" = "Kamu bisa mengimpor obrolan hanya di perangkat ini: pesan muncul di obrolan ini hanya untukmu dan tidak dikirim ke Telegram.";
+"Ayu.ImportLocallyDone" = "Pesan yang diimpor: %@. Hanya terlihat di perangkat ini.";
+"Ayu.ViewDeleted" = "Pesan terhapus";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Obrolan dengan pesan terhapus yang disimpan di perangkat ini. Buka salah satu untuk membaca pesan terhapusnya atau seluruh obrolan.";
+"Ayu.ViewDeletedEmpty" = "Belum ada pesan terhapus.";
+"Ayu.ConfirmReadReceipt" = "Konfirmasi tanda dibaca";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

@@ -1,0 +1,133 @@
+name: Push relay
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [standard]
+    paths: ['push-relay/**', '.github/workflows/push-relay.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+
+      - name: Test
+        working-directory: push-relay
+        run: node test.mjs
+
+      - name: Deploy
+        working-directory: push-relay
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PRO_API_KEY: ${{ secrets.PRO_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MODERATION_KEY: ${{ secrets.MODERATION_KEY }}
+          CRYPTOPAY_TOKEN: ${{ secrets.CRYPTOPAY_TOKEN }}
+          TONCENTER_KEY: ${{ secrets.TONCENTER_KEY }}
+          XROCKET_TOKEN: ${{ secrets.XROCKET_TOKEN }}
+          XROCKET_WEBHOOK_TOKEN: ${{ secrets.XROCKET_WEBHOOK_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID to the repository secrets"
+            exit 1
+          fi
+          npx --yes wrangler@4.26.0 deploy
+          # The scam report workflow derives the same token from the same secret.
+          STATS_TOKEN="$(printf 'ayugram-stats\n%s' "$CLOUDFLARE_API_TOKEN" | sha256sum | cut -d' ' -f1)"
+          echo "::add-mask::$STATS_TOKEN"
+          printf '%s' "$STATS_TOKEN" | npx --yes wrangler@4.26.0 secret put STATS_TOKEN
+          if [ -n "$GROQ_API_KEY" ]; then
+            printf '%s' "$GROQ_API_KEY" | npx --yes wrangler@4.26.0 secret put GROQ_API_KEY
+          fi
+          if [ -n "$PRO_API_KEY" ]; then
+            printf '%s' "$PRO_API_KEY" | npx --yes wrangler@4.26.0 secret put PRO_API_KEY
+          fi
+          if [ -n "$GEMINI_API_KEY" ]; then
+            printf '%s' "$GEMINI_API_KEY" | npx --yes wrangler@4.26.0 secret put GEMINI_API_KEY
+          fi
+          if [ -n "$MODERATION_KEY" ]; then
+            printf '%s' "$MODERATION_KEY" | npx --yes wrangler@4.26.0 secret put MODERATION_KEY
+          fi
+          if [ -n "$CRYPTOPAY_TOKEN" ]; then
+            printf '%s' "$CRYPTOPAY_TOKEN" | npx --yes wrangler@4.26.0 secret put CRYPTOPAY_TOKEN
+          fi
+          if [ -n "$TONCENTER_KEY" ]; then
+            printf '%s' "$TONCENTER_KEY" | npx --yes wrangler@4.26.0 secret put TONCENTER_KEY
+          fi
+          if [ -n "$XROCKET_TOKEN" ]; then
+            printf '%s' "$XROCKET_TOKEN" | npx --yes wrangler@4.26.0 secret put XROCKET_TOKEN
+          fi
+          if [ -n "$XROCKET_WEBHOOK_TOKEN" ]; then
+            printf '%s' "$XROCKET_WEBHOOK_TOKEN" | npx --yes wrangler@4.26.0 secret put XROCKET_WEBHOOK_TOKEN
+          fi
+
+      - name: Connect the scam report bot
+        working-directory: push-relay
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          OWNER_ID: '1272887902'
+          HOOK_URL: https://relay.mapixdev.com/tg/hook
+        run: |
+          set -euo pipefail
+          if [ -z "$BOT_TOKEN" ]; then
+            echo "::warning::TELEGRAM_BOT_TOKEN is not set; scam reports stay in the Scam report workflow"
+            exit 0
+          fi
+          API="https://api.telegram.org/bot$BOT_TOKEN"
+          HOOK_SECRET="$(printf 'ayugram-bot\n%s' "$BOT_TOKEN" | sha256sum | cut -d' ' -f1)"
+          echo "::add-mask::$HOOK_SECRET"
+          printf '%s' "$BOT_TOKEN" | npx --yes wrangler@4.26.0 secret put REPORT_BOT_TOKEN
+          printf '%s' "$OWNER_ID" | npx --yes wrangler@4.26.0 secret put REPORT_CHAT_ID
+          printf '%s' "$HOOK_SECRET" | npx --yes wrangler@4.26.0 secret put REPORT_WEBHOOK_SECRET
+          RESULT="$(curl -sS "$API/setWebhook" --data-urlencode "url=$HOOK_URL" --data-urlencode "secret_token=$HOOK_SECRET" \
+            --data-urlencode 'allowed_updates=["message","callback_query"]' --data-urlencode "drop_pending_updates=true")"
+          python3 -c 'import json,sys; d=json.loads(sys.argv[1]); sys.exit(0 if d.get("ok") else "setWebhook failed: " + str(d.get("description")))' "$RESULT"
+          curl -sS "$API/setMyCommands" --data-urlencode 'commands=[{"command":"bans","description":"Баны и блокировки со снятием"},{"command":"ban","description":"Забанить по ID: /ban 123456789"},{"command":"unban","description":"Разбанить по ID: /unban 123456789"},{"command":"pay","description":"Проверить оплату бейджей"}]' >/dev/null
+          BOT="$(curl -sS "$API/getMe" | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["username"])')"
+          echo "Scam reports go to the owner from @$BOT; the bot answers nobody else." | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Check badge payments
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          STATS_TOKEN="$(printf 'ayugram-stats\n%s' "$CLOUDFLARE_API_TOKEN" | sha256sum | cut -d' ' -f1)"
+          echo "::add-mask::$STATS_TOKEN"
+          for attempt in 1 2 3 4 5 6; do
+            RESULT="$(curl -sS -m 40 -H "Authorization: Bearer $STATS_TOKEN" https://relay.mapixdev.com/badges/health || true)"
+            if printf '%s' "$RESULT" | python3 -c 'import json,sys; json.load(sys.stdin)["cryptobot"]' >/dev/null 2>&1; then
+              break
+            fi
+            sleep 10
+          done
+          python3 - "$RESULT" <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
+          import json, sys
+          try:
+              h = json.loads(sys.argv[1])
+          except Exception:
+              print("::warning::Badge payment check did not answer")
+              sys.exit(0)
+          def mark(part):
+              if not part.get("configured"):
+                  return "not configured"
+              return "ok" if part.get("ok") else "token rejected"
+          print("Crypto Bot: " + mark(h["cryptobot"]) + (" (" + h["cryptobot"]["app"] + ")" if h["cryptobot"].get("app") else ""))
+          print("xRocket: " + mark(h["xrocket"]) + (" (" + h["xrocket"]["app"] + ")" if h["xrocket"].get("app") else "") + ("" if not h["xrocket"].get("configured") else (", webhook token set" if h["xrocket"].get("webhookToken") else ", no webhook token")))
+          print("TON: " + ("toncenter ok" if h["ton"].get("ok") else "toncenter failed") + ", rate $" + str(h["ton"].get("rate")) + ", quote " + str(h["ton"].get("quote")) + " TON" + (", keyed" if h["ton"].get("keyed") else ", no key"))
+          if h["xrocket"].get("error"):
+              print("xRocket answer: " + h["xrocket"]["error"])
+              print("xRocket key shape: " + json.dumps(h["xrocket"].get("shape")) + ", testnet status " + str(h["xrocket"].get("testnet")))
+          print("Pending requests: " + str(h.get("pending")))
+          for name in ("cryptobot", "xrocket"):
+              if h[name].get("configured") and not h[name].get("ok"):
+                  print("::warning::" + name + " token was not accepted")
+          PY

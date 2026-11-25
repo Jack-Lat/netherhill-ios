@@ -1,0 +1,780 @@
+// AyuGram
+"Ayu.SupportSection" = "Support";
+"Ayu.SupportChannel" = "Updates channel";
+"Ayu.SupportDeveloper" = "Contact the developer";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Check for updates";
+"Ayu.UpToDate" = "You have the latest version.";
+"Ayu.UpdateAvailable" = "Update available";
+"Ayu.UpdateAvailableInfo" = "Version %@ is out. Open the channel to download it.";
+"Ayu.UpdateIgnore" = "Ignore";
+"Ayu.UpdateOpen" = "Update";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "To update, launch NETHERHILL in Multitask mode (press and hold the app inside LiveContainer) and try again.";
+"Ayu.NotificationsSection" = "Notifications";
+"Ayu.BarkSetUp" = "Set Up Bark Notifications";
+"Ayu.BarkConnected" = "Bark Notifications: On";
+"Ayu.BarkFooter" = "A sideloaded app gets no notifications from Apple. Install Bark from the App Store, copy your key from it and paste it here. New messages then arrive through the NETHERHILL relay as Bark notifications.";
+"Ayu.BarkPrompt" = "Paste your Bark key or the link from the Bark app. Leave it empty to turn notifications off.";
+"Ayu.BarkEnabled" = "Done. New messages will arrive as Bark notifications while NETHERHILL is closed.";
+"Ayu.BarkDisabled" = "Bark notifications are off.";
+"Ayu.BarkInvalid" = "This is not a Bark key. In Bark, copy the address https://api.day.app/… from its main screen, not the Device Token.";
+"Ayu.BarkFailed" = "Telegram did not accept the subscription: %@";
+"Ayu.BarkFixTitle" = "Fix notifications";
+"Ayu.BarkFixInstall" = "Install Bark from App Store";
+"Ayu.BarkFixConnect" = "Connect Bark to get notifications";
+"Ayu.BarkEnterKey" = "Enter Key";
+"Ayu.BarkHowTo" = "1. Install Bark from the App Store and open it.\n2. Copy the address https://api.day.app/… from its main screen.\n3. Come back, tap “Enter Key” and paste it.";
+"Ayu.ExportChat" = "Export Chat";
+"Ayu.ExportChatMedia" = "The whole chat is saved as an archive that Telegram can import. Include photos, videos, voice messages and files? Downloading them can take a long time.";
+"Ayu.ExportChatWithMedia" = "With Media";
+"Ayu.ExportChatTextOnly" = "Text Only";
+"Ayu.ExportChatLoading" = "Loading messages: %@";
+"Ayu.ExportChatDownloading" = "Downloading media: %@";
+"Ayu.ExportChatSaving" = "Creating archive…";
+"Ayu.ExportChatEmpty" = "There are no messages to export.";
+"Ayu.ChatTransferSection" = "Chat Transfer";
+"Ayu.ImportChat" = "Import Chat";
+"Ayu.ImportChatFooter" = "Import a chat exported from WhatsApp, LINE, KakaoTalk or with “Export Chat” in NETHERHILL (ZIP or TXT file) into one of your chats.";
+"Ayu.ImportChatInvalid" = "This file is not a supported chat export.";
+"Ayu.HistorySaveAudio" = "Save audio";
+"Ayu.HistoryDeleteEntry" = "Delete from history";
+"Ayu.DeletedChats" = "Deleted Chats";
+"Ayu.DeletedChatsInfo" = "Chats whose whole history was deleted. What NETHERHILL kept of them is never removed automatically.";
+"Ayu.DeletedChatSave" = "Save as Archive";
+"Ayu.DeletedChatRemove" = "Remove from List";
+"Ayu.DeletedChatDelete" = "Delete Kept Messages";
+"Ayu.HistorySubtitle" = "Deleted and edited messages from your chosen chats, kept only on this device.";
+"Ayu.HistoryAll" = "All";
+"Ayu.HistoryEdited" = "Edited";
+"Ayu.HistoryNow" = "Now";
+"Ayu.HistoryShowMessage" = "Show in chat";
+"Ayu.HistoryOpenChat" = "Open chat";
+"Ayu.HistoryStopSaving" = "Stop saving this chat";
+"Ayu.HistoryNoChats" = "Choose chats to keep history for. Nothing is saved until you add at least one.";
+"Ayu.HistoryEmptyInfo" = "Deleted and edited messages will appear here.";
+"Ayu.AddAccountHelp" = "You can add up to 500 accounts with different phone numbers.";
+"Ayu.HeroGhostOn" = "Ghost Mode is on";
+"Ayu.HeroGhostOff" = "Ghost Mode is off";
+"Ayu.HeroHidden" = "Hidden: %@ of %@";
+"Ayu.GhostSubtitle" = "Online, reading, typing, recording, uploading and stories";
+"Ayu.GhostFooter" = "Ghost Mode enables every switch below and keeps their own values for later.";
+"Ayu.HideSection" = "What to hide";
+"Ayu.BehaviorSection" = "Behavior";
+"Ayu.OfflineAfterSending" = "Offline after sending";
+"Ayu.OfflineAfterSendingInfo" = "Report offline right after each sent message";
+"Ayu.ReadOnSend" = "Read chat when replying";
+"Ayu.ReadOnSendInfo" = "A sent message marks that chat as read";
+"Ayu.QuickToggle" = "Ghost toggle in Chats tab";
+"Ayu.QuickToggleInfo" = "Long-press the Chats tab to turn Ghost Mode on or off quickly.";
+"Ayu.ContentSection" = "Content";
+"Ayu.IgnoreProtection" = "Ignore content protection";
+"Ayu.IgnoreProtectionInfo" = "Save, copy and forward from protected chats";
+"Ayu.AllowScreenshots" = "Allow screenshots";
+"Ayu.AllowScreenshotsInfo" = "Protected and secret chats appear in screenshots and recordings";
+"Ayu.ContentFooter" = "Messages from protected chats are forwarded as copies without the author; media is uploaded again. The screenshot setting applies to newly opened screens.";
+"Ayu.SaveDeletedInfo" = "Kept in every chat; selected chats are also listed in Message history";
+"Ayu.OpenHistory" = "Open history";
+"Ayu.ClientSection" = "Client";
+"Ayu.LocalPremiumInfo" = "Premium emoji and statuses on this device only";
+"Ayu.GhostEnable" = "Enable Ghost Mode";
+"Ayu.GhostDisable" = "Disable Ghost Mode";
+"Ayu.GhostEnabledToast" = "Ghost Mode enabled";
+"Ayu.GhostDisabledToast" = "Ghost Mode disabled";
+"Ayu.ChatListBackground" = "Chat list background";
+"Ayu.ConversationBackground" = "Chat background";
+"Ayu.ChooseVideo" = "Choose video";
+"Ayu.ShowBackground" = "Show background";
+
+"Settings.ContentSettings" = "Content Settings";
+
+"Settings.Tabs.Header" = "TABS";
+"Settings.Tabs.HideTabBar" = "Hide Tab bar";
+"Settings.Tabs.ShowContacts" = "Show Contacts Tab";
+"Settings.Tabs.ShowNames" = "Show Tab Names";
+"Settings.Tabs.SearchButton" = "Search Button";
+"Settings.Tabs.WideTabBar" = "Wide Tab bar";
+"Settings.Tabs.WideTabBar.Notice" = "Keeps the full width of Tab bar when some tabs are hidden.";
+
+"Settings.Folders.BottomTab" = "Folders at Bottom";
+"Settings.Folders.BottomTabStyle" = "Bottom Folders Style";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Hide \"%@\"";
+"Settings.Folders.RememberLast" = "Open Last Folder";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram will open the last used folder when you restart the app or switch accounts.";
+
+"Settings.Folders.CompactNames" = "Smaller spacing";
+"Settings.Folders.AllChatsTitle" = "\"All Chats\" title";
+"Settings.Folders.AllChatsTitle.short" = "Short";
+"Settings.Folders.AllChatsTitle.long" = "Long";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Default";
+
+
+"Settings.ChatList.Header" = "CHAT LIST";
+"Settings.CompactChatList" = "Compact Chat List";
+"Settings.CompactMessagePreview" = "Compact Message Preview";
+"Settings.ChatList.Lines" = "Chat List Lines";
+"Settings.ChatList.Lines.1" = "1 line";
+"Settings.ChatList.Lines.2" = "2 lines";
+"Settings.ChatList.Lines.3" = "3 lines (Default)";
+
+"Settings.Profiles.Header" = "PROFILES";
+
+"Settings.Stories.Hide" = "Hide Stories";
+"Settings.Stories.WarnBeforeView" = "Ask Before Viewing";
+"Settings.Stories.DisableSwipeToRecord" = "Disable Swipe to Record";
+
+"Settings.Translation.QuickTranslateButton" = "Quick Translate button";
+"Settings.Translation.Backend" = "Service";
+/* Do not translate */
+"Settings.Translation.Backend.default" = "Telegram";
+/* Do not translate */
+"Settings.Translation.Backend.gtranslate" = "GTranslate";
+"Settings.Translation.Backend.system" = "System";
+"Settings.Translation.Backend.Notice" = "Swiftgram will fallback to %@ if selected translation service is not available.";
+
+"Settings.Transcription.Header" = "VOICE-TO-TEXT";
+"Settings.Transcription.Backend" = "Service";
+/* Do not translate */
+"Settings.Transcription.Backend.default" = "Telegram";
+/* Do not translate */
+"Settings.Transcription.Backend.apple" = "Apple";
+"Settings.Transcription.Backend.Notice" = "Swiftgram will fallback to %@ if selected transcription service is not available.";
+
+"Stories.Warning.Author" = "Author";
+"Stories.Warning.ViewStory" = "View Story?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ WILL BE ABLE TO SEE that you viewed their Story.";
+"Stories.Warning.NoticeStealth" = "%@ will not be able to see that you viewed their Story.";
+
+"Settings.Photo.Quality.Notice" = "Quality of uploaded photos and stories.";
+"Settings.Photo.SendLarge" = "Send HD Photos";
+"Settings.Photo.SendLarge.Notice" = "Increase the side limit on compressed images to 2560px.";
+
+"Settings.VideoNotes.Header" = "ROUND VIDEOS";
+"Settings.VideoNotes.StartWithRearCam" = "Start with Rear Camera";
+
+"Settings.CustomColors.Header" = "ACCOUNT COLORS";
+"Settings.CustomColors.Saturation" = "SATURATION";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Set to 0%% to disable account colors.";
+
+"Settings.UploadsBoost" = "Upload Boost";
+"Settings.DownloadsBoost" = "Download Boost";
+"Settings.DownloadsBoost.Notice" = "Increases number of parallel connections and size of file chunks. In case your network can't handle the load, try different options that suits your connection.";
+"Settings.DownloadsBoost.none" = "Disabled";
+"Settings.DownloadsBoost.medium" = "Medium";
+"Settings.DownloadsBoost.maximum" = "Maximum";
+
+"Settings.ShowProfileID" = "Show Profile ID";
+"Settings.ShowDC" = "Show Data Center";
+"Settings.ShowCreationDate" = "Show Chat Creation Date";
+"Settings.ShowCreationDate.Notice" = "The creation date may be unknown for some chats.";
+
+"Settings.ShowRegDate" = "Show Registration Date";
+"Settings.ShowRegDate.Notice" = "The registration date is approximate.";
+
+"Settings.SendWithReturnKey" = "Send with \"return\" key";
+"Settings.HidePhoneInSettingsUI" = "Hide Phone in Settings";
+"Settings.HidePhoneInSettingsUI.Notice" = "This will only hide your phone number from the settings interface. To hide it from others, go to Privacy and Security.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "If away for 5 seconds";
+
+"ProxySettings.UseSystemDNS" = "Use system DNS";
+"ProxySettings.UseSystemDNS.Notice" = "Use system DNS to bypass timeout if you don't have access to Google DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "You **don't need** %@!";
+"Common.RestartRequired" = "Restart required";
+"Common.RestartNow" = "Restart Now";
+"Common.OpenTelegram" = "Open Telegram";
+"Common.UseTelegramForPremium" = "Please note that to get Telegram Premium, you must use the official Telegram app. Once you have obtained Telegram Premium, all its features will become available in Swiftgram.";
+"Common.UpdateOS" = "iOS update required";
+"Common.KnowWhatYouDo" = "Please, change these settings only if you know what they do.";
+
+"Message.HoldToShowOrReport" = "Hold to Show or Report.";
+
+"Auth.AccountBackupReminder" = "Make sure you have a backup access method. Keep a SIM for SMS or an additional session logged in to avoid being locked out.";
+"Auth.UnofficialAppCodeTitle" = "You can get the code only with official app";
+
+"Settings.SmallReactions" = "Small Reactions";
+"Settings.HideReactions" = "Hide Reactions";
+
+"ContextMenu.SaveToCloud" = "Save to Cloud";
+"ContextMenu.SelectFromUser" = "Select from Author";
+
+"Settings.ContextMenu" = "CONTEXT MENU";
+"Settings.ContextMenu.Notice" = "Disabled entries will be available in \"Swiftgram\" sub-menu.";
+
+
+"Settings.ChatSwipeOptions" = "Chat List Swipe Options";
+"Settings.DeleteChatSwipeOption" = "Swipe to Delete Chat";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Pull to Next Unread Channel";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Pull to Next Topic";
+"Settings.GalleryCamera" = "Camera in Gallery";
+"Settings.GalleryCameraPreview" = "Camera Preview in Gallery";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" Button";
+"Settings.SnapDeletionEffect" = "Message Deletion Effects";
+
+"Settings.Stickers.Size" = "SIZE";
+"Settings.Stickers.Timestamp" = "Show Timestamp";
+
+"Settings.RecordingButton" = "Voice Recording Button";
+
+"Settings.DefaultEmojisFirst" = "Standard emojis first";
+"Settings.DefaultEmojisFirst.Notice" = "Show standard emojis before premium in emoji keyboard";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "created: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Joined %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Registered";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Double-tap to edit message";
+
+"Settings.wideChannelPosts" = "Wide posts in channels";
+"Settings.ForceEmojiTab" = "Emoji tab first";
+
+"Settings.forceBuiltInMic" = "Force Device Microphone";
+"Settings.forceBuiltInMic.Notice" = "If enabled, app will use only device microphone even if headphones are connected.";
+
+"Settings.showChannelBottomButton" = "Channel Bottom Panel";
+
+"Settings.secondsInMessages" = "Seconds in Messages";
+
+"Settings.CallConfirmation" = "Call Confirmation";
+"Settings.CallConfirmation.Notice" = "Swiftgram will ask for your confirmation before making a call.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Make a Call?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Make a Video Call?";
+
+"MutualContact.Label" = "mutual contact";
+
+"Settings.swipeForVideoPIP" = "Video PIP with Swipe";
+"Settings.swipeForVideoPIP.Notice" = "If enabled, swiping video will open it in Picture-in-Picture mode.";
+
+"SessionBackup.Title" = "Accounts Backup";
+"SessionBackup.Sessions.Title" = "Sessions";
+"SessionBackup.Actions.Backup" = "Backup to Keychain";
+"SessionBackup.Actions.Restore" = "Restore from Keychain";
+"SessionBackup.Actions.DeleteAll" = "Delete Keychain Backup";
+"SessionBackup.Actions.DeleteOne" = "Delete from Backup";
+"SessionBackup.Actions.RemoveFromApp" = "Remove from App";
+"SessionBackup.LastBackupAt" = "Last Backup: %@";
+"SessionBackup.RestoreOK" = "OK. Sessions restored: %@";
+"SessionBackup.LoggedIn" = "Logged In";
+"SessionBackup.LoggedOut" = "Logged Out";
+"SessionBackup.DeleteAll.Title" = "Delete All Sessions?";
+"SessionBackup.DeleteAll.Text" = "All sessions will be removed from Keychain.\n\nAccounts will not be logged out from Swiftgram.";
+"SessionBackup.DeleteSingle.Title" = "Delete 1 (one) Session?";
+"SessionBackup.DeleteSingle.Text" = "%@ session will be removed from Keychain.\n\nAccount will not be logged out from Swiftgram.";
+"SessionBackup.RemoveFromApp.Title" = "Remove account from App?";
+"SessionBackup.RemoveFromApp.Text" = "%@ session WILL BE REMOVED from Swiftgram! Session will remain active, so you can restore it later.";
+"SessionBackup.Notice" = "Sessions are encrypted and stored in the device Keychain. Sessions never leave your device.\n\nIMPORTANT: To restore sessions on a new device or after an OS reset, you MUST enable encrypted backups, otherwise Keychain won't be transfered.\n\nNOTE: Sessions may still be revoked by Telegram or from another device.";
+
+"MessageFilter.Title" = "Message Filter";
+"MessageFilter.SubTitle" = "Remove distractions and reduce visibility of messages containing keywords below.\nKeywords are case-sensitive.";
+"MessageFilter.Keywords.Title" = "Keywords";
+"MessageFilter.InputPlaceholder" = "Enter keyword";
+
+"InputToolbar.Title" = "Formatting Panel";
+
+"Notifications.MentionsAndReplies.Title" = "@Mentions and Replies";
+"Notifications.MentionsAndReplies.value.default" = "Default";
+"Notifications.MentionsAndReplies.value.silenced" = "Muted";
+"Notifications.MentionsAndReplies.value.disabled" = "Disabled";
+"Notifications.PinnedMessages.Title" = "Pinned Messages";
+"Notifications.PinnedMessages.value.default" = "Default";
+"Notifications.PinnedMessages.value.silenced" = "Muted";
+"Notifications.PinnedMessages.value.disabled" = "Disabled";
+
+
+"PayWall.Text" = "Supercharged with Pro features";
+
+"PayWall.SessionBackup.Title" = "Accounts Backup";
+"PayWall.SessionBackup.Notice" = "Log-in to accounts without code, even after reinstall. Secure storage with on-device Keychain.";
+"PayWall.SessionBackup.Description" = "Changing device or deleting Swiftgram is no longer an issue. Restore all Sessions that are still Active on Telegram servers.";
+
+"PayWall.MessageFilter.Title" = "Message Filter";
+"PayWall.MessageFilter.Notice" = "Reduce visibility of SPAM, promotions and annoying messages.";
+"PayWall.MessageFilter.Description" = "Create a list of keywords you don't want to see often and Swiftgram will reduce distractions.";
+
+"PayWall.Notifications.Title" = "Disable @mentions and replies";
+"PayWall.Notifications.Notice" = "Hide or mute non-important notifications.";
+"PayWall.Notifications.Description" = "No more Pinned Messages or @mentions when you need some peace of mind.";
+
+"PayWall.InputToolbar.Title" = "Formatting Panel";
+"PayWall.InputToolbar.Notice" = "Bold, Italic, Links? Formatting with just a single tap.";
+"PayWall.InputToolbar.Description" = "Apply and clear Formatting or insert new lines like a Pro.";
+
+"PayWall.AppIcons.Title" = "Unique App Icons and Badges";
+"PayWall.AppIcons.Notice" = "Customize Swiftgram look on your home screen and screenshots.";
+
+"PayWall.About.Title" = "About Swiftgram Pro";
+"PayWall.About.Notice" = "Free version of Swiftgram provides dozens of features and improvements over Telegram app. Innovating and keeping Swiftgram in sync with monthly Telegram updates is a huge effort that requires a lot of time and expensive hardware.\n\nSwiftgram is an open-source app that respects your privacy and doesn't bother you with ads. Subscribing to Swiftgram Pro you get access to exclusive features and support an independent developer.";
+/* DO NOT TRANSLATE */
+"PayWall.About.Signature" = "@Kylmakalle";
+/* DO NOT TRANSLATE */
+"PayWall.About.SignatureURL" = "https://t.me/Kylmakalle";
+
+"PayWall.ProSupport.Title" = "Troubles with payment?";
+"PayWall.ProSupport.Contact" = "No worries!";
+
+"PayWall.RestorePurchases" = "Restore Purchases";
+"PayWall.Terms" = "Terms of Service";
+"PayWall.Privacy" = "Privacy Policy";
+"PayWall.TermsURL" = "https://swiftgram.app/terms";
+"PayWall.PrivacyURL" = "https://swiftgram.app/privacy";
+"PayWall.Notice.Markdown" = "By subscribing to Swiftgram Pro you agree to the [Swiftgram Terms of Service](%1$@) and [Privacy Policy](%2$@).";
+"PayWall.Notice.Raw" = "By subscribing to Swiftgram Pro you agree to the Swiftgram Terms of Service and Privacy Policy.";
+
+"PayWall.Button.OpenPro" = "Use Pro features";
+"PayWall.Button.Purchasing" = "Purchasing...";
+"PayWall.Button.Restoring" = "Restoring Purchases...";
+"PayWall.Button.Validating" = "Validating Purchase...";
+"PayWall.Button.PaymentsUnavailable" = "Payments unavailable";
+"PayWall.Button.BuyInAppStore" = "Subscribe in App Store version";
+"PayWall.Button.Subscribe" = "Subscribe for %@ / month";
+"PayWall.Button.ContactingAppStore" = "Contacting App Store...";
+
+"Paywall.Error.Title" = "Error";
+"PayWall.ValidationError" = "Validation Error";
+"PayWall.ValidationError.TryAgain" = "Something went wrong during purchase validation. No worries! Try to Restore Purchases a bit later.";
+"PayWall.ValidationError.Expired" = "Your subscription expired. Subscribe again to regain access to Pro features.";
+
+"AppBadge.Title" = "App Badge";
+"AppBadge.Notice" = "Customize App Badge shown on screenshots";
+
+"Settings.NY.Header" = "HOLIDAY EFFECTS";
+"Settings.NY.Style" = "Style";
+"Settings.NY.Style.default" = "Disabled";
+"Settings.NY.Style.snow" = "Snow";
+"Settings.NY.Style.lightning" = "Lightning";
+"Settings.NY.Notice" = "Available for a limited time only!";
+
+"Ayu.Ghost" = "Ghost mode";
+"Ayu.HideRead" = "Hide read receipts";
+"Ayu.HideOnline" = "Hide online status";
+"Ayu.HideTyping" = "Hide typing";
+"Ayu.HideRecording" = "Hide recording";
+"Ayu.HideUploading" = "Hide uploads";
+"Ayu.HideStories" = "Hide story views";
+"Ayu.History" = "Message history";
+"Ayu.SaveDeleted" = "Save deleted messages";
+"Ayu.SavePhotos" = "Save photos";
+"Ayu.ClearHistory" = "Clear history";
+"Ayu.EmptyHistory" = "No history yet";
+"Ayu.SaveMedia" = "Save cached media";
+"Ayu.BackgroundDimming" = "Background dimming";
+"Ayu.BeforeEdit" = "Before edit";
+"Ayu.Deleted" = "Deleted";
+"Ayu.ServerPresence" = "On the server: %@";
+"Ayu.ServerUnavailable" = "Server status unavailable";
+"Ayu.SendReadReceipt" = "Send read receipt";
+"Ayu.ViewWithoutReceipt" = "View without a receipt";
+"Ayu.ReportPhotoView" = "Report photo view";
+"Ayu.View" = "View";
+"Ayu.SendReceipt" = "Send";
+"Ayu.ReceiptSent" = "Receipt sent";
+"Ayu.ReceiptError" = "Could not send the receipt. Check your connection and try again.";
+"Ayu.IconChangeUnavailable" = "Your choice is saved in the app. iOS could not change the Home Screen icon.";
+"Ayu.LocalPremium" = "Local Premium";
+"Ayu.Pins" = "Maximum pinned chats";
+"Ayu.LocalOnly" = "Only on this device";
+"Ayu.HistoryInfo" = "Selected chats only. Cached photos and text, 30 days, up to 200 entries. Secret chats and one-time media are excluded.";
+"Ayu.ReadWarning" = "Send a read receipt for this chat up to this message?";
+"Ayu.ViewWarning" = "Send a view receipt and start the disappearing media timer?";
+
+"Ayu.RowOpacity" = "Chat row opacity";
+"Ayu.NewYearHeader" = "New Year";
+"Ayu.NewYearMode" = "New Year mode";
+"Ayu.NewYearAuto" = "Turn on from Dec 15 to Jan 15";
+"Ayu.NewYearInfo" = "New Year mode turns on snow, snowdrifts with a snowman and fireworks together.";
+"Ayu.EffectsHeader" = "Effects";
+"Ayu.Particles" = "Falling particles";
+"Ayu.ParticlesKind" = "Kind";
+"Ayu.ParticlesInChats" = "Show in chats";
+"Ayu.ParticlesLeaves" = "Leaves";
+"Ayu.ParticlesRain" = "Rain";
+"Ayu.ParticlesSeasonal" = "Match the season";
+"Ayu.ParticlesHoldHint" = "Hold an option to preview it.";
+"Ayu.ParticlesMix" = "Mix with";
+"Ayu.ParticlesMixNone" = "None";
+"Ayu.SnowDrift" = "Snowdrifts, leaf piles and snowman";
+"Ayu.Fireworks" = "Fireworks";
+"Ayu.Parallax" = "Background parallax";
+"Ayu.EffectsInfo" = "Fireworks go off when you send 🎄, 🎆, 🎉 or a New Year greeting. A snowman builds itself on the tab bar when the snow there is deep enough: tap him to knock him down. Parallax moves your custom background as you tilt the phone.";
+"Ayu.ParticlesAmount" = "Amount of particles";
+"Ayu.ParticlesSize" = "Particle size";
+"Ayu.ParticlesSliderHint" = "Hold a slider for 2 seconds to enter your own value past its limits.";
+"Ayu.Personalize" = "Font and badge";
+"Ayu.Font" = "Font";
+"Ayu.FontSystem" = "System styles";
+"Ayu.FontBuiltIn" = "iOS fonts";
+"Ayu.FontCustom" = "Your font";
+"Ayu.FontDefault" = "Default";
+"Ayu.FontRounded" = "Rounded";
+"Ayu.FontSerif" = "Serif";
+"Ayu.FontMono" = "Monospaced";
+"Ayu.FontImport" = "Import a font (.ttf, .otf)…";
+"Ayu.FontImportFailed" = "This file is not a font NETHERHILL can read.";
+"Ayu.FontRestart" = "The font applies after NETHERHILL restarts: close it from the app switcher and open it again.";
+"Ayu.FontSample" = "Привет, это NETHERHILL · 0123";
+"Ayu.AppBadge" = "App badge";
+"Ayu.AppBadgeCustom" = "Custom app badge";
+"Ayu.AppBadgeText" = "Text";
+"Ayu.AppBadgeIcon" = "Show picture";
+"Ayu.AppBadgePick" = "Choose picture";
+"Ayu.AppBadgeRemove" = "Remove picture";
+"Ayu.AppBadgeDarkText" = "Dark text";
+"Ayu.AppBadgeHint" = "This is the pill shown at the top of the screen under the Dynamic Island. Without your own picture it shows the NETHERHILL mark.";
+"Ayu.ParticlesCustomValue" = "Value in percent";
+"Ayu.ParticlesSnow" = "Snow";
+"Ayu.ParticlesFlakes" = "Snowflakes";
+"Ayu.ParticlesSakura" = "Sakura";
+"Ayu.ParticlesStars" = "Stars";
+"Ayu.MediaImportError" = "Unable to import media. Maximum size: 100 MB.";
+"Ayu.SilentSending" = "Send without sound";
+"Ayu.SilentNever" = "Never";
+"Ayu.SilentInGhost" = "In Ghost Mode";
+"Ayu.SilentAlways" = "Always";
+"Ayu.ScheduleInGhost" = "Send as scheduled";
+"Ayu.ScheduleInGhostInfo" = "In Ghost Mode messages go out as scheduled in 12 seconds, so you never appear online";
+"Ayu.ChatsSection" = "Chats";
+"Ayu.DisableAds" = "Hide sponsored messages";
+"Ayu.DisableLinkWarning" = "No warning for hidden links";
+"Ayu.DisableGreeting" = "No greeting sticker";
+"Ayu.DimDeleted" = "Translucent deleted messages";
+"Ayu.RepeatMessage" = "Repeat in message menu";
+"Ayu.Repeat" = "Repeat";
+"Ayu.ConfirmStickers" = "Confirm sending stickers";
+"Ayu.ConfirmGifs" = "Confirm sending GIFs";
+"Ayu.ConfirmSticker" = "Send this sticker?";
+"Ayu.ConfirmGif" = "Send this GIF?";
+"Ayu.Send" = "Send";
+"Ayu.ImportLocally" = "Import locally";
+"Ayu.ImportLocallyInfo" = "You can import the chat on this device only: the messages appear in this chat for you alone and are not sent to Telegram.";
+"Ayu.ImportLocallyDone" = "Imported messages: %@. They are visible only on this device.";
+"Ayu.ViewDeleted" = "View deleted messages";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchText" = "Search in deleted messages";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Chats with deleted messages kept on this device. Open one to read its deleted messages or the whole chat.";
+"Ayu.ViewDeletedEmpty" = "No deleted messages yet.";
+"Ayu.ConfirmReadReceipt" = "Confirm read receipts";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";
+"Ayu.Reason" = "Reason: %@";
+"Ayu.BannedTextReason" = "NETHERHILL is blocked for your account. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.Reason.scam" = "scamming people";
+"Ayu.Reason.resale" = "selling NETHERHILL";
+"Ayu.Reason.abuse" = "spam and abuse";
+"Ayu.Reason.testflight" = "distributing NETHERHILL through TestFlight or the App Store";
+"Ayu.Reason.modified" = "a modified build of NETHERHILL";
+"Ayu.Reason.fork" = "an unofficial fork of NETHERHILL";
+"Ayu.ReportMediaView" = "Report view";
+"Ayu.PeekOnline" = "Peek online";
+"Ayu.PeekOnlineVia" = "Peeked via %@";
+"Ayu.PeekOnlineDone" = "Peeked: last seen time shown";
+"Ayu.PeekOnlineVisible" = "Last seen time is already visible";
+"Ayu.PeekOnlineHidden" = "This user hides last seen time, it cannot be peeked";
+"Ayu.KeepAlive" = "Notifications without Apple";
+"Ayu.KeepAliveOff" = "Off";
+"Ayu.KeepAliveAlways" = "Always";
+"Ayu.KeepAliveMinutes" = "%@ min after leaving";
+"Ayu.KeepAliveFooter" = "Keeps NETHERHILL running in the background with silent audio and shows notifications for new messages without Apple push. Uses more battery. Music and calls are not affected; after a call it resumes by itself. Not needed with Bark.";
+"Ayu.TerminatedNotice" = "NETHERHILL was closed and notifications are paused. Open it to turn them back on.";
+"Ayu.NotificationPicture" = "Download picture";
+"Ayu.AISection" = "Search and AI";
+"Ayu.SearchEngine" = "Search engine";
+"Ayu.Assistant" = "AI assistant";
+"Ayu.AIProvider" = "AI provider";
+"Ayu.AIKey" = "API key";
+"Ayu.AIKeyNone" = "Not set";
+"Ayu.AIModel" = "Model";
+"Ayu.AIFooter" = "The search engine is used for the web search row in chat search. The assistant talks to the selected provider directly from your device. NETHERHILL and Pollinations work without a key; Groq, Gemini and OpenRouter give free keys on their sites.";
+"Ayu.AIPlaceholder" = "Ask anything";
+"Ayu.AIClear" = "Clear";
+"Ayu.AIError" = "Error";
+"Ayu.AINeedKey" = "This provider needs an API key. Add it in NETHERHILL settings.";
+"Ayu.AIEmpty" = "Ask a question to start.";
+"Ayu.AICopy" = "Copy";
+"Ayu.AIChats" = "Chats";
+"Ayu.AINewChat" = "New chat";
+"Ayu.AIRename" = "Rename";
+"Ayu.AIDelete" = "Delete";
+"Ayu.AIBubble" = "Assistant button in chat list";
+"Ayu.Copilot" = "AI analysis";
+"Ayu.CopilotAsk" = "Ask about this chat…";
+"Ayu.CopilotEmpty" = "No messages to read yet.";
+"Ayu.CopilotThinking" = "Reading the chat…";
+"Ayu.CopilotCopied" = "Copied. Tap a hint to put it into the message field.";
+"Ayu.CopilotToggle" = "AI hints in chats";
+"Ayu.AILanguage" = "Answer language";
+"Ayu.AILanguageAuto" = "Auto";
+"Ayu.AILanguageInfo" = "Language the assistant always answers in. Leave empty to follow the question.";
+"Ayu.AIPersona" = "Personalization";
+"Ayu.AIPersonaInfo" = "Tell the assistant about yourself and how to answer";
+"Ayu.AIPersonaHint" = "Short answers, call me Max…";
+"Ayu.SupporterBadge" = "Supporter badge";
+"Ayu.SupporterInfo" = "Support NETHERHILL iOS with $%@ and get your own badge next to your name. Everyone on NETHERHILL sees it, on any build. Payments are confirmed automatically.";
+"Ayu.SupporterPay" = "Support for $%@";
+"Ayu.SupporterPaid" = "I have paid";
+"Ayu.SupporterCheck" = "Check status";
+"Ayu.SupporterPending" = "Pay $%@ with the button below. Crypto Bot, xRocket and TON wallet payments unlock the badge by themselves within a minute.";
+"Ayu.SupporterWaiting" = "Not confirmed yet. Payments are checked automatically, it usually takes up to a couple of minutes.";
+"Ayu.SupporterFailed" = "Could not reach the server. Try again later.";
+"Ayu.SupporterCopied" = "Code copied";
+"Ayu.SupporterPayIntro" = "Pay $%@. Crypto Bot, xRocket and TON payments are confirmed automatically: just come back, the badge unlocks by itself.";
+"Ayu.SupporterPayCode" = "Your code: %@. If you pay with an old link, put it in the payment comment.";
+"Ayu.SupporterRocketManual" = "Put your code in the comment. Checked by hand.";
+"Ayu.SupporterTonAuto" = "Send %@ TON with the comment %@. Confirmed automatically.";
+"Ayu.SupporterBotAuto" = "Your personal invoice. Any coin, confirmed automatically.";
+"Ayu.BadgeSupported" = "**%@** supported the development of **NETHERHILL iOS**";
+"Ayu.BadgeResource" = "**%@** is the official resource of **NETHERHILL iOS**";
+"Ayu.BadgeDeveloper" = "**%@** is the developer of **NETHERHILL iOS**";
+"Ayu.BadgeSquircle" = "Square";
+"Ayu.BadgeCircle" = "Circle";
+"Ayu.BadgeSeal" = "Seal";
+"Ayu.BadgeNoBackground" = "Icon";
+"Ayu.BadgeIcon" = "Icon";
+"Ayu.BadgeEmoji" = "or type an emoji";
+"Ayu.BadgeColor" = "Color";
+"Ayu.BadgeDarkIcon" = "Dark icon";
+"Ayu.BadgeHint" = "Changes are saved right away and show up for other NETHERHILL users within a few minutes.";
+"Ayu.FloatChat" = "Open in floating window";
+"Ayu.FloatPlaceholder" = "Message";
+"Ayu.AIIntroTagline" = "your pocket ghost";
+"Ayu.AIIntro1" = "waking up";
+"Ayu.AIIntro2" = "loading modules";
+"Ayu.AIIntro3" = "tuning the assistant";
+"Ayu.AIIntro4" = "ready";
+"Ayu.AIRecording" = "Recording… tap stop to send";
+"Ayu.AIMicDenied" = "Allow microphone access in iOS Settings to send voice.";
+"Ayu.AISuggest1" = "Explain something in simple words";
+"Ayu.AISuggest2" = "Help me write a message";
+"Ayu.AISuggest3" = "Translate a text";
+"Ayu.DisableLiquidGlass" = "Disable Liquid Glass";
+"Ayu.DisableLiquidGlassInfo" = "Brings back the classic Telegram interface from iOS 18: full-width bars, the classic tab bar, input panel, menus and settings lists. Applies after restart.";
+"Ayu.RestartToApply" = "Restart NETHERHILL to switch the interface.";
+"Ayu.RestartPending" = "Will apply after restart";
+"Ayu.Later" = "Later";
+"Ayu.LegacyUICrashGuard" = "Classic interface was turned off after repeated crashes.";
+"Ayu.DonateSection" = "Support the project";
+"Ayu.Donate" = "Donate";
+"Ayu.DonateFooter" = "NETHERHILL is free and has no ads. Donations keep it going.";
+"Ayu.DonateIntro" = "Thanks for supporting NETHERHILL. Scan a code or open the link.";
+"Ayu.DonateBotInfo" = "Any coin, paid from the bot balance.";
+"Ayu.DonateWallet" = "TON wallet";
+"Ayu.DonateWalletInfo" = "TON, USDT and other tokens on the TON network.";
+"Ayu.DonateOpen" = "Open";
+
+"Ayu.Effects.Title" = "Effects";
+"Ayu.Effects.Master" = "Visual Effects";
+"Ayu.Effects.MasterInfo" = "Effects pause automatically while Reduce Motion or Low Power Mode is on, and Telegram's standard look is used instead.";
+"Ayu.Effects.BackgroundSection" = "Chat Background";
+"Ayu.Effects.Aurora" = "Aurora Gradient";
+"Ayu.Effects.AuroraInfo" = "Gradient wallpapers drift with more colour spots";
+"Ayu.Effects.Grain" = "Gradient Grain";
+"Ayu.Effects.GrainInfo" = "Film grain over gradient wallpapers. Move the slider to the left to turn it off.";
+"Ayu.Effects.Parallax" = "Deep Parallax";
+"Ayu.Effects.ParallaxInfo" = "Background, pattern and messages move at different depths as you tilt the device";
+"Ayu.Effects.Ripple" = "Ripple";
+"Ayu.Effects.RippleInfo" = "Tapping the empty background leaves a water ripple";
+"Ayu.Effects.BackgroundFooter" = "Parallax and gradient drift pause in Low Power Mode.";
+"Ayu.Effects.BubblesSection" = "Message Bubbles";
+"Ayu.Effects.BubbleGlow" = "Glow";
+"Ayu.Effects.BubbleGlowInfo" = "Soft accent-coloured glow around your messages";
+"Ayu.Effects.GlassBubbles" = "Glass Bubbles";
+"Ayu.Effects.GlassBubblesInfo" = "Liquid glass tinted by your wallpaper: lighter on dark wallpapers, darker on light ones";
+"Ayu.Effects.AnimationsSection" = "Animations";
+"Ayu.Effects.DeleteStyle" = "Deleting";
+"Ayu.Effects.Delete.Standard" = "Standard";
+"Ayu.Effects.Delete.Dust" = "Dust";
+"Ayu.Effects.Delete.Burn" = "Burn";
+"Ayu.Effects.Delete.Shatter" = "Shatter";
+"Ayu.Effects.Delete.Implode" = "Implode";
+"Ayu.Effects.SendStyle" = "Sending";
+"Ayu.Effects.Send.Standard" = "Standard";
+"Ayu.Effects.Send.Spring" = "Spring";
+"Ayu.Effects.Send.Sparkles" = "Sparkles";
+"Ayu.Effects.Send.Warp" = "Warp";
+"Ayu.Effects.TextReveal" = "Text Reveal";
+"Ayu.Effects.TextRevealInfo" = "New incoming messages appear word by word";
+"Ayu.Effects.AnimationsFooter" = "While Reduce Motion is on, Telegram's standard animations are used.";
+"Ayu.Effects.InterfaceSection" = "Interface";
+"Ayu.Effects.AvatarRings" = "Online Rings";
+"Ayu.Effects.AvatarRingsInfo" = "A gradient ring that runs around the avatars of people who are online";
+"Ayu.Effects.InterfaceFooter" = "Rings stop rotating in Low Power Mode.";
+"Ayu.Effects.RingColor" = "Ring Colour";
+"Ayu.Effects.RingColor.Accent" = "Theme Accent";
+"Ayu.Effects.RingColor.Blue" = "Blue";
+"Ayu.Effects.RingColor.Teal" = "Teal";
+"Ayu.Effects.RingColor.Green" = "Green";
+"Ayu.Effects.RingColor.Gold" = "Gold";
+"Ayu.Effects.RingColor.Orange" = "Orange";
+"Ayu.Effects.RingColor.Red" = "Red";
+"Ayu.Effects.RingColor.Pink" = "Pink";
+"Ayu.Effects.RingColor.Purple" = "Purple";
+"Ayu.Effects.RingColor.White" = "Silver";
+"Ayu.Effects.RingColor.Aurora" = "Gradient: Aurora";
+"Ayu.Effects.RingColor.Sunset" = "Gradient: Sunset";
+"Ayu.Effects.RingColor.Ocean" = "Gradient: Ocean";
+"Ayu.Effects.RingColor.Neon" = "Gradient: Neon";
+"Ayu.Effects.RingColor.Fire" = "Gradient: Fire";
+"Ayu.Effects.RingColor.Rainbow" = "Gradient: Rainbow";
+"Ayu.Video.Section" = "Video";
+"Ayu.Video.Title" = "Video settings";
+"Ayu.Video.SectionFooter" = "Quality and frame rate of round videos, sending gallery videos as round ones, and the quality of regular videos.";
+"Ayu.Video.RoundSection" = "Round videos";
+"Ayu.Video.RoundQuality" = "Quality";
+"Ayu.Video.RoundStandard" = "Standard (480p)";
+"Ayu.Video.RoundFrameRate" = "Frame rate";
+"Ayu.Video.RoundFromGallery" = "Round video from gallery";
+"Ayu.Video.RoundFromGalleryInfo" = "Hold the send button in the attachment menu with one video selected";
+"Ayu.Video.RoundMax" = "Maximum (640p)";
+"Ayu.Video.RoundFooter" = "640p is the highest quality Telegram accepts for round videos: anything larger is delivered as a regular video. 60 and 120 fps work when the camera supports them, otherwise the closest lower rate is used. Pinch in to zoom out to 0.5× on the back camera when the phone has an ultra-wide lens. Higher settings make files bigger.";
+"Ayu.Video.Round720" = "720p";
+"Ayu.Video.Round1080" = "1080p";
+"Ayu.Video.RoundBitrate" = "Bitrate";
+"Ayu.Video.RoundBitrateAuto" = "Auto";
+"Ayu.Video.RoundBitrateUnit" = "Mbit/s";
+"Ayu.Video.RoundHEVC" = "HEVC (H.265)";
+"Ayu.Video.RoundHEVCInfo" = "Sharper picture at the same bitrate. If the phone cannot encode HEVC, H.264 is used";
+"Ayu.Video.RoundExperimentalSection" = "Experimental";
+"Ayu.Video.RoundLargeAs640" = "1080p disguised as 640p";
+"Ayu.Video.RoundLargeAs640Info" = "Adds 720p and 1080p to Quality. The video keeps its real resolution but is declared as 640×640, so Telegram still treats it as a round video";
+"Ayu.Video.RoundExperimentalFooter" = "Experimental. Telegram may stop accepting such round videos or deliver them as regular ones, older phones may play them choppy, and files get much bigger.";
+"Ayu.Video.VideoSection" = "Videos";
+"Ayu.Video.BestQuality" = "Always best quality";
+"Ayu.Video.BestQualityInfo" = "Videos are sent in the highest available quality, up to 1080p";
+"Ayu.Video.HighBitrate" = "Higher bitrate";
+"Ayu.Video.HighBitrateInfo" = "Sharper picture at the same resolution, bigger files";
+"Ayu.Video.VideoFooter" = "Videos keep their original frame rate, up to 60 fps.";
+"Ayu.Video.SendAsRound" = "Send as Round Video";
+"Ayu.RoundEditor.Title" = "Round Video";
+"Ayu.RoundEditor.Send" = "Send";
+"Ayu.RoundEditor.Start" = "Fragment";
+"Ayu.RoundEditor.Length" = "Length";
+"Ayu.RoundEditor.Hint" = "Drag and pinch the video to choose what goes into the circle. Up to 60 seconds.";
+"Ayu.RoundEditor.Failed" = "Could not open this video.";
+"Ayu.Effects.ProfileBubbles" = "Profile Bubbles";
+"Ayu.Effects.ProfileBubblesInfo" = "On profiles that turned them on, gifts float around the avatar in glass bubbles";
+"Ayu.FakeNft.Badge" = "⚠️ Fake NFT";
+"Ayu.FakeNft.Title" = "Fake NFT";
+"Ayu.FakeNft.Info" = "This gift was added to the profile in NETHERHILL. It does not belong to this user and is not a real Telegram gift.";
+"Ayu.FakeUsername.Title" = "Fake username";
+"Ayu.FakeUsername.Text" = "%@ was added to this profile in NETHERHILL. It is not a real Telegram username: it does not open a chat and nobody can be found by it.";
+"Ayu.ProfileExtras.Title" = "Profile Extras";
+"Ayu.ProfileExtras.Intro" = "Decorations that every NETHERHILL user sees on your profile. They are not real: other Telegram apps do not show them, and tapping one always shows that it is fake.";
+"Ayu.ProfileExtras.Loading" = "Loading…";
+"Ayu.ProfileExtras.Retry" = "Try Again";
+"Ayu.ProfileExtras.BubblesSection" = "Bubbles";
+"Ayu.ProfileExtras.Bubbles" = "Profile Bubbles";
+"Ayu.ProfileExtras.BubblesInfo" = "Your pinned gifts and fake NFTs float around your avatar in glass bubbles. Everyone can turn bubbles off for themselves in Effects.";
+"Ayu.ProfileExtras.BackgroundSection" = "Profile Background";
+"Ayu.ProfileExtras.CurrentBackground" = "Current background";
+"Ayu.ProfileExtras.Photo" = "Photo";
+"Ayu.ProfileExtras.Video" = "Video";
+"Ayu.ProfileExtras.ChoosePhoto" = "Choose Photo";
+"Ayu.ProfileExtras.ChooseVideo" = "Choose Video";
+"Ayu.ProfileExtras.RemoveBackground" = "Remove Background";
+"Ayu.ProfileExtras.RemoveBackgroundConfirm" = "Remove your profile background for everyone?";
+"Ayu.ProfileExtras.BackgroundInfo" = "A photo or a video behind your profile header. Videos play muted and loop, only the first 15 seconds are used. Large files are compressed automatically; up to 8 uploads a day. Backgrounds are checked by the NETHERHILL team.";
+"Ayu.ProfileExtras.Preparing" = "Preparing…";
+"Ayu.ProfileExtras.Uploading" = "Uploading… %@";
+"Ayu.ProfileExtras.NftsSection" = "Fake NFTs";
+"Ayu.ProfileExtras.AddNft" = "Add NFT";
+"Ayu.ProfileExtras.AddNftPrompt" = "Paste a gift link like t.me/nft/PlushPepe-1 or just its name with the number";
+"Ayu.ProfileExtras.Pinned" = "Pinned";
+"Ayu.ProfileExtras.NftsInfo" = "Up to 30 collectible gifts shown on your profile, in its Gifts tab and in bubbles. Pin up to 6 to show them first. Tapping one always shows a Fake NFT label; they cannot be transferred, sold or worn.";
+"Ayu.ProfileExtras.Preview" = "Preview";
+"Ayu.ProfileExtras.Pin" = "Pin to Top";
+"Ayu.ProfileExtras.Unpin" = "Unpin";
+"Ayu.ProfileExtras.MoveUp" = "Move Up";
+"Ayu.ProfileExtras.MoveDown" = "Move Down";
+"Ayu.ProfileExtras.Delete" = "Delete";
+"Ayu.ProfileExtras.UsernamesSection" = "Fake Usernames";
+"Ayu.ProfileExtras.AddUsername" = "Add Username";
+"Ayu.ProfileExtras.AddUsernamePrompt" = "4 to 32 latin letters, digits or underscores";
+"Ayu.ProfileExtras.UsernamesInfo" = "Up to 10 extra usernames shown next to yours. Tapping one always shows that it is fake; nobody can find or message you by them.";
+"Ayu.ProfileExtras.DeleteAll" = "Delete All Extras";
+"Ayu.ProfileExtras.DeleteAllConfirm" = "Delete your fake NFTs, fake usernames and profile background?";
+"Ayu.ProfileExtras.Footer" = "Extras are tied to this install, other installs cannot change them. Changes to NFTs, usernames and bubbles are applied after you tap Save.";
+"Ayu.ProfileExtras.Saved" = "Profile extras saved";
+"Ayu.ProfileExtras.UnsavedChanges" = "Save your changes to profile extras?";
+"Ayu.ProfileExtras.Discard" = "Discard";
+"Ayu.ProfileExtras.Error.Network" = "Could not reach the NETHERHILL server. Try again later.";
+"Ayu.ProfileExtras.Error.Unavailable" = "Profile extras are temporarily unavailable.";
+"Ayu.ProfileExtras.Error.Locked" = "Extras of this account are managed by another NETHERHILL install.";
+"Ayu.ProfileExtras.Error.Banned" = "Profile extras are blocked for this account.";
+"Ayu.ProfileExtras.Error.RateLimited" = "Too many changes today. Try again tomorrow.";
+"Ayu.ProfileExtras.Error.TooLarge" = "The file is too large.";
+"Ayu.ProfileExtras.Error.TooLong" = "The video is longer than 15 seconds.";
+"Ayu.ProfileExtras.Error.BadMedia" = "This file cannot be used as a background.";
+"Ayu.ProfileExtras.Error.Reserved" = "%@ is reserved and cannot be used.";
+"Ayu.ProfileExtras.Error.BadUsername" = "Use 4 to 32 latin letters, digits or underscores.";
+"Ayu.ProfileExtras.Error.Invalid" = "The server did not accept the change.";
+"Ayu.ProfileExtras.Error.NftNotFound" = "No collectible gift was found for this link.";
+"Ayu.ProfileExtras.Error.NftExists" = "This NFT is already in the list.";
+"Ayu.ProfileExtras.Error.NftBurned" = "This gift was burned.";
+"Ayu.ProfileExtras.Error.PinLimit" = "You can pin up to 6 NFTs.";
+"Ayu.ProfileExtras.Error.Unverified" = "Confirm that this Telegram account is yours first.";
+"Ayu.ProfileExtras.Verify.Section" = "Ownership";
+"Ayu.ProfileExtras.Verify.Title" = "Verify Ownership";
+"Ayu.ProfileExtras.Verify.Action" = "Verify Ownership";
+"Ayu.ProfileExtras.Verify.Again" = "Open the Bot Again";
+"Ayu.ProfileExtras.Verify.Waiting" = "Waiting for confirmation…";
+"Ayu.ProfileExtras.Verify.Info" = "Before the first change, confirm that this Telegram account is yours, so nobody else can put fake NFTs, usernames or a background on your profile. The NETHERHILL bot opens: tap Start, then Confirm, and come back here. It is needed once per install.";
+"Ayu.ProfileExtras.Verify.WaitingInfo" = "In the bot chat tap Start, then Confirm. The bot shows the code %@. Come back here and editing unlocks by itself. The link works for 10 minutes and only from this account.";
+"Ayu.ProfileExtras.Verify.Prompt" = "To change profile extras, confirm in the NETHERHILL bot that this Telegram account is yours. It takes two taps and is needed once per install.";
+"Ayu.ProfileExtras.Verify.Done" = "Ownership confirmed";

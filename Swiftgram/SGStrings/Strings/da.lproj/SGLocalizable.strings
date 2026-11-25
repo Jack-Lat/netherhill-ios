@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Support";
+"Ayu.SupportChannel" = "Opdateringskanal";
+"Ayu.SupportDeveloper" = "Kontakt udvikleren";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Søg efter opdateringer";
+"Ayu.UpToDate" = "Du har den nyeste version.";
+"Ayu.UpdateAvailable" = "Opdatering tilgængelig";
+"Ayu.UpdateAvailableInfo" = "Version %@ er ude. Åbn kanalen for at hente den.";
+"Ayu.UpdateIgnore" = "Ignorer";
+"Ayu.UpdateOpen" = "Opdater";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "For at opdatere skal du starte NETHERHILL i Multitask-tilstand (tryk og hold på appen i LiveContainer) og prøve igen.";
+"Ayu.NotificationsSection" = "Notifikationer";
+"Ayu.BarkSetUp" = "Konfigurer Bark-notifikationer";
+"Ayu.BarkConnected" = "Bark-notifikationer: til";
+"Ayu.BarkFooter" = "En app installeret via sideload får ingen notifikationer fra Apple. Installer Bark fra App Store, kopier din nøgle der og indsæt den her. Nye beskeder kommer så gennem NETHERHILL-relæet som Bark-notifikationer.";
+"Ayu.BarkPrompt" = "Indsæt din Bark-nøgle eller linket fra Bark-appen. Lad feltet være tomt for at slå notifikationer fra.";
+"Ayu.BarkEnabled" = "Færdig. Nye beskeder kommer som Bark-notifikationer, mens NETHERHILL er lukket.";
+"Ayu.BarkDisabled" = "Bark-notifikationer er slået fra.";
+"Ayu.BarkInvalid" = "Dette er ikke en Bark-nøgle. Kopier nøglen eller et link fra Bark-appen.";
+"Ayu.BarkFailed" = "Telegram accepterede ikke abonnementet: %@";
+"Ayu.BarkFixTitle" = "Ret notifikationer";
+"Ayu.BarkFixInstall" = "Installer Bark fra App Store";
+"Ayu.BarkFixConnect" = "Forbind Bark for at få notifikationer";
+"Ayu.BarkEnterKey" = "Indtast nøgle";
+"Ayu.BarkHowTo" = "1. Installer Bark fra App Store, og åbn den.\n2. Kopier adressen https://api.day.app/… fra hovedskærmen.\n3. Kom tilbage, tryk på “Indtast nøgle”, og indsæt den.";
+"Ayu.ExportChat" = "Eksportér chat";
+"Ayu.ExportChatMedia" = "Hele chatten gemmes som et arkiv, som Telegram kan importere. Vil du medtage billeder, videoer, talebeskeder og filer? Det kan tage lang tid at hente dem.";
+"Ayu.ExportChatWithMedia" = "Med medier";
+"Ayu.ExportChatTextOnly" = "Kun tekst";
+"Ayu.ExportChatLoading" = "Indlæser beskeder: %@";
+"Ayu.ExportChatDownloading" = "Henter medier: %@";
+"Ayu.ExportChatSaving" = "Opretter arkiv…";
+"Ayu.ExportChatEmpty" = "Der er ingen beskeder at eksportere.";
+"Ayu.ChatTransferSection" = "Overførsel af chats";
+"Ayu.ImportChat" = "Importér chat";
+"Ayu.ImportChatFooter" = "Importér en chat, der er eksporteret fra WhatsApp, LINE, KakaoTalk eller med “Eksportér chat” i NETHERHILL (ZIP- eller TXT-fil), til en af dine chats.";
+"Ayu.ImportChatInvalid" = "Denne fil er ikke en understøttet chateksport.";
+"Ayu.HistorySaveAudio" = "Gem lyd";
+"Ayu.HistoryDeleteEntry" = "Slet fra historik";
+"Ayu.DeletedChats" = "Slettede chats";
+"Ayu.DeletedChatsInfo" = "Chats, hvis hele historik er slettet. Det, NETHERHILL har gemt, fjernes aldrig automatisk.";
+"Ayu.DeletedChatSave" = "Gem som arkiv";
+"Ayu.DeletedChatRemove" = "Fjern fra listen";
+"Ayu.DeletedChatDelete" = "Slet gemte beskeder";
+"Ayu.HistorySubtitle" = "Slettede og redigerede beskeder fra valgte chats, kun gemt på denne enhed.";
+"Ayu.HistoryAll" = "Alle";
+"Ayu.HistoryEdited" = "Redigeret";
+"Ayu.HistoryNow" = "Nu";
+"Ayu.HistoryShowMessage" = "Vis i chat";
+"Ayu.HistoryOpenChat" = "Åbn chat";
+"Ayu.HistoryStopSaving" = "Stop med at gemme denne chat";
+"Ayu.HistoryNoChats" = "Vælg chats til historikken. Intet gemmes, før du tilføjer mindst én.";
+"Ayu.HistoryEmptyInfo" = "Slettede og redigerede beskeder vises her.";
+"Ayu.AddAccountHelp" = "Du kan tilføje op til 500 konti med forskellige telefonnumre.";
+"Ayu.HeroGhostOn" = "Spøgelsestilstand er slået til";
+"Ayu.HeroGhostOff" = "Spøgelsestilstand er slået fra";
+"Ayu.HeroHidden" = "Skjult: %@ af %@";
+"Ayu.GhostSubtitle" = "Online, læsning, skrivning, optagelse, upload og historier";
+"Ayu.GhostFooter" = "Spøgelsestilstand slår alle kontakter nedenfor til og bevarer deres egne værdier.";
+"Ayu.HideSection" = "Hvad skal skjules";
+"Ayu.BehaviorSection" = "Adfærd";
+"Ayu.OfflineAfterSending" = "Offline efter afsendelse";
+"Ayu.OfflineAfterSendingInfo" = "Meld offline lige efter hver sendt besked";
+"Ayu.ReadOnSend" = "Læs chat ved svar";
+"Ayu.ReadOnSendInfo" = "En sendt besked markerer chatten som læst";
+"Ayu.QuickToggle" = "Kontakt i fanen Chats";
+"Ayu.QuickToggleInfo" = "Hold fanen Chats nede for hurtigt at slå spøgelsestilstand til eller fra.";
+"Ayu.ContentSection" = "Indhold";
+"Ayu.IgnoreProtection" = "Ignorer indholdsbeskyttelse";
+"Ayu.IgnoreProtectionInfo" = "Gem, kopiér og videresend fra beskyttede chats";
+"Ayu.AllowScreenshots" = "Tillad skærmbilleder";
+"Ayu.AllowScreenshotsInfo" = "Beskyttede og hemmelige chats vises på skærmbilleder og optagelser";
+"Ayu.ContentFooter" = "Beskeder fra beskyttede chats videresendes som kopi uden afsender; medier uploades igen. Indstillingen for skærmbilleder gælder for genåbnede skærme.";
+"Ayu.SaveDeletedInfo" = "Bevares i alle chats; valgte chats vises også i beskedhistorikken";
+"Ayu.OpenHistory" = "Åbn historik";
+"Ayu.ClientSection" = "Klient";
+"Ayu.LocalPremiumInfo" = "Premium-emoji og statusser kun på denne enhed";
+"Ayu.GhostEnable" = "Slå spøgelsestilstand til";
+"Ayu.GhostDisable" = "Slå spøgelsestilstand fra";
+"Ayu.GhostEnabledToast" = "Spøgelsestilstand slået til";
+"Ayu.GhostDisabledToast" = "Spøgelsestilstand slået fra";
+"Ayu.ChatListBackground" = "Baggrund for chatliste";
+"Ayu.ConversationBackground" = "Chatbaggrund";
+"Ayu.ChooseVideo" = "Vælg video";
+"Ayu.ShowBackground" = "Vis baggrund";
+
+"Settings.ContentSettings" = "Indholdindstillinger";
+
+"Settings.Tabs.Header" = "Tabs";
+"Settings.Tabs.HideTabBar" = "Skjul Tabbjælke";
+"Settings.Tabs.ShowContacts" = "Kontakte Tab anzeigen";
+"Settings.Tabs.ShowNames" = "Tabnamen anzeigen";
+
+"Settings.Folders.BottomTab" = "Ordner - unten";
+"Settings.Folders.BottomTabStyle" = "Bundmapper Stil";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Skjul \"%@\"";
+"Settings.Folders.RememberLast" = "Åbn sidste mappe";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram vil åbne den sidst brugte mappe efter genstart eller konto skift.";
+
+"Settings.Folders.CompactNames" = "Mindre afstand";
+"Settings.Folders.AllChatsTitle" = "\"Alle Chats\" titel";
+"Settings.Folders.AllChatsTitle.short" = "Kort";
+"Settings.Folders.AllChatsTitle.long" = "Lang";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Standard";
+
+
+"Settings.ChatList.Header" = "CHAT LISTE";
+"Settings.CompactChatList" = "Kompakt Chatliste";
+
+"Settings.Profiles.Header" = "PROFILES";
+
+"Settings.Stories.Hide" = "Skjul Historier";
+"Settings.Stories.WarnBeforeView" = "Spørg før visning";
+"Settings.Stories.DisableSwipeToRecord" = "Deaktiver swipe for at optage";
+
+"Settings.Translation.QuickTranslateButton" = "Schnellübersetzen-Schaltfläche";
+
+"Stories.Warning.Author" = "Forfatter";
+"Stories.Warning.ViewStory" = "Se Historie?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ VIL KUNNE SE at du har set deres Historie.";
+"Stories.Warning.NoticeStealth" = "%@ Vil ikke kunne se, at du har set deres Historie.";
+
+"Settings.Photo.Quality.Notice" = "Kvalitet af udgående fotos og foto-historier.";
+"Settings.Photo.SendLarge" = "Send store fotos";
+"Settings.Photo.SendLarge.Notice" = "Forøg sidestørrelsesgrænsen på komprimerede billeder til 2560px.";
+
+"Settings.VideoNotes.Header" = "RUNDE VIDEOS";
+"Settings.VideoNotes.StartWithRearCam" = "Starte mit umgedrehter Kamera";
+
+"Settings.CustomColors.Header" = "KONTOFARVER";
+"Settings.CustomColors.Saturation" = "MÆTNING";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Indstil mætning til 0%% for at deaktivere konto farver.";
+
+"Settings.UploadsBoost" = "Upload Boost";
+"Settings.DownloadsBoost" = "Download Boost";
+"Settings.DownloadsBoost.Notice" = "Øger antallet af parallelle forbindelser og størrelsen på filstykker. Hvis dit netværk ikke kan håndtere belastningen, kan du prøve forskellige muligheder, der passer til din forbindelse.";
+"Settings.DownloadsBoost.none" = "Deaktiveret";
+"Settings.DownloadsBoost.medium" = "Mellem";
+"Settings.DownloadsBoost.maximum" = "Maksimum";
+
+"Settings.ShowProfileID" = "Profil-ID anzeigen";
+"Settings.ShowDC" = "Vis Datacenter";
+"Settings.ShowCreationDate" = "Vis Chattens Oprettelsesdato";
+"Settings.ShowCreationDate.Notice" = "Oprettelsesdatoen kan være ukendt for nogle chats.";
+
+"Settings.ShowRegDate" = "Vis Registreringsdato";
+"Settings.ShowRegDate.Notice" = "Registreringsdatoen er omtrentlig.";
+
+"Settings.SendWithReturnKey" = "Send med \"return\" tasten";
+"Settings.HidePhoneInSettingsUI" = "Telefon in den Einstellungen ausblenden";
+"Settings.HidePhoneInSettingsUI.Notice" = "Deine Nummer wird nur in der Benutzeroberfläche versteckt. Um sie vor anderen zu verbergen, verwende bitte die Privatsphäre-Einstellungen.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Hvis væk i 5 sekunder";
+
+"ProxySettings.UseSystemDNS" = "Brug system DNS";
+"ProxySettings.UseSystemDNS.Notice" = "Brug system DNS for at omgå timeout hvis du ikke har adgang til Google DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Du **behøver ikke** %@!";
+"Common.RestartRequired" = "Genstart krævet";
+"Common.RestartNow" = "Genstart Nu";
+"Common.OpenTelegram" = "Åben Telegram";
+"Common.UseTelegramForPremium" = "Bemærk venligst, at for at få Telegram Premium skal du bruge den officielle Telegram app. Når du har fået Telegram Premium, vil alle dens funktioner blive tilgængelige i Swiftgram.";
+
+"Message.HoldToShowOrReport" = "Hold for at Vise eller Rapportere.";
+
+"Auth.AccountBackupReminder" = "Sørg for, at du har en backup adgangsmetode. Behold et SIM til SMS eller en ekstra session logget ind for at undgå at blive låst ude.";
+"Auth.UnofficialAppCodeTitle" = "Du kan kun få koden med den officielle app";
+
+"Settings.SmallReactions" = "Små reaktioner";
+"Settings.HideReactions" = "Skjul Reaktioner";
+
+"ContextMenu.SaveToCloud" = "In Cloud speichern";
+"ContextMenu.SelectFromUser" = "Vælg fra Forfatter";
+
+"Settings.ContextMenu" = "KONTEKSTMENU";
+"Settings.ContextMenu.Notice" = "Deaktiverede indgange vil være tilgængelige i \"Swiftgram\" undermenuen.";
+
+
+"Settings.ChatSwipeOptions" = "Chat List Swipe Options";
+"Settings.DeleteChatSwipeOption" = "Svejp for at slette chat";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Træk til Næste U’læst Kanal";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Træk for at gå til næste emne";
+"Settings.GalleryCamera" = "Kamera i Galleri";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" Knap";
+"Settings.SnapDeletionEffect" = "Besked Sletnings Effekter";
+
+"Settings.Stickers.Size" = "STØRRELSE";
+"Settings.Stickers.Timestamp" = "Vis tidsstempel";
+
+"Settings.RecordingButton" = "Lydoptageknap";
+
+"Settings.DefaultEmojisFirst" = "Prioriter standard emojis";
+"Settings.DefaultEmojisFirst.Notice" = "Vis standard emojis før premium i emoji-tastaturet";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "oprettet: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Tilmeldt %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Registreret";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Dobbelt tryk for at redigere besked";
+
+"Settings.wideChannelPosts" = "Brede indlæg i kanaler";
+"Settings.ForceEmojiTab" = "Emoji-tastatur som standard";
+
+"Settings.forceBuiltInMic" = "Tving enhedsmikrofon";
+"Settings.forceBuiltInMic.Notice" = "Hvis aktiveret, vil appen kun bruge enhedens mikrofon, selvom hovedtelefoner er tilsluttet.";
+
+"Settings.hideChannelBottomButton" = "Skjul Kanal Bund Panel";
+
+"Settings.CallConfirmation" = "Opkaldsbekræftelse";
+"Settings.CallConfirmation.Notice" = "Swiftgram vil bede om din bekræftelse, før der foretages et opkald.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Foretage et opkald?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Foretage et videoopkald?";
+
+"MutualContact.Label" = "fælles kontakt";
+
+"Settings.swipeForVideoPIP" = "Video PIP med Swipe";
+"Settings.swipeForVideoPIP.Notice" = "Hvis aktiveret, vil sletning af video åbne den i billede-i-billede-tilstand.";
+
+"Ayu.Ghost" = "Spøgelsestilstand";
+"Ayu.HideRead" = "Skjul læsekvitteringer";
+"Ayu.HideOnline" = "Skjul onlinestatus";
+"Ayu.HideTyping" = "Skjul indtastning";
+"Ayu.HideRecording" = "Skjul optagelse";
+"Ayu.HideUploading" = "Skjul uploads";
+"Ayu.HideStories" = "Skjul historievisninger";
+"Ayu.History" = "Beskedhistorik";
+"Ayu.SaveDeleted" = "Gem slettede beskeder";
+"Ayu.SavePhotos" = "Gem billeder";
+"Ayu.ClearHistory" = "Ryd historik";
+"Ayu.EmptyHistory" = "Ingen historik endnu";
+"Ayu.SaveMedia" = "Gem cachelagrede medier";
+"Ayu.BackgroundDimming" = "Dæmpning af baggrund";
+"Ayu.BeforeEdit" = "Før redigering";
+"Ayu.Deleted" = "Slettet";
+"Ayu.ServerPresence" = "På serveren: %@";
+"Ayu.ServerUnavailable" = "Serverstatus er ikke tilgængelig";
+"Ayu.SendReadReceipt" = "Send læsekvittering";
+"Ayu.ViewWithoutReceipt" = "Vis uden kvittering";
+"Ayu.ReportPhotoView" = "Bekræft visning af billedet";
+"Ayu.View" = "Vis";
+"Ayu.SendReceipt" = "Send";
+"Ayu.ReceiptSent" = "Kvittering sendt";
+"Ayu.ReceiptError" = "Kunne ikke sende kvitteringen. Tjek forbindelsen, og prøv igen.";
+"Ayu.IconChangeUnavailable" = "Dit valg er gemt i appen. iOS kunne ikke ændre ikonet på hjemmeskærmen.";
+"Ayu.LocalPremium" = "Lokalt Premium";
+"Ayu.Pins" = "Maksimalt antal fastgjorte chats";
+"Ayu.LocalOnly" = "Kun på denne enhed";
+"Ayu.HistoryInfo" = "Kun valgte chats. Cachelagrede billeder og tekst: 30 dage, op til 200 poster. Ingen hemmelige eller forsvindende beskeder.";
+"Ayu.ReadWarning" = "Send læsekvittering for chatten frem til denne besked?";
+"Ayu.ViewWarning" = "Bekræft visning og start timeren for forsvindende medier?";
+
+"Ayu.RowOpacity" = "Chatlinjernes opacitet";
+"Ayu.MediaImportError" = "Kan ikke importere filen. Højst 100 MB.";
+"Ayu.SilentSending" = "Send uden lyd";
+"Ayu.SilentNever" = "Aldrig";
+"Ayu.SilentInGhost" = "I spøgelsestilstand";
+"Ayu.SilentAlways" = "Altid";
+"Ayu.ScheduleInGhost" = "Send som planlagt";
+"Ayu.ScheduleInGhostInfo" = "I spøgelsestilstand sendes beskeder planlagt om 12 sekunder, så du aldrig ses online";
+"Ayu.ChatsSection" = "Chats";
+"Ayu.DisableAds" = "Skjul sponsorerede beskeder";
+"Ayu.DisableLinkWarning" = "Ingen advarsel ved skjulte links";
+"Ayu.DisableGreeting" = "Intet velkomstklistermærke";
+"Ayu.DimDeleted" = "Gennemsigtige slettede beskeder";
+"Ayu.RepeatMessage" = "Gentag i beskedmenuen";
+"Ayu.Repeat" = "Gentag";
+"Ayu.ConfirmStickers" = "Bekræft afsendelse af klistermærker";
+"Ayu.ConfirmGifs" = "Bekræft afsendelse af GIF";
+"Ayu.ConfirmSticker" = "Send dette klistermærke?";
+"Ayu.ConfirmGif" = "Send denne GIF?";
+"Ayu.Send" = "Send";
+"Ayu.ImportLocally" = "Importér lokalt";
+"Ayu.ImportLocallyInfo" = "Du kan kun importere chatten på denne enhed: beskederne vises i chatten kun for dig og sendes ikke til Telegram.";
+"Ayu.ImportLocallyDone" = "Importerede beskeder: %@. De ses kun på denne enhed.";
+"Ayu.ViewDeleted" = "Slettede beskeder";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Chats med slettede beskeder gemt på denne enhed. Åbn en for at læse dens slettede beskeder eller hele chatten.";
+"Ayu.ViewDeletedEmpty" = "Ingen slettede beskeder endnu.";
+"Ayu.ConfirmReadReceipt" = "Bekræft læsekvitteringer";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

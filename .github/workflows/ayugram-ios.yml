@@ -1,0 +1,191 @@
+name: NETHERHILL iOS
+
+on:
+  workflow_dispatch:
+    inputs:
+      variant:
+        description: 'Versions to build (Standard from the selected branch, Custom from its custom branch)'
+        type: choice
+        options: [both, standard, custom]
+        default: both
+      configuration:
+        description: 'Device build configuration'
+        type: choice
+        options: [release_arm64, debug_arm64]
+        default: release_arm64
+      label:
+        description: 'Label shown after the build number in the release title, for example hotfix'
+        required: false
+        type: string
+
+permissions:
+  # Releases hold the IPA behind a direct link, which the in-app updater hands to installer apps.
+  contents: write
+
+concurrency:
+  group: ayugram-ios-${{ inputs.variant }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: AyuGram ${{ matrix.variant }}
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        variant: ${{ fromJSON(inputs.variant == 'custom' && '["custom"]' || inputs.variant == 'standard' && '["standard"]' || '["standard","custom"]') }}
+    # Set repository variable AYUGRAM_RUNNER to a larger macOS runner label if needed.
+    runs-on: ${{ vars.AYUGRAM_RUNNER || 'xcode-27' }}
+    timeout-minutes: 360
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout source with submodules
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          # Run from standard: Standard builds standard and Custom builds custom. Run from another
+          # branch: Standard builds it and Custom builds <branch>-custom.
+          ref: ${{ matrix.variant == 'custom' && (github.ref_name == 'standard' && 'custom' || format('{0}-custom', github.ref_name)) || github.ref_name }}
+          submodules: recursive
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.10'
+
+      - name: Check CI helpers
+        run: python -m unittest discover -s ci/tests -p 'test_*.py' -v
+
+      - name: Select the Xcode pinned in versions.json
+        run: |
+          set -euo pipefail
+          XCODE_VERSION="$(python -c 'import json; print(json.load(open("versions.json"))["xcode"])')"
+          DEVELOPER_DIR="/Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer"
+          if [[ ! -d "$DEVELOPER_DIR" ]]; then
+            echo "::error::Required Xcode ${XCODE_VERSION} is not installed on this runner. Select a runner with this version."
+            find /Applications -maxdepth 1 -name 'Xcode*.app' -print
+            exit 1
+          fi
+          sudo xcode-select --switch "$DEVELOPER_DIR"
+          echo "DEVELOPER_DIR=$DEVELOPER_DIR" >> "$GITHUB_ENV"
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          df -h .
+
+      # The xcode-27 image ships other Xcodes, simulator runtimes and SDKs the build never uses.
+      # Without the space, the runner died about an hour into the Telegram 13.1 build, logs and all.
+      - name: Free disk space
+        run: |
+          set -uo pipefail
+          df -h /
+          # The pinned Xcode may be a symlink to another name: keep its real path too.
+          KEEP="$(cd "${DEVELOPER_DIR%/Contents/Developer}" && pwd -P)"
+          [[ -n "$KEEP" && -x "$KEEP/Contents/Developer/usr/bin/xcodebuild" ]] || { echo "::error::Pinned Xcode not found"; exit 1; }
+          for app in /Applications/Xcode*.app; do
+            if [[ ! -L "$app" && "$(cd "$app" && pwd -P)" != "$KEEP" ]]; then
+              sudo rm -rf "$app" &
+            fi
+          done
+          xcrun simctl shutdown all 2>/dev/null || true
+          xcrun simctl delete all 2>/dev/null || true
+          xcrun simctl runtime delete all 2>/dev/null || true
+          sudo rm -rf ~/Library/Android /usr/local/share/dotnet ~/.dotnet ~/Library/Developer/CoreSimulator/Caches &
+          wait || true
+          df -h /
+          sysctl -n hw.memsize hw.ncpu || true
+
+      # Xcode 26 and later ship the Metal compiler as a separate download; the shaders need it.
+      - name: Install the Metal toolchain
+        run: |
+          set -euo pipefail
+          if ! xcrun metal --version >/dev/null 2>&1; then
+            xcodebuild -downloadComponent MetalToolchain
+          fi
+          # The downloaded toolchain is mounted in the background; wait for it.
+          for attempt in $(seq 1 60); do
+            if xcrun metal --version; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::The Metal toolchain did not become available"
+          exit 1
+
+      - name: Check build utilities
+        run: |
+          set -euo pipefail
+          if ! command -v ccache >/dev/null; then
+            brew install ccache
+          fi
+          ccache --version
+
+      - name: Restore Bazel cache
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: ~/telegram-bazel-cache
+          key: bazel-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            bazel-${{ github.ref_name }}-
+            bazel-
+
+      - name: Check and build
+        env:
+          AYUGRAM_BAZEL_CACHE: /Users/runner/telegram-bazel-cache
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APP_BUNDLE_ID: ${{ secrets.APP_BUNDLE_ID }}
+          AYUGRAM_VARIANT: ${{ matrix.variant }}
+          AYUGRAM_CONFIGURATION: ${{ inputs.configuration }}
+        run: python -u ci/ayugram_ci.py --source . --ci ci --output artifacts
+
+      # Both variants share one cache; Standard saves it, even after a failed build, so the next run reuses every target that compiled.
+      - name: Save Bazel cache
+        if: ${{ always() && matrix.variant == 'standard' }}
+        continue-on-error: true
+        uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: ~/telegram-bazel-cache
+          key: bazel-${{ github.ref_name }}-${{ github.run_id }}
+
+      - name: Upload IPA and build manifest
+        if: ${{ always() }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: ayugram-${{ matrix.variant }}-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            artifacts/*.ipa
+            artifacts/build-manifest.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Attach the IPA to the build release
+        if: ${{ success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VARIANT: ${{ matrix.variant }}
+          LABEL: ${{ inputs.label }}
+        run: |
+          set -euo pipefail
+          [[ -z "$LABEL" || "$LABEL" =~ ^[A-Za-z0-9._-]+$ ]] || LABEL=""
+          BUILD="$(python -c 'import json; print(json.load(open("artifacts/build-manifest.json"))["build_number"])')"
+          TAG="build-$BUILD"
+          if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            # Both variants race to create it; whichever loses just uploads.
+            gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --prerelease \
+              --title "AyuGram build $BUILD${LABEL:+-$LABEL}" \
+              --notes "Unsigned IPAs; re-sign them with your installer. Published to users with the Publish update workflow." || true
+          fi
+          # The build number in the name keeps downloads of different builds apart; Safari
+          # turns a second "AyuGram-standard.ipa" into "AyuGram-standard.ipa 2".
+          cp "artifacts/AyuGram-$VARIANT-unsigned.ipa" "AyuGram-$VARIANT-$BUILD.ipa"
+          # The app compares its loaded code with this fingerprint to tell an official build from a modified one.
+          python ci/ayugram_integrity.py "AyuGram-$VARIANT-$BUILD.ipa" "$BUILD" > "AyuGram-$VARIANT-$BUILD.integrity.json"
+          gh release upload "$TAG" "AyuGram-$VARIANT-$BUILD.ipa" "AyuGram-$VARIANT-$BUILD.integrity.json" --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Remove generated credential files
+        if: ${{ always() }}
+        run: python ci/ayugram_ci.py --source . --cleanup-only

@@ -1,0 +1,462 @@
+// AyuGram
+"Ayu.SupportSection" = "Suporte";
+"Ayu.SupportChannel" = "Canal de atualizações";
+"Ayu.SupportDeveloper" = "Falar com o desenvolvedor";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Verificar atualizações";
+"Ayu.UpToDate" = "Você tem a versão mais recente.";
+"Ayu.UpdateAvailable" = "Atualização disponível";
+"Ayu.UpdateAvailableInfo" = "A versão %@ saiu. Abra o canal para baixá-la.";
+"Ayu.UpdateIgnore" = "Ignorar";
+"Ayu.UpdateOpen" = "Atualizar";
+"Ayu.UpdateNoticeTitle" = "Atualização disponível! 🆕";
+"Ayu.UpdateNoticeText" = "Toque para atualizar";
+"Ayu.UpdateQuestion" = "Atualizar o NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "A versão %@ será baixada e instalada.";
+"Ayu.LiveContainerUpdate" = "Para atualizar, abra o NETHERHILL no modo Multitask (toque e segure o app dentro do LiveContainer) e tente novamente.";
+"Ayu.NotificationsSection" = "Notificações";
+"Ayu.BarkSetUp" = "Configurar notificações do Bark";
+"Ayu.BarkConnected" = "Notificações do Bark: ativadas";
+"Ayu.BarkFooter" = "Um app instalado por sideload não recebe notificações da Apple. Instale o Bark pela App Store, copie a sua chave nele e cole aqui. As novas mensagens chegarão pelo relé do NETHERHILL como notificações do Bark.";
+"Ayu.BarkPrompt" = "Cole a sua chave do Bark ou o link do app Bark. Deixe vazio para desativar as notificações.";
+"Ayu.BarkEnabled" = "Pronto. As novas mensagens chegarão como notificações do Bark enquanto o NETHERHILL estiver fechado.";
+"Ayu.BarkDisabled" = "As notificações do Bark estão desativadas.";
+"Ayu.BarkInvalid" = "Isto não é uma chave do Bark. Copie a chave ou um link do app Bark.";
+"Ayu.BarkFailed" = "O Telegram não aceitou a assinatura: %@";
+"Ayu.BarkFixTitle" = "Corrigir notificações";
+"Ayu.BarkFixInstall" = "Instale o Bark pela App Store";
+"Ayu.BarkFixConnect" = "Conecte o Bark para receber notificações";
+"Ayu.BarkEnterKey" = "Inserir chave";
+"Ayu.BarkHowTo" = "1. Instale o Bark pela App Store e abra-o.\n2. Copie o endereço https://api.day.app/… da tela principal dele.\n3. Volte, toque em “Inserir chave” e cole.";
+"Ayu.ExportChat" = "Exportar conversa";
+"Ayu.ExportChatMedia" = "A conversa inteira é salva como um arquivo que o Telegram pode importar. Incluir fotos, vídeos, mensagens de voz e arquivos? Baixá-los pode demorar bastante.";
+"Ayu.ExportChatWithMedia" = "Com mídia";
+"Ayu.ExportChatTextOnly" = "Só texto";
+"Ayu.ExportChatLoading" = "Carregando mensagens: %@";
+"Ayu.ExportChatDownloading" = "Baixando mídia: %@";
+"Ayu.ExportChatSaving" = "Criando arquivo…";
+"Ayu.ExportChatEmpty" = "Não há mensagens para exportar.";
+"Ayu.ChatTransferSection" = "Transferência de conversas";
+"Ayu.ImportChat" = "Importar conversa";
+"Ayu.ImportChatFooter" = "Importe para uma das suas conversas uma conversa exportada do WhatsApp, LINE, KakaoTalk ou com “Exportar conversa” no NETHERHILL (arquivo ZIP ou TXT).";
+"Ayu.ImportChatInvalid" = "Este arquivo não é uma exportação de conversa compatível.";
+"Ayu.HistorySaveAudio" = "Salvar áudio";
+"Ayu.HistoryDeleteEntry" = "Excluir do histórico";
+"Ayu.DeletedChats" = "Conversas apagadas";
+"Ayu.DeletedChatsInfo" = "Conversas cujo histórico foi apagado por completo. O que o NETHERHILL guardou delas nunca é removido automaticamente.";
+"Ayu.DeletedChatSave" = "Salvar como arquivo";
+"Ayu.DeletedChatRemove" = "Remover da lista";
+"Ayu.DeletedChatDelete" = "Apagar mensagens guardadas";
+"Ayu.HistorySubtitle" = "Mensagens apagadas e editadas dos chats escolhidos, guardadas apenas neste dispositivo.";
+"Ayu.HistoryAll" = "Todas";
+"Ayu.HistoryEdited" = "Editada";
+"Ayu.HistoryNow" = "Agora";
+"Ayu.HistoryShowMessage" = "Mostrar no chat";
+"Ayu.HistoryOpenChat" = "Abrir chat";
+"Ayu.HistoryStopSaving" = "Parar de salvar este chat";
+"Ayu.HistoryNoChats" = "Escolha os chats para o histórico. Nada é salvo até adicionar pelo menos um.";
+"Ayu.HistoryEmptyInfo" = "Mensagens apagadas e editadas aparecerão aqui.";
+"Ayu.AddAccountHelp" = "Você pode adicionar até 500 contas com números de telefone diferentes.";
+"Ayu.HeroGhostOn" = "Modo fantasma ativado";
+"Ayu.HeroGhostOff" = "Modo fantasma desativado";
+"Ayu.HeroHidden" = "Ocultos: %@ de %@";
+"Ayu.GhostSubtitle" = "Online, leitura, digitação, gravação, envio e stories";
+"Ayu.GhostFooter" = "O modo fantasma ativa todas as opções abaixo e mantém os valores delas.";
+"Ayu.HideSection" = "O que ocultar";
+"Ayu.BehaviorSection" = "Comportamento";
+"Ayu.OfflineAfterSending" = "Offline após enviar";
+"Ayu.OfflineAfterSendingInfo" = "Informar offline logo após cada mensagem enviada";
+"Ayu.ReadOnSend" = "Ler o chat ao responder";
+"Ayu.ReadOnSendInfo" = "Uma mensagem enviada marca o chat como lido";
+"Ayu.QuickToggle" = "Botão na aba Conversas";
+"Ayu.QuickToggleInfo" = "Mantenha pressionada a aba Conversas para ligar ou desligar rapidamente o modo fantasma.";
+"Ayu.ContentSection" = "Conteúdo";
+"Ayu.IgnoreProtection" = "Ignorar proteção de conteúdo";
+"Ayu.IgnoreProtectionInfo" = "Salvar, copiar e encaminhar de chats protegidos";
+"Ayu.AllowScreenshots" = "Permitir capturas de tela";
+"Ayu.AllowScreenshotsInfo" = "Chats protegidos e secretos aparecem em capturas e gravações";
+"Ayu.ContentFooter" = "Mensagens de chats protegidos são encaminhadas como cópia sem autor; a mídia é enviada novamente. A opção de capturas vale para telas abertas de novo.";
+"Ayu.SaveDeletedInfo" = "Mantidas em todos os chats; os chats escolhidos também aparecem no histórico";
+"Ayu.OpenHistory" = "Abrir histórico";
+"Ayu.ClientSection" = "Cliente";
+"Ayu.LocalPremiumInfo" = "Emojis e status Premium apenas neste dispositivo";
+"Ayu.GhostEnable" = "Ativar modo fantasma";
+"Ayu.GhostDisable" = "Desativar modo fantasma";
+"Ayu.GhostEnabledToast" = "Modo fantasma ativado";
+"Ayu.GhostDisabledToast" = "Modo fantasma desativado";
+"Ayu.ChatListBackground" = "Fundo da lista de chats";
+"Ayu.ConversationBackground" = "Fundo dos chats";
+"Ayu.ChooseVideo" = "Escolher vídeo";
+"Ayu.ShowBackground" = "Mostrar fundo";
+
+"Settings.ContentSettings" = "Configurações de Conteúdo";
+
+"Settings.Tabs.Header" = "ABAS";
+"Settings.Tabs.HideTabBar" = "Ocultar Abas de Guias";
+"Settings.Tabs.ShowContacts" = "Mostrar Aba dos Contatos";
+"Settings.Tabs.ShowNames" = "Mostrar nomes das abas";
+"Settings.Tabs.SearchButton" = "Botão de pesquisa";
+"Settings.Tabs.WideTabBar" = "Ocultar Abas de Guias";
+"Settings.Tabs.WideTabBar.Notice" = "Mantém a largura total da barra de abas quando algumas abas estão ocultas.";
+
+"Settings.Folders.BottomTab" = "Pastas embaixo";
+"Settings.Folders.BottomTabStyle" = "Estilos de Pastas Inferiores";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Ocultar \"%@\"";
+"Settings.Folders.RememberLast" = "Abrir última pasta";
+"Settings.Folders.RememberLast.Notice" = "O Swiftgram abrirá a última pasta usada após reiniciar ou trocar de conta";
+
+"Settings.Folders.CompactNames" = "Espaçamento Menor";
+"Settings.Folders.AllChatsTitle" = "Título \"Todos os bate-papos\"";
+"Settings.Folders.AllChatsTitle.short" = "Curto";
+"Settings.Folders.AllChatsTitle.long" = "Longas";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Padrão";
+
+
+"Settings.ChatList.Header" = "LISTA DE CHAT";
+"Settings.CompactChatList" = "Lista de Bate-Papo Compacta";
+
+"Settings.Profiles.Header" = "Perfis";
+
+"Settings.Stories.Hide" = "Ocultar Stories";
+"Settings.Stories.WarnBeforeView" = "Perguntar antes de visualizar";
+"Settings.Stories.DisableSwipeToRecord" = "Desativar deslize para gravar";
+
+"Settings.Translation.QuickTranslateButton" = "Botão de Tradução Rápida";
+"Settings.Translation.Backend" = "Serviço";
+/* Do not translate */
+"Settings.Translation.Backend.default" = "Telegram";
+/* Do not translate */
+"Settings.Translation.Backend.gtranslate" = "GTranslate";
+"Settings.Translation.Backend.system" = "Sistema";
+"Settings.Translation.Backend.Notice" = "O Swiftgram usará %@ caso o serviço de tradução selecionado não esteja disponível.";
+
+"Settings.Transcription.Header" = "VOZ PARA TEXTO";
+"Settings.Transcription.Backend" = "Serviço";
+/* Do not translate */
+"Settings.Transcription.Backend.default" = "Telegram";
+/* Do not translate */
+"Settings.Transcription.Backend.apple" = "Apple";
+"Settings.Transcription.Backend.Notice" = "O Swiftgram usará %@ caso o serviço de transcrição selecionado não esteja disponível.";
+
+"Stories.Warning.Author" = "Autor";
+"Stories.Warning.ViewStory" = "Ver Story?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ SABERÁ que você viu a Story dele.";
+"Stories.Warning.NoticeStealth" = "%@ não saberá que você viu a Story dele.";
+
+"Settings.Photo.Quality.Notice" = "Qualidade de fotos enviadas e photo-stories";
+"Settings.Photo.SendLarge" = "Enviar fotos grandes";
+"Settings.Photo.SendLarge.Notice" = "Aumentar o limite de tamanho de imagens comprimidas para 2560px";
+
+"Settings.VideoNotes.Header" = "VÍDEOS REDONDOS";
+"Settings.VideoNotes.StartWithRearCam" = "Iniciar com a câmera traseira";
+
+"Settings.CustomColors.Header" = "CORES DA CONTA";
+"Settings.CustomColors.Saturation" = "SATURAÇÃO";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Defina a saturação para 0%% para desativar as cores da conta";
+
+"Settings.UploadsBoost" = "Aceleração de Uploads";
+"Settings.DownloadsBoost" = "Aceleração de Downloads";
+"Settings.DownloadsBoost.Notice" = "Aumenta o número de conexões paralelas e o tamanho dos pedaços de arquivo. Se sua rede não conseguir lidar com a carga, tente diferentes opções que se adequem à sua conexão.";
+"Settings.DownloadsBoost.none" = "Desativado";
+"Settings.DownloadsBoost.medium" = "Médio";
+"Settings.DownloadsBoost.maximum" = "Máximo";
+
+"Settings.ShowProfileID" = "Mostrar perfil";
+"Settings.ShowDC" = "Mostrar Centro de Dados";
+"Settings.ShowCreationDate" = "Mostrar data de criação do chat";
+"Settings.ShowCreationDate.Notice" = "A data de criação pode ser desconhecida para alguns chats.";
+
+"Settings.ShowRegDate" = "Mostrar data de registro";
+"Settings.ShowRegDate.Notice" = "A data de registo é aproximada.";
+
+"Settings.SendWithReturnKey" = "Enviar com a tecla \"retorno\"";
+"Settings.HidePhoneInSettingsUI" = "Ocultar telefone nas configurações";
+"Settings.HidePhoneInSettingsUI.Notice" = "Seu número ficará oculto apenas na interface do usuário. Para ocultá-lo de outras pessoas, use as configurações de privacidade.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Se ausente por 5 segundos";
+
+"ProxySettings.UseSystemDNS" = "Usar DNS do sistema";
+"ProxySettings.UseSystemDNS.Notice" = "Use o DNS do sistema para evitar tempo limite se você não tiver acesso ao DNS do Google";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Você **não precisa** de %@!";
+"Common.RestartRequired" = "Reinício necessário";
+"Common.RestartNow" = "Reiniciar agora";
+"Common.OpenTelegram" = "Abrir Telegram";
+"Common.UseTelegramForPremium" = "Observe que para obter o Telegram Premium, você precisa usar o aplicativo oficial do Telegram. Depois de obter o Telegram Premium, todos os seus recursos ficarão disponíveis no Swiftgram.";
+"Common.UpdateOS" = "Atualização do iOS necessária";
+"Common.KnowWhatYouDo" = "Por favor, mude estas configurações apenas se souber o que elas fazem.";
+
+"Message.HoldToShowOrReport" = "Segure para Mostrar ou Denunciar.";
+
+"Auth.AccountBackupReminder" = "Certifique-se de ter um método de acesso de backup. Mantenha um SIM para SMS ou uma sessão adicional logada para evitar ser bloqueado.";
+"Auth.UnofficialAppCodeTitle" = "Você só pode obter o código com o aplicativo oficial";
+
+"Settings.SmallReactions" = "Pequenas reações";
+"Settings.HideReactions" = "Esconder Reações";
+
+"ContextMenu.SaveToCloud" = "Salvar na Nuvem";
+"ContextMenu.SelectFromUser" = "Selecionar do Autor";
+
+"Settings.ContextMenu" = "MENU DE CONTEXTO";
+"Settings.ContextMenu.Notice" = "Entradas desativadas estarão disponíveis no sub-menu 'Swiftgram'.";
+
+
+"Settings.ChatSwipeOptions" = "Opções de deslizar Lista de Chat";
+"Settings.DeleteChatSwipeOption" = "Deslize para excluir o bate-papo";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Puxe para o próximo canal não lido";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Arraste para o Próximo Tópico";
+"Settings.GalleryCamera" = "Câmera na Galeria";
+"Settings.GalleryCameraPreview" = "Pré-visualização da câmara na galeria";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "Botão \"%@\"";
+"Settings.SnapDeletionEffect" = "Efeitos de exclusão de mensagens";
+
+"Settings.Stickers.Size" = "TAMANHO";
+"Settings.Stickers.Timestamp" = "Mostrar Data/Hora";
+
+"Settings.RecordingButton" = "Botão de gravação de voz";
+
+"Settings.DefaultEmojisFirst" = "Priorizar emojis padrão";
+"Settings.DefaultEmojisFirst.Notice" = "Mostrar emojis padrão antes dos premium no teclado de emojis";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "criado: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Entrou em %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Registrado";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Toque duplo para editar mensagem";
+
+"Settings.wideChannelPosts" = "Postagens amplas nos canais";
+"Settings.ForceEmojiTab" = "Teclado de emojis por padrão";
+
+"Settings.forceBuiltInMic" = "Forçar Microfone do Dispositivo";
+"Settings.forceBuiltInMic.Notice" = "Se ativado, o aplicativo usará apenas o microfone do dispositivo mesmo se os fones de ouvido estiverem conectados.";
+
+"Settings.showChannelBottomButton" = "Painel Inferior do Canal";
+
+"Settings.secondsInMessages" = "Segundos em Mensagens";
+
+"Settings.CallConfirmation" = "Confirmação de chamada";
+"Settings.CallConfirmation.Notice" = "O Swiftgram pedirá sua confirmação antes de fazer uma chamada.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Fazer uma Chamada?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Fazer uma Chamada de Vídeo?";
+
+"MutualContact.Label" = "contato mútuo";
+
+"Settings.swipeForVideoPIP" = "Vídeo PIP com Deslizar";
+"Settings.swipeForVideoPIP.Notice" = "Se habilitado, deslizar o vídeo o abrirá em modo Picture-in-Picture.";
+
+"SessionBackup.Title" = "Backup de Sessão";
+"SessionBackup.Sessions.Title" = "Sessões";
+"SessionBackup.Actions.Backup" = "Backup para o Keychain";
+"SessionBackup.Actions.Restore" = "Restaurar do Keychain";
+"SessionBackup.Actions.DeleteAll" = "Excluir Backup do Keychain";
+"SessionBackup.Actions.DeleteOne" = "Excluir do Backup";
+"SessionBackup.Actions.RemoveFromApp" = "Remover do App";
+"SessionBackup.LastBackupAt" = "Último Backup: %@";
+"SessionBackup.RestoreOK" = "OK. Sessões restauradas: %@";
+"SessionBackup.LoggedIn" = "Conectado";
+"SessionBackup.LoggedOut" = "Desconectado";
+"SessionBackup.DeleteAll.Title" = "Excluir Todas as Sessões?";
+"SessionBackup.DeleteAll.Text" = "Todas as sessões serão removidas do Keychain.\n\nAs contas não serão desconectadas do Swiftgram.";
+"SessionBackup.DeleteSingle.Title" = "Excluir 1 (uma) Sessão?";
+"SessionBackup.DeleteSingle.Text" = "%@ sessão será removida do Keychain.\n\nA conta não será desconectada do Swiftgram.";
+"SessionBackup.RemoveFromApp.Title" = "Remover conta do App?";
+"SessionBackup.RemoveFromApp.Text" = "%@ sessão SERÁ REMOVIDA do Swiftgram! A sessão permanecerá ativa, para que você possa restaurá-la mais tarde.";
+"SessionBackup.Notice" = "As sessões são criptografadas e armazenadas no Acesso às Chaves do dispositivo. As sessões nunca saem do seu dispositivo.\n\nIMPORTANTE: Para restaurar sessões em um novo dispositivo ou após a redefinição do sistema operacional, você DEVE habilitar backups criptografados, caso contrário o Keychain não será transferido.\n\nNOTA: as sessões ainda podem ser revogadas pelo Telegram ou de outro dispositivo.";
+
+"MessageFilter.Title" = "Filtro de Mensagens";
+"MessageFilter.SubTitle" = "Remova distrações e reduza a visibilidade de mensagens contendo palavras-chave abaixo.\nAs palavras-chave são sensíveis a maiúsculas e minúsculas.";
+"MessageFilter.Keywords.Title" = "Palavras-chave";
+"MessageFilter.InputPlaceholder" = "Insira a palavra-chave";
+
+"InputToolbar.Title" = "Painel de Formatação";
+
+"Notifications.MentionsAndReplies.Title" = "@Menções e Respostas";
+"Notifications.MentionsAndReplies.value.default" = "Padrão";
+"Notifications.MentionsAndReplies.value.silenced" = "Silenciado";
+"Notifications.MentionsAndReplies.value.disabled" = "Desativado";
+"Notifications.PinnedMessages.Title" = "Mensagens Fixadas";
+"Notifications.PinnedMessages.value.default" = "Padrão";
+"Notifications.PinnedMessages.value.silenced" = "Silenciado";
+"Notifications.PinnedMessages.value.disabled" = "Desativado";
+
+
+"PayWall.Text" = "Supercarregado com recursos Pro";
+
+"PayWall.SessionBackup.Title" = "Backup de Sessão";
+"PayWall.SessionBackup.Notice" = "Faça login em contas sem código, mesmo depois de reinstalar. Armazenamento seguro com Keychain no dispositivo.";
+"PayWall.SessionBackup.Description" = "Alterar o dispositivo ou excluir o Swiftgram não é mais um problema. Restaure todas as sessões que ainda estão ativas nos servidores do Telegram.";
+
+"PayWall.MessageFilter.Title" = "Filtro de Mensagens";
+"PayWall.MessageFilter.Notice" = "Reduza a visibilidade de SPAM, promoções e mensagens irritantes.";
+"PayWall.MessageFilter.Description" = "Crie uma lista de palavras-chave que você não quer ver frequentemente e o Swiftgram reduzirá as distrações.";
+
+"PayWall.Notifications.Title" = "Desativar @menções e respostas";
+"PayWall.Notifications.Notice" = "Oculte ou silencie notificações não importantes.";
+"PayWall.Notifications.Description" = "Não há mais mensagens fixadas ou @menções quando você precisa de alguma coisa.";
+
+"PayWall.InputToolbar.Title" = "Painel de Formatação";
+"PayWall.InputToolbar.Notice" = "Economize tempo formatando as mensagens com apenas um único toque.";
+"PayWall.InputToolbar.Description" = "Aplique e limpe a formatação ou insira novas linhas como um profissional.";
+
+"PayWall.AppIcons.Title" = "Ícones de Aplicativos Exclusivos";
+"PayWall.AppIcons.Notice" = "Personalize a aparência do Swiftgram na sua tela inicial.";
+
+"PayWall.About.Title" = "Sobre o Swiftgram Pro";
+"PayWall.About.Notice" = "A versão gratuita do Swiftgram oferece dezenas de recursos e melhorias em relação ao aplicativo Telegram. Inovar e manter o Swiftgram em sincronia com as atualizações mensais do Telegram é um grande esforço que requer muito tempo e hardware caro.\n\nO Swiftgram é um aplicativo de código aberto que respeita sua privacidade e não incomoda você com anúncios. Ao se inscrever no Swiftgram Pro, você obtém acesso a recursos exclusivos e apoia um desenvolvedor independente.";
+/* DO NOT TRANSLATE */
+"PayWall.About.Signature" = "@Kylmakalle";
+/* DO NOT TRANSLATE */
+"PayWall.About.SignatureURL" = "https://t.me/Kylmakalle";
+
+"PayWall.ProSupport.Title" = "Problemas com pagamento?";
+"PayWall.ProSupport.Contact" = "Não se preocupe!";
+
+"PayWall.RestorePurchases" = "Restaurar Compras";
+"PayWall.Terms" = "Termos de Serviço";
+"PayWall.Privacy" = "Política de Privacidade";
+"PayWall.TermsURL" = "https://swiftgram.app/terms";
+"PayWall.PrivacyURL" = "https://swiftgram.app/privacy";
+"PayWall.Notice.Markdown" = "Ao se inscrever no Swiftgram Pro, você concorda com os [Termos de Serviço do Swiftgram](%1$@) e com a [Política de Privacidade](%2$@).";
+"PayWall.Notice.Raw" = "Ao se inscrever no Swiftgram Pro, você concorda com os Termos de Serviço e Política de Privacidade do Swiftgram.";
+
+"PayWall.Button.OpenPro" = "Usar recursos Pro";
+"PayWall.Button.Purchasing" = "Adquirindo...";
+"PayWall.Button.Restoring" = "Restaurando Compras...";
+"PayWall.Button.Validating" = "Validando Compra...";
+"PayWall.Button.PaymentsUnavailable" = "Pagamentos indisponíveis";
+"PayWall.Button.BuyInAppStore" = "Inscrever-se na versão da App Store";
+"PayWall.Button.Subscribe" = "Assinar por %@ / mês";
+"PayWall.Button.ContactingAppStore" = "Contatando App Store...";
+
+"Paywall.Error.Title" = "Erro";
+"PayWall.ValidationError" = "Erro de Validação";
+"PayWall.ValidationError.TryAgain" = "Algo deu errado durante a validação da compra. Sem problemas! Tente Restaurar Compras um pouco mais tarde.";
+"PayWall.ValidationError.Expired" = "Sua assinatura expirou. Inscreva-se novamente para recuperar o acesso aos recursos Pro.";
+
+"AppBadge.Title" = "Emblema do Aplicativo";
+"AppBadge.Notice" = "Personalizar Emblema do Aplicativo Exibido nas capturas de tela";
+
+"Settings.NY.Header" = "EFEITOS DE FERIADO";
+"Settings.NY.Style" = "Estilo";
+"Settings.NY.Style.default" = "Desativado";
+"Settings.NY.Style.snow" = "Neve";
+"Settings.NY.Style.lightning" = "Raio";
+"Settings.NY.Notice" = "Disponível por tempo limitado!";
+
+"Ayu.Ghost" = "Modo fantasma";
+"Ayu.HideRead" = "Ocultar confirmações de leitura";
+"Ayu.HideOnline" = "Ocultar estado online";
+"Ayu.HideTyping" = "Ocultar digitação";
+"Ayu.HideRecording" = "Ocultar gravação";
+"Ayu.HideUploading" = "Ocultar envios";
+"Ayu.HideStories" = "Ocultar visualizações de histórias";
+"Ayu.History" = "Histórico de mensagens";
+"Ayu.SaveDeleted" = "Guardar mensagens apagadas";
+"Ayu.SavePhotos" = "Guardar fotos";
+"Ayu.ClearHistory" = "Limpar histórico";
+"Ayu.EmptyHistory" = "Ainda sem histórico";
+"Ayu.SaveMedia" = "Guardar mídia em cache";
+"Ayu.BackgroundDimming" = "Escurecimento do fundo";
+"Ayu.BeforeEdit" = "Antes da edição";
+"Ayu.Deleted" = "Apagado";
+"Ayu.ServerPresence" = "No servidor: %@";
+"Ayu.ServerUnavailable" = "Estado do servidor indisponível";
+"Ayu.SendReadReceipt" = "Enviar confirmação de leitura";
+"Ayu.ViewWithoutReceipt" = "Ver sem confirmação";
+"Ayu.ReportPhotoView" = "Confirmar a visualização da foto";
+"Ayu.View" = "Ver";
+"Ayu.SendReceipt" = "Enviar";
+"Ayu.ReceiptSent" = "Confirmação enviada";
+"Ayu.ReceiptError" = "Não foi possível enviar a confirmação. Verifica a ligação e tenta novamente.";
+"Ayu.IconChangeUnavailable" = "A escolha foi guardada na aplicação. O iOS não conseguiu alterar o ícone do ecrã inicial.";
+"Ayu.LocalPremium" = "Premium local";
+"Ayu.Pins" = "Máximo de conversas fixadas";
+"Ayu.LocalOnly" = "Apenas neste dispositivo";
+"Ayu.HistoryInfo" = "Apenas conversas selecionadas. Fotos em cache e texto: 30 dias, até 200 registos. Sem mensagens secretas ou temporárias.";
+"Ayu.ReadWarning" = "Confirmar a leitura da conversa até esta mensagem?";
+"Ayu.ViewWarning" = "Confirmar a visualização e iniciar o temporizador do conteúdo temporário?";
+
+"Ayu.RowOpacity" = "Opacidade das linhas de conversa";
+"Ayu.MediaImportError" = "Não foi possível importar o ficheiro. Máximo: 100 MB.";
+"Ayu.SilentSending" = "Enviar sem som";
+"Ayu.SilentNever" = "Nunca";
+"Ayu.SilentInGhost" = "No modo fantasma";
+"Ayu.SilentAlways" = "Sempre";
+"Ayu.ScheduleInGhost" = "Enviar como agendada";
+"Ayu.ScheduleInGhostInfo" = "No modo fantasma as mensagens saem agendadas em 12 segundos, assim você nunca aparece online";
+"Ayu.ChatsSection" = "Conversas";
+"Ayu.DisableAds" = "Ocultar mensagens patrocinadas";
+"Ayu.DisableLinkWarning" = "Sem aviso para links ocultos";
+"Ayu.DisableGreeting" = "Sem figurinha de saudação";
+"Ayu.DimDeleted" = "Mensagens apagadas translúcidas";
+"Ayu.RepeatMessage" = "Repetir no menu da mensagem";
+"Ayu.Repeat" = "Repetir";
+"Ayu.ConfirmStickers" = "Confirmar envio de figurinhas";
+"Ayu.ConfirmGifs" = "Confirmar envio de GIFs";
+"Ayu.ConfirmSticker" = "Enviar esta figurinha?";
+"Ayu.ConfirmGif" = "Enviar este GIF?";
+"Ayu.Send" = "Enviar";
+"Ayu.ImportLocally" = "Importar localmente";
+"Ayu.ImportLocallyInfo" = "Você pode importar a conversa só neste aparelho: as mensagens aparecem nesta conversa apenas para você e não são enviadas ao Telegram.";
+"Ayu.ImportLocallyDone" = "Mensagens importadas: %@. Elas aparecem só neste aparelho.";
+"Ayu.ViewDeleted" = "Mensagens apagadas";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Conversas com mensagens apagadas guardadas neste aparelho. Abra uma para ler as mensagens apagadas ou a conversa inteira.";
+"Ayu.ViewDeletedEmpty" = "Ainda não há mensagens apagadas.";
+"Ayu.ConfirmReadReceipt" = "Confirmar recibos de leitura";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

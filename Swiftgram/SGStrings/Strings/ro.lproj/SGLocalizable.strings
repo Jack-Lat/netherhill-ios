@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Asistență";
+"Ayu.SupportChannel" = "Canal de actualizări";
+"Ayu.SupportDeveloper" = "Contactează dezvoltatorul";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Caută actualizări";
+"Ayu.UpToDate" = "Ai cea mai nouă versiune.";
+"Ayu.UpdateAvailable" = "Actualizare disponibilă";
+"Ayu.UpdateAvailableInfo" = "A apărut versiunea %@. Deschide canalul ca s-o descarci.";
+"Ayu.UpdateIgnore" = "Ignoră";
+"Ayu.UpdateOpen" = "Actualizează";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "Pentru actualizare, pornește NETHERHILL în modul Multitask (ține apăsat pe aplicație în LiveContainer) și încearcă din nou.";
+"Ayu.NotificationsSection" = "Notificări";
+"Ayu.BarkSetUp" = "Configurează notificările Bark";
+"Ayu.BarkConnected" = "Notificări Bark: activate";
+"Ayu.BarkFooter" = "O aplicație instalată prin sideload nu primește notificări de la Apple. Instalează Bark din App Store, copiază acolo cheia ta și lipește-o aici. Mesajele noi vor sosi prin releul NETHERHILL ca notificări Bark.";
+"Ayu.BarkPrompt" = "Lipește cheia Bark sau linkul din aplicația Bark. Lasă gol pentru a dezactiva notificările.";
+"Ayu.BarkEnabled" = "Gata. Mesajele noi vor sosi ca notificări Bark cât timp NETHERHILL este închis.";
+"Ayu.BarkDisabled" = "Notificările Bark sunt dezactivate.";
+"Ayu.BarkInvalid" = "Aceasta nu este o cheie Bark. Copiază cheia sau un link din aplicația Bark.";
+"Ayu.BarkFailed" = "Telegram nu a acceptat abonarea: %@";
+"Ayu.BarkFixTitle" = "Repară notificările";
+"Ayu.BarkFixInstall" = "Instalează Bark din App Store";
+"Ayu.BarkFixConnect" = "Conectează Bark pentru a primi notificări";
+"Ayu.BarkEnterKey" = "Introdu cheia";
+"Ayu.BarkHowTo" = "1. Instalează Bark din App Store și deschide-l.\n2. Copiază adresa https://api.day.app/… de pe ecranul său principal.\n3. Revino, atinge „Introdu cheia” și lipește-o.";
+"Ayu.ExportChat" = "Exportă conversația";
+"Ayu.ExportChatMedia" = "Întreaga conversație este salvată ca o arhivă pe care Telegram o poate importa. Includeți fotografii, videoclipuri, mesaje vocale și fișiere? Descărcarea lor poate dura mult.";
+"Ayu.ExportChatWithMedia" = "Cu fișiere media";
+"Ayu.ExportChatTextOnly" = "Doar text";
+"Ayu.ExportChatLoading" = "Se încarcă mesajele: %@";
+"Ayu.ExportChatDownloading" = "Se descarcă fișierele media: %@";
+"Ayu.ExportChatSaving" = "Se creează arhiva…";
+"Ayu.ExportChatEmpty" = "Nu există mesaje de exportat.";
+"Ayu.ChatTransferSection" = "Transferul conversațiilor";
+"Ayu.ImportChat" = "Importă conversația";
+"Ayu.ImportChatFooter" = "Importați într-una dintre conversațiile dvs. o conversație exportată din WhatsApp, LINE, KakaoTalk sau cu „Exportă conversația” în NETHERHILL (fișier ZIP sau TXT).";
+"Ayu.ImportChatInvalid" = "Acest fișier nu este un export de conversație acceptat.";
+"Ayu.HistorySaveAudio" = "Salvează audio";
+"Ayu.HistoryDeleteEntry" = "Șterge din istoric";
+"Ayu.DeletedChats" = "Conversații șterse";
+"Ayu.DeletedChatsInfo" = "Conversații al căror istoric a fost șters complet. Ce a păstrat NETHERHILL nu se șterge niciodată automat.";
+"Ayu.DeletedChatSave" = "Salvează ca arhivă";
+"Ayu.DeletedChatRemove" = "Elimină din listă";
+"Ayu.DeletedChatDelete" = "Șterge mesajele păstrate";
+"Ayu.HistorySubtitle" = "Mesaje șterse și editate din chaturile alese, păstrate doar pe acest dispozitiv.";
+"Ayu.HistoryAll" = "Toate";
+"Ayu.HistoryEdited" = "Editat";
+"Ayu.HistoryNow" = "Acum";
+"Ayu.HistoryShowMessage" = "Arată în chat";
+"Ayu.HistoryOpenChat" = "Deschide chatul";
+"Ayu.HistoryStopSaving" = "Nu mai salva acest chat";
+"Ayu.HistoryNoChats" = "Alege chaturile pentru istoric. Nu se salvează nimic până nu adaugi cel puțin unul.";
+"Ayu.HistoryEmptyInfo" = "Aici vor apărea mesajele șterse și editate.";
+"Ayu.AddAccountHelp" = "Poți adăuga până la 500 de conturi cu numere de telefon diferite.";
+"Ayu.HeroGhostOn" = "Modul fantomă este activ";
+"Ayu.HeroGhostOff" = "Modul fantomă este dezactivat";
+"Ayu.HeroHidden" = "Ascunse: %@ din %@";
+"Ayu.GhostSubtitle" = "Online, citire, scriere, înregistrare, încărcare și povești";
+"Ayu.GhostFooter" = "Modul fantomă activează toate comutatoarele de mai jos și le păstrează valorile proprii.";
+"Ayu.HideSection" = "Ce se ascunde";
+"Ayu.BehaviorSection" = "Comportament";
+"Ayu.OfflineAfterSending" = "Offline după trimitere";
+"Ayu.OfflineAfterSendingInfo" = "Raportează offline imediat după fiecare mesaj trimis";
+"Ayu.ReadOnSend" = "Citește chatul la răspuns";
+"Ayu.ReadOnSendInfo" = "Un mesaj trimis marchează chatul ca citit";
+"Ayu.QuickToggle" = "Comutator în fila Chaturi";
+"Ayu.QuickToggleInfo" = "Ține apăsat pe fila Chaturi pentru a porni sau opri rapid modul fantomă.";
+"Ayu.ContentSection" = "Conținut";
+"Ayu.IgnoreProtection" = "Ignoră protecția conținutului";
+"Ayu.IgnoreProtectionInfo" = "Salvare, copiere și redirecționare din chaturi protejate";
+"Ayu.AllowScreenshots" = "Permite capturi de ecran";
+"Ayu.AllowScreenshotsInfo" = "Chaturile protejate și secrete apar în capturi și înregistrări";
+"Ayu.ContentFooter" = "Mesajele din chaturi protejate sunt redirecționate ca o copie fără autor; fișierele media se încarcă din nou. Setarea pentru capturi se aplică ecranelor redeschise.";
+"Ayu.SaveDeletedInfo" = "Rămân în toate chaturile; chaturile alese apar și în istoricul mesajelor";
+"Ayu.OpenHistory" = "Deschide istoricul";
+"Ayu.ClientSection" = "Client";
+"Ayu.LocalPremiumInfo" = "Emoji și stări Premium doar pe acest dispozitiv";
+"Ayu.GhostEnable" = "Activează modul fantomă";
+"Ayu.GhostDisable" = "Dezactivează modul fantomă";
+"Ayu.GhostEnabledToast" = "Mod fantomă activat";
+"Ayu.GhostDisabledToast" = "Mod fantomă dezactivat";
+"Ayu.ChatListBackground" = "Fundalul listei de chaturi";
+"Ayu.ConversationBackground" = "Fundalul chaturilor";
+"Ayu.ChooseVideo" = "Alege videoclip";
+"Ayu.ShowBackground" = "Arată fundalul";
+
+"Settings.ContentSettings" = "Setări Conținut";
+
+"Settings.Tabs.Header" = "FERESTRE";
+"Settings.Tabs.HideTabBar" = "Ascunde bara de filă";
+"Settings.Tabs.ShowContacts" = "Vizualizare contacte";
+"Settings.Tabs.ShowNames" = "Arată Fereastra cu Numele";
+
+"Settings.Folders.BottomTab" = "Dosare de jos";
+"Settings.Folders.BottomTabStyle" = "Stil directoare de jos";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegramă";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Ascundeți „%@\"";
+"Settings.Folders.RememberLast" = "Deschideți ultimul dosar";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram va deschide ultimul folder utilizat atunci când reporniți aplicația sau schimbați conturile.";
+
+"Settings.Folders.CompactNames" = "Spațiere mai mică";
+"Settings.Folders.AllChatsTitle" = "Titlul \"Toate conversațiile\"";
+"Settings.Folders.AllChatsTitle.short" = "Scurt";
+"Settings.Folders.AllChatsTitle.long" = "Lungă";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Implicit";
+
+
+"Settings.ChatList.Header" = "LISTA CHAT";
+"Settings.CompactChatList" = "Lista compactă de Chat";
+
+"Settings.Profiles.Header" = "PROFILES";
+
+"Settings.Stories.Hide" = "Ascunde povestiri";
+"Settings.Stories.WarnBeforeView" = "Întreabă înainte de vizualizare";
+"Settings.Stories.DisableSwipeToRecord" = "Dezactivează glisarea pentru înregistrare";
+
+"Settings.Translation.QuickTranslateButton" = "Butonul Traducere Rapidă";
+
+"Stories.Warning.Author" = "Autor";
+"Stories.Warning.ViewStory" = "Vezi povestirea?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ VOR FI ACĂ SĂ VEDEȚI că le-ați văzut povestea lor.";
+"Stories.Warning.NoticeStealth" = "%@ nu va putea vedea povestea lor.";
+
+"Settings.Photo.Quality.Notice" = "Calitatea fotografiilor și povestirilor încărcate.";
+"Settings.Photo.SendLarge" = "Trimite fotografii mari";
+"Settings.Photo.SendLarge.Notice" = "Crește limita laterală a imaginilor comprimate la 2560px.";
+
+"Settings.VideoNotes.Header" = "VIDEO ROTUND";
+"Settings.VideoNotes.StartWithRearCam" = "Începe cu camera posterioară";
+
+"Settings.CustomColors.Header" = "COLORTURI DE CONT";
+"Settings.CustomColors.Saturation" = "SATURARE";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Setați la 0%% pentru a dezactiva culorile contului.";
+
+"Settings.UploadsBoost" = "Accelerare Încărcare";
+"Settings.DownloadsBoost" = "Impuls descărcare";
+"Settings.DownloadsBoost.Notice" = "Crește numărul de conexiuni paralele și dimensiunea fragmentelor de fișier. Dacă rețeaua ta nu poate gestiona încărcătura, încearcă diferite opțiuni care se potrivesc conexiunii tale.";
+"Settings.DownloadsBoost.none" = "Dezactivat";
+"Settings.DownloadsBoost.medium" = "Medie";
+"Settings.DownloadsBoost.maximum" = "Maxim";
+
+"Settings.ShowProfileID" = "Arată ID-ul profilului";
+"Settings.ShowDC" = "Arată Centrul de date";
+"Settings.ShowCreationDate" = "Arată data creării chat-ului";
+"Settings.ShowCreationDate.Notice" = "Data creării poate fi necunoscută pentru unele conversații.";
+
+"Settings.ShowRegDate" = "Arată data înregistrării";
+"Settings.ShowRegDate.Notice" = "Data înregistrării este aproximativă.";
+
+"Settings.SendWithReturnKey" = "Trimite cu cheia \"Returnare\"";
+"Settings.HidePhoneInSettingsUI" = "Ascunde telefonul din setări";
+"Settings.HidePhoneInSettingsUI.Notice" = "Acest lucru va ascunde numărul de telefon din interfața de setări. Pentru a-l ascunde de alții, mergi la confidențialitate și securitate.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Dacă este plecat timp de 5 secunde";
+
+"ProxySettings.UseSystemDNS" = "Utilizați DNS sistem";
+"ProxySettings.UseSystemDNS.Notice" = "Utilizați DNS pentru a ocoli timeout-ul dacă nu aveți acces la Google DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Nu ai nevoie de ** %@!";
+"Common.RestartRequired" = "Repornire necesară";
+"Common.RestartNow" = "Repornește acum";
+"Common.OpenTelegram" = "Deschide telegrama";
+"Common.UseTelegramForPremium" = "Vă rugăm să reţineţi că, pentru a obţine Telegram Premium, trebuie să utilizaţi aplicaţia oficială Telegram. Odată ce ai obţinut Telegram Premium, toate caracteristicile sale vor deveni disponibile în Swiftgram.";
+
+"Message.HoldToShowOrReport" = "Țineți apăsat pentru a afișa sau raporta.";
+
+"Auth.AccountBackupReminder" = "Asigurați-vă că aveți o metodă de acces de rezervă. Păstrați un SIM pentru SMS sau o sesiune adițională conectată pentru a evita blocarea.";
+"Auth.UnofficialAppCodeTitle" = "Poți obține codul doar cu aplicația oficială";
+
+"Settings.SmallReactions" = "Reacţii mici";
+"Settings.HideReactions" = "Ascunde Reacțiile";
+
+"ContextMenu.SaveToCloud" = "Salvează în Cloud";
+"ContextMenu.SelectFromUser" = "Selectați din autor";
+
+"Settings.ContextMenu" = "MENIU CONTEXTUAL";
+"Settings.ContextMenu.Notice" = "Intrările dezactivate vor fi disponibile în submeniul 'Swiftgram'.";
+
+
+"Settings.ChatSwipeOptions" = "Opțiuni de glisare a chatului";
+"Settings.DeleteChatSwipeOption" = "Glisați pentru ștergere chat";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Trageţi pentru următorul canal necitit";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Trageți către Următorul Subiect";
+"Settings.GalleryCamera" = "Cameră foto în Galerie";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "Butonul \"%@\"";
+"Settings.SnapDeletionEffect" = "Efecte ștergere mesaj";
+
+"Settings.Stickers.Size" = "MISIUNE";
+"Settings.Stickers.Timestamp" = "Arată Ora";
+
+"Settings.RecordingButton" = "Butonul Înregistrare Voce";
+
+"Settings.DefaultEmojisFirst" = "Prioritize emoticoanele standard";
+"Settings.DefaultEmojisFirst.Notice" = "Afișați emoticoanele standard înainte de cele premium în tastatura emoji";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "creat: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "S-a alăturat %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Înregistrat";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Apăsați de două ori pentru a edita mesajul";
+
+"Settings.wideChannelPosts" = "Postări late în canale";
+"Settings.ForceEmojiTab" = "Tastatură emoji implicită";
+
+"Settings.forceBuiltInMic" = "Forțează Microfon Dispozitiv";
+"Settings.forceBuiltInMic.Notice" = "Dacă este activat, aplicația va folosi doar microfonul dispozitivului chiar dacă sunt conectate căștile.";
+
+"Settings.hideChannelBottomButton" = "Ascundeți panoul de jos al canalului";
+
+"Settings.CallConfirmation" = "Confirmare apel";
+"Settings.CallConfirmation.Notice" = "Swiftgram va solicita confirmarea dumneavoastră înainte de a efectua un apel.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Ești sigur că vrei să faci un apel?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Ești sigur că vrei să faci un apel video?";
+
+"MutualContact.Label" = "contact mutual";
+
+"Settings.swipeForVideoPIP" = "Video PIP cu gestul de glisare";
+"Settings.swipeForVideoPIP.Notice" = "Dacă este activat, glisarea video va deschide în modul imagine în imagine.";
+
+"Ayu.Ghost" = "Mod fantomă";
+"Ayu.HideRead" = "Ascunde confirmările de citire";
+"Ayu.HideOnline" = "Ascunde starea online";
+"Ayu.HideTyping" = "Ascunde tastarea";
+"Ayu.HideRecording" = "Ascunde înregistrarea";
+"Ayu.HideUploading" = "Ascunde încărcările";
+"Ayu.HideStories" = "Ascunde vizualizările poveștilor";
+"Ayu.History" = "Istoricul mesajelor";
+"Ayu.SaveDeleted" = "Salvează mesajele șterse";
+"Ayu.SavePhotos" = "Salvează fotografii";
+"Ayu.ClearHistory" = "Șterge istoricul";
+"Ayu.EmptyHistory" = "Încă nu există istoric";
+"Ayu.SaveMedia" = "Salvează fișierele media din cache";
+"Ayu.BackgroundDimming" = "Întunecarea fundalului";
+"Ayu.BeforeEdit" = "Înainte de editare";
+"Ayu.Deleted" = "Șters";
+"Ayu.ServerPresence" = "Pe server: %@";
+"Ayu.ServerUnavailable" = "Starea serverului nu este disponibilă";
+"Ayu.SendReadReceipt" = "Trimite confirmarea citirii";
+"Ayu.ViewWithoutReceipt" = "Vizualizează fără confirmare";
+"Ayu.ReportPhotoView" = "Confirmă vizualizarea fotografiei";
+"Ayu.View" = "Vizualizează";
+"Ayu.SendReceipt" = "Trimite";
+"Ayu.ReceiptSent" = "Confirmare trimisă";
+"Ayu.ReceiptError" = "Confirmarea nu a putut fi trimisă. Verifică conexiunea și încearcă din nou.";
+"Ayu.IconChangeUnavailable" = "Alegerea este salvată în aplicație. iOS nu a putut schimba pictograma de pe ecranul principal.";
+"Ayu.LocalPremium" = "Premium local";
+"Ayu.Pins" = "Număr maxim de conversații fixate";
+"Ayu.LocalOnly" = "Doar pe acest dispozitiv";
+"Ayu.HistoryInfo" = "Doar conversațiile selectate. Fotografii în cache și text: 30 de zile, până la 200 de înregistrări. Fără mesaje secrete sau temporare.";
+"Ayu.ReadWarning" = "Trimiți confirmarea de citire a conversației până la acest mesaj?";
+"Ayu.ViewWarning" = "Confirmi vizualizarea și pornești temporizatorul conținutului temporar?";
+
+"Ayu.RowOpacity" = "Opacitatea rândurilor de conversații";
+"Ayu.MediaImportError" = "Fișierul nu poate fi importat. Maximum: 100 MB.";
+"Ayu.SilentSending" = "Trimite fără sunet";
+"Ayu.SilentNever" = "Niciodată";
+"Ayu.SilentInGhost" = "În modul fantomă";
+"Ayu.SilentAlways" = "Mereu";
+"Ayu.ScheduleInGhost" = "Trimite ca programat";
+"Ayu.ScheduleInGhostInfo" = "În modul fantomă mesajele pleacă programate peste 12 secunde, deci nu apari niciodată online";
+"Ayu.ChatsSection" = "Chaturi";
+"Ayu.DisableAds" = "Ascunde mesajele sponsorizate";
+"Ayu.DisableLinkWarning" = "Fără avertisment pentru linkuri ascunse";
+"Ayu.DisableGreeting" = "Fără autocolant de salut";
+"Ayu.DimDeleted" = "Mesaje șterse translucide";
+"Ayu.RepeatMessage" = "Repetă în meniul mesajului";
+"Ayu.Repeat" = "Repetă";
+"Ayu.ConfirmStickers" = "Confirmă trimiterea autocolantelor";
+"Ayu.ConfirmGifs" = "Confirmă trimiterea GIF-urilor";
+"Ayu.ConfirmSticker" = "Trimiți acest autocolant?";
+"Ayu.ConfirmGif" = "Trimiți acest GIF?";
+"Ayu.Send" = "Trimite";
+"Ayu.ImportLocally" = "Importă local";
+"Ayu.ImportLocallyInfo" = "Poți importa chatul doar pe acest dispozitiv: mesajele apar în acest chat doar pentru tine și nu sunt trimise la Telegram.";
+"Ayu.ImportLocallyDone" = "Mesaje importate: %@. Sunt vizibile doar pe acest dispozitiv.";
+"Ayu.ViewDeleted" = "Mesaje șterse";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Chaturi cu mesaje șterse păstrate pe acest dispozitiv. Deschide unul pentru a citi mesajele șterse sau tot chatul.";
+"Ayu.ViewDeletedEmpty" = "Încă nu există mesaje șterse.";
+"Ayu.ConfirmReadReceipt" = "Confirmă confirmările de citire";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

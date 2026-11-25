@@ -1,0 +1,437 @@
+// AyuGram
+"Ayu.SupportSection" = "支持";
+"Ayu.SupportChannel" = "更新频道";
+"Ayu.SupportDeveloper" = "联系开发者";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "检查更新";
+"Ayu.UpToDate" = "已是最新版本。";
+"Ayu.UpdateAvailable" = "有可用更新";
+"Ayu.UpdateAvailableInfo" = "版本 %@ 已发布。打开频道下载。";
+"Ayu.UpdateIgnore" = "忽略";
+"Ayu.UpdateOpen" = "更新";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "要更新，请在 LiveContainer 中长按应用，以 Multitask 模式启动 NETHERHILL，然后重试。";
+"Ayu.NotificationsSection" = "通知";
+"Ayu.BarkSetUp" = "设置 Bark 通知";
+"Ayu.BarkConnected" = "Bark 通知：已开启";
+"Ayu.BarkFooter" = "侧载安装的应用无法收到 Apple 的通知。请从 App Store 安装 Bark，复制其中的密钥并粘贴到这里。新消息将通过 NETHERHILL 中继以 Bark 通知送达。";
+"Ayu.BarkPrompt" = "粘贴你的 Bark 密钥或 Bark 应用中的链接。留空即可关闭通知。";
+"Ayu.BarkEnabled" = "完成。NETHERHILL 关闭时，新消息将以 Bark 通知送达。";
+"Ayu.BarkDisabled" = "Bark 通知已关闭。";
+"Ayu.BarkInvalid" = "这不是 Bark 密钥。请从 Bark 应用复制密钥或链接。";
+"Ayu.BarkFailed" = "Telegram 未接受订阅：%@";
+"Ayu.BarkFixTitle" = "修复通知";
+"Ayu.BarkFixInstall" = "从 App Store 安装 Bark";
+"Ayu.BarkFixConnect" = "连接 Bark 以接收通知";
+"Ayu.BarkEnterKey" = "输入密钥";
+"Ayu.BarkHowTo" = "1. 从 App Store 安装并打开 Bark。\n2. 复制其主界面上的地址 https://api.day.app/…。\n3. 回到这里，点按“输入密钥”并粘贴。";
+"Ayu.ExportChat" = "导出聊天";
+"Ayu.ExportChatMedia" = "整个聊天将保存为 Telegram 可以导入的压缩包。是否包含照片、视频、语音消息和文件？下载它们可能需要很长时间。";
+"Ayu.ExportChatWithMedia" = "包含媒体";
+"Ayu.ExportChatTextOnly" = "仅文字";
+"Ayu.ExportChatLoading" = "正在加载消息：%@";
+"Ayu.ExportChatDownloading" = "正在下载媒体：%@";
+"Ayu.ExportChatSaving" = "正在创建压缩包…";
+"Ayu.ExportChatEmpty" = "没有可导出的消息。";
+"Ayu.ChatTransferSection" = "聊天迁移";
+"Ayu.ImportChat" = "导入聊天";
+"Ayu.ImportChatFooter" = "将从 WhatsApp、LINE、KakaoTalk 导出或通过 NETHERHILL 中的“导出聊天”导出的聊天（ZIP 或 TXT 文件）导入到你的某个聊天中。";
+"Ayu.ImportChatInvalid" = "此文件不是受支持的聊天导出文件。";
+"Ayu.HistorySaveAudio" = "保存音频";
+"Ayu.HistoryDeleteEntry" = "从历史记录中删除";
+"Ayu.DeletedChats" = "已删除的聊天";
+"Ayu.DeletedChatsInfo" = "整个记录被删除的聊天。NETHERHILL 保留的内容永远不会被自动删除。";
+"Ayu.DeletedChatSave" = "保存为归档";
+"Ayu.DeletedChatRemove" = "从列表中移除";
+"Ayu.DeletedChatDelete" = "删除保留的消息";
+"Ayu.HistorySubtitle" = "所选聊天中被删除和编辑的消息，仅保存在此设备上。";
+"Ayu.HistoryAll" = "全部";
+"Ayu.HistoryEdited" = "已编辑";
+"Ayu.HistoryNow" = "现在";
+"Ayu.HistoryShowMessage" = "在聊天中显示";
+"Ayu.HistoryOpenChat" = "打开聊天";
+"Ayu.HistoryStopSaving" = "停止保存此聊天";
+"Ayu.HistoryNoChats" = "请选择要保存历史的聊天。至少添加一个之前不会保存任何内容。";
+"Ayu.HistoryEmptyInfo" = "被删除和编辑的消息将显示在这里。";
+"Ayu.AddAccountHelp" = "您最多可以添加 500 个使用不同手机号的账号。";
+"Ayu.HeroGhostOn" = "幽灵模式已开启";
+"Ayu.HeroGhostOff" = "幽灵模式已关闭";
+"Ayu.HeroHidden" = "已隐藏：%@ / %@";
+"Ayu.GhostSubtitle" = "在线、已读、输入、录音、上传和动态";
+"Ayu.GhostFooter" = "幽灵模式会开启下方所有开关，并保留它们各自的设置。";
+"Ayu.HideSection" = "隐藏内容";
+"Ayu.BehaviorSection" = "行为";
+"Ayu.OfflineAfterSending" = "发送后离线";
+"Ayu.OfflineAfterSendingInfo" = "每次发送消息后立即报告离线";
+"Ayu.ReadOnSend" = "回复时标记已读";
+"Ayu.ReadOnSendInfo" = "发送的消息会将该聊天标记为已读";
+"Ayu.QuickToggle" = "聊天标签中的开关";
+"Ayu.QuickToggleInfo" = "长按“聊天”标签即可快速开启或关闭幽灵模式。";
+"Ayu.ContentSection" = "内容";
+"Ayu.IgnoreProtection" = "忽略内容保护";
+"Ayu.IgnoreProtectionInfo" = "从受保护的聊天中保存、复制和转发";
+"Ayu.AllowScreenshots" = "允许截屏";
+"Ayu.AllowScreenshotsInfo" = "受保护和私密聊天会出现在截屏和录屏中";
+"Ayu.ContentFooter" = "受保护聊天的消息将以不含作者的副本转发，媒体会重新上传。截屏设置对重新打开的界面生效。";
+"Ayu.SaveDeletedInfo" = "保留在所有聊天中；所选聊天也会显示在消息历史中";
+"Ayu.OpenHistory" = "打开历史";
+"Ayu.ClientSection" = "客户端";
+"Ayu.LocalPremiumInfo" = "Premium 表情和状态仅在此设备上";
+"Ayu.GhostEnable" = "开启幽灵模式";
+"Ayu.GhostDisable" = "关闭幽灵模式";
+"Ayu.GhostEnabledToast" = "已开启幽灵模式";
+"Ayu.GhostDisabledToast" = "已关闭幽灵模式";
+"Ayu.ChatListBackground" = "聊天列表背景";
+"Ayu.ConversationBackground" = "聊天背景";
+"Ayu.ChooseVideo" = "选择视频";
+"Ayu.ShowBackground" = "显示背景";
+
+"Settings.ContentSettings" = "敏感内容设置";
+
+"Settings.Tabs.Header" = "标签";
+"Settings.Tabs.HideTabBar" = "隐藏底部导航栏";
+"Settings.Tabs.ShowContacts" = "显示联系人标签";
+"Settings.Tabs.ShowNames" = "显示标签名称";
+
+"Settings.Folders.BottomTab" = "底部分组";
+"Settings.Folders.BottomTabStyle" = "底部分组样式";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS样式";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram样式";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "隐藏 \"%@\"";
+"Settings.Folders.RememberLast" = "打开上次分组";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram 将在重启或切换账户后打开最后使用的分组";
+
+"Settings.Folders.CompactNames" = "缩小分组间距";
+"Settings.Folders.AllChatsTitle" = "\"所有对话\"标题";
+"Settings.Folders.AllChatsTitle.short" = "短标题";
+"Settings.Folders.AllChatsTitle.long" = "长标题";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "默认";
+
+
+"Settings.ChatList.Header" = "对话列表";
+"Settings.CompactChatList" = "紧凑型对话列表";
+"Settings.ChatList.Lines" = "对话列表行数";
+"Settings.ChatList.Lines.1" = "1 行";
+"Settings.ChatList.Lines.2" = "2 行";
+"Settings.ChatList.Lines.3" = "3 行（默认）";
+
+"Settings.Profiles.Header" = "资料";
+
+"Settings.Stories.Hide" = "隐藏动态";
+"Settings.Stories.WarnBeforeView" = "查看前询问";
+"Settings.Stories.DisableSwipeToRecord" = "禁用侧滑拍摄";
+
+"Settings.Translation.QuickTranslateButton" = "快速翻译按钮";
+
+"Stories.Warning.Author" = "作者";
+"Stories.Warning.ViewStory" = "要查看动态吗？";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ 将能够看到你查看了他们的动态";
+"Stories.Warning.NoticeStealth" = "%@ 将无法看到您查看他们的动态";
+
+"Settings.Photo.Quality.Notice" = "发送图片的质量";
+"Settings.Photo.SendLarge" = "发送大尺寸照片";
+"Settings.Photo.SendLarge.Notice" = "将压缩图片的尺寸限制提高到 2560px";
+
+"Settings.VideoNotes.Header" = "圆形视频";
+"Settings.VideoNotes.StartWithRearCam" = "默认使用后置相机";
+
+"Settings.CustomColors.Header" = "账户颜色";
+"Settings.CustomColors.Saturation" = "饱和度";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "设置饱和度为 0%% 以禁用账户颜色";
+
+"Settings.UploadsBoost" = "上传加速";
+"Settings.DownloadsBoost" = "下载加速";
+"Settings.DownloadsBoost.Notice" = "增加并行连接的数量和文件块的大小。如果您的网络无法承受负载，请尝试不同适合您连接的选项。";
+"Settings.DownloadsBoost.none" = "停用";
+"Settings.DownloadsBoost.medium" = "中等";
+"Settings.DownloadsBoost.maximum" = "最大";
+
+"Settings.ShowProfileID" = "显示用户 UID";
+"Settings.ShowDC" = "显示数据中心";
+"Settings.ShowCreationDate" = "显示群组或频道的创建日期";
+"Settings.ShowCreationDate.Notice" = "某些群组或频道可能缺少创建日期";
+
+"Settings.ShowRegDate" = "显示注册日期";
+"Settings.ShowRegDate.Notice" = "这是大概的注册日期";
+
+"Settings.SendWithReturnKey" = "使用返回键发送";
+"Settings.HidePhoneInSettingsUI" = "在设置中隐藏电话号码";
+"Settings.HidePhoneInSettingsUI.Notice" = "您的电话号码只会在设置界面中隐藏。要对其他人隐藏，可进入隐私设置调整。";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "离开 5 秒后";
+
+"ProxySettings.UseSystemDNS" = "使用系统DNS";
+"ProxySettings.UseSystemDNS.Notice" = "如果您无法使用 Google DNS，请使用系统 DNS";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "此功能**无需** %@ 订阅！";
+"Common.RestartRequired" = "需要重启";
+"Common.RestartNow" = "立即重启";
+"Common.OpenTelegram" = "打开 Telegram";
+"Common.UseTelegramForPremium" = "请注意，您必须使用官方的 Telegram 客户端才可购买 Telegram Premium，一旦您获得 Telegram Premium，其所有功能也将在 Swiftgram 中生效。";
+"Common.UpdateOS" = "需要 iOS 更新";
+
+"Message.HoldToShowOrReport" = "长按显示或举报";
+
+"Auth.AccountBackupReminder" = "请确保您有一个备用的访问方式。保留一张用于接收短信的 SIM 卡或多登录一个会话，以免被锁定。";
+"Auth.UnofficialAppCodeTitle" = "您只能通过官方应用程序获得代码";
+
+"Settings.SmallReactions" = "缩小表情回应";
+"Settings.HideReactions" = "隐藏回应";
+
+"ContextMenu.SaveToCloud" = "保存到收藏夹";
+"ContextMenu.SelectFromUser" = "选择此人所有消息";
+
+"Settings.ContextMenu" = "消息菜单";
+"Settings.ContextMenu.Notice" = "已禁用的项目可在 Swiftgram 子菜单中找到";
+
+
+"Settings.ChatSwipeOptions" = "对话列表滑动选项";
+"Settings.DeleteChatSwipeOption" = "滑动删除对话";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "上滑到下一未读频道";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "上滑到下一个主题";
+"Settings.GalleryCamera" = "图库中的相机";
+"Settings.GalleryCameraPreview" = "图库中的相机预览";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" 按钮";
+"Settings.SnapDeletionEffect" = "删除消息的特效";
+
+"Settings.Stickers.Size" = "尺寸";
+"Settings.Stickers.Timestamp" = "显示时间";
+
+"Settings.RecordingButton" = "录音按钮";
+
+"Settings.DefaultEmojisFirst" = "优先使用标准表情符号";
+"Settings.DefaultEmojisFirst.Notice" = "在表情列表中将标准表情符号置于高级表情符号之前";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "创建日期: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "加入 %@ 的日期";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "注册日期";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "双击编辑消息";
+
+"Settings.wideChannelPosts" = "在频道中以更宽的版面显示消息";
+"Settings.ForceEmojiTab" = "默认展示表情符号";
+
+"Settings.forceBuiltInMic" = "强制使用设备麦克风";
+"Settings.forceBuiltInMic.Notice" = "若启用，即使已连接耳机，应用也只使用设备自身的麦克风。";
+
+"Settings.showChannelBottomButton" = "频道底部面板";
+
+"Settings.secondsInMessages" = "消息中的秒数";
+
+"Settings.CallConfirmation" = "通话确认";
+"Settings.CallConfirmation.Notice" = "Swiftgram 将在拨打电话前征求您的确认";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "拨打语音通话？";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "拨打视频通话？";
+
+"MutualContact.Label" = "双向联系人";
+
+"Settings.swipeForVideoPIP" = "上滑打开画中画";
+"Settings.swipeForVideoPIP.Notice" = "如果启用，滑动视频将以画中画模式打开。";
+
+"SessionBackup.Title" = "会话备份";
+"SessionBackup.Sessions.Title" = "会话";
+"SessionBackup.Actions.Backup" = "备份到钥匙串";
+"SessionBackup.Actions.Restore" = "从钥匙串恢复";
+"SessionBackup.Actions.DeleteAll" = "删除钥匙串备份";
+"SessionBackup.Actions.DeleteOne" = "从备份中删除";
+"SessionBackup.Actions.RemoveFromApp" = "从应用程序中移除";
+"SessionBackup.LastBackupAt" = "最后备份：%@";
+"SessionBackup.RestoreOK" = "确定。已恢复会话：%@";
+"SessionBackup.LoggedIn" = "已登录";
+"SessionBackup.LoggedOut" = "已登出";
+"SessionBackup.DeleteAll.Title" = "删除所有会话？";
+"SessionBackup.DeleteAll.Text" = "所有会话将从钥匙串中删除。\n\n帐号将不会从 Swiftgram 登出。";
+"SessionBackup.DeleteSingle.Title" = "删除 1 个会话？";
+"SessionBackup.DeleteSingle.Text" = "%@ 会话将从钥匙串中删除。\n\n帐号将不会从 Swiftgram 登出。";
+"SessionBackup.RemoveFromApp.Title" = "从应用程序中移除帐户？";
+"SessionBackup.RemoveFromApp.Text" = "%@ 会话将从 Swiftgram 中移除！会话将保持活动状态，以便稍后恢复。";
+"SessionBackup.Notice" = "会话已加密并存储在设备的钥匙串中。会话永远不会离开您的设备。\n\n重要提示：要在新设备或操作系统重置后恢复会话，您必须启用加密备份，否则钥匙串将无法转移。\n\n注意：会话仍可能被Telegram或另一台设备撤销。";
+
+"MessageFilter.Title" = "消息过滤器";
+"MessageFilter.SubTitle" = "移除干扰，减少包含以下关键字的消息的可见性。\n关键字区分大小写。";
+"MessageFilter.Keywords.Title" = "关键字";
+"MessageFilter.InputPlaceholder" = "输入关键字";
+
+"InputToolbar.Title" = "格式面板";
+
+"Notifications.MentionsAndReplies.Title" = "@提及和回复";
+"Notifications.MentionsAndReplies.value.default" = "默认";
+"Notifications.MentionsAndReplies.value.silenced" = "已静音";
+"Notifications.MentionsAndReplies.value.disabled" = "停用";
+"Notifications.PinnedMessages.Title" = "置顶消息";
+"Notifications.PinnedMessages.value.default" = "默认";
+"Notifications.PinnedMessages.value.silenced" = "已静音";
+"Notifications.PinnedMessages.value.disabled" = "停用";
+
+
+"PayWall.Text" = "增强了专业功能";
+
+"PayWall.SessionBackup.Title" = "账号备份";
+"PayWall.SessionBackup.Notice" = "即使在重新安装后也可以登录到没有代码的帐户。使用设备上的密钥链来安全存储。";
+"PayWall.SessionBackup.Description" = "更改设备或删除 Swiftgram 已不再是一个问题。还原在Telegram 服务器上仍然活跃的所有会话。";
+
+"PayWall.MessageFilter.Title" = "消息过滤器";
+"PayWall.MessageFilter.Notice" = "减少 SPAM、促销和令人烦恼的消息的可见性。";
+"PayWall.MessageFilter.Description" = "创建一个您不想经常看到的关键字列表，而Swiftgram 会减少干扰。";
+
+"PayWall.Notifications.Title" = "禁用 @提及和回复";
+"PayWall.Notifications.Notice" = "隐藏或静音不重要的通知。";
+"PayWall.Notifications.Description" = "当你需要一点心情时，不再有固定的消息或 @reference.";
+
+"PayWall.InputToolbar.Title" = "格式面板";
+"PayWall.InputToolbar.Notice" = "只需单击即可节省时间格式化消息。";
+"PayWall.InputToolbar.Description" = "应用并清除格式化或插入像专业版这样的新行。";
+
+"PayWall.AppIcons.Title" = "独特的应用图标";
+"PayWall.AppIcons.Notice" = "自定义 Swiftgram 在主屏幕上的外观。";
+
+"PayWall.About.Title" = "关于 Swiftgram Pro";
+"PayWall.About.Notice" = "Swiftgram 的免费版本提供超过 Telegram 应用的多个功能和改进。创新并保持 Swiftgram 与每月的 Telegram 更新同步是一项庞大的工作，需要耗费大量的时间和昂贵的硬件。\n\nSwiftgram 是一个开源应用，尊重您的隐私，并且不打扰您广告。订阅 Swiftgram Pro，您将获得独享特性并支持独立开发者。\n\n- @Kylmakalle";
+/* DO NOT TRANSLATE */
+"PayWall.About.Signature" = "@Kylmakalle";
+/* DO NOT TRANSLATE */
+"PayWall.About.SignatureURL" = "https://t.me/Kylmakalle";
+
+"PayWall.ProSupport.Title" = "支付问题？";
+"PayWall.ProSupport.Contact" = "不用担心！";
+
+"PayWall.RestorePurchases" = "恢复购买";
+"PayWall.Terms" = "服务条款";
+"PayWall.Privacy" = "隐私政策";
+"PayWall.TermsURL" = "https://swiftgram.app/terms";
+"PayWall.PrivacyURL" = "https://swiftgram.app/privacy";
+"PayWall.Notice.Markdown" = "通过订阅 Swiftgram Pro，您同意 [Swiftgram 服务条款](%1$@) 和 [隐私政策](%2$@)。";
+"PayWall.Notice.Raw" = "通过订阅 Swiftgram Pro，您同意 Swiftgram 服务条款和隐私政策。";
+
+"PayWall.Button.OpenPro" = "使用专业功能";
+"PayWall.Button.Purchasing" = "正在购买……";
+"PayWall.Button.Restoring" = "正在恢复购买……";
+"PayWall.Button.Validating" = "正在验证购买……";
+"PayWall.Button.PaymentsUnavailable" = "付款不可用";
+"PayWall.Button.BuyInAppStore" = "订阅 App Store 版本";
+"PayWall.Button.Subscribe" = "订阅 %@ / 月";
+"PayWall.Button.ContactingAppStore" = "正在联系 App Store……";
+
+"Paywall.Error.Title" = "错误";
+"PayWall.ValidationError" = "验证错误";
+"PayWall.ValidationError.TryAgain" = "购买验证过程中出现问题。不用担心！稍后再试恢复购买。";
+"PayWall.ValidationError.Expired" = "您的订阅已过期。再次订阅以重新获得专业版功能。";
+
+"Ayu.Ghost" = "幽灵模式";
+"Ayu.HideRead" = "隐藏已读回执";
+"Ayu.HideOnline" = "隐藏在线状态";
+"Ayu.HideTyping" = "隐藏正在输入";
+"Ayu.HideRecording" = "隐藏正在录制";
+"Ayu.HideUploading" = "隐藏正在上传";
+"Ayu.HideStories" = "隐藏限时动态浏览";
+"Ayu.History" = "消息历史";
+"Ayu.SaveDeleted" = "保存已删除消息";
+"Ayu.SavePhotos" = "保存照片";
+"Ayu.ClearHistory" = "清空历史";
+"Ayu.EmptyHistory" = "暂无历史记录";
+"Ayu.SaveMedia" = "保存已缓存的媒体";
+"Ayu.BackgroundDimming" = "背景变暗";
+"Ayu.BeforeEdit" = "编辑前";
+"Ayu.Deleted" = "已删除";
+"Ayu.ServerPresence" = "服务器上：%@";
+"Ayu.ServerUnavailable" = "无法获取服务器状态";
+"Ayu.SendReadReceipt" = "发送已读回执";
+"Ayu.ViewWithoutReceipt" = "查看但不发送回执";
+"Ayu.ReportPhotoView" = "发送照片查看回执";
+"Ayu.View" = "查看";
+"Ayu.SendReceipt" = "发送";
+"Ayu.ReceiptSent" = "回执已发送";
+"Ayu.ReceiptError" = "无法发送回执。请检查连接后重试。";
+"Ayu.IconChangeUnavailable" = "已在应用内保存选择。iOS 未能更改主屏幕图标。";
+"Ayu.LocalPremium" = "本地 Premium";
+"Ayu.Pins" = "最多置顶聊天数";
+"Ayu.LocalOnly" = "仅在此设备上";
+"Ayu.HistoryInfo" = "仅限所选聊天。缓存照片和文字保留30天，最多200条。不包括秘密聊天和阅后即焚消息。";
+"Ayu.ReadWarning" = "发送此聊天截至这条消息的已读回执？";
+"Ayu.ViewWarning" = "发送浏览回执并启动阅后即焚媒体计时器？";
+
+"Ayu.RowOpacity" = "聊天行不透明度";
+"Ayu.MediaImportError" = "无法导入文件。最大100 MB。";
+"Ayu.SilentSending" = "静音发送";
+"Ayu.SilentNever" = "从不";
+"Ayu.SilentInGhost" = "幽灵模式下";
+"Ayu.SilentAlways" = "始终";
+"Ayu.ScheduleInGhost" = "以定时消息发送";
+"Ayu.ScheduleInGhostInfo" = "幽灵模式下消息会作为 12 秒后的定时消息发出，因此你不会显示为在线";
+"Ayu.ChatsSection" = "聊天";
+"Ayu.DisableAds" = "隐藏赞助消息";
+"Ayu.DisableLinkWarning" = "隐藏链接不再提示";
+"Ayu.DisableGreeting" = "不显示问候贴纸";
+"Ayu.DimDeleted" = "已删除消息半透明";
+"Ayu.RepeatMessage" = "消息菜单中的“重复”";
+"Ayu.Repeat" = "重复";
+"Ayu.ConfirmStickers" = "发送贴纸前确认";
+"Ayu.ConfirmGifs" = "发送 GIF 前确认";
+"Ayu.ConfirmSticker" = "发送这个贴纸？";
+"Ayu.ConfirmGif" = "发送这个 GIF？";
+"Ayu.Send" = "发送";
+"Ayu.ImportLocally" = "本地导入";
+"Ayu.ImportLocallyInfo" = "你可以只在这台设备上导入聊天：消息只会在此聊天中对你显示，不会发送到 Telegram。";
+"Ayu.ImportLocallyDone" = "已导入消息：%@。仅在这台设备上可见。";
+"Ayu.ViewDeleted" = "已删除的消息";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "在这台设备上保留了已删除消息的聊天。打开一个即可查看其已删除的消息或整个聊天。";
+"Ayu.ViewDeletedEmpty" = "还没有已删除的消息。";
+"Ayu.ConfirmReadReceipt" = "发送已读回执前确认";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

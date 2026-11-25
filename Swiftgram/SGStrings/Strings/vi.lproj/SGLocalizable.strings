@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Hỗ trợ";
+"Ayu.SupportChannel" = "Kênh cập nhật";
+"Ayu.SupportDeveloper" = "Liên hệ nhà phát triển";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Kiểm tra cập nhật";
+"Ayu.UpToDate" = "Bạn đang dùng phiên bản mới nhất.";
+"Ayu.UpdateAvailable" = "Có bản cập nhật";
+"Ayu.UpdateAvailableInfo" = "Đã có phiên bản %@. Mở kênh để tải về.";
+"Ayu.UpdateIgnore" = "Bỏ qua";
+"Ayu.UpdateOpen" = "Cập nhật";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "Để cập nhật, hãy mở NETHERHILL ở chế độ Multitask (nhấn giữ ứng dụng trong LiveContainer) rồi thử lại.";
+"Ayu.NotificationsSection" = "Thông báo";
+"Ayu.BarkSetUp" = "Thiết lập thông báo Bark";
+"Ayu.BarkConnected" = "Thông báo Bark: Bật";
+"Ayu.BarkFooter" = "Ứng dụng cài qua sideload không nhận được thông báo từ Apple. Hãy cài Bark từ App Store, sao chép khóa của bạn trong đó và dán vào đây. Tin nhắn mới sẽ đến qua bộ chuyển tiếp NETHERHILL dưới dạng thông báo Bark.";
+"Ayu.BarkPrompt" = "Dán khóa Bark hoặc liên kết từ ứng dụng Bark. Để trống để tắt thông báo.";
+"Ayu.BarkEnabled" = "Xong. Tin nhắn mới sẽ đến dưới dạng thông báo Bark khi NETHERHILL đóng.";
+"Ayu.BarkDisabled" = "Thông báo Bark đã tắt.";
+"Ayu.BarkInvalid" = "Đây không phải khóa Bark. Hãy sao chép khóa hoặc liên kết từ ứng dụng Bark.";
+"Ayu.BarkFailed" = "Telegram không chấp nhận đăng ký: %@";
+"Ayu.BarkFixTitle" = "Sửa thông báo";
+"Ayu.BarkFixInstall" = "Cài Bark từ App Store";
+"Ayu.BarkFixConnect" = "Kết nối Bark để nhận thông báo";
+"Ayu.BarkEnterKey" = "Nhập khóa";
+"Ayu.BarkHowTo" = "1. Cài Bark từ App Store và mở nó.\n2. Sao chép địa chỉ https://api.day.app/… trên màn hình chính của nó.\n3. Quay lại, chạm “Nhập khóa” và dán vào.";
+"Ayu.ExportChat" = "Xuất cuộc trò chuyện";
+"Ayu.ExportChatMedia" = "Toàn bộ cuộc trò chuyện được lưu thành một tệp lưu trữ mà Telegram có thể nhập. Có bao gồm ảnh, video, tin nhắn thoại và tệp không? Việc tải chúng xuống có thể mất nhiều thời gian.";
+"Ayu.ExportChatWithMedia" = "Kèm phương tiện";
+"Ayu.ExportChatTextOnly" = "Chỉ văn bản";
+"Ayu.ExportChatLoading" = "Đang tải tin nhắn: %@";
+"Ayu.ExportChatDownloading" = "Đang tải phương tiện: %@";
+"Ayu.ExportChatSaving" = "Đang tạo tệp lưu trữ…";
+"Ayu.ExportChatEmpty" = "Không có tin nhắn nào để xuất.";
+"Ayu.ChatTransferSection" = "Chuyển cuộc trò chuyện";
+"Ayu.ImportChat" = "Nhập cuộc trò chuyện";
+"Ayu.ImportChatFooter" = "Nhập vào một cuộc trò chuyện của bạn một cuộc trò chuyện đã xuất từ WhatsApp, LINE, KakaoTalk hoặc bằng “Xuất cuộc trò chuyện” trong NETHERHILL (tệp ZIP hoặc TXT).";
+"Ayu.ImportChatInvalid" = "Tệp này không phải là bản xuất cuộc trò chuyện được hỗ trợ.";
+"Ayu.HistorySaveAudio" = "Lưu âm thanh";
+"Ayu.HistoryDeleteEntry" = "Xóa khỏi lịch sử";
+"Ayu.DeletedChats" = "Cuộc trò chuyện đã xóa";
+"Ayu.DeletedChatsInfo" = "Các cuộc trò chuyện bị xóa toàn bộ lịch sử. Những gì NETHERHILL giữ lại không bao giờ tự động bị xóa.";
+"Ayu.DeletedChatSave" = "Lưu thành tệp lưu trữ";
+"Ayu.DeletedChatRemove" = "Xóa khỏi danh sách";
+"Ayu.DeletedChatDelete" = "Xóa tin nhắn đã giữ";
+"Ayu.HistorySubtitle" = "Tin nhắn đã xóa và đã sửa từ các cuộc trò chuyện được chọn, chỉ lưu trên thiết bị này.";
+"Ayu.HistoryAll" = "Tất cả";
+"Ayu.HistoryEdited" = "Đã sửa";
+"Ayu.HistoryNow" = "Hiện tại";
+"Ayu.HistoryShowMessage" = "Hiện trong trò chuyện";
+"Ayu.HistoryOpenChat" = "Mở trò chuyện";
+"Ayu.HistoryStopSaving" = "Ngừng lưu cuộc trò chuyện này";
+"Ayu.HistoryNoChats" = "Chọn các cuộc trò chuyện để lưu lịch sử. Không có gì được lưu cho đến khi bạn thêm ít nhất một.";
+"Ayu.HistoryEmptyInfo" = "Tin nhắn đã xóa và đã sửa sẽ hiển thị ở đây.";
+"Ayu.AddAccountHelp" = "Bạn có thể thêm tối đa 500 tài khoản với các số điện thoại khác nhau.";
+"Ayu.HeroGhostOn" = "Chế độ bóng ma đang bật";
+"Ayu.HeroGhostOff" = "Chế độ bóng ma đang tắt";
+"Ayu.HeroHidden" = "Đã ẩn: %@ / %@";
+"Ayu.GhostSubtitle" = "Trực tuyến, đã đọc, đang nhập, ghi âm, tải lên và tin";
+"Ayu.GhostFooter" = "Chế độ bóng ma bật mọi công tắc bên dưới và giữ nguyên giá trị riêng của chúng.";
+"Ayu.HideSection" = "Ẩn những gì";
+"Ayu.BehaviorSection" = "Hành vi";
+"Ayu.OfflineAfterSending" = "Ngoại tuyến sau khi gửi";
+"Ayu.OfflineAfterSendingInfo" = "Báo ngoại tuyến ngay sau mỗi tin nhắn đã gửi";
+"Ayu.ReadOnSend" = "Đọc cuộc trò chuyện khi trả lời";
+"Ayu.ReadOnSendInfo" = "Tin nhắn đã gửi đánh dấu cuộc trò chuyện là đã đọc";
+"Ayu.QuickToggle" = "Công tắc ở tab Chat";
+"Ayu.QuickToggleInfo" = "Nhấn giữ tab Chat để bật hoặc tắt nhanh chế độ bóng ma.";
+"Ayu.ContentSection" = "Nội dung";
+"Ayu.IgnoreProtection" = "Bỏ qua bảo vệ nội dung";
+"Ayu.IgnoreProtectionInfo" = "Lưu, sao chép và chuyển tiếp từ cuộc trò chuyện được bảo vệ";
+"Ayu.AllowScreenshots" = "Cho phép chụp màn hình";
+"Ayu.AllowScreenshotsInfo" = "Cuộc trò chuyện được bảo vệ và bí mật hiện trong ảnh chụp và bản ghi màn hình";
+"Ayu.ContentFooter" = "Tin nhắn từ cuộc trò chuyện được bảo vệ được chuyển tiếp dưới dạng bản sao không tác giả; phương tiện được tải lên lại. Cài đặt chụp màn hình áp dụng cho màn hình mở lại.";
+"Ayu.SaveDeletedInfo" = "Giữ lại trong mọi cuộc trò chuyện; cuộc trò chuyện đã chọn cũng có trong lịch sử";
+"Ayu.OpenHistory" = "Mở lịch sử";
+"Ayu.ClientSection" = "Ứng dụng";
+"Ayu.LocalPremiumInfo" = "Emoji và trạng thái Premium chỉ trên thiết bị này";
+"Ayu.GhostEnable" = "Bật chế độ bóng ma";
+"Ayu.GhostDisable" = "Tắt chế độ bóng ma";
+"Ayu.GhostEnabledToast" = "Đã bật chế độ bóng ma";
+"Ayu.GhostDisabledToast" = "Đã tắt chế độ bóng ma";
+"Ayu.ChatListBackground" = "Nền danh sách chat";
+"Ayu.ConversationBackground" = "Nền chat";
+"Ayu.ChooseVideo" = "Chọn video";
+"Ayu.ShowBackground" = "Hiện nền";
+
+"Settings.ContentSettings" = "Cài đặt nội dung";
+
+"Settings.Tabs.Header" = "THẺ";
+"Settings.Tabs.HideTabBar" = "Ẩn thanh Tab";
+"Settings.Tabs.ShowContacts" = "Hiện Liên hệ";
+"Settings.Tabs.ShowNames" = "Hiện tên các thẻ";
+
+"Settings.Folders.BottomTab" = "Đặt thư mục tin nhắn ở dưới cùng";
+"Settings.Folders.BottomTabStyle" = "Kiểu Thư mục dưới cùng";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Ẩn \"%@\"";
+"Settings.Folders.RememberLast" = "Mở thư mục gần đây";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram sẽ mở thư mục gần nhất sau khi khởi động lại hoặc chuyển tài khoản";
+
+"Settings.Folders.CompactNames" = "Khoảng cách nhỏ hơn";
+"Settings.Folders.AllChatsTitle" = "Tiêu đề \"Tất cả Chat\"";
+"Settings.Folders.AllChatsTitle.short" = "Ngắn";
+"Settings.Folders.AllChatsTitle.long" = "Dài";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Mặc định";
+
+
+"Settings.ChatList.Header" = "DANH SÁCH CHAT";
+"Settings.CompactChatList" = "Danh sách Chat Nhỏ gọn";
+
+"Settings.Profiles.Header" = "HỒ SƠ";
+
+"Settings.Stories.Hide" = "Ẩn Tin";
+"Settings.Stories.WarnBeforeView" = "Hỏi trước khi xem";
+"Settings.Stories.DisableSwipeToRecord" = "Tắt vuốt để quay";
+
+"Settings.Translation.QuickTranslateButton" = "Hiện nút dịch nhanh";
+
+"Stories.Warning.Author" = "Tác giả";
+"Stories.Warning.ViewStory" = "Xem Tin?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ SẼ CÓ THỂ THẤY bạn đã xem Tin của họ.";
+"Stories.Warning.NoticeStealth" = "%@ sẽ không biết bạn đã xem Tin của họ.";
+
+"Settings.Photo.Quality.Notice" = "Chất lượng của ảnh gửi đi và ảnh Tin";
+"Settings.Photo.SendLarge" = "Gửi ảnh lớn";
+"Settings.Photo.SendLarge.Notice" = "Tăng giới hạn kích thước bên trên của hình ảnh nén lên 2560px";
+
+"Settings.VideoNotes.Header" = "VIDEO TRÒN";
+"Settings.VideoNotes.StartWithRearCam" = "Bắt đầu với camera sau";
+
+"Settings.CustomColors.Header" = "MÀU TÀI KHOẢN";
+"Settings.CustomColors.Saturation" = "ĐỘ BÃO HÒA";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Đặt độ bão hòa thành 0%% để tắt màu tài khoản";
+
+"Settings.UploadsBoost" = "Tăng tốc tải lên";
+"Settings.DownloadsBoost" = "Tăng tốc tải xuống";
+"Settings.DownloadsBoost.Notice" = "Tăng số lượng kết nối song song và kích thước các khối tệp. Nếu mạng của bạn không thể xử lý tải, hãy thử các tùy chọn khác phù hợp với kết nối của bạn.";
+"Settings.DownloadsBoost.none" = "Tắt";
+"Settings.DownloadsBoost.medium" = "Trung bình";
+"Settings.DownloadsBoost.maximum" = "Tối đa";
+
+"Settings.ShowProfileID" = "Hiện ID hồ sơ";
+"Settings.ShowDC" = "Hiển thị Trung tâm Dữ liệu";
+"Settings.ShowCreationDate" = "Hiển thị Ngày Tạo Chat";
+"Settings.ShowCreationDate.Notice" = "Ngày tạo có thể không biết được đối với một số cuộc trò chuyện.";
+
+"Settings.ShowRegDate" = "Hiển thị Ngày Đăng ký";
+"Settings.ShowRegDate.Notice" = "Ngày đăng ký là xấp xỉ.";
+
+"Settings.SendWithReturnKey" = "Gửi tín nhắn bằng nút \"Nhập\"";
+"Settings.HidePhoneInSettingsUI" = "Ẩn số điện thoại trong cài đặt";
+"Settings.HidePhoneInSettingsUI.Notice" = "Số điện thoại của bạn sẽ chỉ ẩn đi trong cài đặt. Đến cài đặt \"Riêng tư và Bảo mật\" để ẩn đối với người khác\".";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Nếu rời đi trong 5 giây";
+
+"ProxySettings.UseSystemDNS" = "Sử dụng DNS hệ thống";
+"ProxySettings.UseSystemDNS.Notice" = "Sử dụng DNS hệ thống để bỏ qua thời gian chờ nếu bạn không có quyền truy cập vào DNS của Google";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Bạn **không cần** %@!";
+"Common.RestartRequired" = "Yêu cầu khởi động lại";
+"Common.RestartNow" = "Khởi động lại";
+"Common.OpenTelegram" = "Mở Telegram";
+"Common.UseTelegramForPremium" = "Vui lòng lưu ý rằng để có được Telegram Premium, bạn phải sử dụng ứng dụng Telegram chính thức. Sau khi bạn đã có Telegram Premium, tất cả các tính năng của nó sẽ trở nên có sẵn trong Swiftgram.";
+
+"Message.HoldToShowOrReport" = "Nhấn giữ để Hiển thị hoặc Báo cáo.";
+
+"Auth.AccountBackupReminder" = "Hãy đảm bảo bạn có một phương pháp truy cập dự phòng. Giữ lại một SIM để nhận SMS hoặc một phiên đăng nhập bổ sung để tránh bị khóa tài khoản.";
+"Auth.UnofficialAppCodeTitle" = "Bạn chỉ có thể nhận được mã thông qua ứng dụng chính thức";
+
+"Settings.SmallReactions" = "Thu nhỏ biểu tượng cảm xúc";
+"Settings.HideReactions" = "Ẩn Biểu tượng cảm xúc";
+
+"ContextMenu.SaveToCloud" = "Lưu vào Đám mây";
+"ContextMenu.SelectFromUser" = "Chọn từ Tác giả";
+
+"Settings.ContextMenu" = "MENU NGỮ CẢNH";
+"Settings.ContextMenu.Notice" = "Mục nhập đã vô hiệu hóa sẽ có sẵn trong menu phụ 'Swiftgram'.";
+
+
+"Settings.ChatSwipeOptions" = "Tuỳ chọn Lướt Danh sách Chat";
+"Settings.DeleteChatSwipeOption" = "Vuốt để xóa Cuộc trò chuyện";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Kéo xuống đến kênh chưa đọc";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Kéo Để Đến Chủ Đề Tiếp Theo";
+"Settings.GalleryCamera" = "Máy ảnh trong thư viện";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" Nút";
+"Settings.SnapDeletionEffect" = "Hiệu Ứng Xóa Tin Nhắn";
+
+"Settings.Stickers.Size" = "KÍCH THƯỚC";
+"Settings.Stickers.Timestamp" = "Hiện mốc thời gian";
+
+"Settings.RecordingButton" = "Nút Ghi Âm Giọng Nói";
+
+"Settings.DefaultEmojisFirst" = "Ưu tiên biểu tượng cảm xúc tiêu chuẩn";
+"Settings.DefaultEmojisFirst.Notice" = "Hiển thị biểu tượng cảm xúc tiêu chuẩn trước biểu tượng cảm xúc cao cấp trên bàn phím biểu tượng cảm xúc";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "đã tạo: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Đã tham gia %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Đã đăng ký";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Double-tap để chỉnh sửa tin nhắn";
+
+"Settings.wideChannelPosts" = "Bài đăng rộng trong các kênh";
+"Settings.ForceEmojiTab" = "Bàn phím Emoji mặc định";
+
+"Settings.forceBuiltInMic" = "Buộc Micro Điện Thoại";
+"Settings.forceBuiltInMic.Notice" = "Nếu được kích hoạt, ứng dụng sẽ chỉ sử dụng micro điện thoại của thiết bị ngay cả khi tai nghe được kết nối.";
+
+"Settings.hideChannelBottomButton" = "Ẩn thanh dưới cùng của kênh";
+
+"Settings.CallConfirmation" = "Xác nhận cuộc gọi";
+"Settings.CallConfirmation.Notice" = "Swiftgram sẽ yêu cầu bạn xác nhận trước khi thực hiện cuộc gọi.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Thực hiện cuộc gọi?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Thực hiện cuộc gọi video?";
+
+"MutualContact.Label" = "liên hệ chung";
+
+"Settings.swipeForVideoPIP" = "Video PIP với Vuốt";
+"Settings.swipeForVideoPIP.Notice" = "Nếu được kích hoạt, việc vuốt video sẽ mở nó ở chế độ Hình trong hình.";
+
+"Ayu.Ghost" = "Chế độ ẩn";
+"Ayu.HideRead" = "Ẩn xác nhận đã đọc";
+"Ayu.HideOnline" = "Ẩn trạng thái trực tuyến";
+"Ayu.HideTyping" = "Ẩn đang nhập";
+"Ayu.HideRecording" = "Ẩn đang ghi âm";
+"Ayu.HideUploading" = "Ẩn tải lên";
+"Ayu.HideStories" = "Ẩn lượt xem tin";
+"Ayu.History" = "Lịch sử tin nhắn";
+"Ayu.SaveDeleted" = "Lưu tin nhắn đã xóa";
+"Ayu.SavePhotos" = "Lưu ảnh";
+"Ayu.ClearHistory" = "Xóa lịch sử";
+"Ayu.EmptyHistory" = "Chưa có lịch sử";
+"Ayu.SaveMedia" = "Lưu nội dung trong bộ nhớ đệm";
+"Ayu.BackgroundDimming" = "Làm tối nền";
+"Ayu.BeforeEdit" = "Trước khi sửa";
+"Ayu.Deleted" = "Đã xóa";
+"Ayu.ServerPresence" = "Trên máy chủ: %@";
+"Ayu.ServerUnavailable" = "Không có trạng thái máy chủ";
+"Ayu.SendReadReceipt" = "Gửi xác nhận đã đọc";
+"Ayu.ViewWithoutReceipt" = "Xem mà không xác nhận";
+"Ayu.ReportPhotoView" = "Xác nhận đã xem ảnh";
+"Ayu.View" = "Xem";
+"Ayu.SendReceipt" = "Gửi";
+"Ayu.ReceiptSent" = "Đã gửi xác nhận";
+"Ayu.ReceiptError" = "Không thể gửi xác nhận. Kiểm tra kết nối và thử lại.";
+"Ayu.IconChangeUnavailable" = "Lựa chọn đã được lưu trong ứng dụng. iOS không thể thay đổi biểu tượng Màn hình chính.";
+"Ayu.LocalPremium" = "Premium cục bộ";
+"Ayu.Pins" = "Số cuộc trò chuyện ghim tối đa";
+"Ayu.LocalOnly" = "Chỉ trên thiết bị này";
+"Ayu.HistoryInfo" = "Chỉ các cuộc trò chuyện đã chọn. Ảnh được lưu đệm và văn bản: 30 ngày, tối đa 200 mục. Không gồm tin nhắn bí mật và tự hủy.";
+"Ayu.ReadWarning" = "Gửi xác nhận đã đọc cuộc trò chuyện đến tin nhắn này?";
+"Ayu.ViewWarning" = "Gửi xác nhận đã xem và bắt đầu bộ đếm cho nội dung tự hủy?";
+
+"Ayu.RowOpacity" = "Độ mờ của hàng trò chuyện";
+"Ayu.MediaImportError" = "Không thể nhập tệp. Tối đa: 100 MB.";
+"Ayu.SilentSending" = "Gửi không âm thanh";
+"Ayu.SilentNever" = "Không bao giờ";
+"Ayu.SilentInGhost" = "Trong chế độ bóng ma";
+"Ayu.SilentAlways" = "Luôn luôn";
+"Ayu.ScheduleInGhost" = "Gửi dưới dạng hẹn giờ";
+"Ayu.ScheduleInGhostInfo" = "Trong chế độ bóng ma tin nhắn được hẹn giờ gửi sau 12 giây, nên bạn không bao giờ hiện trực tuyến";
+"Ayu.ChatsSection" = "Trò chuyện";
+"Ayu.DisableAds" = "Ẩn tin nhắn tài trợ";
+"Ayu.DisableLinkWarning" = "Không cảnh báo liên kết ẩn";
+"Ayu.DisableGreeting" = "Không có nhãn dán chào";
+"Ayu.DimDeleted" = "Tin nhắn đã xóa trong mờ";
+"Ayu.RepeatMessage" = "Lặp lại trong menu tin nhắn";
+"Ayu.Repeat" = "Lặp lại";
+"Ayu.ConfirmStickers" = "Xác nhận gửi nhãn dán";
+"Ayu.ConfirmGifs" = "Xác nhận gửi GIF";
+"Ayu.ConfirmSticker" = "Gửi nhãn dán này?";
+"Ayu.ConfirmGif" = "Gửi GIF này?";
+"Ayu.Send" = "Gửi";
+"Ayu.ImportLocally" = "Nhập cục bộ";
+"Ayu.ImportLocallyInfo" = "Bạn có thể nhập cuộc trò chuyện chỉ trên thiết bị này: tin nhắn chỉ hiện trong cuộc trò chuyện này với bạn và không được gửi lên Telegram.";
+"Ayu.ImportLocallyDone" = "Tin nhắn đã nhập: %@. Chúng chỉ hiển thị trên thiết bị này.";
+"Ayu.ViewDeleted" = "Tin nhắn đã xóa";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Các cuộc trò chuyện có tin nhắn đã xóa được giữ trên thiết bị này. Mở một cuộc để đọc tin nhắn đã xóa hoặc toàn bộ cuộc trò chuyện.";
+"Ayu.ViewDeletedEmpty" = "Chưa có tin nhắn đã xóa.";
+"Ayu.ConfirmReadReceipt" = "Xác nhận trước khi gửi đã đọc";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

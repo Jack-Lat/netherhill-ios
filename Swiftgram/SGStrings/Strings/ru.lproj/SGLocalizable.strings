@@ -1,0 +1,775 @@
+// AyuGram
+"Ayu.SupportSection" = "Поддержка";
+"Ayu.SupportChannel" = "Канал с обновлениями";
+"Ayu.SupportDeveloper" = "Связаться с разработчиком";
+"Ayu.SessionLog" = "Журнал NETHERHILL";
+"Ayu.SessionLogEmpty" = "Журнал пока пуст.";
+"Ayu.SecuritySection" = "Безопасность";
+"Ayu.BuildStatus" = "Сборка";
+"Ayu.BuildOfficial" = "Официальная";
+"Ayu.BuildModified" = "Изменённая";
+"Ayu.BuildChecking" = "Проверяется…";
+"Ayu.BuildUnknown" = "Не проверена";
+"Ayu.BuildInfoOfficial" = "Это официальная сборка NETHERHILL из канала @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "Эта сборка отличается от официальной: её мог изменить кто угодно. Скачивай NETHERHILL только из канала @netherhill_DEV и никогда не входи в чужой Apple ID.";
+"Ayu.BuildInfoUnknown" = "Сборку пока не удалось проверить. Проверка повторится при следующем запуске.";
+"Ayu.BuildDetails" = "Сборка: %@\nУстановлена через: %@\nСертификат: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Свой сертификат (SideStore)";
+"Ayu.SourceEnterprise" = "Корпоративный сертификат";
+"Ayu.ReportScam" = "Сообщить о скаме";
+"Ayu.ReportScamInfo" = "Напиши юзернейм или ссылку мошенника и как он предлагал тебе NETHERHILL. Сообщение анонимное.";
+"Ayu.ReportScamSent" = "Спасибо! Сообщение отправлено.";
+"Ayu.ReportScamFailed" = "Не удалось отправить. Попробуй позже.";
+"Ayu.AnonymousStats" = "Анонимная статистика";
+"Ayu.AnonymousStatsInfo" = "Раз в день NETHERHILL отправляет номер сборки, способ установки и страну, а для изменённых или чужих копий ещё и сертификат подписи. ID аккаунта отправляется только в виде необратимого хэша: его можно сверить лишь с мошенником, на которого пожаловались. Номер телефона и переписки никогда не отправляются. Это помогает находить мошеннические копии NETHERHILL и мошенников.";
+"Ayu.ScamTitle" = "Мошенническая копия NETHERHILL";
+"Ayu.ScamText" = "Эту копию NETHERHILL распространяют мошенники, например через чужой Apple ID. Выйди из чужого Apple ID в настройках iPhone, удали это приложение и скачай NETHERHILL только из канала @netherhill_DEV.";
+"Ayu.ScamChannel" = "Официальный канал";
+"Ayu.CheckUpdates" = "Проверить обновления";
+"Ayu.UpToDate" = "У вас последняя версия.";
+"Ayu.UpdateAvailable" = "Доступно обновление";
+"Ayu.UpdateAvailableInfo" = "Вышла версия %@. Откройте канал, чтобы скачать её.";
+"Ayu.UpdateIgnore" = "Игнорировать";
+"Ayu.UpdateOpen" = "Обновить";
+"Ayu.UpdateNoticeTitle" = "Доступно обновление! 🆕";
+"Ayu.UpdateNoticeText" = "Нажмите, чтобы обновить";
+"Ayu.UpdateQuestion" = "Обновить NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Версия %@ будет скачана и установлена.";
+"Ayu.LiveContainerUpdate" = "Чтобы обновить, запустите NETHERHILL в режиме Multitask (зажмите приложение внутри LiveContainer) и попробуйте снова.";
+"Ayu.NotificationsSection" = "Уведомления";
+"Ayu.BarkSetUp" = "Настроить уведомления Bark";
+"Ayu.BarkConnected" = "Уведомления Bark: вкл.";
+"Ayu.BarkFooter" = "Приложение, установленное через сайдлоад, не получает уведомления от Apple. Установите Bark из App Store, скопируйте в нём свой ключ и вставьте сюда. Новые сообщения будут приходить через ретранслятор NETHERHILL как уведомления Bark.";
+"Ayu.BarkPrompt" = "Вставьте ключ Bark или ссылку из приложения Bark. Оставьте пустым, чтобы выключить уведомления.";
+"Ayu.BarkEnabled" = "Готово. Новые сообщения будут приходить уведомлениями Bark, пока NETHERHILL закрыт.";
+"Ayu.BarkDisabled" = "Уведомления Bark выключены.";
+"Ayu.BarkInvalid" = "Это не ключ Bark. Скопируйте в Bark адрес https://api.day.app/… с главного экрана, а не Device Token.";
+"Ayu.BarkFailed" = "Telegram не принял подписку: %@";
+"Ayu.BarkFixTitle" = "Исправить уведомления";
+"Ayu.BarkFixInstall" = "Установите Bark из App Store";
+"Ayu.BarkFixConnect" = "Подключите Bark, чтобы получать уведомления";
+"Ayu.BarkEnterKey" = "Ввести ключ";
+"Ayu.BarkHowTo" = "1. Установите Bark из App Store и откройте его.\n2. Скопируйте адрес https://api.day.app/… с его главного экрана.\n3. Вернитесь сюда, нажмите «Ввести ключ» и вставьте его.";
+"Ayu.ExportChat" = "Экспорт чата";
+"Ayu.ExportChatMedia" = "Весь чат сохраняется в архив, который Telegram может импортировать. Добавить фото, видео, голосовые сообщения и файлы? Их загрузка может занять много времени.";
+"Ayu.ExportChatWithMedia" = "С медиафайлами";
+"Ayu.ExportChatTextOnly" = "Только текст";
+"Ayu.ExportChatLoading" = "Загрузка сообщений: %@";
+"Ayu.ExportChatDownloading" = "Загрузка медиафайлов: %@";
+"Ayu.ExportChatSaving" = "Создание архива…";
+"Ayu.ExportChatEmpty" = "Нет сообщений для экспорта.";
+"Ayu.ChatTransferSection" = "Перенос чатов";
+"Ayu.ImportChat" = "Импорт чата";
+"Ayu.ImportChatFooter" = "Импортируйте в один из своих чатов чат, экспортированный из WhatsApp, LINE, KakaoTalk или через «Экспорт чата» в NETHERHILL (файл ZIP или TXT).";
+"Ayu.ImportChatInvalid" = "Этот файл не является поддерживаемым экспортом чата.";
+"Ayu.HistorySaveAudio" = "Сохранить аудио";
+"Ayu.HistoryDeleteEntry" = "Удалить из истории";
+"Ayu.DeletedChats" = "Удалённые чаты";
+"Ayu.DeletedChatsInfo" = "Чаты, история которых была удалена целиком. То, что NETHERHILL успел сохранить, автоматически не удаляется.";
+"Ayu.DeletedChatSave" = "Сохранить архивом";
+"Ayu.DeletedChatRemove" = "Убрать из списка";
+"Ayu.DeletedChatDelete" = "Удалить сохранённые сообщения";
+"Ayu.HistorySubtitle" = "Удалённые и изменённые сообщения из выбранных чатов. Хранятся только на этом устройстве.";
+"Ayu.HistoryAll" = "Все";
+"Ayu.HistoryEdited" = "Изменено";
+"Ayu.HistoryNow" = "Сейчас";
+"Ayu.HistoryShowMessage" = "Показать в чате";
+"Ayu.HistoryOpenChat" = "Открыть чат";
+"Ayu.HistoryStopSaving" = "Перестать сохранять этот чат";
+"Ayu.HistoryNoChats" = "Выберите чаты для истории. Пока не добавлен хотя бы один, ничего не сохраняется.";
+"Ayu.HistoryEmptyInfo" = "Здесь появятся удалённые и изменённые сообщения.";
+"Ayu.AddAccountHelp" = "Можно добавить до 500 аккаунтов с разными номерами телефонов.";
+"Ayu.HeroGhostOn" = "Режим призрака включён";
+"Ayu.HeroGhostOff" = "Режим призрака выключен";
+"Ayu.HeroHidden" = "Скрыто: %@ из %@";
+"Ayu.GhostSubtitle" = "Онлайн, прочтение, набор, запись, загрузка и истории";
+"Ayu.GhostFooter" = "Режим призрака включает все переключатели ниже и сохраняет их собственные значения.";
+"Ayu.HideSection" = "Что скрывать";
+"Ayu.BehaviorSection" = "Поведение";
+"Ayu.OfflineAfterSending" = "Офлайн после отправки";
+"Ayu.OfflineAfterSendingInfo" = "Сразу сообщать «не в сети» после каждого сообщения";
+"Ayu.ReadOnSend" = "Читать чат при ответе";
+"Ayu.ReadOnSendInfo" = "Отправленное сообщение отмечает чат прочитанным";
+"Ayu.QuickToggle" = "Переключатель во вкладке «Чаты»";
+"Ayu.QuickToggleInfo" = "Удерживайте вкладку «Чаты», чтобы быстро включить или выключить режим призрака.";
+"Ayu.ContentSection" = "Контент";
+"Ayu.IgnoreProtection" = "Обходить запрет копирования";
+"Ayu.IgnoreProtectionInfo" = "Сохранение, копирование и пересылка из защищённых чатов";
+"Ayu.AllowScreenshots" = "Разрешить скриншоты";
+"Ayu.AllowScreenshotsInfo" = "Защищённые и секретные чаты видны на снимках и записи экрана";
+"Ayu.ContentFooter" = "Сообщения из защищённых чатов пересылаются копией без автора, медиа загружается заново. Настройка скриншотов применяется к заново открытым экранам.";
+"Ayu.SaveDeletedInfo" = "Остаются во всех чатах; выбранные чаты также попадают в историю сообщений";
+"Ayu.OpenHistory" = "Открыть историю";
+"Ayu.ClientSection" = "Клиент";
+"Ayu.LocalPremiumInfo" = "Premium-эмодзи и статусы только на этом устройстве";
+"Ayu.GhostEnable" = "Включить режим призрака";
+"Ayu.GhostDisable" = "Выключить режим призрака";
+"Ayu.GhostEnabledToast" = "Режим призрака включён";
+"Ayu.GhostDisabledToast" = "Режим призрака выключен";
+"Ayu.ChatListBackground" = "Фон списка чатов";
+"Ayu.ConversationBackground" = "Фон чатов";
+"Ayu.ChooseVideo" = "Выбрать видео";
+"Ayu.ShowBackground" = "Показывать фон";
+
+"Settings.ContentSettings" = "Настройки контента";
+
+"Settings.Tabs.Header" = "ВКЛАДКИ";
+"Settings.Tabs.HideTabBar" = "Скрыть панель вкладок";
+"Settings.Tabs.ShowContacts" = "Вкладка «Контакты»";
+"Settings.Tabs.ShowNames" = "Имена вкладок";
+"Settings.Tabs.SearchButton" = "Кнопка поиска";
+"Settings.Tabs.WideTabBar" = "Широкая панель";
+"Settings.Tabs.WideTabBar.Notice" = "Сохраняет полную ширину панели вкладок, когда некоторые вкладки скрыты.";
+
+"Settings.Folders.BottomTab" = "Папки снизу";
+"Settings.Folders.BottomTabStyle" = "Стиль папок внизу";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Скрыть \"%@\"";
+"Settings.Folders.RememberLast" = "Открывать последнюю папку";
+"Settings.Folders.RememberLast.Notice" = "Swiftgram откроет последнюю использованную папку после перезапуска или переключения учетной записи";
+
+"Settings.Folders.CompactNames" = "Уменьшенные расстояния";
+"Settings.Folders.AllChatsTitle" = "Название \"Все чаты\"";
+"Settings.Folders.AllChatsTitle.short" = "Короткое";
+"Settings.Folders.AllChatsTitle.long" = "Длинное";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "По умолчанию";
+
+
+"Settings.ChatList.Header" = "СПИСОК ЧАТОВ";
+"Settings.CompactChatList" = "Компактный список чатов";
+"Settings.CompactMessagePreview" = "Компактное превью сообщений";
+"Settings.Profiles.Header" = "ПРОФИЛИ";
+
+"Settings.Stories.Hide" = "Скрыть истории";
+"Settings.Stories.WarnBeforeView" = "Спросить перед просмотром";
+"Settings.Stories.DisableSwipeToRecord" = "Отключить свайп для записи";
+
+"Settings.Translation.QuickTranslateButton" = "Кнопка быстрого перевода";
+"Settings.Translation.Backend" = "Сервис";
+/* Do not translate */
+"Settings.Translation.Backend.default" = "Telegram";
+/* Do not translate */
+"Settings.Translation.Backend.gtranslate" = "GTranslate";
+"Settings.Translation.Backend.system" = "Система";
+"Settings.Translation.Backend.Notice" = "Swiftgram будет использовать %@, если выбранный сервис перевода недоступен.";
+
+"Settings.Transcription.Header" = "ГОЛОС В ТЕКСТ";
+"Settings.Transcription.Backend" = "Сервис";
+/* Do not translate */
+"Settings.Transcription.Backend.default" = "Telegram";
+/* Do not translate */
+"Settings.Transcription.Backend.apple" = "Apple";
+"Settings.Transcription.Backend.Notice" = "Swiftgram будет использовать %@, если выбранный сервис транскрипции недоступен.";
+
+"Stories.Warning.Author" = "Автор";
+"Stories.Warning.ViewStory" = "Просмотреть историю?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ СМОЖЕТ УВИДЕТЬ, что вы просмотрели историю.";
+"Stories.Warning.NoticeStealth" = "%@ не сможет увидеть, что вы просмотрели историю.";
+
+"Settings.Photo.Quality.Notice" = "Качество исходящих фото и фото-историй";
+"Settings.Photo.SendLarge" = "Отправлять большие фото";
+"Settings.Photo.SendLarge.Notice" = "Увеличить лимит сторон для сжатых фото до 2560пкс";
+
+"Settings.VideoNotes.Header" = "КРУГЛЫЕ ВИДЕО";
+"Settings.VideoNotes.StartWithRearCam" = "На заднюю камеру";
+
+"Settings.CustomColors.Header" = "ПЕРСОНАЛЬНЫЕ ЦВЕТА";
+"Settings.CustomColors.Saturation" = "НАСЫЩЕННОСТЬ";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Установите насыщенность на 0%%, чтобы отключить персональные цвета";
+
+"Settings.UploadsBoost" = "Ускорение загрузки";
+"Settings.DownloadsBoost" = "Ускорение скачивания";
+"Settings.DownloadsBoost.Notice" = "Увеличивает количество параллельных соединений и размер частей файлов. Если ваша сеть не может справиться с нагрузкой, попробуйте разные опции, которые подойдут для вашего соединения.";
+"Settings.DownloadsBoost.none" = "Выключено";
+"Settings.DownloadsBoost.medium" = "Средне";
+"Settings.DownloadsBoost.maximum" = "Максимум";
+
+"Settings.ShowProfileID" = "ID профилей";
+"Settings.ShowDC" = "Показать дата-центр (DC)";
+"Settings.ShowCreationDate" = "Показать дату создания чата";
+"Settings.ShowCreationDate.Notice" = "Дата создания может быть неизвестна для некоторых чатов.";
+
+"Settings.ShowRegDate" = "Показать дату регистрации";
+"Settings.ShowRegDate.Notice" = "Дата регистрации приблизительная.";
+
+"Settings.SendWithReturnKey" = "Отправка кнопкой \"Ввод\"";
+"Settings.HidePhoneInSettingsUI" = "Скрыть номер";
+"Settings.HidePhoneInSettingsUI.Notice" = "Ваш номер будет скрыт только в интерфейсе настроек. Используйте настройки Конфиденциальности, чтобы скрыть его от других.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Через 5 секунд";
+
+"ProxySettings.UseSystemDNS" = "Системный DNS";
+"ProxySettings.UseSystemDNS.Notice" = "Используйте системный DNS, чтобы избежать задержки, если у вас нет доступа к DNS Google";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Вам **не нужен** %@!";
+"Common.RestartRequired" = "Необходим перезапуск";
+"Common.RestartNow" = "Перезапустить Сейчас";
+"Common.OpenTelegram" = "Открыть Telegram";
+"Common.UseTelegramForPremium" = "Обратите внимание, что для получения Telegram Premium, вы должны использовать официальное приложение Telegram. Как только вы получите Telegram Premium, все его функции станут доступны в Swiftgram.";
+"Common.UpdateOS" = "Требуется обновление iOS";
+"Common.KnowWhatYouDo" = "Пожалуйста, меняйте эти настройки только если вы знаете, что они делают.";
+
+"Message.HoldToShowOrReport" = "Удерживайте для Показа или Жалобы.";
+
+"Auth.AccountBackupReminder" = "Убедитесь, что у вас есть запасной вариант входа: Активная SIM-карта или дополнительная сессия, чтобы не потерять доступ к аккаунту.";
+"Auth.UnofficialAppCodeTitle" = "Вы можете получить код только в официальном приложении";
+
+"Settings.SmallReactions" = "Маленькие реакции";
+"Settings.HideReactions" = "Скрыть реакции";
+
+"ContextMenu.SaveToCloud" = "Сохранить в Избранное";
+"ContextMenu.SelectFromUser" = "Выбрать от Автора";
+
+"Settings.ContextMenu" = "КОНТЕКСТНОЕ МЕНЮ";
+"Settings.ContextMenu.Notice" = "Выключенные пункты будут доступны в подменю «Swiftgram».";
+
+
+"Settings.ChatSwipeOptions" = "Опции чатов при свайпе";
+"Settings.DeleteChatSwipeOption" = "Свайп для удаления чата";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Свайп между каналами";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Свайп между топиками";
+"Settings.GalleryCamera" = "Камера в галерее";
+"Settings.GalleryCameraPreview" = "Превью камеры в галерее";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "Кнопка \"%@\"";
+"Settings.SnapDeletionEffect" = "Эффекты удаления сообщений";
+
+"Settings.Stickers.Size" = "РАЗМЕР";
+"Settings.Stickers.Timestamp" = "Показывать время";
+
+"Settings.RecordingButton" = "Кнопка записи голоса";
+
+"Settings.DefaultEmojisFirst" = "Сначала стандартные смайлы";
+"Settings.DefaultEmojisFirst.Notice" = "Показывать стандартные эмодзи перед Premium в эмодзи-клавиатуре";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "создан: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Присоединился к %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Дата регистрации";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Редактирование двойным тапом";
+
+"Settings.wideChannelPosts" = "Широкие посты в каналах";
+"Settings.ForceEmojiTab" = "Сначала вкладка смайлов";
+
+"Settings.forceBuiltInMic" = "Микрофон устройства";
+"Settings.forceBuiltInMic.Notice" = "Если включено, то приложение будет использовать только встроенный микрофон устройства, даже если подключены наушники.";
+
+"Settings.showChannelBottomButton" = "Нижняя панель канала";
+
+"Settings.secondsInMessages" = "Секунды в Сообщениях";
+
+"Settings.CallConfirmation" = "Подтверждение вызова";
+"Settings.CallConfirmation.Notice" = "Swiftgram запросит подтверждение перед совершением звонка.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Позвонить?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Позвонить с видео?";
+
+"MutualContact.Label" = "взаимный контакт";
+
+"Settings.swipeForVideoPIP" = "Видео PIP свайпом";
+"Settings.swipeForVideoPIP.Notice" = "Если включено, свайп видео откроет его в режиме «Картинка в картинке».";
+
+"SessionBackup.Title" = "Бэкап аккаунтов";
+"SessionBackup.Sessions.Title" = "Сессии";
+"SessionBackup.Actions.Backup" = "Бэкап в Keychain";
+"SessionBackup.Actions.Restore" = "Восстановить из Keychain";
+"SessionBackup.Actions.DeleteAll" = "Удалить Бэкап из Keychain";
+"SessionBackup.Actions.DeleteOne" = "Удалить из Бэкапа";
+"SessionBackup.Actions.RemoveFromApp" = "Удалить из приложения";
+"SessionBackup.LastBackupAt" = "Последний бэкап: %@";
+"SessionBackup.RestoreOK" = "ОК. Восстановлено: %@";
+"SessionBackup.LoggedIn" = "Залогинен";
+"SessionBackup.LoggedOut" = "Разлогинен";
+"SessionBackup.DeleteAll.Title" = "Удалить все сессии?";
+"SessionBackup.DeleteAll.Text" = "Все сессии будут удалены из Keychain.\n\nАккаунты не будут разлогинены из Swiftgram.";
+"SessionBackup.DeleteSingle.Title" = "Удалить 1 (одну) сессию?";
+"SessionBackup.DeleteSingle.Text" = "%@ сессия будет удалена из Keychain.\n\nАккаунт не будет разлогинен из Swiftgram.";
+"SessionBackup.RemoveFromApp.Title" = "Удалить аккаунт из приложения?";
+"SessionBackup.RemoveFromApp.Text" = "%@ сессия БУДЕТ УДАЛЕНА из Swiftgram! Сессия останется активной, чтобы вы могли восстановить ее позже.";
+"SessionBackup.Notice" = "Сессии шифруются и хранятся в Keychain устройства. Сессии никогда не покидают ваше устройство.\n\nВАЖНО: Чтобы восстановить сессии на новом устройстве или после сброса системы, ОБЯЗАТЕЛЬНО включите шифрование резервных копий ОС, иначе Keychain будет утерян при восстановлении.\n\nПРИМЕЧАНИЕ: Сессии всё ещё могут быть разлогинены самим Telegram или с другого устройства.";
+
+"MessageFilter.Title" = "Фильтр сообщений";
+"MessageFilter.SubTitle" = "Убирает отвлекающие факторы и уменьшает видимость сообщений, содержащих ключевые слова ниже.\nКлючевые слова чувствительны к регистру.";
+"MessageFilter.Keywords.Title" = "Ключевые слова";
+"MessageFilter.InputPlaceholder" = "Введите слово";
+
+"InputToolbar.Title" = "Панель форматирования";
+
+"Notifications.MentionsAndReplies.Title" = "@Упоминания и ответы";
+"Notifications.MentionsAndReplies.value.default" = "По умолчанию";
+"Notifications.MentionsAndReplies.value.silenced" = "Без звука";
+"Notifications.MentionsAndReplies.value.disabled" = "Выключено";
+"Notifications.PinnedMessages.Title" = "Сообщение закреплено";
+"Notifications.PinnedMessages.value.default" = "По умолчанию";
+"Notifications.PinnedMessages.value.silenced" = "Без звука";
+"Notifications.PinnedMessages.value.disabled" = "Выключено";
+
+
+"PayWall.Text" = "Заряжен Pro функциями";
+
+"PayWall.SessionBackup.Title" = "Бэкап Аккаунтов";
+"PayWall.SessionBackup.Notice" = "Вход в аккаунты без кода, даже после переустановки. Безопасное хранение в Keychain на устройстве.";
+"PayWall.SessionBackup.Description" = "Смена устройства или удаление Swiftgram больше не проблема. Восстановите все ваши Сессии, которые активны на серверах Telegram.";
+
+"PayWall.MessageFilter.Title" = "Фильтр сообщений";
+"PayWall.MessageFilter.Notice" = "Уменьшает видимость навязчивых сообщений со СПАМом или рекламой.";
+"PayWall.MessageFilter.Description" = "Создайте список ключевых слов, которые вы не хотите встречать, и Swiftgram снизит их видимость.";
+
+"PayWall.Notifications.Title" = "Отключение @тэгов и ответов";
+"PayWall.Notifications.Notice" = "Скрывает или приглушает неважные уведомления.";
+"PayWall.Notifications.Description" = "Никаких больше Закрепов или @тэгов, когда нужно побыть в тишине.";
+
+"PayWall.InputToolbar.Title" = "Панель форматирования";
+"PayWall.InputToolbar.Notice" = "Экономит время, форматируя сообщения всего одним касанием.";
+"PayWall.InputToolbar.Description" = "Применяйте и очищайте форматирование, переносите абзацы как Pro.";
+
+"PayWall.AppIcons.Title" = "Уникальные иконки приложения";
+"PayWall.AppIcons.Notice" = "Настройка внешнего вида Swiftgram на главном экране.";
+
+"PayWall.About.Title" = "О Swiftgram Pro";
+"PayWall.About.Notice" = "Бесплатная версия Swiftgram предлагает десятки функций и улучшений по сравнению с приложением Telegram. Новые функции и синхронизация Swiftgram с ежемесячными обновлениями Telegram — это огромные усилия, требующие много времени и дорогой техники.\n\nSwiftgram — это приложение с открытым исходным кодом, которое уважает вашу конфиденциальность и не беспокоит вас рекламой. Подписываясь на Swiftgram Pro, вы получаете доступ к эксклюзивным функциям и поддерживаете независимого разработчика.";
+/* DO NOT TRANSLATE */
+"PayWall.About.Signature" = "@Kylmakalle";
+/* DO NOT TRANSLATE */
+"PayWall.About.SignatureURL" = "https://t.me/Kylmakalle";
+
+"PayWall.ProSupport.Title" = "Проблемы с оплатой?";
+"PayWall.ProSupport.Contact" = "Не беда!";
+
+"PayWall.RestorePurchases" = "Восстановить покупки";
+"PayWall.Terms" = "Условия использования";
+"PayWall.Privacy" = "Политика конфиденциальности";
+"PayWall.TermsURL" = "https://swiftgram.app/terms";
+"PayWall.PrivacyURL" = "https://swiftgram.app/privacy";
+"PayWall.Notice.Markdown" = "Подписываясь на Swiftgram Pro, вы соглашаетесь с [Условиями использования Swiftgram](%1$@) и [Политикой конфиденциальности](%2$@).";
+"PayWall.Notice.Raw" = "Подписываясь на Swiftgram Pro, вы соглашаетесь с Условиями использования и Политикой конфиденциальности Swiftgram.";
+
+"PayWall.Button.OpenPro" = "Pro функции";
+"PayWall.Button.Purchasing" = "Покупка...";
+"PayWall.Button.Restoring" = "Восстановление покупок...";
+"PayWall.Button.Validating" = "Проверка покупки...";
+"PayWall.Button.PaymentsUnavailable" = "Платежи недоступны";
+"PayWall.Button.BuyInAppStore" = "Подписаться в App Store версии";
+"PayWall.Button.Subscribe" = "Подписаться за %@ / месяц";
+"PayWall.Button.ContactingAppStore" = "Подключение к App Store...";
+
+"Paywall.Error.Title" = "Ошибка";
+"PayWall.ValidationError" = "Ошибка проверки";
+"PayWall.ValidationError.TryAgain" = "Что-то пошло не так во время проверки оплаты. Не волнуйтесь! Попробуйте Восстановить Покупки чуть позже.";
+"PayWall.ValidationError.Expired" = "Ваша подписка истекла. Подпишитесь снова, чтобы восстановить доступ к Pro функциям.";
+
+"AppBadge.Title" = "Бэйдж приложения";
+"AppBadge.Notice" = "Настройка Бэйджа приложения на скриншотах";
+
+"Settings.NY.Header" = "НОВОГОДНИЕ ЭФФЕКТЫ";
+"Settings.NY.Style" = "Стиль";
+"Settings.NY.Style.default" = "Выключено";
+"Settings.NY.Style.snow" = "Снег";
+"Settings.NY.Style.lightning" = "Молнии";
+"Settings.NY.Notice" = "Доступны только на ограниченное время!";
+
+"Ayu.Ghost" = "Режим призрака";
+"Ayu.HideRead" = "Скрывать прочтение";
+"Ayu.HideOnline" = "Скрывать онлайн";
+"Ayu.HideTyping" = "Скрывать набор текста";
+"Ayu.HideRecording" = "Скрывать запись";
+"Ayu.HideUploading" = "Скрывать загрузку";
+"Ayu.HideStories" = "Скрывать просмотр историй";
+"Ayu.History" = "История сообщений";
+"Ayu.SaveDeleted" = "Сохранять удалённые сообщения";
+"Ayu.SavePhotos" = "Сохранять фото";
+"Ayu.ClearHistory" = "Очистить историю";
+"Ayu.EmptyHistory" = "История пока пуста";
+"Ayu.SaveMedia" = "Сохранять медиа из кэша";
+"Ayu.BackgroundDimming" = "Затемнение фона";
+"Ayu.BeforeEdit" = "До изменения";
+"Ayu.Deleted" = "Удалено";
+"Ayu.ServerPresence" = "На сервере: %@";
+"Ayu.ServerUnavailable" = "Статус сервера недоступен";
+"Ayu.SendReadReceipt" = "Отправить отчёт о прочтении";
+"Ayu.ViewWithoutReceipt" = "Посмотреть без отчёта";
+"Ayu.ReportPhotoView" = "Сообщить о просмотре фото";
+"Ayu.View" = "Просмотреть";
+"Ayu.SendReceipt" = "Отправить";
+"Ayu.ReceiptSent" = "Отчёт отправлен";
+"Ayu.ReceiptError" = "Не удалось отправить отчёт. Проверь подключение и попробуй ещё раз.";
+"Ayu.IconChangeUnavailable" = "Выбор сохранён в приложении. iOS не разрешила изменить значок на главном экране.";
+"Ayu.LocalPremium" = "Локальный Premium";
+"Ayu.Pins" = "Максимум закреплённых чатов";
+"Ayu.LocalOnly" = "Только на этом устройстве";
+"Ayu.HistoryInfo" = "Только выбранные чаты. Загруженные фото и текст: 30 дней, до 200 записей. Без секретных чатов и одноразовых медиа.";
+"Ayu.ReadWarning" = "Отправить отчёт о прочтении чата до этого сообщения?";
+"Ayu.ViewWarning" = "Отправить отчёт о просмотре и запустить таймер исчезающего медиа?";
+
+"Ayu.RowOpacity" = "Непрозрачность строк чатов";
+"Ayu.NewYearHeader" = "Новый год";
+"Ayu.NewYearMode" = "Новогодний режим";
+"Ayu.NewYearAuto" = "Включать с 15 декабря по 15 января";
+"Ayu.NewYearInfo" = "Новогодний режим включает снег, сугробы со снеговиком и фейерверк вместе.";
+"Ayu.EffectsHeader" = "Эффекты";
+"Ayu.Particles" = "Падающие частицы";
+"Ayu.ParticlesKind" = "Вид";
+"Ayu.ParticlesInChats" = "Показывать в чатах";
+"Ayu.ParticlesLeaves" = "Листья";
+"Ayu.ParticlesRain" = "Дождь";
+"Ayu.ParticlesSeasonal" = "По времени года";
+"Ayu.ParticlesHoldHint" = "Зажмите вариант, чтобы посмотреть, как он выглядит.";
+"Ayu.ParticlesMix" = "Смешать с";
+"Ayu.ParticlesMixNone" = "Ничего";
+"Ayu.SnowDrift" = "Сугробы, кучи листьев и снеговик";
+"Ayu.Fireworks" = "Фейерверк";
+"Ayu.Parallax" = "Параллакс фона";
+"Ayu.EffectsInfo" = "Фейерверк срабатывает, когда вы отправляете 🎄, 🎆, 🎉 или поздравление с Новым годом. Когда на панели вкладок наметёт снега, там соберётся снеговик: нажмите на него, чтобы сбить. Параллакс двигает ваш фон при наклоне телефона.";
+"Ayu.ParticlesAmount" = "Количество частиц";
+"Ayu.ParticlesSize" = "Размер частиц";
+"Ayu.ParticlesSliderHint" = "Зажмите ползунок на 2 секунды, чтобы ввести своё значение за пределами шкалы.";
+"Ayu.Personalize" = "Шрифт и бейдж";
+"Ayu.Font" = "Шрифт";
+"Ayu.FontSystem" = "Системные стили";
+"Ayu.FontBuiltIn" = "Шрифты iOS";
+"Ayu.FontCustom" = "Свой шрифт";
+"Ayu.FontDefault" = "Стандартный";
+"Ayu.FontRounded" = "Скруглённый";
+"Ayu.FontSerif" = "С засечками";
+"Ayu.FontMono" = "Моноширинный";
+"Ayu.FontImport" = "Загрузить шрифт (.ttf, .otf)…";
+"Ayu.FontImportFailed" = "NETHERHILL не смог прочитать этот файл как шрифт.";
+"Ayu.FontRestart" = "Шрифт применится после перезапуска NETHERHILL: смахни его из переключателя приложений и открой снова.";
+"Ayu.FontSample" = "Привет, это NETHERHILL · 0123";
+"Ayu.AppBadge" = "Бейдж приложения";
+"Ayu.AppBadgeCustom" = "Свой бейдж приложения";
+"Ayu.AppBadgeText" = "Текст";
+"Ayu.AppBadgeIcon" = "Показывать картинку";
+"Ayu.AppBadgePick" = "Выбрать картинку";
+"Ayu.AppBadgeRemove" = "Убрать картинку";
+"Ayu.AppBadgeDarkText" = "Тёмный текст";
+"Ayu.AppBadgeHint" = "Это плашка вверху экрана под Dynamic Island. Без своей картинки в ней показывается знак NETHERHILL.";
+"Ayu.ParticlesCustomValue" = "Значение в процентах";
+"Ayu.ParticlesSnow" = "Снег";
+"Ayu.ParticlesFlakes" = "Снежинки";
+"Ayu.ParticlesSakura" = "Сакура";
+"Ayu.ParticlesStars" = "Звёзды";
+"Ayu.MediaImportError" = "Не удалось загрузить файл. Максимальный размер: 100 МБ.";
+"Ayu.SilentSending" = "Отправка без звука";
+"Ayu.SilentNever" = "Никогда";
+"Ayu.SilentInGhost" = "В режиме призрака";
+"Ayu.SilentAlways" = "Всегда";
+"Ayu.ScheduleInGhost" = "Отправлять отложенными";
+"Ayu.ScheduleInGhostInfo" = "В режиме призрака сообщения уходят как отложенные через 12 секунд, и ты не появляешься в сети";
+"Ayu.ChatsSection" = "Чаты";
+"Ayu.DisableAds" = "Скрывать рекламу";
+"Ayu.DisableLinkWarning" = "Без предупреждения о скрытых ссылках";
+"Ayu.DisableGreeting" = "Без стикера-приветствия";
+"Ayu.DimDeleted" = "Полупрозрачные удалённые сообщения";
+"Ayu.RepeatMessage" = "«Повторить» в меню сообщения";
+"Ayu.Repeat" = "Повторить";
+"Ayu.ConfirmStickers" = "Подтверждать отправку стикеров";
+"Ayu.ConfirmGifs" = "Подтверждать отправку GIF";
+"Ayu.ConfirmSticker" = "Отправить этот стикер?";
+"Ayu.ConfirmGif" = "Отправить этот GIF?";
+"Ayu.Send" = "Отправить";
+"Ayu.ImportLocally" = "Импортировать локально";
+"Ayu.ImportLocallyInfo" = "Можно импортировать чат только на этом устройстве: сообщения появятся в этом чате только у тебя и не отправятся в Telegram.";
+"Ayu.ImportLocallyDone" = "Импортировано сообщений: %@. Они видны только на этом устройстве.";
+"Ayu.ViewDeleted" = "Удалённые сообщения";
+"Ayu.DeletedSectionUsers" = "Личные сообщения";
+"Ayu.DeletedSectionGroups" = "Чаты";
+"Ayu.DeletedSectionChannels" = "Каналы";
+"Ayu.DeletedSearch" = "Поиск по чату, нику или тексту";
+"Ayu.DeletedSearchText" = "Поиск по удалённым сообщениям";
+"Ayu.DeletedSearchEmpty" = "Ничего не найдено.";
+"Ayu.ViewDeletedInfo" = "Чаты, где на этом устройстве сохранены удалённые сообщения. Открой чат, чтобы посмотреть его удалённые сообщения или весь чат.";
+"Ayu.ViewDeletedEmpty" = "Удалённых сообщений пока нет.";
+"Ayu.ConfirmReadReceipt" = "Подтверждать отправку прочтения";
+"Ayu.BannedTitle" = "NETHERHILL заблокирован";
+"Ayu.BannedText" = "На тебя пожаловались, что ты обманываешь людей с помощью NETHERHILL, поэтому NETHERHILL на этом устройстве заблокирован. Если это ошибка, напиши в @netherhill_DEV.";
+"Ayu.WarnTitle" = "Предупреждение";
+"Ayu.WarnText" = "На тебя пожаловались, что ты обманываешь людей с помощью NETHERHILL. Если это продолжится, NETHERHILL для тебя заблокируют.";
+"Ayu.WarnOk" = "Понятно";
+"Ayu.ReportAttachInfo" = "Прикрепить скриншоты или видео как доказательство? До 5 файлов, видео до 20 МБ.";
+"Ayu.ReportAttach" = "Прикрепить фото или видео";
+"Ayu.ReportSendNow" = "Отправить без вложений";
+"Ayu.ReportAttachFailed" = "Жалоба отправлена, но часть вложений не загрузилась.";
+"Ayu.Reason" = "Причина: %@";
+"Ayu.BannedTextReason" = "NETHERHILL для твоего аккаунта заблокирован. Если это ошибка, напиши в @netherhill_DEV.";
+"Ayu.Reason.scam" = "мошенничество";
+"Ayu.Reason.resale" = "продажа NETHERHILL";
+"Ayu.Reason.abuse" = "спам и злоупотребления";
+"Ayu.Reason.testflight" = "раздача NETHERHILL через TestFlight или App Store";
+"Ayu.Reason.modified" = "изменённая сборка NETHERHILL";
+"Ayu.Reason.fork" = "неофициальный форк NETHERHILL";
+"Ayu.ReportMediaView" = "Отправить просмотр";
+"Ayu.PeekOnline" = "Подглядеть онлайн";
+"Ayu.PeekOnlineVia" = "Подсмотрено через %@";
+"Ayu.PeekOnlineDone" = "Подсмотрено: время захода показано";
+"Ayu.PeekOnlineVisible" = "Время захода и так видно";
+"Ayu.PeekOnlineHidden" = "Пользователь скрыл время захода, подсмотреть нельзя";
+"Ayu.KeepAlive" = "Уведомления без Apple";
+"Ayu.KeepAliveOff" = "Выключено";
+"Ayu.KeepAliveAlways" = "Всегда";
+"Ayu.KeepAliveMinutes" = "%@ мин после выхода";
+"Ayu.KeepAliveFooter" = "NETHERHILL остаётся работать в фоне за счёт беззвучного звука и показывает уведомления о новых сообщениях без пушей Apple. Расходует больше батареи. Музыку и звонки не прерывает, после звонка включается сам. С Bark не нужно.";
+"Ayu.TerminatedNotice" = "NETHERHILL закрыт, уведомления приостановлены. Откройте его, чтобы вернуть их.";
+"Ayu.NotificationPicture" = "Загрузить фото";
+"Ayu.AISection" = "Поиск и ИИ";
+"Ayu.SearchEngine" = "Поисковик";
+"Ayu.Assistant" = "ИИ-ассистент";
+"Ayu.AIProvider" = "Провайдер ИИ";
+"Ayu.AIKey" = "API-ключ";
+"Ayu.AIKeyNone" = "Не задан";
+"Ayu.AIModel" = "Модель";
+"Ayu.AIFooter" = "Поисковик используется для строки веб-поиска в поиске по чатам. Ассистент обращается к выбранному провайдеру напрямую с устройства. NETHERHILL и Pollinations работают без ключа; Groq, Gemini и OpenRouter дают бесплатные ключи на своих сайтах.";
+"Ayu.AIPlaceholder" = "Спросите что угодно";
+"Ayu.AIClear" = "Очистить";
+"Ayu.AIError" = "Ошибка";
+"Ayu.AINeedKey" = "Этому провайдеру нужен API-ключ. Добавьте его в настройках NETHERHILL.";
+"Ayu.AIEmpty" = "Задайте вопрос, чтобы начать.";
+"Ayu.AICopy" = "Скопировать";
+"Ayu.AIChats" = "Чаты";
+"Ayu.AINewChat" = "Новый чат";
+"Ayu.AIRename" = "Переименовать";
+"Ayu.AIDelete" = "Удалить";
+"Ayu.AIBubble" = "Кнопка ассистента в списке чатов";
+"Ayu.Copilot" = "ИИ-анализ";
+"Ayu.CopilotAsk" = "Спросить про этот чат…";
+"Ayu.CopilotEmpty" = "Пока нечего читать.";
+"Ayu.CopilotThinking" = "Читаю переписку…";
+"Ayu.CopilotCopied" = "Скопировано. Нажми на подсказку, чтобы вставить её в поле ввода.";
+"Ayu.CopilotToggle" = "ИИ-подсказки в чатах";
+"Ayu.AILanguage" = "Язык ответов";
+"Ayu.AILanguageAuto" = "Авто";
+"Ayu.AILanguageInfo" = "Язык, на котором ассистент отвечает всегда. Оставь пустым, чтобы он отвечал на языке вопроса.";
+"Ayu.AIPersona" = "Персонализация";
+"Ayu.AIPersonaInfo" = "Расскажи ассистенту о себе и о том, как отвечать";
+"Ayu.AIPersonaHint" = "Отвечай коротко, зови меня Макс…";
+"Ayu.SupporterBadge" = "Бейдж поддержки";
+"Ayu.SupporterInfo" = "Поддержи NETHERHILL iOS на $%@ и получи свой бейдж рядом с именем. Его видят все пользователи NETHERHILL на любой сборке. Оплата подтверждается автоматически.";
+"Ayu.SupporterPay" = "Поддержать за $%@";
+"Ayu.SupporterPaid" = "Я оплатил";
+"Ayu.SupporterCheck" = "Проверить статус";
+"Ayu.SupporterPending" = "Оплати $%@ кнопкой ниже. После оплаты через Crypto Bot, xRocket или TON-кошелёк бейдж откроется сам в течение минуты.";
+"Ayu.SupporterWaiting" = "Пока не подтверждено. Платежи проверяются автоматически, обычно это занимает до пары минут.";
+"Ayu.SupporterFailed" = "Не удалось связаться с сервером. Попробуй позже.";
+"Ayu.SupporterCopied" = "Код скопирован";
+"Ayu.SupporterPayIntro" = "Оплати $%@. Платежи через Crypto Bot, xRocket и TON подтверждаются автоматически: просто вернись назад, бейдж откроется сам.";
+"Ayu.SupporterPayCode" = "Твой код: %@. Если платишь по старой ссылке, укажи его в комментарии к платежу.";
+"Ayu.SupporterRocketManual" = "Укажи код в комментарии. Проверяется вручную.";
+"Ayu.SupporterTonAuto" = "Отправь %@ TON с комментарием %@. Подтверждается автоматически.";
+"Ayu.SupporterBotAuto" = "Твой личный счёт. Любая монета, подтверждается автоматически.";
+"Ayu.BadgeSupported" = "**%@** поддержал(а) разработку **NETHERHILL iOS**";
+"Ayu.BadgeResource" = "**%@** — официальный ресурс **NETHERHILL iOS**";
+"Ayu.BadgeDeveloper" = "**%@** — разработчик **NETHERHILL iOS**";
+"Ayu.BadgeSquircle" = "Квадрат";
+"Ayu.BadgeCircle" = "Круг";
+"Ayu.BadgeSeal" = "Печать";
+"Ayu.BadgeNoBackground" = "Значок";
+"Ayu.BadgeIcon" = "Значок";
+"Ayu.BadgeEmoji" = "или введи эмодзи";
+"Ayu.BadgeColor" = "Цвет";
+"Ayu.BadgeDarkIcon" = "Тёмный значок";
+"Ayu.BadgeHint" = "Изменения сохраняются сразу и появляются у других пользователей NETHERHILL в течение нескольких минут.";
+"Ayu.FloatChat" = "Открыть в окне";
+"Ayu.FloatPlaceholder" = "Сообщение";
+"Ayu.AIIntroTagline" = "карманный призрак";
+"Ayu.AIIntro1" = "просыпаюсь";
+"Ayu.AIIntro2" = "гружу модули";
+"Ayu.AIIntro3" = "настраиваю ассистента";
+"Ayu.AIIntro4" = "готово";
+"Ayu.AIRecording" = "Запись… нажмите стоп, чтобы отправить";
+"Ayu.AIMicDenied" = "Разрешите доступ к микрофону в настройках iOS, чтобы отправлять голос.";
+"Ayu.AISuggest1" = "Объясни что-нибудь простыми словами";
+"Ayu.AISuggest2" = "Помоги написать сообщение";
+"Ayu.AISuggest3" = "Переведи текст";
+"Ayu.DisableLiquidGlass" = "Отключить Liquid Glass";
+"Ayu.DisableLiquidGlassInfo" = "Возвращает классический интерфейс Telegram времён iOS 18: панели на всю ширину, классические таб-бар, поле ввода, меню и списки настроек. Применяется после перезапуска.";
+"Ayu.RestartToApply" = "Перезапустите NETHERHILL, чтобы сменить интерфейс.";
+"Ayu.RestartPending" = "Применится после перезапуска";
+"Ayu.Later" = "Позже";
+"Ayu.LegacyUICrashGuard" = "Классический интерфейс отключён после повторяющихся сбоев.";
+"Ayu.DonateSection" = "Поддержать проект";
+"Ayu.Donate" = "Донат";
+"Ayu.DonateFooter" = "NETHERHILL бесплатный и без рекламы. Донаты помогают развивать его дальше.";
+"Ayu.DonateIntro" = "Спасибо за поддержку NETHERHILL. Отсканируй код или открой ссылку.";
+"Ayu.DonateBotInfo" = "Любая монета, оплата с баланса бота.";
+"Ayu.DonateWallet" = "TON-кошелёк";
+"Ayu.DonateWalletInfo" = "TON, USDT и другие токены в сети TON.";
+"Ayu.DonateOpen" = "Открыть";
+
+"Ayu.Effects.Title" = "Эффекты";
+"Ayu.Effects.Master" = "Визуальные эффекты";
+"Ayu.Effects.MasterInfo" = "Эффекты автоматически приостанавливаются, когда включены «Уменьшение движения» или режим энергосбережения, — тогда используется обычный вид Telegram.";
+"Ayu.Effects.BackgroundSection" = "Фон чата";
+"Ayu.Effects.Aurora" = "Северное сияние";
+"Ayu.Effects.AuroraInfo" = "Градиентные обои переливаются большим числом цветов";
+"Ayu.Effects.Grain" = "Зернистость градиента";
+"Ayu.Effects.GrainInfo" = "Плёночное зерно поверх градиентных обоев. Сдвиньте ползунок влево, чтобы выключить.";
+"Ayu.Effects.Parallax" = "Глубокий параллакс";
+"Ayu.Effects.ParallaxInfo" = "Фон, узор и сообщения смещаются на разной глубине при наклоне устройства";
+"Ayu.Effects.Ripple" = "Рябь";
+"Ayu.Effects.RippleInfo" = "Касание пустого фона оставляет рябь, как на воде";
+"Ayu.Effects.BackgroundFooter" = "Параллакс и движение градиента приостанавливаются в режиме энергосбережения.";
+"Ayu.Effects.BubblesSection" = "Пузыри сообщений";
+"Ayu.Effects.BubbleGlow" = "Свечение";
+"Ayu.Effects.BubbleGlowInfo" = "Мягкое свечение цвета акцента вокруг ваших сообщений";
+"Ayu.Effects.GlassBubbles" = "Стеклянные пузыри";
+"Ayu.Effects.GlassBubblesInfo" = "Жидкое стекло в оттенке обоев: светлее на тёмных обоях, темнее на светлых";
+"Ayu.Effects.AnimationsSection" = "Анимации";
+"Ayu.Effects.DeleteStyle" = "Удаление";
+"Ayu.Effects.Delete.Standard" = "Стандартное";
+"Ayu.Effects.Delete.Dust" = "Пыль";
+"Ayu.Effects.Delete.Burn" = "Сгорание";
+"Ayu.Effects.Delete.Shatter" = "Осколки";
+"Ayu.Effects.Delete.Implode" = "Схлопывание";
+"Ayu.Effects.SendStyle" = "Отправка";
+"Ayu.Effects.Send.Standard" = "Стандартная";
+"Ayu.Effects.Send.Spring" = "Пружина";
+"Ayu.Effects.Send.Sparkles" = "Искры";
+"Ayu.Effects.Send.Warp" = "Варп";
+"Ayu.Effects.TextReveal" = "Проявление текста";
+"Ayu.Effects.TextRevealInfo" = "Новые входящие сообщения появляются слово за словом";
+"Ayu.Effects.AnimationsFooter" = "Когда включено «Уменьшение движения», используются стандартные анимации Telegram.";
+"Ayu.Effects.InterfaceSection" = "Интерфейс";
+"Ayu.Effects.AvatarRings" = "Кольца «в сети»";
+"Ayu.Effects.AvatarRingsInfo" = "Градиентное кольцо бежит по кругу вокруг аватаров тех, кто в сети";
+"Ayu.Effects.InterfaceFooter" = "В режиме энергосбережения кольца перестают вращаться.";
+"Ayu.Effects.RingColor" = "Цвет кольца";
+"Ayu.Effects.RingColor.Accent" = "Акцент темы";
+"Ayu.Effects.RingColor.Blue" = "Синий";
+"Ayu.Effects.RingColor.Teal" = "Бирюзовый";
+"Ayu.Effects.RingColor.Green" = "Зелёный";
+"Ayu.Effects.RingColor.Gold" = "Золотой";
+"Ayu.Effects.RingColor.Orange" = "Оранжевый";
+"Ayu.Effects.RingColor.Red" = "Красный";
+"Ayu.Effects.RingColor.Pink" = "Розовый";
+"Ayu.Effects.RingColor.Purple" = "Фиолетовый";
+"Ayu.Effects.RingColor.White" = "Серебристый";
+"Ayu.Effects.RingColor.Aurora" = "Градиент: Сияние";
+"Ayu.Effects.RingColor.Sunset" = "Градиент: Закат";
+"Ayu.Effects.RingColor.Ocean" = "Градиент: Океан";
+"Ayu.Effects.RingColor.Neon" = "Градиент: Неон";
+"Ayu.Effects.RingColor.Fire" = "Градиент: Огонь";
+"Ayu.Effects.RingColor.Rainbow" = "Градиент: Радуга";
+"Ayu.Video.Section" = "Видео";
+"Ayu.Video.Title" = "Настройки видео";
+"Ayu.Video.SectionFooter" = "Качество и частота кадров кружков, отправка видео из галереи кружком и качество обычных видео.";
+"Ayu.Video.RoundSection" = "Кружки";
+"Ayu.Video.RoundQuality" = "Качество";
+"Ayu.Video.RoundStandard" = "Стандарт (480p)";
+"Ayu.Video.RoundFrameRate" = "Частота кадров";
+"Ayu.Video.RoundFromGallery" = "Кружок из галереи";
+"Ayu.Video.RoundFromGalleryInfo" = "Зажми кнопку отправки в меню вложений, когда выбрано одно видео";
+"Ayu.Video.RoundMax" = "Максимум (640p)";
+"Ayu.Video.RoundFooter" = "640p — максимум, который Telegram принимает для кружков: всё, что больше, приходит как обычное видео. 60 и 120 fps работают, если их поддерживает камера, иначе берётся ближайшая меньшая частота. Сведи пальцы, чтобы отдалить до 0.5× на задней камере, если у телефона есть сверхширик. Чем выше настройки, тем больше файлы.";
+"Ayu.Video.Round720" = "720p";
+"Ayu.Video.Round1080" = "1080p";
+"Ayu.Video.RoundBitrate" = "Битрейт";
+"Ayu.Video.RoundBitrateAuto" = "Авто";
+"Ayu.Video.RoundBitrateUnit" = "Мбит/с";
+"Ayu.Video.RoundHEVC" = "HEVC (H.265)";
+"Ayu.Video.RoundHEVCInfo" = "Чётче картинка при том же битрейте. Если телефон не умеет кодировать HEVC, используется H.264";
+"Ayu.Video.RoundExperimentalSection" = "Эксперименты";
+"Ayu.Video.RoundLargeAs640" = "1080p под видом 640p";
+"Ayu.Video.RoundLargeAs640Info" = "Добавляет 720p и 1080p в «Качество». Видео остаётся в настоящем разрешении, но заявляется как 640×640, поэтому Telegram считает его кружком";
+"Ayu.Video.RoundExperimentalFooter" = "Экспериментально. Telegram может перестать принимать такие кружки или доставлять их как обычные видео, на старых телефонах они могут подтормаживать, а файлы становятся намного больше.";
+"Ayu.Video.VideoSection" = "Видео";
+"Ayu.Video.BestQuality" = "Всегда лучшее качество";
+"Ayu.Video.BestQualityInfo" = "Видео отправляются в максимальном доступном качестве, до 1080p";
+"Ayu.Video.HighBitrate" = "Повышенный битрейт";
+"Ayu.Video.HighBitrateInfo" = "Чётче картинка при том же разрешении, файлы больше";
+"Ayu.Video.VideoFooter" = "Видео сохраняют исходную частоту кадров, до 60 fps.";
+"Ayu.Video.SendAsRound" = "Отправить кружком";
+"Ayu.RoundEditor.Title" = "Кружок";
+"Ayu.RoundEditor.Send" = "Отправить";
+"Ayu.RoundEditor.Start" = "Отрезок";
+"Ayu.RoundEditor.Length" = "Длительность";
+"Ayu.RoundEditor.Hint" = "Двигай и масштабируй видео, чтобы выбрать, что попадёт в кружок. До 60 секунд.";
+"Ayu.RoundEditor.Failed" = "Не удалось открыть это видео.";
+"Ayu.Effects.ProfileBubbles" = "Пузыри в профиле";
+"Ayu.Effects.ProfileBubblesInfo" = "В профилях, где их включили, подарки плавают вокруг аватара в стеклянных пузырях";
+"Ayu.FakeNft.Badge" = "⚠️ Фейковый NFT";
+"Ayu.FakeNft.Title" = "Фейковый NFT";
+"Ayu.FakeNft.Info" = "Этот подарок добавлен в профиль через NETHERHILL. Он не принадлежит этому пользователю и не является настоящим подарком Telegram.";
+"Ayu.FakeUsername.Title" = "Фейковый юзернейм";
+"Ayu.FakeUsername.Text" = "%@ добавлен в этот профиль через NETHERHILL. Это не настоящий юзернейм Telegram: он не открывает чат, и по нему никого нельзя найти.";
+"Ayu.ProfileExtras.Title" = "Украшения профиля";
+"Ayu.ProfileExtras.Intro" = "Украшения, которые видит каждый пользователь NETHERHILL в вашем профиле. Они ненастоящие: другие приложения Telegram их не показывают, а по нажатию всегда видно, что это фейк.";
+"Ayu.ProfileExtras.Loading" = "Загрузка…";
+"Ayu.ProfileExtras.Retry" = "Повторить";
+"Ayu.ProfileExtras.BubblesSection" = "Пузыри";
+"Ayu.ProfileExtras.Bubbles" = "Пузыри в профиле";
+"Ayu.ProfileExtras.BubblesInfo" = "Закреплённые подарки и фейковые NFT плавают вокруг аватара в стеклянных пузырях. Каждый может выключить пузыри у себя в «Эффектах».";
+"Ayu.ProfileExtras.BackgroundSection" = "Фон профиля";
+"Ayu.ProfileExtras.CurrentBackground" = "Текущий фон";
+"Ayu.ProfileExtras.Photo" = "Фото";
+"Ayu.ProfileExtras.Video" = "Видео";
+"Ayu.ProfileExtras.ChoosePhoto" = "Выбрать фото";
+"Ayu.ProfileExtras.ChooseVideo" = "Выбрать видео";
+"Ayu.ProfileExtras.RemoveBackground" = "Удалить фон";
+"Ayu.ProfileExtras.RemoveBackgroundConfirm" = "Удалить фон профиля для всех?";
+"Ayu.ProfileExtras.BackgroundInfo" = "Фото или видео за шапкой профиля. Видео играет без звука по кругу, берутся первые 15 секунд. Большие файлы сжимаются автоматически; до 8 загрузок в день. Фоны проверяет команда NETHERHILL.";
+"Ayu.ProfileExtras.Preparing" = "Подготовка…";
+"Ayu.ProfileExtras.Uploading" = "Загрузка… %@";
+"Ayu.ProfileExtras.NftsSection" = "Фейковые NFT";
+"Ayu.ProfileExtras.AddNft" = "Добавить NFT";
+"Ayu.ProfileExtras.AddNftPrompt" = "Вставьте ссылку на подарок вида t.me/nft/PlushPepe-1 или просто его название с номером";
+"Ayu.ProfileExtras.Pinned" = "Закреплён";
+"Ayu.ProfileExtras.NftsInfo" = "До 30 коллекционных подарков в профиле, во вкладке «Подарки» и в пузырях. Закрепите до 6, чтобы они шли первыми. По нажатию всегда видна метка «Фейковый NFT»; их нельзя передать, продать или надеть.";
+"Ayu.ProfileExtras.Preview" = "Предпросмотр";
+"Ayu.ProfileExtras.Pin" = "Закрепить";
+"Ayu.ProfileExtras.Unpin" = "Открепить";
+"Ayu.ProfileExtras.MoveUp" = "Выше";
+"Ayu.ProfileExtras.MoveDown" = "Ниже";
+"Ayu.ProfileExtras.Delete" = "Удалить";
+"Ayu.ProfileExtras.UsernamesSection" = "Фейковые юзернеймы";
+"Ayu.ProfileExtras.AddUsername" = "Добавить юзернейм";
+"Ayu.ProfileExtras.AddUsernamePrompt" = "От 4 до 32 латинских букв, цифр или подчёркиваний";
+"Ayu.ProfileExtras.UsernamesInfo" = "До 10 дополнительных юзернеймов рядом с вашим. По нажатию всегда видно, что это фейк; по ним вас нельзя найти или написать вам.";
+"Ayu.ProfileExtras.DeleteAll" = "Удалить все украшения";
+"Ayu.ProfileExtras.DeleteAllConfirm" = "Удалить фейковые NFT, фейковые юзернеймы и фон профиля?";
+"Ayu.ProfileExtras.Footer" = "Украшения привязаны к этой установке, другие установки не могут их изменить. Изменения NFT, юзернеймов и пузырей применяются после нажатия «Сохранить».";
+"Ayu.ProfileExtras.Saved" = "Украшения профиля сохранены";
+"Ayu.ProfileExtras.UnsavedChanges" = "Сохранить изменения украшений профиля?";
+"Ayu.ProfileExtras.Discard" = "Не сохранять";
+"Ayu.ProfileExtras.Error.Network" = "Не удалось связаться с сервером NETHERHILL. Попробуйте позже.";
+"Ayu.ProfileExtras.Error.Unavailable" = "Украшения профиля временно недоступны.";
+"Ayu.ProfileExtras.Error.Locked" = "Украшениями этого аккаунта управляет другая установка NETHERHILL.";
+"Ayu.ProfileExtras.Error.Banned" = "Украшения профиля заблокированы для этого аккаунта.";
+"Ayu.ProfileExtras.Error.RateLimited" = "Слишком много изменений за сегодня. Попробуйте завтра.";
+"Ayu.ProfileExtras.Error.TooLarge" = "Файл слишком большой.";
+"Ayu.ProfileExtras.Error.TooLong" = "Видео длиннее 15 секунд.";
+"Ayu.ProfileExtras.Error.BadMedia" = "Этот файл нельзя использовать как фон.";
+"Ayu.ProfileExtras.Error.Reserved" = "%@ зарезервирован, его нельзя использовать.";
+"Ayu.ProfileExtras.Error.BadUsername" = "Используйте от 4 до 32 латинских букв, цифр или подчёркиваний.";
+"Ayu.ProfileExtras.Error.Invalid" = "Сервер не принял изменение.";
+"Ayu.ProfileExtras.Error.NftNotFound" = "По этой ссылке не найден коллекционный подарок.";
+"Ayu.ProfileExtras.Error.NftExists" = "Этот NFT уже есть в списке.";
+"Ayu.ProfileExtras.Error.NftBurned" = "Этот подарок сожжён.";
+"Ayu.ProfileExtras.Error.PinLimit" = "Можно закрепить до 6 NFT.";
+"Ayu.ProfileExtras.Error.Unverified" = "Сначала подтвердите, что этот аккаунт Telegram ваш.";
+"Ayu.ProfileExtras.Verify.Section" = "Владелец";
+"Ayu.ProfileExtras.Verify.Title" = "Подтверждение владельца";
+"Ayu.ProfileExtras.Verify.Action" = "Подтвердить владельца";
+"Ayu.ProfileExtras.Verify.Again" = "Открыть бота ещё раз";
+"Ayu.ProfileExtras.Verify.Waiting" = "Ждём подтверждения…";
+"Ayu.ProfileExtras.Verify.Info" = "Перед первым изменением подтвердите, что этот аккаунт Telegram ваш, чтобы никто другой не мог добавить фейковые NFT, юзернеймы или фон в ваш профиль. Откроется бот NETHERHILL: нажмите «Старт», затем «Подтвердить» и вернитесь сюда. Нужно один раз для этой установки.";
+"Ayu.ProfileExtras.Verify.WaitingInfo" = "В чате с ботом нажмите «Старт», затем «Подтвердить». Бот покажет код %@. Вернитесь сюда, и редактирование откроется само. Ссылка работает 10 минут и только с этого аккаунта.";
+"Ayu.ProfileExtras.Verify.Prompt" = "Чтобы менять украшения профиля, подтвердите в боте NETHERHILL, что этот аккаунт Telegram ваш. Это два нажатия, нужно один раз для этой установки.";
+"Ayu.ProfileExtras.Verify.Done" = "Владелец подтверждён";

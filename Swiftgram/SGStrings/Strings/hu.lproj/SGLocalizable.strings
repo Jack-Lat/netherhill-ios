@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Támogatás";
+"Ayu.SupportChannel" = "Frissítési csatorna";
+"Ayu.SupportDeveloper" = "Kapcsolat a fejlesztővel";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Frissítések keresése";
+"Ayu.UpToDate" = "A legújabb verzió van telepítve.";
+"Ayu.UpdateAvailable" = "Frissítés érhető el";
+"Ayu.UpdateAvailableInfo" = "Megjelent a(z) %@ verzió. Nyisd meg a csatornát a letöltéshez.";
+"Ayu.UpdateIgnore" = "Kihagyás";
+"Ayu.UpdateOpen" = "Frissítés";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "A frissítéshez indítsd el az NETHERHILLot Multitask módban (tartsd lenyomva az appot a LiveContainerben), majd próbáld újra.";
+"Ayu.NotificationsSection" = "Értesítések";
+"Ayu.BarkSetUp" = "Bark-értesítések beállítása";
+"Ayu.BarkConnected" = "Bark-értesítések: be";
+"Ayu.BarkFooter" = "A sideloaddal telepített alkalmazás nem kap értesítést az Apple-től. Telepítsd a Barkot az App Store-ból, másold ki benne a kulcsodat, és illeszd be ide. Az új üzenetek ezután az NETHERHILL továbbítón át Bark-értesítésként érkeznek.";
+"Ayu.BarkPrompt" = "Illeszd be a Bark-kulcsodat vagy a Bark alkalmazás linkjét. Hagyd üresen az értesítések kikapcsolásához.";
+"Ayu.BarkEnabled" = "Kész. Az új üzenetek Bark-értesítésként érkeznek, amíg az NETHERHILL be van zárva.";
+"Ayu.BarkDisabled" = "A Bark-értesítések ki vannak kapcsolva.";
+"Ayu.BarkInvalid" = "Ez nem Bark-kulcs. Másold ki a kulcsot vagy egy linket a Bark alkalmazásból.";
+"Ayu.BarkFailed" = "A Telegram nem fogadta el a feliratkozást: %@";
+"Ayu.BarkFixTitle" = "Értesítések javítása";
+"Ayu.BarkFixInstall" = "Telepítsd a Barkot az App Store-ból";
+"Ayu.BarkFixConnect" = "Csatlakoztasd a Barkot az értesítésekhez";
+"Ayu.BarkEnterKey" = "Kulcs megadása";
+"Ayu.BarkHowTo" = "1. Telepítsd a Barkot az App Store-ból, és nyisd meg.\n2. Másold ki a(z) https://api.day.app/… címet a főképernyőjéről.\n3. Gyere vissza, koppints a „Kulcs megadása” gombra, és illeszd be.";
+"Ayu.ExportChat" = "Csevegés exportálása";
+"Ayu.ExportChatMedia" = "A teljes csevegés olyan archívumba kerül, amelyet a Telegram importálni tud. Legyenek benne a fotók, videók, hangüzenetek és fájlok is? A letöltésük sokáig tarthat.";
+"Ayu.ExportChatWithMedia" = "Médiával";
+"Ayu.ExportChatTextOnly" = "Csak szöveg";
+"Ayu.ExportChatLoading" = "Üzenetek betöltése: %@";
+"Ayu.ExportChatDownloading" = "Média letöltése: %@";
+"Ayu.ExportChatSaving" = "Archívum létrehozása…";
+"Ayu.ExportChatEmpty" = "Nincs exportálható üzenet.";
+"Ayu.ChatTransferSection" = "Csevegések átvitele";
+"Ayu.ImportChat" = "Csevegés importálása";
+"Ayu.ImportChatFooter" = "Importálj valamelyik csevegésedbe egy WhatsAppból, LINE-ból, KakaoTalkból vagy az NETHERHILL „Csevegés exportálása” funkciójával exportált csevegést (ZIP- vagy TXT-fájl).";
+"Ayu.ImportChatInvalid" = "Ez a fájl nem támogatott csevegésexport.";
+"Ayu.HistorySaveAudio" = "Hang mentése";
+"Ayu.HistoryDeleteEntry" = "Törlés az előzményekből";
+"Ayu.DeletedChats" = "Törölt csevegések";
+"Ayu.DeletedChatsInfo" = "Csevegések, amelyek teljes előzménye törölve lett. Amit az NETHERHILL megőrzött belőlük, sosem törlődik automatikusan.";
+"Ayu.DeletedChatSave" = "Mentés archívumként";
+"Ayu.DeletedChatRemove" = "Eltávolítás a listáról";
+"Ayu.DeletedChatDelete" = "Megőrzött üzenetek törlése";
+"Ayu.HistorySubtitle" = "Törölt és szerkesztett üzenetek a kiválasztott csevegésekből, csak ezen az eszközön tárolva.";
+"Ayu.HistoryAll" = "Összes";
+"Ayu.HistoryEdited" = "Szerkesztve";
+"Ayu.HistoryNow" = "Most";
+"Ayu.HistoryShowMessage" = "Megjelenítés a csevegésben";
+"Ayu.HistoryOpenChat" = "Csevegés megnyitása";
+"Ayu.HistoryStopSaving" = "Ne mentse tovább ezt a csevegést";
+"Ayu.HistoryNoChats" = "Válaszd ki az előzményekhez a csevegéseket. Amíg legalább egyet nem adsz hozzá, semmi sem mentődik.";
+"Ayu.HistoryEmptyInfo" = "Itt jelennek meg a törölt és szerkesztett üzenetek.";
+"Ayu.AddAccountHelp" = "Legfeljebb 500 fiókot adhatsz hozzá különböző telefonszámokkal.";
+"Ayu.HeroGhostOn" = "Szellemmód bekapcsolva";
+"Ayu.HeroGhostOff" = "Szellemmód kikapcsolva";
+"Ayu.HeroHidden" = "Elrejtve: %@ / %@";
+"Ayu.GhostSubtitle" = "Online, olvasás, gépelés, felvétel, feltöltés és történetek";
+"Ayu.GhostFooter" = "A szellemmód bekapcsolja az összes alábbi kapcsolót, és megőrzi saját értékeiket.";
+"Ayu.HideSection" = "Mit rejtsen el";
+"Ayu.BehaviorSection" = "Viselkedés";
+"Ayu.OfflineAfterSending" = "Offline küldés után";
+"Ayu.OfflineAfterSendingInfo" = "Minden elküldött üzenet után azonnal offline jelzés";
+"Ayu.ReadOnSend" = "Csevegés olvasása válaszkor";
+"Ayu.ReadOnSendInfo" = "Az elküldött üzenet olvasottnak jelöli a csevegést";
+"Ayu.QuickToggle" = "Kapcsoló a Csevegések lapon";
+"Ayu.QuickToggleInfo" = "Tartsd lenyomva a Csevegések lapot a szellemmód gyors be- vagy kikapcsolásához.";
+"Ayu.ContentSection" = "Tartalom";
+"Ayu.IgnoreProtection" = "Tartalomvédelem figyelmen kívül hagyása";
+"Ayu.IgnoreProtectionInfo" = "Mentés, másolás és továbbítás védett csevegésekből";
+"Ayu.AllowScreenshots" = "Képernyőképek engedélyezése";
+"Ayu.AllowScreenshotsInfo" = "A védett és titkos csevegések látszanak a képernyőképeken és felvételeken";
+"Ayu.ContentFooter" = "A védett csevegések üzenetei szerző nélküli másolatként továbbítódnak, a média újra feltöltődik. A képernyőkép-beállítás az újra megnyitott képernyőkre vonatkozik.";
+"Ayu.SaveDeletedInfo" = "Minden csevegésben megmaradnak; a kiválasztottak az üzenetelőzményekben is";
+"Ayu.OpenHistory" = "Előzmények megnyitása";
+"Ayu.ClientSection" = "Kliens";
+"Ayu.LocalPremiumInfo" = "Prémium emojik és állapotok csak ezen az eszközön";
+"Ayu.GhostEnable" = "Szellemmód bekapcsolása";
+"Ayu.GhostDisable" = "Szellemmód kikapcsolása";
+"Ayu.GhostEnabledToast" = "Szellemmód bekapcsolva";
+"Ayu.GhostDisabledToast" = "Szellemmód kikapcsolva";
+"Ayu.ChatListBackground" = "Csevegéslista háttere";
+"Ayu.ConversationBackground" = "Csevegések háttere";
+"Ayu.ChooseVideo" = "Videó kiválasztása";
+"Ayu.ShowBackground" = "Háttér megjelenítése";
+
+"Settings.ContentSettings" = "Tartalombeállítások";
+
+"Settings.Tabs.Header" = "FÜLEK";
+"Settings.Tabs.HideTabBar" = "Feliratcsík elrejtése";
+"Settings.Tabs.ShowContacts" = "Kapcsolatok fül megjelenítése";
+"Settings.Tabs.ShowNames" = "Feliratcsík nevek megjelenítése";
+
+"Settings.Folders.BottomTab" = "Könyvtárak az alján";
+"Settings.Folders.BottomTabStyle" = "Alsó könyvtár stílus";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "Elrejtése \"%@\"";
+"Settings.Folders.RememberLast" = "Utolsó mappa megnyitása";
+"Settings.Folders.RememberLast.Notice" = "A Swiftgram az utoljára használt mappát fogja megnyitni, amikor újraindítja az alkalmazást vagy fiókok között vált.";
+
+"Settings.Folders.CompactNames" = "Kisebb térköz";
+"Settings.Folders.AllChatsTitle" = "\"Minden Beszélgetés\" cím";
+"Settings.Folders.AllChatsTitle.short" = "Rövid";
+"Settings.Folders.AllChatsTitle.long" = "Hosszú";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Alapértelmezett";
+
+
+"Settings.ChatList.Header" = "BESZÉLGETÉS LISTA";
+"Settings.CompactChatList" = "Kompakt Beszélgetés Lista";
+
+"Settings.Profiles.Header" = "PROFIL";
+
+"Settings.Stories.Hide" = "Történetek elrejtése";
+"Settings.Stories.WarnBeforeView" = "Kérdezzen megtekintés előtt";
+"Settings.Stories.DisableSwipeToRecord" = "Húzás letiltása felvételhez";
+
+"Settings.Translation.QuickTranslateButton" = "Gyors Fordítás gomb";
+
+"Stories.Warning.Author" = "Szerző";
+"Stories.Warning.ViewStory" = "Történet megtekintése?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ LÁTNI FOGJA, hogy megtekintetted a történetüket.";
+"Stories.Warning.NoticeStealth" = "%@ nem fogja látni, hogy megtekintetted a történetüket.";
+
+"Settings.Photo.Quality.Notice" = "Feltöltött fényképek és történetek minősége.";
+"Settings.Photo.SendLarge" = "Nagy fényképek küldése";
+"Settings.Photo.SendLarge.Notice" = "Növelje a tömörített képek oldalméretének határát 2560px-re.";
+
+"Settings.VideoNotes.Header" = "KEREK VIDEÓK";
+"Settings.VideoNotes.StartWithRearCam" = "Kezdje a hátsó kamerával";
+
+"Settings.CustomColors.Header" = "FIÓK SZÍNEI";
+"Settings.CustomColors.Saturation" = "TELÍTETTSÉG";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Színértéket 0%%-ra állítva az fiókszíneket letiltja.";
+
+"Settings.UploadsBoost" = "Feltöltés fokozása";
+"Settings.DownloadsBoost" = "Letöltés fokozása";
+"Settings.DownloadsBoost.Notice" = "Növeli a párhuzamos kapcsolatok számát és a fájlok darabjainak méretét. Ha a hálózatod nem képes kezelni a terhelést, próbálj ki különböző opciókat, amelyek illeszkednek a kapcsolatodhoz.";
+"Settings.DownloadsBoost.none" = "Kikapcsolva";
+"Settings.DownloadsBoost.medium" = "Közepes";
+"Settings.DownloadsBoost.maximum" = "Maximális";
+
+"Settings.ShowProfileID" = "Profil azonosító megjelenítése";
+"Settings.ShowDC" = "Adatközpont megjelenítése";
+"Settings.ShowCreationDate" = "Beszélgetés létrehozásának dátumának megjelenítése";
+"Settings.ShowCreationDate.Notice" = "A beszélgetés létrehozásának dátuma ismeretlen lehet néhány csevegésnél.";
+
+"Settings.ShowRegDate" = "Regisztrációs Dátum Megjelenítése";
+"Settings.ShowRegDate.Notice" = "A regisztrációs dátum csak hozzávetőleges.";
+
+"Settings.SendWithReturnKey" = "Küldés 'vissza' gombbal";
+"Settings.HidePhoneInSettingsUI" = "Telefonszám elrejtése a beállításokban";
+"Settings.HidePhoneInSettingsUI.Notice" = "Ezzel csak a telefonszámát rejti el a beállítások felületen. Ha mások számára is el akarja rejteni, menjen a Adatvédelem és biztonság menübe.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "Ha 5 másodpercig távol van";
+
+"ProxySettings.UseSystemDNS" = "Rendszer DNS használata";
+"ProxySettings.UseSystemDNS.Notice" = "Használja a rendszer DNS-t, ha nem fér hozzá a Google DNS-hez";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Nem **szükséges** %@!";
+"Common.RestartRequired" = "Újraindítás szükséges";
+"Common.RestartNow" = "Újraindítás most";
+"Common.OpenTelegram" = "Telegram megnyitása";
+"Common.UseTelegramForPremium" = "Kérjük vegye figyelembe, hogy a Telegram Prémiumhoz az hivatalos Telegram appot kell használnia. Amint megkapta a Telegram Prémiumot, Swiftgram összes funkciója elérhető lesz.";
+
+"Message.HoldToShowOrReport" = "Tartsa lenyomva a Megjelenítéshez vagy Jelentéshez.";
+
+"Auth.AccountBackupReminder" = "Győződjön meg róla, hogy van biztonsági másolat hozzáférési módszere. Tartsa meg a SMS-hez használt SIM-et vagy egy másik bejelentkezett munkamenetet, hogy elkerülje a kizárást.";
+"Auth.UnofficialAppCodeTitle" = "A kódot csak a hivatalos alkalmazással szerezheti meg";
+
+"Settings.SmallReactions" = "Kis reakciók";
+"Settings.HideReactions" = "Reakciók Elrejtése";
+
+"ContextMenu.SaveToCloud" = "Mentés a Felhőbe";
+"ContextMenu.SelectFromUser" = "Kiválasztás a Szerzőtől";
+
+"Settings.ContextMenu" = "KONTEXTUS MENÜ";
+"Settings.ContextMenu.Notice" = "A kikapcsolt bejegyzések elérhetők lesznek a 'Swiftgram' almenüjében.";
+
+
+"Settings.ChatSwipeOptions" = "Csevegőlista húzás opciók";
+"Settings.DeleteChatSwipeOption" = "Húzza át az üzenet törléséhez";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Húzza a következő olvasatlan csatornához";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Húzza le a következő témához";
+"Settings.GalleryCamera" = "Kamera a Galériában";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" Gomb";
+"Settings.SnapDeletionEffect" = "Üzenet törlés hatások";
+
+"Settings.Stickers.Size" = "MÉRET";
+"Settings.Stickers.Timestamp" = "Időbélyeg Megjelenítése";
+
+"Settings.RecordingButton" = "Hangrögzítés Gomb";
+
+"Settings.DefaultEmojisFirst" = "Prioritize standard emojis";
+"Settings.DefaultEmojisFirst.Notice" = "Mutassa az alap emojisokat az emoji billentyűzet előtt a prémiumok helyett";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "létrehozva: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "Csatlakozott %@";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Regisztrált";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Dupla koppintás a üzenet szerkesztéséhez";
+
+"Settings.wideChannelPosts" = "Széles posztok csatornákban";
+"Settings.ForceEmojiTab" = "Alapértelmezett Emoji billentyűzet";
+
+"Settings.forceBuiltInMic" = "Eszköz mikrofonjának kényszerítése";
+"Settings.forceBuiltInMic.Notice" = "Ha engedélyezve van, az alkalmazás csak az eszköz mikrofonját fogja használni, még akkor is, ha a fejhallgató csatlakoztatva van.";
+
+"Settings.hideChannelBottomButton" = "Kanal Alsó Panel Elrejtése";
+
+"Settings.CallConfirmation" = "Hívás megerősítése";
+"Settings.CallConfirmation.Notice" = "A Swiftgram megkéri a megerősítését, mielőtt hívást indítana.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Hívást kezdeni?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Videóhívást kezdeni?";
+
+"MutualContact.Label" = "közöns kontakt";
+
+"Settings.swipeForVideoPIP" = "Videó PIP a húzással";
+"Settings.swipeForVideoPIP.Notice" = "Ha engedélyezve van, a videó húzása képet-képben üzemmódban nyitja meg.";
+
+"Ayu.Ghost" = "Szellem mód";
+"Ayu.HideRead" = "Olvasási visszajelzések elrejtése";
+"Ayu.HideOnline" = "Online állapot elrejtése";
+"Ayu.HideTyping" = "Gépelés elrejtése";
+"Ayu.HideRecording" = "Felvétel elrejtése";
+"Ayu.HideUploading" = "Feltöltések elrejtése";
+"Ayu.HideStories" = "Történetmegtekintések elrejtése";
+"Ayu.History" = "Üzenetelőzmények";
+"Ayu.SaveDeleted" = "Törölt üzenetek mentése";
+"Ayu.SavePhotos" = "Fotók mentése";
+"Ayu.ClearHistory" = "Előzmények törlése";
+"Ayu.EmptyHistory" = "Még nincsenek előzmények";
+"Ayu.SaveMedia" = "Gyorsítótárazott média mentése";
+"Ayu.BackgroundDimming" = "Háttér sötétítése";
+"Ayu.BeforeEdit" = "Szerkesztés előtt";
+"Ayu.Deleted" = "Törölve";
+"Ayu.ServerPresence" = "A szerveren: %@";
+"Ayu.ServerUnavailable" = "A szerver állapota nem elérhető";
+"Ayu.SendReadReceipt" = "Olvasási visszaigazolás küldése";
+"Ayu.ViewWithoutReceipt" = "Megtekintés visszaigazolás nélkül";
+"Ayu.ReportPhotoView" = "Fénykép megtekintésének igazolása";
+"Ayu.View" = "Megtekintés";
+"Ayu.SendReceipt" = "Küldés";
+"Ayu.ReceiptSent" = "Visszaigazolás elküldve";
+"Ayu.ReceiptError" = "Nem sikerült elküldeni a visszaigazolást. Ellenőrizd a kapcsolatot, és próbáld újra.";
+"Ayu.IconChangeUnavailable" = "A választás mentve az alkalmazásban. Az iOS nem tudta megváltoztatni a főképernyő ikonját.";
+"Ayu.LocalPremium" = "Helyi Premium";
+"Ayu.Pins" = "Rögzített csevegések maximális száma";
+"Ayu.LocalOnly" = "Csak ezen az eszközön";
+"Ayu.HistoryInfo" = "Csak a kijelölt csevegések. Gyorsítótárazott fotók és szöveg: 30 nap, legfeljebb 200 bejegyzés. Titkos és eltűnő üzenetek nélkül.";
+"Ayu.ReadWarning" = "Olvasási visszajelzés küldése erről a beszélgetésről eddig az üzenetig?";
+"Ayu.ViewWarning" = "Megtekintés visszajelzése és az eltűnő média időzítőjének indítása?";
+
+"Ayu.RowOpacity" = "Csevegéssorok átlátszatlansága";
+"Ayu.MediaImportError" = "A fájl nem importálható. Legfeljebb 100 MB.";
+"Ayu.SilentSending" = "Küldés hang nélkül";
+"Ayu.SilentNever" = "Soha";
+"Ayu.SilentInGhost" = "Szellemmódban";
+"Ayu.SilentAlways" = "Mindig";
+"Ayu.ScheduleInGhost" = "Küldés ütemezettként";
+"Ayu.ScheduleInGhostInfo" = "Szellemmódban az üzenetek 12 másodperc múlva ütemezve mennek ki, így sosem látszol online";
+"Ayu.ChatsSection" = "Csevegések";
+"Ayu.DisableAds" = "Szponzorált üzenetek elrejtése";
+"Ayu.DisableLinkWarning" = "Nincs figyelmeztetés rejtett linkeknél";
+"Ayu.DisableGreeting" = "Nincs üdvözlő matrica";
+"Ayu.DimDeleted" = "Áttetsző törölt üzenetek";
+"Ayu.RepeatMessage" = "Ismétlés az üzenetmenüben";
+"Ayu.Repeat" = "Ismétlés";
+"Ayu.ConfirmStickers" = "Matricák küldésének megerősítése";
+"Ayu.ConfirmGifs" = "GIF-ek küldésének megerősítése";
+"Ayu.ConfirmSticker" = "Elküldöd ezt a matricát?";
+"Ayu.ConfirmGif" = "Elküldöd ezt a GIF-et?";
+"Ayu.Send" = "Küldés";
+"Ayu.ImportLocally" = "Importálás helyileg";
+"Ayu.ImportLocallyInfo" = "A csevegést csak erre az eszközre importálhatod: az üzenetek csak neked jelennek meg ebben a csevegésben, és nem kerülnek a Telegramra.";
+"Ayu.ImportLocallyDone" = "Importált üzenetek: %@. Csak ezen az eszközön láthatók.";
+"Ayu.ViewDeleted" = "Törölt üzenetek";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "Csevegések, amelyek törölt üzenetei ezen az eszközön megmaradtak. Nyiss meg egyet a törölt üzenetek vagy az egész csevegés olvasásához.";
+"Ayu.ViewDeletedEmpty" = "Még nincsenek törölt üzenetek.";
+"Ayu.ConfirmReadReceipt" = "Olvasási visszaigazolás megerősítése";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

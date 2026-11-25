@@ -1,0 +1,434 @@
+// AyuGram
+"Ayu.SupportSection" = "サポート";
+"Ayu.SupportChannel" = "アップデートチャンネル";
+"Ayu.SupportDeveloper" = "開発者に連絡";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "アップデートを確認";
+"Ayu.UpToDate" = "最新バージョンです。";
+"Ayu.UpdateAvailable" = "アップデートがあります";
+"Ayu.UpdateAvailableInfo" = "バージョン %@ が公開されました。チャンネルを開いてダウンロードしてください。";
+"Ayu.UpdateIgnore" = "無視";
+"Ayu.UpdateOpen" = "アップデート";
+"Ayu.UpdateNoticeTitle" = "Available update! 🆕";
+"Ayu.UpdateNoticeText" = "Tap to update";
+"Ayu.UpdateQuestion" = "Update NETHERHILL?";
+"Ayu.UpdateQuestionInfo" = "Version %@ will be downloaded and installed.";
+"Ayu.LiveContainerUpdate" = "アップデートするには、LiveContainer 内でアプリを長押しして NETHERHILL を Multitask モードで起動し、もう一度お試しください。";
+"Ayu.NotificationsSection" = "通知";
+"Ayu.BarkSetUp" = "Bark通知を設定";
+"Ayu.BarkConnected" = "Bark通知：オン";
+"Ayu.BarkFooter" = "サイドロードしたアプリはAppleから通知を受け取れません。App StoreからBarkをインストールし、そこでキーをコピーしてここに貼り付けてください。新着メッセージはNETHERHILLリレー経由でBark通知として届きます。";
+"Ayu.BarkPrompt" = "BarkのキーまたはBarkアプリのリンクを貼り付けてください。空にすると通知がオフになります。";
+"Ayu.BarkEnabled" = "完了しました。NETHERHILLを閉じている間、新着メッセージはBark通知として届きます。";
+"Ayu.BarkDisabled" = "Bark通知はオフです。";
+"Ayu.BarkInvalid" = "Barkのキーではありません。Barkアプリからキーまたはリンクをコピーしてください。";
+"Ayu.BarkFailed" = "Telegramが購読を受け付けませんでした：%@";
+"Ayu.BarkFixTitle" = "通知を修正";
+"Ayu.BarkFixInstall" = "App StoreからBarkをインストール";
+"Ayu.BarkFixConnect" = "通知を受け取るにはBarkを接続してください";
+"Ayu.BarkEnterKey" = "キーを入力";
+"Ayu.BarkHowTo" = "1. App StoreからBarkをインストールして開きます。\n2. メイン画面のアドレス https://api.day.app/… をコピーします。\n3. ここに戻り「キーを入力」をタップして貼り付けます。";
+"Ayu.ExportChat" = "チャットをエクスポート";
+"Ayu.ExportChatMedia" = "チャット全体を、Telegramでインポートできるアーカイブとして保存します。写真、動画、ボイスメッセージ、ファイルも含めますか？ダウンロードに時間がかかる場合があります。";
+"Ayu.ExportChatWithMedia" = "メディアを含める";
+"Ayu.ExportChatTextOnly" = "テキストのみ";
+"Ayu.ExportChatLoading" = "メッセージを読み込み中: %@";
+"Ayu.ExportChatDownloading" = "メディアをダウンロード中: %@";
+"Ayu.ExportChatSaving" = "アーカイブを作成中…";
+"Ayu.ExportChatEmpty" = "エクスポートするメッセージがありません。";
+"Ayu.ChatTransferSection" = "チャットの移行";
+"Ayu.ImportChat" = "チャットをインポート";
+"Ayu.ImportChatFooter" = "WhatsApp、LINE、KakaoTalk、またはNETHERHILLの「チャットをエクスポート」で書き出したチャット（ZIPまたはTXTファイル）を、自分のチャットにインポートします。";
+"Ayu.ImportChatInvalid" = "このファイルは対応しているチャットのエクスポートではありません。";
+"Ayu.HistorySaveAudio" = "音声を保存";
+"Ayu.HistoryDeleteEntry" = "履歴から削除";
+"Ayu.DeletedChats" = "削除されたチャット";
+"Ayu.DeletedChatsInfo" = "履歴がすべて削除されたチャットです。NETHERHILLが保存した内容は自動的に削除されません。";
+"Ayu.DeletedChatSave" = "アーカイブとして保存";
+"Ayu.DeletedChatRemove" = "リストから外す";
+"Ayu.DeletedChatDelete" = "保存したメッセージを削除";
+"Ayu.HistorySubtitle" = "選択したチャットの削除・編集されたメッセージ。この端末にのみ保存されます。";
+"Ayu.HistoryAll" = "すべて";
+"Ayu.HistoryEdited" = "編集済み";
+"Ayu.HistoryNow" = "現在";
+"Ayu.HistoryShowMessage" = "チャットで表示";
+"Ayu.HistoryOpenChat" = "チャットを開く";
+"Ayu.HistoryStopSaving" = "このチャットの保存をやめる";
+"Ayu.HistoryNoChats" = "履歴を保存するチャットを選んでください。1つ以上追加するまで何も保存されません。";
+"Ayu.HistoryEmptyInfo" = "削除・編集されたメッセージがここに表示されます。";
+"Ayu.AddAccountHelp" = "異なる電話番号のアカウントを最大500件まで追加できます。";
+"Ayu.HeroGhostOn" = "ゴーストモード：オン";
+"Ayu.HeroGhostOff" = "ゴーストモード：オフ";
+"Ayu.HeroHidden" = "非表示：%@ / %@";
+"Ayu.GhostSubtitle" = "オンライン、既読、入力中、録音、アップロード、ストーリー";
+"Ayu.GhostFooter" = "ゴーストモードは下のすべてのスイッチを有効にし、それぞれの設定値は保持されます。";
+"Ayu.HideSection" = "非表示にする項目";
+"Ayu.BehaviorSection" = "動作";
+"Ayu.OfflineAfterSending" = "送信後にオフライン";
+"Ayu.OfflineAfterSendingInfo" = "メッセージを送信するたびにすぐオフラインを通知";
+"Ayu.ReadOnSend" = "返信時にチャットを既読にする";
+"Ayu.ReadOnSendInfo" = "送信したメッセージでそのチャットを既読にします";
+"Ayu.QuickToggle" = "チャットタブのスイッチ";
+"Ayu.QuickToggleInfo" = "チャットタブを長押しすると、ゴーストモードをすばやく切り替えられます。";
+"Ayu.ContentSection" = "コンテンツ";
+"Ayu.IgnoreProtection" = "コンテンツ保護を無視";
+"Ayu.IgnoreProtectionInfo" = "保護されたチャットから保存・コピー・転送";
+"Ayu.AllowScreenshots" = "スクリーンショットを許可";
+"Ayu.AllowScreenshotsInfo" = "保護・シークレットチャットがスクリーンショットや録画に写ります";
+"Ayu.ContentFooter" = "保護されたチャットのメッセージは送信者なしのコピーとして転送され、メディアは再アップロードされます。スクリーンショット設定は開き直した画面に適用されます。";
+"Ayu.SaveDeletedInfo" = "すべてのチャットに残り、選択したチャットはメッセージ履歴にも表示されます";
+"Ayu.OpenHistory" = "履歴を開く";
+"Ayu.ClientSection" = "クライアント";
+"Ayu.LocalPremiumInfo" = "Premium絵文字とステータスはこの端末のみ";
+"Ayu.GhostEnable" = "ゴーストモードをオン";
+"Ayu.GhostDisable" = "ゴーストモードをオフ";
+"Ayu.GhostEnabledToast" = "ゴーストモードをオンにしました";
+"Ayu.GhostDisabledToast" = "ゴーストモードをオフにしました";
+"Ayu.ChatListBackground" = "チャット一覧の背景";
+"Ayu.ConversationBackground" = "チャットの背景";
+"Ayu.ChooseVideo" = "動画を選択";
+"Ayu.ShowBackground" = "背景を表示";
+
+"Settings.ContentSettings" = "コンテンツの設定";
+
+"Settings.Tabs.Header" = "タブ";
+"Settings.Tabs.HideTabBar" = "タブバーを非表示にする";
+"Settings.Tabs.ShowContacts" = "連絡先のタブを表示";
+"Settings.Tabs.ShowNames" = "タブの名前を隠す";
+
+"Settings.Folders.BottomTab" = "フォルダーを下に表示";
+"Settings.Folders.BottomTabStyle" = "チャットフォルダーのスタイル";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iOS";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "\"%@\"を非表示";
+"Settings.Folders.RememberLast" = "最後に開いたフォルダを開く";
+"Settings.Folders.RememberLast.Notice" = "Swiftgramは再起動またはアカウント切替後に最後に使用したフォルダを開きます";
+
+"Settings.Folders.CompactNames" = "より小さい間隔";
+"Settings.Folders.AllChatsTitle" = "「すべてのチャット」タイトル";
+"Settings.Folders.AllChatsTitle.short" = "Short";
+"Settings.Folders.AllChatsTitle.long" = "長い順";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "デフォルト";
+
+
+"Settings.ChatList.Header" = "チャットリスト";
+"Settings.CompactChatList" = "コンパクトなチャットリスト";
+
+"Settings.Profiles.Header" = "PROFILES";
+
+"Settings.Stories.Hide" = "ストーリーを隠す";
+"Settings.Stories.WarnBeforeView" = "視聴前に確認";
+"Settings.Stories.DisableSwipeToRecord" = "スワイプで録画を無効にする";
+
+"Settings.Translation.QuickTranslateButton" = "クイック翻訳ボタン";
+
+"Stories.Warning.Author" = "投稿者";
+"Stories.Warning.ViewStory" = "ストーリーを表示？";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@はあなたがそのストーリーを見たことを確認できます。";
+"Stories.Warning.NoticeStealth" = "%@はあなたがそのストーリーを見たことを確認できません。";
+
+"Settings.Photo.Quality.Notice" = "送信する写真とフォトストーリーの品質";
+"Settings.Photo.SendLarge" = "大きな写真を送信";
+"Settings.Photo.SendLarge.Notice" = "圧縮画像のサイド制限を2560pxに増加";
+
+"Settings.VideoNotes.Header" = "丸いビデオ";
+"Settings.VideoNotes.StartWithRearCam" = "リアカメラで開始";
+
+"Settings.CustomColors.Header" = "アカウントの色";
+"Settings.CustomColors.Saturation" = "彩度";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "彩度を0%%に設定してアカウントの色を無効にする";
+
+"Settings.UploadsBoost" = "アップロードブースト";
+"Settings.DownloadsBoost" = "ダウンロードブースト";
+"Settings.DownloadsBoost.Notice" = "並行接続の数とファイルチャンクのサイズを増やします。ネットワークが負荷に耐えられない場合は、接続に適した別のオプションを試してください。";
+"Settings.DownloadsBoost.none" = "無効";
+"Settings.DownloadsBoost.medium" = "中程度";
+"Settings.DownloadsBoost.maximum" = "最大";
+
+"Settings.ShowProfileID" = "プロフィールIDを表示";
+"Settings.ShowDC" = "データセンターを表示";
+"Settings.ShowCreationDate" = "チャットの作成日を表示";
+"Settings.ShowCreationDate.Notice" = "作成日が不明なチャットがあります。";
+
+"Settings.ShowRegDate" = "登録日を表示";
+"Settings.ShowRegDate.Notice" = "登録日はおおよその日です。";
+
+"Settings.SendWithReturnKey" = "\"return\" キーで送信";
+"Settings.HidePhoneInSettingsUI" = "設定で電話番号を隠す";
+"Settings.HidePhoneInSettingsUI.Notice" = "あなたの番号は設定UIでのみ隠されます。他の人から隠すにはプライバシー設定に移動してください。";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "5秒間離れると自動ロック";
+
+"ProxySettings.UseSystemDNS" = "システムDNSを使用";
+"ProxySettings.UseSystemDNS.Notice" = "Google DNSにアクセスできない場合はシステムDNSを使用してタイムアウトを回避";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "** %@は必要ありません**！";
+"Common.RestartRequired" = "再起動が必要です";
+"Common.RestartNow" = "今すぐ再実行";
+"Common.OpenTelegram" = "Telegram を開く";
+"Common.UseTelegramForPremium" = "Telegram Premiumを登録するには、公式のTelegramアプリが必要です。
+登録すると、Swiftgram等の非公式アプリ含め、Telegram Premiumをサポートする全てのアプリでプレミアムメソッドを利用できます。";
+"Common.UpdateOS" = "iOSの更新が必要です";
+
+"Message.HoldToShowOrReport" = "表示または報告するために押し続ける。";
+
+"Auth.AccountBackupReminder" = "バックアップアクセス方法があることを確認してください。SMS用のSIMを保持するか、追加のセッションにログインしてロックアウトを避けてください。";
+"Auth.UnofficialAppCodeTitle" = "テレグラムの公式アプリでのみログインコードを取得できます";
+
+"Settings.SmallReactions" = "小さいリアクション";
+"Settings.HideReactions" = "リアクションを非表示";
+
+"ContextMenu.SaveToCloud" = "メッセージを保存";
+"ContextMenu.SelectFromUser" = "全て選択";
+
+"Settings.ContextMenu" = "コンテキスト メニュー";
+"Settings.ContextMenu.Notice" = "無効化されたエントリは、「Swiftgram」サブメニューから利用できます。";
+
+
+"Settings.ChatSwipeOptions" = "チャットリストのスワイプ設定";
+"Settings.DeleteChatSwipeOption" = "チャットを削除するにはスワイプしてください";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "次の未読チャンネルまでプルする";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "次のトピックに移動する";
+"Settings.GalleryCamera" = "ギャラリーのカメラを隠す";
+"Settings.GalleryCameraPreview" = "ギャラリーのカメラプレビュー";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" ボタン";
+"Settings.SnapDeletionEffect" = "メッセージ削除のエフェクト";
+
+"Settings.Stickers.Size" = "サイズ";
+"Settings.Stickers.Timestamp" = "タイムスタンプを表示";
+
+"Settings.RecordingButton" = "音声録音ボタン";
+
+"Settings.DefaultEmojisFirst" = "標準エモジを優先";
+"Settings.DefaultEmojisFirst.Notice" = "絵文字キーボードでプレミアムより前に標準エモジを表示";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "作成済み: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "%@ に参加しました";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "登録済み";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "メッセージを編集するにはタップをダブルタップ";
+
+"Settings.wideChannelPosts" = "チャンネル内の幅広い投稿";
+"Settings.ForceEmojiTab" = "デフォルトで絵文字キーボード";
+
+"Settings.forceBuiltInMic" = "デバイスのマイクを強制";
+"Settings.forceBuiltInMic.Notice" = "有効にすると、ヘッドフォンが接続されていてもアプリはデバイスのマイクのみを使用します。";
+
+"Settings.showChannelBottomButton" = "チャンネルボトムパネル";
+
+"Settings.secondsInMessages" = "メッセージ内の秒数";
+
+"Settings.CallConfirmation" = "コール確認";
+"Settings.CallConfirmation.Notice" = "Swiftgram は、通話を行う前にあなたの確認を求めます。";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "通話をかけますか？";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "ビデオ通話をかけますか？";
+
+"MutualContact.Label" = "相互連絡先";
+
+"Settings.swipeForVideoPIP" = "ビデオ PIP スワイプ";
+"Settings.swipeForVideoPIP.Notice" = "有効になっている場合、ビデオをスワイプするとピクチャーインピクチャーモードで開きます。";
+
+"SessionBackup.Title" = "アカウントのバックアップ";
+"SessionBackup.Sessions.Title" = "セッション";
+"SessionBackup.Actions.Backup" = "キーチェーンにバックアップ";
+"SessionBackup.Actions.Restore" = "キーチェーンから復元";
+"SessionBackup.Actions.DeleteAll" = "キーチェーンのバックアップを削除";
+"SessionBackup.Actions.DeleteOne" = "バックアップから削除";
+"SessionBackup.Actions.RemoveFromApp" = "アプリから削除";
+"SessionBackup.LastBackupAt" = "最終バックアップ: %@";
+"SessionBackup.RestoreOK" = "OK。復元されたセッション: %@";
+"SessionBackup.LoggedIn" = "ログイン中";
+"SessionBackup.LoggedOut" = "ログアウトしました";
+"SessionBackup.DeleteAll.Title" = "すべてのセッションを削除しますか？";
+"SessionBackup.DeleteAll.Text" = "すべてのセッションがキーチェーンから削除されます。\n\nアカウントはSwiftgramからログアウトされません。";
+"SessionBackup.DeleteSingle.Title" = "1つのセッションを削除しますか？";
+"SessionBackup.DeleteSingle.Text" = "%@のセッションがキーチェーンから削除されます。\n\nアカウントはSwiftgramからログアウトされません。";
+"SessionBackup.RemoveFromApp.Title" = "アプリからアカウントを削除しますか？";
+"SessionBackup.RemoveFromApp.Text" = "%@のセッションがSwiftgramから削除されます！セッションはアクティブなままなので、後で復元できます。";
+"SessionBackup.Notice" = "セッションは暗号化され、デバイスのキーチェーンに保存されます。セッションはあなたのデバイスを離れることはありません。\n\n重要: 新しいデバイスまたはOSのリセット後にセッションを復元するには、暗号化されたバックアップを有効にする必要があります。さもなければキーチェーンは移行されません。\n\n注意: セッションはTelegramや他のデバイスからも取り消される可能性があります。";
+
+"MessageFilter.Title" = "メッセージフィルター";
+"MessageFilter.SubTitle" = "下記のキーワードを含むメッセージの可視性を減少させ、気を散らさないようにします。\nキーワードは大文字と小文字を区別します。";
+"MessageFilter.Keywords.Title" = "キーワード";
+"MessageFilter.InputPlaceholder" = "キーワードを入力してください";
+
+"InputToolbar.Title" = "フォーマットパネル";
+
+"Notifications.MentionsAndReplies.Title" = "@メンションと返信";
+"Notifications.MentionsAndReplies.value.default" = "デフォルト";
+"Notifications.MentionsAndReplies.value.silenced" = "ミュート";
+"Notifications.MentionsAndReplies.value.disabled" = "無効";
+"Notifications.PinnedMessages.Title" = "固定メッセージ";
+"Notifications.PinnedMessages.value.default" = "デフォルト";
+"Notifications.PinnedMessages.value.silenced" = "ミュート";
+"Notifications.PinnedMessages.value.disabled" = "無効";
+
+
+"PayWall.Text" = "プロ機能で強化";
+
+"PayWall.SessionBackup.Title" = "アカウントのバックアップ";
+"PayWall.SessionBackup.Notice" = "コードなしでアカウントにログインできます。再インストール後も可能です。デバイス上のキーチェーンで安全に保存されています";
+"PayWall.SessionBackup.Description" = "デバイスを変更したりSwiftgramを削除したりしても、もはや問題にはなりません。Telegramサーバー上でまだアクティブなすべてのセッションを復元します";
+
+"PayWall.MessageFilter.Title" = "メッセージフィルター";
+"PayWall.MessageFilter.Notice" = "SPAM、プロモーション、および煩わしいメッセージの可視性を減少させます。";
+"PayWall.MessageFilter.Description" = "見たくないキーワードのリストを作成すると、Swiftgramがそのキーワードを非表示にします";
+
+"PayWall.Notifications.Title" = "@メンションと返信を無効にする";
+"PayWall.Notifications.Notice" = "重要でない通知を隠したりミュートしたりします。";
+"PayWall.Notifications.Description" = "気分を落ち着けたいときは、固定メッセージやメンションを非表示にできます";
+
+"PayWall.InputToolbar.Title" = "フォーマットパネル";
+"PayWall.InputToolbar.Notice" = "ワンタップでメッセージの書式設定を短縮";
+"PayWall.InputToolbar.Description" = "書式を適用・解除したり、新しい行を挿入したりと、プロのように操作できます";
+
+"PayWall.AppIcons.Title" = "ユニークなアプリアイコン";
+"PayWall.AppIcons.Notice" = "ホーム画面でSwiftgramの外観をカスタマイズします。";
+
+"PayWall.About.Title" = "Swiftgram Proについて";
+"PayWall.About.Notice" = "Swiftgramの無料版は、Telegramアプリ上で数十の機能と改善を提供します。 毎月のTelegramのアップデートとSwiftgramの同期を革新し、維持することは多くの時間と高価なハードウェアを必要とする膨大な努力です。\n\nSwiftgramはプライバシーを尊重し、広告を気にしないオープンソースのアプリです。 Swiftgram Proに登録すると、排他的な機能にアクセスでき、独立した開発者をサポートできます。";
+/* DO NOT TRANSLATE */
+"PayWall.About.Signature" = "@Kylmakalle";
+/* DO NOT TRANSLATE */
+"PayWall.About.SignatureURL" = "https://t.me/Kylmakalle";
+
+"PayWall.ProSupport.Title" = "お支払いに問題がありますか？";
+"PayWall.ProSupport.Contact" = "心配ないさ！";
+
+"PayWall.RestorePurchases" = "購入を復元する";
+"PayWall.Terms" = "利用規約";
+"PayWall.Privacy" = "プライバシーポリシー";
+"PayWall.TermsURL" = "https://swiftgram.app/terms";
+"PayWall.PrivacyURL" = "https://swiftgram.app/privacy";
+"PayWall.Notice.Markdown" = "Swiftgram Proに購読することで、[Swiftgram利用規約](%1$@)と[プライバシーポリシー](%2$@)に同意したことになります。";
+"PayWall.Notice.Raw" = "Swiftgram Proに購読することで、Swiftgramの利用規約とプライバシーポリシーに同意したことになります。";
+
+"PayWall.Button.OpenPro" = "プロ機能を使用する";
+"PayWall.Button.Purchasing" = "購入中…";
+"PayWall.Button.Restoring" = "購入を復元中…";
+"PayWall.Button.Validating" = "購入を検証中…";
+"PayWall.Button.PaymentsUnavailable" = "支払い不可";
+"PayWall.Button.BuyInAppStore" = "App Store版で登録";
+"PayWall.Button.Subscribe" = "%@ / 月で購読";
+"PayWall.Button.ContactingAppStore" = "App Storeに連絡中…";
+
+"Paywall.Error.Title" = "エラー";
+"PayWall.ValidationError" = "検証エラー";
+"PayWall.ValidationError.TryAgain" = "購入の検証中に問題が発生しました。心配しないでください！後で購入を復元してみてください。";
+"PayWall.ValidationError.Expired" = "サブスクリプションの有効期限が切れました。Pro機能へのアクセスを取り戻すには、再度サブスクリプションを登録してください。";
+
+"Ayu.Ghost" = "ゴーストモード";
+"Ayu.HideRead" = "既読通知を隠す";
+"Ayu.HideOnline" = "オンライン状態を隠す";
+"Ayu.HideTyping" = "入力中を隠す";
+"Ayu.HideRecording" = "録音中を隠す";
+"Ayu.HideUploading" = "アップロード中を隠す";
+"Ayu.HideStories" = "ストーリーの閲覧を隠す";
+"Ayu.History" = "メッセージ履歴";
+"Ayu.SaveDeleted" = "削除されたメッセージを保存";
+"Ayu.SavePhotos" = "写真を保存";
+"Ayu.ClearHistory" = "履歴を消去";
+"Ayu.EmptyHistory" = "履歴はまだありません";
+"Ayu.SaveMedia" = "キャッシュ済みメディアを保存";
+"Ayu.BackgroundDimming" = "背景の暗さ";
+"Ayu.BeforeEdit" = "編集前";
+"Ayu.Deleted" = "削除済み";
+"Ayu.ServerPresence" = "サーバー上：%@";
+"Ayu.ServerUnavailable" = "サーバーの状態を取得できません";
+"Ayu.SendReadReceipt" = "既読通知を送信";
+"Ayu.ViewWithoutReceipt" = "通知せずに表示";
+"Ayu.ReportPhotoView" = "写真の閲覧を通知";
+"Ayu.View" = "表示";
+"Ayu.SendReceipt" = "送信";
+"Ayu.ReceiptSent" = "通知を送信しました";
+"Ayu.ReceiptError" = "通知を送信できませんでした。接続を確認して再試行してください。";
+"Ayu.IconChangeUnavailable" = "選択はアプリに保存されました。iOSでホーム画面のアイコンを変更できませんでした。";
+"Ayu.LocalPremium" = "ローカル Premium";
+"Ayu.Pins" = "固定するチャットの上限";
+"Ayu.LocalOnly" = "この端末のみ";
+"Ayu.HistoryInfo" = "選択したチャットのみ。キャッシュされた写真とテキストを30日間、最大200件保存。秘密・消えるメッセージは対象外。";
+"Ayu.ReadWarning" = "このメッセージまでの既読通知を送信しますか？";
+"Ayu.ViewWarning" = "閲覧通知を送信し、消えるメディアのタイマーを開始しますか？";
+
+"Ayu.RowOpacity" = "チャット行の不透明度";
+"Ayu.MediaImportError" = "ファイルを読み込めません。最大100 MBです。";
+"Ayu.SilentSending" = "サウンドなしで送信";
+"Ayu.SilentNever" = "しない";
+"Ayu.SilentInGhost" = "ゴーストモード中";
+"Ayu.SilentAlways" = "常に";
+"Ayu.ScheduleInGhost" = "予約送信にする";
+"Ayu.ScheduleInGhostInfo" = "ゴーストモードではメッセージが12秒後の予約送信として送られるため、オンラインに表示されません";
+"Ayu.ChatsSection" = "チャット";
+"Ayu.DisableAds" = "スポンサーメッセージを隠す";
+"Ayu.DisableLinkWarning" = "隠しリンクの警告を表示しない";
+"Ayu.DisableGreeting" = "あいさつステッカーを表示しない";
+"Ayu.DimDeleted" = "削除済みメッセージを半透明に";
+"Ayu.RepeatMessage" = "メッセージメニューに「繰り返す」";
+"Ayu.Repeat" = "繰り返す";
+"Ayu.ConfirmStickers" = "ステッカー送信を確認";
+"Ayu.ConfirmGifs" = "GIF送信を確認";
+"Ayu.ConfirmSticker" = "このステッカーを送信しますか？";
+"Ayu.ConfirmGif" = "このGIFを送信しますか？";
+"Ayu.Send" = "送信";
+"Ayu.ImportLocally" = "ローカルにインポート";
+"Ayu.ImportLocallyInfo" = "このデバイスだけにチャットをインポートできます。メッセージはこのチャットにあなたにだけ表示され、Telegramには送信されません。";
+"Ayu.ImportLocallyDone" = "インポートしたメッセージ: %@。このデバイスでのみ表示されます。";
+"Ayu.ViewDeleted" = "削除されたメッセージ";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "削除されたメッセージがこのデバイスに保存されているチャットです。開くと削除されたメッセージやチャット全体を読めます。";
+"Ayu.ViewDeletedEmpty" = "削除されたメッセージはまだありません。";
+"Ayu.ConfirmReadReceipt" = "既読の送信前に確認";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";

@@ -1,0 +1,340 @@
+// AyuGram
+"Ayu.SupportSection" = "Yordam";
+"Ayu.SupportChannel" = "Yangilanishlar kanali";
+"Ayu.SupportDeveloper" = "Dasturchi bilan bog‘lanish";
+"Ayu.SessionLog" = "NETHERHILL log";
+"Ayu.SessionLogEmpty" = "The log is empty so far.";
+"Ayu.SecuritySection" = "Security";
+"Ayu.BuildStatus" = "Build";
+"Ayu.BuildOfficial" = "Official";
+"Ayu.BuildModified" = "Modified";
+"Ayu.BuildChecking" = "Checking…";
+"Ayu.BuildUnknown" = "Not verified";
+"Ayu.BuildInfoOfficial" = "This is the official NETHERHILL build from @netherhill_DEV.";
+"Ayu.BuildInfoModified" = "This build differs from the official one, so anyone could have changed it. Download NETHERHILL only from @netherhill_DEV and never sign in to someone else's Apple ID.";
+"Ayu.BuildInfoUnknown" = "The build could not be verified yet. It is checked again on the next launch.";
+"Ayu.BuildDetails" = "Build: %@\nInstalled via: %@\nCertificate: %@\nTeam ID: %@";
+"Ayu.SourceSideload" = "Own certificate (SideStore)";
+"Ayu.SourceEnterprise" = "Enterprise certificate";
+"Ayu.ReportScam" = "Report a scam";
+"Ayu.ReportScamInfo" = "Write the scammer's username or link and how they offered NETHERHILL to you. The report is anonymous.";
+"Ayu.ReportScamSent" = "Thanks! The report has been sent.";
+"Ayu.ReportScamFailed" = "Could not send the report. Try again later.";
+"Ayu.AnonymousStats" = "Anonymous statistics";
+"Ayu.AnonymousStatsInfo" = "Once a day NETHERHILL sends its build number, how it was installed and the country, plus the signing certificate for modified or third-party copies. Your account ID is sent only as a one-way hash, so it can be matched only against a scammer someone reported. Your phone number and chats are never sent. This helps find scam copies of NETHERHILL and scammers.";
+"Ayu.ScamTitle" = "Scam copy of NETHERHILL";
+"Ayu.ScamText" = "This copy of NETHERHILL is spread by scammers, for example through someone else's Apple ID. Sign out of that Apple ID in iPhone Settings, delete this app and download NETHERHILL only from @netherhill_DEV.";
+"Ayu.ScamChannel" = "Official channel";
+"Ayu.CheckUpdates" = "Yangilanishlarni tekshirish";
+"Ayu.UpToDate" = "Sizda eng so‘nggi versiya.";
+"Ayu.UpdateAvailable" = "Yangilanish mavjud";
+"Ayu.UpdateAvailableInfo" = "%@ versiyasi chiqdi. Yuklab olish uchun kanalni oching.";
+"Ayu.UpdateIgnore" = "E’tiborsiz qoldirish";
+"Ayu.UpdateOpen" = "Yangilash";
+"Ayu.UpdateNoticeTitle" = "Yangilanish mavjud! 🆕";
+"Ayu.UpdateNoticeText" = "Yangilash uchun bosing";
+"Ayu.UpdateQuestion" = "NETHERHILL yangilansinmi?";
+"Ayu.UpdateQuestionInfo" = "%@ versiyasi yuklab olinadi va oʻrnatiladi.";
+"Ayu.LiveContainerUpdate" = "Yangilash uchun NETHERHILL’ni Multitask rejimida ishga tushiring (LiveContainer ichida ilovani bosib turing) va qayta urinib ko‘ring.";
+"Ayu.NotificationsSection" = "Bildirishnomalar";
+"Ayu.BarkSetUp" = "Bark bildirishnomalarini sozlash";
+"Ayu.BarkConnected" = "Bark bildirishnomalari: yoqilgan";
+"Ayu.BarkFooter" = "Sideload orqali o‘rnatilgan ilova Apple’dan bildirishnoma olmaydi. App Store’dan Bark’ni o‘rnating, undagi kalitingizdan nusxa oling va shu yerga qo‘ying. Yangi xabarlar NETHERHILL releyi orqali Bark bildirishnomasi sifatida keladi.";
+"Ayu.BarkPrompt" = "Bark kalitingizni yoki Bark ilovasidagi havolani qo‘ying. Bildirishnomalarni o‘chirish uchun bo‘sh qoldiring.";
+"Ayu.BarkEnabled" = "Tayyor. NETHERHILL yopiq paytda yangi xabarlar Bark bildirishnomasi sifatida keladi.";
+"Ayu.BarkDisabled" = "Bark bildirishnomalari o‘chirilgan.";
+"Ayu.BarkInvalid" = "Bu Bark kaliti emas. Bark ilovasidan kalit yoki havoladan nusxa oling.";
+"Ayu.BarkFailed" = "Telegram obunani qabul qilmadi: %@";
+"Ayu.BarkFixTitle" = "Bildirishnomalarni tuzatish";
+"Ayu.BarkFixInstall" = "Bark’ni App Store’dan o‘rnating";
+"Ayu.BarkFixConnect" = "Bildirishnoma olish uchun Bark’ni ulang";
+"Ayu.BarkEnterKey" = "Kalitni kiritish";
+"Ayu.BarkHowTo" = "1. Bark’ni App Store’dan o‘rnatib, oching.\n2. Uning asosiy ekranidagi https://api.day.app/… manzilidan nusxa oling.\n3. Qayting, “Kalitni kiritish”ni bosing va qo‘ying.";
+"Ayu.ExportChat" = "Chatni eksport qilish";
+"Ayu.ExportChatMedia" = "Butun chat Telegram import qila oladigan arxiv sifatida saqlanadi. Rasmlar, videolar, ovozli xabarlar va fayllar ham qo‘shilsinmi? Ularni yuklab olish uzoq vaqt olishi mumkin.";
+"Ayu.ExportChatWithMedia" = "Media bilan";
+"Ayu.ExportChatTextOnly" = "Faqat matn";
+"Ayu.ExportChatLoading" = "Xabarlar yuklanmoqda: %@";
+"Ayu.ExportChatDownloading" = "Media yuklab olinmoqda: %@";
+"Ayu.ExportChatSaving" = "Arxiv yaratilmoqda…";
+"Ayu.ExportChatEmpty" = "Eksport qilish uchun xabarlar yo‘q.";
+"Ayu.ChatTransferSection" = "Chatlarni ko‘chirish";
+"Ayu.ImportChat" = "Chatni import qilish";
+"Ayu.ImportChatFooter" = "WhatsApp, LINE, KakaoTalk yoki NETHERHILL’dagi “Chatni eksport qilish” orqali eksport qilingan chatni (ZIP yoki TXT fayl) chatlaringizdan biriga import qiling.";
+"Ayu.ImportChatInvalid" = "Bu fayl qo‘llab-quvvatlanadigan chat eksporti emas.";
+"Ayu.HistorySaveAudio" = "Audioni saqlash";
+"Ayu.HistoryDeleteEntry" = "Tarixdan o‘chirish";
+"Ayu.DeletedChats" = "O‘chirilgan chatlar";
+"Ayu.DeletedChatsInfo" = "Butun tarixi o‘chirilgan chatlar. NETHERHILL saqlab qolganlari hech qachon avtomatik o‘chirilmaydi.";
+"Ayu.DeletedChatSave" = "Arxiv sifatida saqlash";
+"Ayu.DeletedChatRemove" = "Ro‘yxatdan olib tashlash";
+"Ayu.DeletedChatDelete" = "Saqlangan xabarlarni o‘chirish";
+"Ayu.HistorySubtitle" = "Tanlangan chatlardan o‘chirilgan va tahrirlangan xabarlar, faqat shu qurilmada saqlanadi.";
+"Ayu.HistoryAll" = "Hammasi";
+"Ayu.HistoryEdited" = "Tahrirlangan";
+"Ayu.HistoryNow" = "Hozir";
+"Ayu.HistoryShowMessage" = "Chatda ko‘rsatish";
+"Ayu.HistoryOpenChat" = "Chatni ochish";
+"Ayu.HistoryStopSaving" = "Bu chatni saqlashni to‘xtatish";
+"Ayu.HistoryNoChats" = "Tarix uchun chatlarni tanlang. Kamida bittasi qo‘shilmaguncha hech narsa saqlanmaydi.";
+"Ayu.HistoryEmptyInfo" = "O‘chirilgan va tahrirlangan xabarlar shu yerda ko‘rinadi.";
+"Ayu.AddAccountHelp" = "Turli telefon raqamlari bilan 500 tagacha akkaunt qo‘shishingiz mumkin.";
+"Ayu.HeroGhostOn" = "Arvoh rejimi yoqilgan";
+"Ayu.HeroGhostOff" = "Arvoh rejimi o‘chirilgan";
+"Ayu.HeroHidden" = "Yashirilgan: %@ / %@";
+"Ayu.GhostSubtitle" = "Onlayn, o‘qish, yozish, yozib olish, yuklash va hikoyalar";
+"Ayu.GhostFooter" = "Arvoh rejimi quyidagi barcha kalitlarni yoqadi va ularning qiymatlarini saqlaydi.";
+"Ayu.HideSection" = "Nimani yashirish";
+"Ayu.BehaviorSection" = "Xatti-harakat";
+"Ayu.OfflineAfterSending" = "Yuborgandan keyin oflayn";
+"Ayu.OfflineAfterSendingInfo" = "Har bir xabardan so‘ng darhol oflayn deb xabar berish";
+"Ayu.ReadOnSend" = "Javob berganda chatni o‘qish";
+"Ayu.ReadOnSendInfo" = "Yuborilgan xabar chatni o‘qilgan deb belgilaydi";
+"Ayu.QuickToggle" = "Chatlar bo‘limidagi kalit";
+"Ayu.QuickToggleInfo" = "Arvoh rejimini tez yoqish yoki o‘chirish uchun Chatlar bo‘limini bosib turing.";
+"Ayu.ContentSection" = "Kontent";
+"Ayu.IgnoreProtection" = "Kontent himoyasini e’tiborsiz qoldirish";
+"Ayu.IgnoreProtectionInfo" = "Himoyalangan chatlardan saqlash, nusxalash va uzatish";
+"Ayu.AllowScreenshots" = "Skrinshotlarga ruxsat";
+"Ayu.AllowScreenshotsInfo" = "Himoyalangan va maxfiy chatlar skrinshot va yozuvlarda ko‘rinadi";
+"Ayu.ContentFooter" = "Himoyalangan chatlardagi xabarlar muallifsiz nusxa sifatida uzatiladi, media qayta yuklanadi. Skrinshot sozlamasi qayta ochilgan ekranlarga qo‘llanadi.";
+"Ayu.SaveDeletedInfo" = "Barcha chatlarda qoladi; tanlangan chatlar xabarlar tarixida ham ko‘rinadi";
+"Ayu.OpenHistory" = "Tarixni ochish";
+"Ayu.ClientSection" = "Mijoz";
+"Ayu.LocalPremiumInfo" = "Premium emoji va holatlar faqat shu qurilmada";
+"Ayu.GhostEnable" = "Arvoh rejimini yoqish";
+"Ayu.GhostDisable" = "Arvoh rejimini o‘chirish";
+"Ayu.GhostEnabledToast" = "Arvoh rejimi yoqildi";
+"Ayu.GhostDisabledToast" = "Arvoh rejimi o‘chirildi";
+"Ayu.ChatListBackground" = "Chatlar ro‘yxati foni";
+"Ayu.ConversationBackground" = "Chat foni";
+"Ayu.ChooseVideo" = "Video tanlash";
+"Ayu.ShowBackground" = "Fonni ko‘rsatish";
+
+"Settings.ContentSettings" = "Kontent sozlamalari";
+
+"Settings.Tabs.Header" = "Oynalar";
+"Settings.Tabs.HideTabBar" = "Oynalarni yashirish";
+"Settings.Tabs.ShowContacts" = "Kontaktlarni oynasini ko'rsatish";
+"Settings.Tabs.ShowNames" = "Oyna nomini ko'rsatish";
+
+"Settings.Folders.BottomTab" = "Qurollar pastda";
+"Settings.Folders.BottomTabStyle" = "Pastki Qurollar uslubi";
+
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.ios" = "iPhone";
+/* Do not translate */
+"Settings.Folders.BottomTabStyle.telegram" = "Telegram";
+/* Example: Hide "All Chats" */
+"Settings.Folders.AllChatsHidden" = "\"%@\"ni yashirish";
+"Settings.Folders.RememberLast" = "Oxirgi Jildni ochish";
+"Settings.Folders.RememberLast.Notice" = "Ilovani qayta ishga tushirganingizda yoki hisoblarni almashtirganingizda Swiftgram oxirgi foydalanilgan jildni ochadi.";
+
+"Settings.Folders.CompactNames" = "Kichik bo'sh joy";
+"Settings.Folders.AllChatsTitle" = "\"Barcha Chatlar\" nomi";
+"Settings.Folders.AllChatsTitle.short" = "Qisqa";
+"Settings.Folders.AllChatsTitle.long" = "Uzoq";
+/* Default behaviour for All Chats Folder Title. "All Chats" title: Default */
+"Settings.Folders.AllChatsTitle.none" = "Standart";
+
+
+"Settings.ChatList.Header" = "CHAT RO'YXI";
+"Settings.CompactChatList" = "Qisqa Chat Ro'yxi";
+
+"Settings.Profiles.Header" = "PROFILLAR";
+
+"Settings.Stories.Hide" = "Hikoyalarni yashirish";
+"Settings.Stories.WarnBeforeView" = "Ko'rishdan avval tasdiqlash";
+"Settings.Stories.DisableSwipeToRecord" = "Kayd qilishni o'chirish";
+
+"Settings.Translation.QuickTranslateButton" = "Tezkor tarjima tugmasi";
+
+"Stories.Warning.Author" = "Muallif";
+"Stories.Warning.ViewStory" = "Hikoyani ko'rasizmi?";
+/* Author will be able to see that you viewed their Story */
+"Stories.Warning.Notice" = "%@ hatto siz ularning Hikoyasini ko'rganini ko'rsatishadi.";
+"Stories.Warning.NoticeStealth" = "%@ ularning Hikoyasini ko'rgani ko'rsatmaydi.";
+
+"Settings.Photo.Quality.Notice" = "Yuklanadigan fotosuratlar va hikoyalarning sifati.";
+"Settings.Photo.SendLarge" = "Katta rasmlarni yuborish";
+"Settings.Photo.SendLarge.Notice" = "Tasodifiy rasmlarni to'g'rilangan hajmini 2560px ga oshiring.";
+
+"Settings.VideoNotes.Header" = "Aylana video";
+"Settings.VideoNotes.StartWithRearCam" = "Orqa kamerada boshlash";
+
+"Settings.CustomColors.Header" = "Hisob ranglari";
+"Settings.CustomColors.Saturation" = "SATURATSIYA";
+/* Make sure to escape Percentage sign % */
+"Settings.CustomColors.Saturation.Notice" = "Hisob ranglarini o'chirish uchun 0%% ga sozlang.";
+
+"Settings.UploadsBoost" = "Yuklashni kuchaytirish";
+"Settings.DownloadsBoost" = "Yuklab olishni kuchaytirish";
+"Settings.DownloadsBoost.Notice" = "Parallel ulanishlar sonini va fayl bo'laklari o'lchamini oshiradi. Agar sizning tarmog'ingiz yuklamani boshqarolmasa, ulanishingizga mos keladigan boshqa variantlarni sinab ko'ring.";
+"Settings.DownloadsBoost.none" = "O'chirilgan";
+"Settings.DownloadsBoost.medium" = "O'rtacha";
+"Settings.DownloadsBoost.maximum" = "Maksimum";
+
+"Settings.ShowProfileID" = "Profil Id'ni ko'rsatish";
+"Settings.ShowDC" = "Ma'lumotlar bazasini ko'rsatish";
+"Settings.ShowCreationDate" = "Suxbat yaratilgan sanani ko'rsatish";
+"Settings.ShowCreationDate.Notice" = "Ba'zi sahifalarning yaratilish sanasi ma'lum emas.";
+
+"Settings.ShowRegDate" = "Ro'yhatdan o'tish sanasini ko'rsatish";
+"Settings.ShowRegDate.Notice" = "Ro'yhatdan o'tgan sana yakunlanmagan.";
+
+"Settings.SendWithReturnKey" = "Enter orqali yuborish";
+"Settings.HidePhoneInSettingsUI" = "Telefonni sozlamalarda yashirish";
+"Settings.HidePhoneInSettingsUI.Notice" = "Bu faqat sozlamalardan telefon raqamingizni yashiradi. Uni boshqalar dan yashirish uchun, Farovonlik va Xavfsizlik ga o'ting.";
+
+"PasscodeSettings.AutoLock.InFiveSeconds" = "5 soniya uzoq bo'lsa";
+
+"ProxySettings.UseSystemDNS" = "Tizim DNSni ishlat";
+"ProxySettings.UseSystemDNS.Notice" = "Agar sizda Google DNS guruhlaringiz bo'lmasa, istisnodan o'tish uchun tizim DNS ni ishlatishingiz kerak.";
+
+/* Preserve markdown asterisks! Example: You **don't** need Telegram Premium! */
+"Common.NoTelegramPremiumNeeded" = "Sizga %@ kerak emas!";
+"Common.RestartRequired" = "Qayta ishga tushirish lozim";
+"Common.RestartNow" = "Hozir qayta ishlash";
+"Common.OpenTelegram" = "Telegramni ochish";
+"Common.UseTelegramForPremium" = "Iltimos, Telegram Premiumni olish uchun rasmiy Telegram ilovasidan foydalaning. Telegram Premiumni olinganidan so'ng, barcha xususiyatlar Swiftgram da mavjud bo'ladi.";
+
+"Message.HoldToShowOrReport" = "Ko'rsatish yoki hisobga olish uchun tuting.";
+
+"Auth.AccountBackupReminder" = "Oldin saqlash usulini to'g'riroq o'rnatganingizni tekshiring. Alockli qilish uchun SMS uchun SIM kartni yoki qo'shimcha sessiyani tarqatib turish uchun qo'shimcha kirish usuliga kirish olib qo'ying.";
+"Auth.UnofficialAppCodeTitle" = "Siz faqat rasmiy ilovadan faqat kodingizni olasiz";
+
+"Settings.SmallReactions" = "Kichik Reaktsiyalar";
+"Settings.HideReactions" = "Reaksiyalarni yashirish";
+
+"ContextMenu.SaveToCloud" = "Bulutga saqlash";
+"ContextMenu.SelectFromUser" = "Avtordan tanlash";
+
+"Settings.ContextMenu" = "KONTEKS MENYU";
+"Settings.ContextMenu.Notice" = "O'chirilgan kirishlar \"Swiftgram\" pastki menudasiga o'tkaziladi.";
+
+
+"Settings.ChatSwipeOptions" = "Chat Ro'yxati Sürüş variantlari";
+"Settings.DeleteChatSwipeOption" = "Sohbetni o'chirish uchun sug'urta";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextChannelSameLocationSwipeProgress */
+"Settings.PullToNextChannel" = "Keyingi O'qilmagan Kanalga burilish";
+/* Re-word like this string on offical app https://translations.telegram.org/en/ios/groups_and_channels/Chat.NextUnreadTopicSwipeProgress */
+"Settings.PullToNextTopic" = "Keyingi mavzuga torting";
+"Settings.GalleryCamera" = "Galereyadagi Kamera";
+/* "Send Message As..." button */
+"Settings.SendAsButton" = "\"%@\" Tugma";
+"Settings.SnapDeletionEffect" = "Xabar O'chirish O'zgartirishlari";
+
+"Settings.Stickers.Size" = "OLCHAM";
+"Settings.Stickers.Timestamp" = "Vaqtni Ko'rsatish";
+
+"Settings.RecordingButton" = "Ovozni Yozish Tugmasi";
+
+"Settings.DefaultEmojisFirst" = "Standart emoyilarni prioritetga qo'ying";
+"Settings.DefaultEmojisFirst.Notice" = "Emojilar klaviaturasida premiumdan oldin standart alifbo emoyilarni ko'rsating";
+
+/* Date when chat was created. "created: 24 May 2016" */
+"Chat.Created" = "yaratildi: %@";
+
+/* Date when user joined the chat. "Joined Swiftgram Chat" */
+"Chat.JoinedDateTitle" = "%@\" ga qo'shildi";
+/* Date when user registered in Telegram. Will be shown like "Registered\n24 May 2016" */
+"Chat.RegDate" = "Ro'yhatga olingan";
+
+"Settings.messageDoubleTapActionOutgoingEdit" = "Xabarni tahrirlash uchun ikki marta bosing";
+
+"Settings.wideChannelPosts" = "Keng postlar kanallarda";
+"Settings.ForceEmojiTab" = "Emoji klaviatura sukutiga";
+
+"Settings.forceBuiltInMic" = "Qurilma Mikrofonini Kuchaytirish";
+"Settings.forceBuiltInMic.Notice" = "Agar yoqilsa, ilova faqat qurilma mikrofonidan foydalanadi, hattoki naushnik bog'langan bo'lsa ham.";
+
+"Settings.hideChannelBottomButton" = "Kanal Pastki Panellini yashirish";
+
+"Settings.CallConfirmation" = "Qo'ng'iroq tasdiqlanishi";
+"Settings.CallConfirmation.Notice" = "Swiftgram sizdan qo'ng'iroq qilishdan oldin tasdiqlashni so'raydi.";
+
+/* Confirmation before making a Call */
+"CallConfirmation.Audio.Title" = "Qo'ng'iroq qilish?";
+
+/* Confirmation before making a Video Call */
+"CallConfirmation.Video.Title" = "Video qo'ng'iroq qilish?";
+
+"MutualContact.Label" = "o'zaro aloqa";
+
+"Settings.swipeForVideoPIP" = "Video PIP bilan Surish";
+"Settings.swipeForVideoPIP.Notice" = "Agar yoqilgan bo'lsa, videoni surish uni Tasvir ichida Tasvir rejimida ochadi.";
+
+"Ayu.Ghost" = "Arvoh rejimi";
+"Ayu.HideRead" = "O‘qilganini yashirish";
+"Ayu.HideOnline" = "Onlayn holatini yashirish";
+"Ayu.HideTyping" = "Yozishni yashirish";
+"Ayu.HideRecording" = "Yozib olishni yashirish";
+"Ayu.HideUploading" = "Yuklashni yashirish";
+"Ayu.HideStories" = "Hikoya ko‘rishlarini yashirish";
+"Ayu.History" = "Xabarlar tarixi";
+"Ayu.SaveDeleted" = "O‘chirilgan xabarlarni saqlash";
+"Ayu.SavePhotos" = "Rasmlarni saqlash";
+"Ayu.ClearHistory" = "Tarixni tozalash";
+"Ayu.EmptyHistory" = "Hali tarix yo‘q";
+"Ayu.SaveMedia" = "Keshdagi mediani saqlash";
+"Ayu.BackgroundDimming" = "Fon qoraytirish";
+"Ayu.BeforeEdit" = "Tahrirdan oldin";
+"Ayu.Deleted" = "O‘chirilgan";
+"Ayu.ServerPresence" = "Serverda: %@";
+"Ayu.ServerUnavailable" = "Server holati mavjud emas";
+"Ayu.SendReadReceipt" = "O‘qilganligi haqida tasdiq yuborish";
+"Ayu.ViewWithoutReceipt" = "Tasdiqsiz ko‘rish";
+"Ayu.ReportPhotoView" = "Surat ko‘rilganini tasdiqlash";
+"Ayu.View" = "Ko‘rish";
+"Ayu.SendReceipt" = "Yuborish";
+"Ayu.ReceiptSent" = "Tasdiq yuborildi";
+"Ayu.ReceiptError" = "Tasdiqni yuborib bo‘lmadi. Ulanishni tekshirib, qayta urinib ko‘ring.";
+"Ayu.IconChangeUnavailable" = "Tanlov ilovada saqlandi. iOS bosh ekran belgisini o‘zgartira olmadi.";
+"Ayu.LocalPremium" = "Mahalliy Premium";
+"Ayu.Pins" = "Qadalgan chatlar maksimumi";
+"Ayu.LocalOnly" = "Faqat shu qurilmada";
+"Ayu.HistoryInfo" = "Faqat tanlangan chatlar. Keshdagi rasmlar va matn: 30 kun, 200 tagacha yozuv. Maxfiy va yo‘qoladigan xabarlar kiritilmaydi.";
+"Ayu.ReadWarning" = "Chatning shu xabargacha o‘qilgani haqida hisobot yuborilsinmi?";
+"Ayu.ViewWarning" = "Ko‘rish hisoboti yuborilib, yo‘qoladigan media taymeri boshlansinmi?";
+
+"Ayu.RowOpacity" = "Chat qatorlari shaffofmasligi";
+"Ayu.MediaImportError" = "Faylni import qilib bo‘lmadi. Maksimum: 100 MB.";
+"Ayu.SilentSending" = "Ovozsiz yuborish";
+"Ayu.SilentNever" = "Hech qachon";
+"Ayu.SilentInGhost" = "Arvoh rejimida";
+"Ayu.SilentAlways" = "Doim";
+"Ayu.ScheduleInGhost" = "Rejalashtirilgan sifatida yuborish";
+"Ayu.ScheduleInGhostInfo" = "Arvoh rejimida xabarlar 12 soniyadan keyin rejalashtirilgan holda ketadi, shuning uchun hech qachon onlayn ko'rinmaysiz";
+"Ayu.ChatsSection" = "Chatlar";
+"Ayu.DisableAds" = "Homiylik xabarlarini yashirish";
+"Ayu.DisableLinkWarning" = "Yashirin havolalar uchun ogohlantirishsiz";
+"Ayu.DisableGreeting" = "Salomlash stikerisiz";
+"Ayu.DimDeleted" = "Yarim shaffof o'chirilgan xabarlar";
+"Ayu.RepeatMessage" = "Xabar menyusida Takrorlash";
+"Ayu.Repeat" = "Takrorlash";
+"Ayu.ConfirmStickers" = "Stiker yuborishni tasdiqlash";
+"Ayu.ConfirmGifs" = "GIF yuborishni tasdiqlash";
+"Ayu.ConfirmSticker" = "Bu stiker yuborilsinmi?";
+"Ayu.ConfirmGif" = "Bu GIF yuborilsinmi?";
+"Ayu.Send" = "Yuborish";
+"Ayu.ImportLocally" = "Mahalliy import qilish";
+"Ayu.ImportLocallyInfo" = "Chatni faqat shu qurilmaga import qilishingiz mumkin: xabarlar bu chatda faqat sizga ko'rinadi va Telegramga yuborilmaydi.";
+"Ayu.ImportLocallyDone" = "Import qilingan xabarlar: %@. Ular faqat shu qurilmada ko'rinadi.";
+"Ayu.ViewDeleted" = "O'chirilgan xabarlar";
+"Ayu.DeletedSectionUsers" = "Private chats";
+"Ayu.DeletedSectionGroups" = "Groups";
+"Ayu.DeletedSectionChannels" = "Channels";
+"Ayu.DeletedSearch" = "Search by chat, username or text";
+"Ayu.DeletedSearchEmpty" = "Nothing found.";
+"Ayu.ViewDeletedInfo" = "O'chirilgan xabarlari shu qurilmada saqlangan chatlar. O'chirilgan xabarlarini yoki butun chatni o'qish uchun birini oching.";
+"Ayu.ViewDeletedEmpty" = "Hozircha o'chirilgan xabarlar yo'q.";
+"Ayu.ConfirmReadReceipt" = "O‘qilganlik xabarini tasdiqlash";
+"Ayu.BannedTitle" = "NETHERHILL is blocked";
+"Ayu.BannedText" = "Users reported that you scam people using NETHERHILL, so NETHERHILL is blocked on this device. If this is a mistake, write to @netherhill_DEV.";
+"Ayu.WarnTitle" = "Warning";
+"Ayu.WarnText" = "Users reported that you scam people using NETHERHILL. If this goes on, NETHERHILL will be blocked for you.";
+"Ayu.WarnOk" = "Got it";
+"Ayu.ReportAttachInfo" = "Add screenshots or videos as proof? Up to 5 files, videos up to 20 MB.";
+"Ayu.ReportAttach" = "Add photos or videos";
+"Ayu.ReportSendNow" = "Send without attachments";
+"Ayu.ReportAttachFailed" = "The report was sent, but some attachments did not upload.";
