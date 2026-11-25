@@ -108,10 +108,7 @@ public final class AyuGramClientBadges {
 
     public func setForeground(_ value: Bool) {
         if value {
-            if let id {
-            self.presenceHandler?(id)
-        }
-        self.refresh()
+            self.refresh()
         }
     }
 
