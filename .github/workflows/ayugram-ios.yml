@@ -176,15 +176,12 @@ jobs:
           if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             # Both variants race to create it; whichever loses just uploads.
             gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --prerelease \
-              --title "AyuGram build $BUILD${LABEL:+-$LABEL}" \
-              --notes "Unsigned IPAs; re-sign them with your installer. Published to users with the Publish update workflow." || true
+              --title "NETHERHILL build $BUILD${LABEL:+-$LABEL}" \
+              --notes "Unsigned IPAs; re-sign them with your installer." || true
           fi
-          # The build number in the name keeps downloads of different builds apart; Safari
-          # turns a second "AyuGram-standard.ipa" into "AyuGram-standard.ipa 2".
-          cp "artifacts/AyuGram-$VARIANT-unsigned.ipa" "AyuGram-$VARIANT-$BUILD.ipa"
-          # The app compares its loaded code with this fingerprint to tell an official build from a modified one.
-          python ci/ayugram_integrity.py "AyuGram-$VARIANT-$BUILD.ipa" "$BUILD" > "AyuGram-$VARIANT-$BUILD.integrity.json"
-          gh release upload "$TAG" "AyuGram-$VARIANT-$BUILD.ipa" "AyuGram-$VARIANT-$BUILD.integrity.json" --repo "$GITHUB_REPOSITORY" --clobber
+          cp "artifacts/NETHERHILL-$VARIANT-unsigned.ipa" "NETHERHILL-$VARIANT-$BUILD.ipa"
+          python ci/ayugram_integrity.py "NETHERHILL-$VARIANT-$BUILD.ipa" "$BUILD" > "NETHERHILL-$VARIANT-$BUILD.integrity.json"
+          gh release upload "$TAG" "NETHERHILL-$VARIANT-$BUILD.ipa" "NETHERHILL-$VARIANT-$BUILD.integrity.json" --repo "$GITHUB_REPOSITORY" --clobber
 
       - name: Remove generated credential files
         if: ${{ always() }}
