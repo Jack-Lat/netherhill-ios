@@ -46,7 +46,7 @@ jobs:
         with:
           # Run from standard: Standard builds standard and Custom builds custom. Run from another
           # branch: Standard builds it and Custom builds <branch>-custom.
-          ref: ${{ matrix.variant == 'custom' && (github.ref_name == 'standard' && 'custom' || format('{0}-custom', github.ref_name)) || github.ref_name }}
+          ref: ${{ github.ref_name }}
           submodules: recursive
           fetch-depth: 1
           persist-credentials: false
