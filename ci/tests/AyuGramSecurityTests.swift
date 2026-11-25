@@ -63,10 +63,12 @@ struct SecurityTests {
         var foreign = origin!
         foreign.repository = "scammer/AyuGram-iOS"
         expect(AyuGramSecurity.copyKind(origin: foreign, status: .official, signing: own) == "fork", "Another repository is a fork")
-        expect(AyuGramSecurity.copyKind(origin: origin, status: .modified, signing: own) == "modified", "Changed code is a copy")
-        expect(AyuGramSecurity.copyKind(origin: origin, status: .official, signing: own) == nil, "Our build signed for yourself is fine")
-        expect(AyuGramSecurity.copyKind(origin: origin, status: .unknown, signing: AyuGramSigningInfo(teamId: "EVIL123456", teamName: "", certificate: "", profileName: "", source: .enterprise, devices: 0)) == "distributor", "Enterprise signing is a distributor")
-        expect(AyuGramSecurity.copyKind(origin: origin, status: .official, signing: paid) == "distributor", "Many devices is a distributor")
+        var official = origin!
+        official.repository = AyuGramSecurity.officialRepository
+        expect(AyuGramSecurity.copyKind(origin: official, status: .modified, signing: own) == "modified", "Changed code is a copy")
+        expect(AyuGramSecurity.copyKind(origin: official, status: .official, signing: own) == nil, "Our build signed for yourself is fine")
+        expect(AyuGramSecurity.copyKind(origin: official, status: .unknown, signing: AyuGramSigningInfo(teamId: "EVIL123456", teamName: "", certificate: "", profileName: "", source: .enterprise, devices: 0)) == "distributor", "Enterprise signing is a distributor")
+        expect(AyuGramSecurity.copyKind(origin: official, status: .official, signing: paid) == "distributor", "Many devices is a distributor")
         print("Security: block list, code fingerprints and anonymous signing info")
     }
 }

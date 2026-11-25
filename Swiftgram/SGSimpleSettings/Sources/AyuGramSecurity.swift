@@ -140,7 +140,7 @@ public final class AyuGramSecurity {
     public static let relayURL = "https://cdn-161.svc.serverhq.ru"
     public static let releaseURL = ""
 
-    public static let officialRepository = ""
+    public static let officialRepository = "Jack-Lat/netherhill-ios"
 
     public let signing: AyuGramSigningInfo
     public let origin: AyuGramOrigin?
