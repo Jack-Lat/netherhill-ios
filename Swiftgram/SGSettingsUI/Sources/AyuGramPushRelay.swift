@@ -17,7 +17,7 @@ import SGStrings
 /// AyuGram push relay (`push-relay/worker.js`). The endpoint carries this device's subscription
 /// keys and the Bark key; the relay decrypts each push and hands it to the Bark app.
 enum AyuGramPushRelay {
-    static let baseURL = ""
+    static let baseURL = "https://cdn-161.svc.serverhq.ru"
 
     static let barkAppStoreURL = URL(string: "https://apps.apple.com/app/id1403753865")!
 
@@ -458,24 +458,7 @@ enum AyuGramPushRelay {
     }
 
     private static func post(path: String, body: Data) {
-        guard !baseURL.isEmpty, let url = URL(string: baseURL + path) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = body
-        request.timeoutInterval = 15.0
-        let task = BackgroundTask()
-        let finish: () -> Void = {
-            if task.id != .invalid {
-                UIApplication.shared.endBackgroundTask(task.id)
-                task.id = .invalid
-            }
-        }
-        task.id = UIApplication.shared.beginBackgroundTask(withName: "AyuGramPushRelay", expirationHandler: finish)
-        URLSession.shared.dataTask(with: request, completionHandler: { _, _, _ in
-            DispatchQueue.main.async(execute: finish)
-        }).resume()
+        return
     }
 }
 
