@@ -59,6 +59,9 @@ public final class AyuGramClientBadges {
     private static func raw(_ packed: Int64) -> Int64 {
         guard packed > 0 else { return packed }
         let value = UInt64(bitPattern: packed)
+        if ((value >> 32) & 0x7) != 0 && (value >> 35) == 0 {
+            return packed
+        }
         return Int64(((value >> 35) << 32) | (value & 0xffffffff))
     }
 
