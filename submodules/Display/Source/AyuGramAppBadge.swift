@@ -34,19 +34,88 @@ public func ayuGramChannelBadgeImage() -> UIImage {
 }
 
 private func ayuSealBadgeImage(fill: UIColor, secondary: UIColor) -> UIImage {
-    return UIGraphicsImageRenderer(size: CGSize(width: 22, height: 22)).image { _ in
-        let seal = UIBezierPath()
-        for index in 0 ..< 32 {
-            let angle = CGFloat(index) * .pi / 16 - .pi / 2
-            let radius: CGFloat = index % 2 == 0 ? 10.8 : 9.6
-            let point = CGPoint(x: 11 + cos(angle) * radius, y: 11 + sin(angle) * radius)
-            if index == 0 { seal.move(to: point) } else { seal.addLine(to: point) }
+    let format = UIGraphicsImageRendererFormat.preferred()
+    let size = CGSize(width: 22, height: 22)
+    return UIGraphicsImageRenderer(size: size, format: format).image { ctx in
+        let rect = CGRect(origin: .zero, size: size)
+        let rounded = UIBezierPath(roundedRect: rect.insetBy(dx: 0.5, dy: 0.5), cornerRadius: 5.5)
+        ctx.cgContext.saveGState()
+        rounded.addClip()
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 1
+        fill.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let bottom = UIColor(red: max(0, r * 0.65), green: max(0, g * 0.65), blue: max(0, b * 0.65), alpha: a)
+        if let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [fill.cgColor, bottom.cgColor] as CFArray, locations: [0, 1]) {
+            ctx.cgContext.drawLinearGradient(gradient, start: CGPoint(x: 0, y: 0), end: CGPoint(x: 0, y: size.height), options: [])
         }
-        seal.close()
-        fill.setFill()
-        seal.fill()
-        ayuPlane(CGRect(x: 4.5, y: 4.2, width: 13, height: 13), foreground: .white, secondary: secondary)
+        ctx.cgContext.restoreGState()
+        ayuPlane(CGRect(x: 4.0, y: 4.5, width: 14.0, height: 12.0), foreground: .white, secondary: secondary)
     }
+}
+
+public func ayuGramApplyTitleShimmer(on view: UIView?, enabled: Bool) {
+    guard let view else { return }
+    let layerName = "nhTitleShimmerLayer"
+    view.layer.sublayers?.removeAll(where: { $0.name == layerName })
+    guard enabled, let contents = view.layer.contents, view.bounds.width > 1, view.bounds.height > 1 else {
+        return
+    }
+    let gradient = CAGradientLayer()
+    gradient.name = layerName
+    gradient.frame = view.bounds
+    gradient.colors = [
+        UIColor(red: 1.00, green: 0.23, blue: 0.23, alpha: 1).cgColor,
+        UIColor(red: 1.00, green: 0.62, blue: 0.10, alpha: 1).cgColor,
+        UIColor(red: 0.25, green: 0.88, blue: 0.55, alpha: 1).cgColor,
+        UIColor(red: 0.22, green: 0.72, blue: 1.00, alpha: 1).cgColor,
+        UIColor(red: 0.75, green: 0.35, blue: 1.00, alpha: 1).cgColor,
+        UIColor(red: 1.00, green: 0.23, blue: 0.23, alpha: 1).cgColor
+    ]
+    gradient.startPoint = CGPoint(x: -1.0, y: 0.5)
+    gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+
+    let mask = CALayer()
+    mask.frame = view.bounds
+    mask.contents = contents
+    mask.contentsGravity = view.layer.contentsGravity
+    mask.contentsScale = view.layer.contentsScale
+    gradient.mask = mask
+
+    let animStart = CABasicAnimation(keyPath: "startPoint")
+    animStart.fromValue = CGPoint(x: -1.0, y: 0.5)
+    animStart.toValue = CGPoint(x: 1.0, y: 0.5)
+    let animEnd = CABasicAnimation(keyPath: "endPoint")
+    animEnd.fromValue = CGPoint(x: 0.0, y: 0.5)
+    animEnd.toValue = CGPoint(x: 2.0, y: 0.5)
+    let group = CAAnimationGroup()
+    group.animations = [animStart, animEnd]
+    group.duration = 2.8
+    group.repeatCount = .infinity
+    gradient.add(group, forKey: "nhShimmerSlide")
+
+    view.layer.addSublayer(gradient)
+}
+
+public func ayuGramMakeDevPillView() -> UIView {
+    let container = UIView()
+    container.backgroundColor = UIColor(red: 0.91, green: 0.13, blue: 0.14, alpha: 0.18)
+    container.layer.cornerRadius = 9.0
+    container.layer.borderWidth = 1.0
+    container.layer.borderColor = UIColor(red: 0.91, green: 0.13, blue: 0.14, alpha: 0.55).cgColor
+
+    let icon = UIImageView(image: ayuGramOwnerBadgeImage())
+    icon.frame = CGRect(x: 5, y: 3, width: 12, height: 12)
+    container.addSubview(icon)
+
+    let label = UILabel()
+    label.text = "Разработчик NETHERHILL"
+    label.font = UIFont.systemFont(ofSize: 10.5, weight: .semibold)
+    label.textColor = UIColor(red: 1.0, green: 0.72, blue: 0.72, alpha: 1.0)
+    label.sizeToFit()
+    label.frame = CGRect(x: 21, y: (18 - label.frame.height) / 2, width: label.frame.width, height: label.frame.height)
+    container.addSubview(label)
+
+    container.frame = CGRect(x: 0, y: 0, width: 21 + label.frame.width + 7, height: 18)
+    return container
 }
 
 private func ayuBadgeColor(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat = 1) -> UIColor {

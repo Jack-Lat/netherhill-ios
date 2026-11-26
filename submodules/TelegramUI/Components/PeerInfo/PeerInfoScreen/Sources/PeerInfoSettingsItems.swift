@@ -244,7 +244,7 @@ func settingsItems(showProfileId: Bool, data: PeerInfoScreenData?, context: Acco
         interaction.openSettings(.swiftgram)
     }))
 
-    items[.swiftgram]!.append(PeerInfoScreenDisclosureItem(id: 2, text: "AyuGram", icon: ayuGramSettingsIcon(), action: {
+    items[.swiftgram]!.append(PeerInfoScreenDisclosureItem(id: 2, text: "NETHERHILL", icon: ayuGramSettingsIcon(), action: {
         interaction.openSettings(.ayuGramPrivacy)
     }))
 

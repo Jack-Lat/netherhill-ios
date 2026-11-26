@@ -26,7 +26,7 @@ private enum AyuScreenToggle: Equatable {
 }
 
 private enum AyuScreenLink: Equatable {
-    case history, appearance, effects, update, checkUpdates, channel, developer, importChat, silentSending, sessionLog, buildInfo, reportScam, searchEngine, assistant, aiProvider, aiKey, aiModel, donate, aiLanguage, aiPersona, supporter, video, profileExtras, nhAdmin
+    case history, appearance, effects, update, checkUpdates, channel, developer, importChat, silentSending, sessionLog, buildInfo, reportScam, searchEngine, assistant, aiProvider, aiKey, aiModel, donate, aiLanguage, aiPersona, supporter, video, profileExtras, nhAdmin, voicePreset
 }
 
 private enum AyuScreenTint: Equatable {
@@ -208,6 +208,7 @@ private func ayuScreenEntries(data: PresentationData, privacy: AyuGramPrivacySet
     if isDeveloper {
         entries.append(.link(id: 695, section: .security, link: .nhAdmin, symbol: "crown.fill", tint: .orange, title: "Админ-панель NETHERHILL", label: AyuGramBadgeSync.shared.adminToken.isEmpty ? "Токен не задан" : "Активна"))
     }
+    entries.append(.link(id: 696, section: .security, link: .voicePreset, symbol: "waveform", tint: .purple, title: "Обработка голоса (ГС)", label: NetherhillVoicePreset.current.title))
     entries.append(.footer(id: 694, section: .security, text: "При включённой видимости другие пользователи NETHERHILL видят фирменный значок и свечение в вашем профиле."))
 
     entries.append(.header(id: 700, section: .support, text: s("Ayu.SupportSection")))
@@ -216,9 +217,6 @@ private func ayuScreenEntries(data: PresentationData, privacy: AyuGramPrivacySet
     entries.append(.link(id: 730, section: .support, link: .sessionLog, symbol: "doc.text.fill", tint: .gray, title: s("Ayu.SessionLog"), label: ""))
     entries.append(.link(id: 740, section: .support, link: .checkUpdates, symbol: "arrow.triangle.2.circlepath", tint: .gray, title: s("Ayu.CheckUpdates"), label: ""))
 
-    entries.append(.header(id: 800, section: .donate, text: s("Ayu.DonateSection")))
-    entries.append(.link(id: 810, section: .donate, link: .donate, symbol: "heart.fill", tint: .pink, title: s("Ayu.Donate"), label: ""))
-    entries.append(.footer(id: 820, section: .donate, text: s("Ayu.DonateFooter")))
     return entries
 }
 
@@ -425,53 +423,21 @@ public func ayuGramSettingsScreen(context: AccountContext) -> ViewController {
             ])
             presentController?(sheet)
         case .nhAdmin:
+            pushController?(netherhillAdminController(context: context))
+        case .voicePreset:
             let data = context.sharedContext.currentPresentationData.with { $0 }
-            let showResult: (Bool) -> Void = { ok in
-                presentController?(textAlertController(context: context, title: nil, text: ok ? "Готово!" : "Ошибка. Проверь Admin Token и ID.", actions: [TextAlertAction(type: .defaultAction, title: data.strings.Common_OK, action: {})]))
-            }
             let sheet = ActionSheetController(presentationData: data)
+            let current = NetherhillVoicePreset.current
+            var items: [ActionSheetItem] = []
+            for preset in NetherhillVoicePreset.allCases {
+                items.append(ActionSheetButtonItem(title: (preset == current ? "✓ " : "") + preset.title, color: .accent, action: { [weak sheet] in
+                    sheet?.dismissAnimated()
+                    NetherhillVoicePreset.current = preset
+                    NotificationCenter.default.post(name: AyuGramSettings.didChange, object: nil)
+                }))
+            }
             sheet.setItemGroups([
-                ActionSheetItemGroup(items: [
-                    ActionSheetButtonItem(title: "Установить Admin Token", color: .accent, action: { [weak sheet] in
-                        sheet?.dismissAnimated()
-                        presentController?(promptController(context: context, text: "Admin Token сервера NETHERHILL", value: AyuGramBadgeSync.shared.adminToken, placeholder: "Token", characterLimit: 200, apply: { val in
-                            if let val {
-                                AyuGramBadgeSync.shared.adminToken = val
-                                NotificationCenter.default.post(name: AyuGramSettings.didChange, object: nil)
-                            }
-                        }))
-                    }),
-                    ActionSheetButtonItem(title: "Выдать NFT по ID", color: .accent, action: { [weak sheet] in
-                        sheet?.dismissAnimated()
-                        presentController?(promptController(context: context, text: "Введи: <UserID> <Slug> (напр. 123456789 PlushPepe-1)", value: "", placeholder: "123456789 PlushPepe-1", characterLimit: 120, apply: { val in
-                            guard let parts = val?.split(separator: " ", maxSplits: 1), parts.count == 2, let uid = Int64(parts[0]) else { return }
-                            AyuGramBadgeSync.shared.adminGrantNft(targetId: uid, slug: String(parts[1]), completion: showResult)
-                        }))
-                    }),
-                    ActionSheetButtonItem(title: "Очистить NFT по ID", color: .destructive, action: { [weak sheet] in
-                        sheet?.dismissAnimated()
-                        presentController?(promptController(context: context, text: "Введи Telegram User ID для очистки NFT", value: "", placeholder: "123456789", characterLimit: 32, apply: { val in
-                            guard let uid = val.flatMap({ Int64($0.trimmingCharacters(in: .whitespaces)) }) else { return }
-                            AyuGramBadgeSync.shared.adminGrantNft(targetId: uid, clear: true, completion: showResult)
-                        }))
-                    }),
-                    ActionSheetButtonItem(title: "Выдать особый бейдж по ID", color: .accent, action: { [weak sheet] in
-                        sheet?.dismissAnimated()
-                        presentController?(promptController(context: context, text: "Введи: <UserID> [SF Symbol или эмодзи]", value: "", placeholder: "123456789 crown.fill", characterLimit: 64, apply: { val in
-                            guard let parts = val?.split(separator: " ", maxSplits: 1), let uid = Int64(parts[0]) else { return }
-                            let glyph = parts.count > 1 ? String(parts[1]).trimmingCharacters(in: .whitespaces) : "crown.fill"
-                            let isEmoji = glyph.unicodeScalars.contains(where: { $0.value > 127 })
-                            AyuGramBadgeSync.shared.adminGrantBadge(targetId: uid, symbol: isEmoji ? "crown.fill" : glyph, emoji: isEmoji ? glyph : "", completion: showResult)
-                        }))
-                    }),
-                    ActionSheetButtonItem(title: "Снять особый бейдж по ID", color: .destructive, action: { [weak sheet] in
-                        sheet?.dismissAnimated()
-                        presentController?(promptController(context: context, text: "Введи Telegram User ID для снятия бейджа", value: "", placeholder: "123456789", characterLimit: 32, apply: { val in
-                            guard let uid = val.flatMap({ Int64($0.trimmingCharacters(in: .whitespaces)) }) else { return }
-                            AyuGramBadgeSync.shared.adminGrantBadge(targetId: uid, remove: true, completion: showResult)
-                        }))
-                    })
-                ]),
+                ActionSheetItemGroup(items: items),
                 ActionSheetItemGroup(items: [ActionSheetButtonItem(title: data.strings.Common_Cancel, color: .accent, action: { [weak sheet] in sheet?.dismissAnimated() })])
             ])
             presentController?(sheet)

@@ -140,6 +140,7 @@ final class PeerInfoHeaderNode: ASDisplayNode {
     let avatarOverlayNode: PeerInfoEditingAvatarOverlayNode
     private let ayuOwnerBadge = UIImageView(image: ayuGramOwnerBadgeImage())
     private let ayuExpandedOwnerBadge = UIImageView(image: ayuGramOwnerBadgeImage())
+    private let ayuDevPillView = ayuGramMakeDevPillView()
     private var ayuBadgeKind: String?
     private var ayuBadgeName = ""
     private var ayuBubblesView: AyuGramProfileBubblesView?
@@ -216,7 +217,7 @@ final class PeerInfoHeaderNode: ASDisplayNode {
         case "updates":
             text = i18n("Ayu.BadgeResource", locale, "NETHERHILL DEV")
         case "peek":
-            text = i18n("Ayu.BadgeResource", locale, "AyuGram iOS sneakpeek")
+            text = i18n("Ayu.BadgeResource", locale, "NETHERHILL")
         case "owner":
             text = i18n("Ayu.BadgeDeveloper", locale, self.ayuBadgeName)
         default:
@@ -1990,13 +1991,23 @@ final class PeerInfoHeaderNode: ASDisplayNode {
             titleExpandedHorizontalOffset -= 13
         }
         let glowColor = UIColor(red: 0.91, green: 0.13, blue: 0.14, alpha: 1.0).cgColor
+        let isDev = ayuBadge == "owner"
         for stateKey in [TitleNodeStateRegular, TitleNodeStateExpanded] {
-            if let stateLayer = self.titleNode.stateNode(forKey: stateKey)?.layer {
-                stateLayer.shadowColor = glowColor
-                stateLayer.shadowRadius = 7.0
-                stateLayer.shadowOffset = .zero
-                stateLayer.shadowOpacity = ayuOwner ? 0.65 : 0.0
+            if let stateView = self.titleNode.stateNode(forKey: stateKey)?.view {
+                ayuGramApplyTitleShimmer(on: stateView, enabled: isDev)
+                stateView.layer.shadowColor = glowColor
+                stateView.layer.shadowRadius = isDev ? 6.0 : 5.0
+                stateView.layer.shadowOffset = .zero
+                stateView.layer.shadowOpacity = (ayuOwner && !isDev) ? 0.55 : 0.0
             }
+        }
+        self.ayuDevPillView.isHidden = !isDev
+        if isDev {
+            if self.ayuDevPillView.superview == nil {
+                self.regularContentNode.view.addSubview(self.ayuDevPillView)
+            }
+            let pillSize = self.ayuDevPillView.frame.size
+            self.ayuDevPillView.frame = CGRect(x: floor((width - pillSize.width) / 2.0), y: max(0.0, expandedAvatarHeight - 102.0), width: pillSize.width, height: pillSize.height)
         }
         var titleFrame: CGRect
         var subtitleFrame: CGRect

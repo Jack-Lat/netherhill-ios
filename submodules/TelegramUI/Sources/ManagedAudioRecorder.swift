@@ -10,6 +10,7 @@ import OpusBinding
 import ChatPresentationInterfaceState
 import AudioWaveform
 import FFMpegBinding
+import SGSimpleSettings
 
 private let kOutputBus: UInt32 = 0
 private let kInputBus: UInt32 = 1
@@ -186,6 +187,7 @@ final class ManagedAudioRecorderContext {
     private var toneRendererAudioSessionActivated = false
     
     private var processSamples = false
+    private let voiceProcessor = NetherhillVoiceProcessor(preset: NetherhillVoicePreset.current, sampleRate: 16000.0)
     
     private var toneTimer: SwiftSignalKit.Timer?
     private var idleTimerExtensionDisposable: Disposable?
@@ -628,7 +630,9 @@ final class ManagedAudioRecorderContext {
                 self.audioBuffer.append(currentEncoderPacket.assumingMemoryBound(to: UInt8.self), count: currentEncoderPacketSize)
                 break
             } else {
-                self.processWaveformPreview(samples: currentEncoderPacket.assumingMemoryBound(to: Int16.self), count: currentEncoderPacketSize / 2)
+                let pcmSamples = currentEncoderPacket.assumingMemoryBound(to: Int16.self)
+                self.voiceProcessor.processInPlace(samples: pcmSamples, count: currentEncoderPacketSize / 2)
+                self.processWaveformPreview(samples: pcmSamples, count: currentEncoderPacketSize / 2)
                 
                 self.oggWriter.writeFrame(currentEncoderPacket.assumingMemoryBound(to: UInt8.self), frameByteCount: UInt(currentEncoderPacketSize))
                 

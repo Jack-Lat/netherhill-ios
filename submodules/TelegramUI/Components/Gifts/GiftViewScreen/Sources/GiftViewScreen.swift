@@ -3494,7 +3494,9 @@ private final class GiftViewSheetContent: CombinedComponent {
             }
             
             var ownerPeerId: EnginePeer.Id?
-            if let uniqueGift {
+            if isAyuFakeNft {
+                ownerPeerId = component.context.account.peerId
+            } else if let uniqueGift {
                 if case let .peerId(peerId) = uniqueGift.owner {
                     ownerPeerId = peerId
                 } else {
@@ -4273,7 +4275,9 @@ private final class GiftViewSheetContent: CombinedComponent {
                         descriptionText = ""
                         originY += 7.0
                     }
-                    if case let .uniqueGift(_, recipientPeerId) = component.subject, recipientPeerId != nil {
+                    if isAyuFakeNft {
+                        selling = false
+                    } else if case let .uniqueGift(_, recipientPeerId) = component.subject, recipientPeerId != nil {
                     } else if ownerPeerId != component.context.account.peerId {
                         selling = true
                     }
