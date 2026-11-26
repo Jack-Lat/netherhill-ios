@@ -109,7 +109,7 @@ private enum NhAdminEntry: ItemListNodeEntry {
 
 public func netherhillAdminController(context: AccountContext) -> ViewController {
     var presentController: ((ViewController) -> Void)?
-    let statePromise = ValuePromise<(Int64, [AyuGramProfileNft], Bool)>((AyuGramUpdates.developerId, [], false), ignoreRepeated: false)
+    let statePromise = ValuePromise<(Int64, [String], Bool)>((AyuGramUpdates.developerId, [], false), ignoreRepeated: false)
 
     func reloadTarget(_ targetId: Int64) {
         statePromise.set((targetId, [], true))
@@ -120,13 +120,20 @@ public func netherhillAdminController(context: AccountContext) -> ViewController
         let session = URLSession(configuration: .ephemeral)
         session.dataTask(with: URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 15.0), completionHandler: { data, _, _ in
             session.finishTasksAndInvalidate()
-            var nfts: [AyuGramProfileNft] = []
+            var nfts: [String] = []
             if let data,
                let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
                let items = json["items"] as? [[String: Any]],
                let first = items.first,
-               let entry = AyuGramProfileEntry.from(json: first) {
-                nfts = entry.nfts
+               let rawNfts = first["nfts"] as? [[String: Any]] {
+                for item in rawNfts {
+                    if let slug = item["slug"] as? String, !slug.isEmpty {
+                        nfts.append(slug + ((item["pinned"] as? Bool) == true ? " · Закреплена" : ""))
+                    } else if let col = item["collection"] as? String, !col.isEmpty {
+                        let num = (item["number"] as? Int) ?? 1
+                        nfts.append("\(col) #\(num)")
+                    }
+                }
             }
             DispatchQueue.main.async {
                 statePromise.set((targetId, nfts, false))
@@ -199,8 +206,9 @@ public func netherhillAdminController(context: AccountContext) -> ViewController
         } else if nfts.isEmpty {
             entries.append(.info(id: 11, section: .currentNfts, title: "Нет выданных NFT", label: "0"))
         } else {
-            for (idx, nft) in nfts.enumerated() {
-                entries.append(.info(id: 20 + idx, section: .currentNfts, title: nft.slug ?? nft.title, label: nft.pinned ? "Закреплена" : "В списке"))
+            for (idx, nftName) in nfts.enumerated() {
+                let parts = nftName.components(separatedBy: " · ")
+                entries.append(.info(id: 20 + idx, section: .currentNfts, title: parts[0], label: parts.count > 1 ? parts[1] : ""))
             }
             entries.append(.destructive(id: 90, section: .currentNfts, action: .clearNfts, title: "Очистить все NFT у \(targetId)"))
         }

@@ -194,43 +194,57 @@ public func ayuGramAppBadgeImage(style: String, scale: CGFloat) -> UIImage {
         return image
     }
     let style = ayuBadgeStyle(style)
-    let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 13, weight: .semibold), .foregroundColor: style.text]
-    let text = "NETHERHILL" as NSString
-    let textSize = text.size(withAttributes: attributes)
-    let base = CGSize(width: max(124.0, 34.0 + ceil(textSize.width)), height: 23)
+    let base = CGSize(width: 176.0, height: 32.0)
     let format = UIGraphicsImageRendererFormat.preferred()
     if scale > 0 {
         format.scale = scale
     }
     return UIGraphicsImageRenderer(size: base, format: format).image { renderer in
         let context = renderer.cgContext
-        let capsule = UIBezierPath(roundedRect: CGRect(origin: .zero, size: base), cornerRadius: base.height / 2)
+        let rect = CGRect(origin: .zero, size: base)
+        let island = UIBezierPath(roundedRect: rect.insetBy(dx: 0.5, dy: 0.5), cornerRadius: base.height / 2.0)
         context.saveGState()
-        capsule.addClip()
-        let cgColors = style.colors.map { $0.cgColor } as CFArray
-        if let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: cgColors, locations: nil) {
-            context.drawLinearGradient(gradient, start: CGPoint(x: 0, y: 0), end: CGPoint(x: base.width, y: base.height), options: [])
-        }
-        if let glow = style.glow, let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [glow.cgColor, glow.withAlphaComponent(0).cgColor] as CFArray, locations: nil) {
-            context.drawLinearGradient(gradient, start: CGPoint(x: 0, y: 0), end: CGPoint(x: 0, y: base.height * 0.6), options: [])
-        }
-        var seed: UInt32 = 0x41595547
-        func next() -> CGFloat {
-            seed = seed &* 1664525 &+ 1013904223
-            return CGFloat(seed >> 8) / CGFloat(1 << 24)
-        }
-        for index in 0 ..< style.dotCount {
-            let radius = style.dotRadius.lowerBound + (style.dotRadius.upperBound - style.dotRadius.lowerBound) * next()
-            let point = CGPoint(x: next() * base.width, y: next() * base.height)
-            style.dots[index % style.dots.count].setFill()
-            UIBezierPath(ovalIn: CGRect(x: point.x - radius, y: point.y - radius, width: radius * 2, height: radius * 2)).fill()
-        }
-        if style.watermark > 0 {
-            ayuPlane(CGRect(x: -3, y: -10, width: 116, height: 45), foreground: UIColor.black.withAlphaComponent(style.watermark), secondary: UIColor.black.withAlphaComponent(style.watermark * 0.65))
+        island.addClip()
+
+        // Deep OLED Dynamic Island background
+        UIColor(red: 0.03, green: 0.03, blue: 0.04, alpha: 0.98).setFill()
+        context.fill(rect)
+
+        // Subtle top gloss
+        if let gloss = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [UIColor.white.withAlphaComponent(0.12).cgColor, UIColor.clear.cgColor] as CFArray, locations: [0, 1]) {
+            context.drawLinearGradient(gloss, start: CGPoint(x: 0, y: 0), end: CGPoint(x: 0, y: base.height * 0.55), options: [])
         }
         context.restoreGState()
-        ayuPlane(CGRect(x: 7, y: 4, width: 16, height: 14), foreground: style.foreground, secondary: style.secondary)
-        text.draw(at: CGPoint(x: 27, y: (base.height - textSize.height) / 2), withAttributes: attributes)
+
+        // Subtle rim border
+        UIColor(red: 0.91, green: 0.13, blue: 0.14, alpha: 0.38).setStroke()
+        island.lineWidth = 1.0
+        island.stroke()
+
+        // Left square NETHERHILL mark
+        let markRect = CGRect(x: 7.0, y: 6.0, width: 20.0, height: 20.0)
+        UIColor(red: 0.91, green: 0.13, blue: 0.14, alpha: 1.0).setFill()
+        UIBezierPath(roundedRect: markRect, cornerRadius: 5.5).fill()
+        ayuPlane(CGRect(x: 10.5, y: 10.0, width: 13.0, height: 11.5), foreground: .white, secondary: .white)
+
+        // Center title
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 12.0, weight: .semibold),
+            .foregroundColor: UIColor.white
+        ]
+        let text = "NETHERHILL" as NSString
+        let textSize = text.size(withAttributes: attributes)
+        text.draw(at: CGPoint(x: 34.0, y: (base.height - textSize.height) / 2.0), withAttributes: attributes)
+
+        // Right Dynamic Island camera lens + live red dot
+        let lensRect = CGRect(x: base.width - 25.0, y: 9.0, width: 14.0, height: 14.0)
+        UIColor(red: 0.11, green: 0.11, blue: 0.14, alpha: 1.0).setFill()
+        UIBezierPath(ovalIn: lensRect).fill()
+        UIColor(red: 0.22, green: 0.24, blue: 0.34, alpha: 0.85).setFill()
+        UIBezierPath(ovalIn: lensRect.insetBy(dx: 3.5, dy: 3.5)).fill()
+        UIColor(red: 0.91, green: 0.13, blue: 0.14, alpha: 1.0).setFill()
+        UIBezierPath(ovalIn: CGRect(x: base.width - 35.0, y: 13.5, width: 5.0, height: 5.0)).fill()
+        _ = style
     }
 }
 
