@@ -107,14 +107,20 @@ private enum NhAdminEntry: ItemListNodeEntry {
     }
 }
 
+private struct NhAdminState: Equatable {
+    let targetId: Int64
+    let nfts: [String]
+    let loading: Bool
+}
+
 public func netherhillAdminController(context: AccountContext) -> ViewController {
     var presentController: ((ViewController) -> Void)?
-    let statePromise = ValuePromise<(Int64, [String], Bool)>((AyuGramUpdates.developerId, [], false), ignoreRepeated: false)
+    let statePromise = ValuePromise<NhAdminState>(NhAdminState(targetId: AyuGramUpdates.developerId, nfts: [], loading: false), ignoreRepeated: false)
 
     func reloadTarget(_ targetId: Int64) {
-        statePromise.set((targetId, [], true))
+        statePromise.set(NhAdminState(targetId: targetId, nfts: [], loading: true))
         guard let url = URL(string: AyuGramSecurity.relayURL + "/profile?ids=\(targetId)") else {
-            statePromise.set((targetId, [], false))
+            statePromise.set(NhAdminState(targetId: targetId, nfts: [], loading: false))
             return
         }
         let session = URLSession(configuration: .ephemeral)
@@ -136,7 +142,7 @@ public func netherhillAdminController(context: AccountContext) -> ViewController
                 }
             }
             DispatchQueue.main.async {
-                statePromise.set((targetId, nfts, false))
+                statePromise.set(NhAdminState(targetId: targetId, nfts: nfts, loading: false))
             }
         }).resume()
     }
@@ -194,7 +200,9 @@ public func netherhillAdminController(context: AccountContext) -> ViewController
     let signal = combineLatest(context.sharedContext.presentationData, statePromise.get())
     |> deliverOnMainQueue
     |> map { data, state -> (ItemListControllerState, (ItemListNodeState, NhAdminArguments)) in
-        let (targetId, nfts, loading) = state
+        let targetId = state.targetId
+        let nfts = state.nfts
+        let loading = state.loading
         var entries: [NhAdminEntry] = []
 
         entries.append(.header(id: 1, section: .target, text: "ПОЛУЧАТЕЛЬ"))
