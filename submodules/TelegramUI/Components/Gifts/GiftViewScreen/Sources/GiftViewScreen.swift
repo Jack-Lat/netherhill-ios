@@ -4284,39 +4284,7 @@ private final class GiftViewSheetContent: CombinedComponent {
                 }
                 
                 if isAyuFakeNft, uniqueGift != nil {
-                    let languageCode = strings.baseLanguageCode
-                    let badgeString = NSAttributedString(string: i18n("Ayu.FakeNft.Badge", languageCode), font: Font.semibold(13.0), textColor: UIColor.white)
-                    let badgeTextSize = badgeString.boundingRect(with: CGSize(width: context.availableSize.width - sideInset * 2.0 - 40.0, height: 100.0), options: .usesLineFragmentOrigin, context: nil).size
-                    let badgeSize = CGSize(width: ceil(badgeTextSize.width) + 22.0, height: 24.0)
-                    let ayuFakeBadge = ayuFakeBadge.update(
-                        component: GlassBarButtonComponent(
-                            size: badgeSize,
-                            backgroundColor: UIColor(rgb: 0xff3b30),
-                            isDark: true,
-                            state: .tintedGlass,
-                            component: AnyComponentWithIdentity(id: "label", component: AnyComponent(
-                                MultilineTextComponent(text: .plain(badgeString), horizontalAlignment: .center, maximumNumberOfLines: 1)
-                            )),
-                            action: { _ in
-                                guard let controller = controller() else {
-                                    return
-                                }
-                                let presentationData = component.context.sharedContext.currentPresentationData.with { $0 }
-                                controller.present(UndoOverlayController(presentationData: presentationData, content: .info(title: i18n("Ayu.FakeNft.Title", languageCode), text: i18n("Ayu.FakeNft.Info", languageCode), timeout: nil, customUndoText: nil), elevatedLayout: false, animateInAsReplacement: false, action: { _ in return false }), in: .current)
-                            }
-                        ),
-                        availableSize: badgeSize,
-                        transition: context.transition
-                    )
-                    headerComponents.append({
-                        context.add(ayuFakeBadge
-                            .position(CGPoint(x: context.availableSize.width / 2.0, y: 207.0 + descriptionOffset + ayuFakeBadge.size.height / 2.0))
-                            .appear(.default(scale: true, alpha: true))
-                            .disappear(.default(scale: true, alpha: true))
-                        )
-                    })
                     descriptionText = ""
-                    originY += 7.0
                 }
                 
                 var useDescriptionTint = false

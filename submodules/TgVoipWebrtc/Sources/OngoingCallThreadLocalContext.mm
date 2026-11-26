@@ -481,6 +481,103 @@ public:
         return WrappedInstance()->GetRecordAudioParameters(params);
     }
     
+    struct NhBiquad {
+        float b0 = 1, b1 = 0, b2 = 0, a1 = 0, a2 = 0, z1 = 0, z2 = 0;
+        float process(float x) {
+            float y = b0 * x + z1;
+            z1 = b1 * x - a1 * y + z2;
+            z2 = b2 * x - a2 * y;
+            return y;
+        }
+        static NhBiquad highPass(float fs, float fc, float q = 0.707f) {
+            float w0 = 2.0f * (float)M_PI * fc / fs;
+            float cosw = cosf(w0), alpha = sinf(w0) / (2.0f * q), a0 = 1.0f + alpha;
+            return {((1.0f + cosw) * 0.5f) / a0, -(1.0f + cosw) / a0, ((1.0f + cosw) * 0.5f) / a0, (-2.0f * cosw) / a0, (1.0f - alpha) / a0, 0, 0};
+        }
+        static NhBiquad peaking(float fs, float fc, float q, float gainDb) {
+            float a = powf(10.0f, gainDb / 40.0f);
+            float w0 = 2.0f * (float)M_PI * fc / fs;
+            float cosw = cosf(w0), alpha = sinf(w0) / (2.0f * q), a0 = 1.0f + alpha / a;
+            return {(1.0f + alpha * a) / a0, (-2.0f * cosw) / a0, (1.0f - alpha * a) / a0, (-2.0f * cosw) / a0, (1.0f - alpha / a) / a0, 0, 0};
+        }
+    };
+
+    struct NhCallVoiceDsp {
+        uint32_t fs = 0;
+        int preset = 0;
+        int tick = 0;
+        NhBiquad hp, eqLow, eqMidCut, eqPresence;
+        float gateEnv = 0.0f, gateGain = 0.0f;
+        static constexpr int kRingSize = 4096;
+        float ring[kRingSize] = {};
+        int writeIdx = 0;
+        float phase = 0.0f;
+        std::vector<int16_t> scratch;
+
+        const void* processIfNeeded(const void* audioSamples, size_t nSamples, size_t nBytesPerSample, size_t nChannels, uint32_t samplesPerSec) {
+            if ((tick++ % 50) == 0) {
+                preset = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"netherhill.voice.preset"];
+            }
+            if (preset <= 0 || preset > 3 || nBytesPerSample != 2 || nChannels != 1 || nSamples == 0 || samplesPerSec == 0 || !audioSamples) {
+                return audioSamples;
+            }
+            if (fs != samplesPerSec) {
+                fs = samplesPerSec;
+                float f = (float)fs;
+                hp = NhBiquad::highPass(f, 75.0f);
+                eqLow = NhBiquad::peaking(f, 115.0f, 0.9f, 3.5f);
+                eqMidCut = NhBiquad::peaking(f, 400.0f, 1.2f, -3.0f);
+                eqPresence = NhBiquad::peaking(f, 3200.0f, 1.1f, 2.5f);
+            }
+            scratch.resize(nSamples);
+            const int16_t* src = (const int16_t*)audioSamples;
+            float pitchRatio = (preset == 1) ? powf(2.0f, -1.04f / 12.0f) : ((preset == 3) ? powf(2.0f, -2.5f / 12.0f) : 1.0f);
+            const float threshold = 0.00316f;
+            const float windowLen = (fs >= 32000) ? 1024.0f : 512.0f;
+            const float limitCeiling = 0.89125f;
+
+            for (size_t i = 0; i < nSamples; ++i) {
+                float x = (float)src[i] / 32768.0f;
+                float absX = fabsf(x);
+                gateEnv = absX > gateEnv ? (0.15f * absX + 0.85f * gateEnv) : (0.002f * absX + 0.998f * gateEnv);
+                float targetGate = gateEnv >= threshold ? 1.0f : 0.0f;
+                gateGain += (targetGate - gateGain) * (targetGate > gateGain ? 0.15f : 0.01f);
+                x *= gateGain;
+
+                x = hp.process(x);
+                x = eqLow.process(x);
+                x = eqMidCut.process(x);
+                x = eqPresence.process(x);
+
+                if (pitchRatio != 1.0f) {
+                    ring[writeIdx] = x;
+                    float p1 = phase;
+                    float p2 = phase + 0.5f;
+                    if (p2 >= 1.0f) p2 -= 1.0f;
+                    auto readInterp = [&](float delay) -> float {
+                        int dInt = (int)delay;
+                        float frac = delay - (float)dInt;
+                        int idx0 = (writeIdx - dInt + kRingSize) & (kRingSize - 1);
+                        int idx1 = (idx0 - 1 + kRingSize) & (kRingSize - 1);
+                        return ring[idx0] * (1.0f - frac) + ring[idx1] * frac;
+                    };
+                    float w1 = 0.5f * (1.0f - cosf(2.0f * (float)M_PI * p1));
+                    float w2 = 0.5f * (1.0f - cosf(2.0f * (float)M_PI * p2));
+                    x = readInterp(p1 * windowLen) * w1 + readInterp(p2 * windowLen) * w2;
+                    phase += (1.0f - pitchRatio) / windowLen;
+                    if (phase >= 1.0f) phase -= 1.0f;
+                    if (phase < 0.0f) phase += 1.0f;
+                    writeIdx = (writeIdx + 1) & (kRingSize - 1);
+                }
+
+                x = limitCeiling * tanhf(x / limitCeiling);
+                float scaled = fmaxf(-32767.0f, fminf(32767.0f, x * 32768.0f));
+                scratch[i] = (int16_t)scaled;
+            }
+            return scratch.data();
+        }
+    } _nhCallDsp;
+
 public:
     virtual int32_t RecordedDataIsAvailable(
         const void* audioSamples,
@@ -495,10 +592,11 @@ public:
         uint32_t& newMicLevel
     ) override {
         _mutex.Lock();
+        const void* processed = _nhCallDsp.processIfNeeded(audioSamples, nSamples, nBytesPerSample, nChannels, samplesPerSec);
         if (!_audioTransports.empty()) {
             for (size_t i = 0; i < _audioTransports.size(); i++) {
                 _audioTransports[i].first->RecordedDataIsAvailable(
-                    audioSamples,
+                    processed,
                     nSamples,
                     nBytesPerSample,
                     nChannels,
@@ -529,10 +627,11 @@ public:
         absl::optional<int64_t> estimatedCaptureTimeNS
     ) override {
         _mutex.Lock();
+        const void* processed = _nhCallDsp.processIfNeeded(audioSamples, nSamples, nBytesPerSample, nChannels, samplesPerSec);
         if (!_audioTransports.empty()) {
             for (size_t i = 0; i < _audioTransports.size(); i++) {
                 _audioTransports[i].first->RecordedDataIsAvailable(
-                    audioSamples,
+                    processed,
                     nSamples,
                     nBytesPerSample,
                     nChannels,

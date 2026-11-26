@@ -208,7 +208,7 @@ private func ayuScreenEntries(data: PresentationData, privacy: AyuGramPrivacySet
     if isDeveloper {
         entries.append(.link(id: 695, section: .security, link: .nhAdmin, symbol: "crown.fill", tint: .orange, title: "Админ-панель NETHERHILL", label: AyuGramBadgeSync.shared.adminToken.isEmpty ? "Токен не задан" : "Активна"))
     }
-    entries.append(.link(id: 696, section: .security, link: .voicePreset, symbol: "waveform", tint: .purple, title: "Обработка голоса (ГС)", label: NetherhillVoicePreset.current.title))
+    entries.append(.link(id: 696, section: .security, link: .voicePreset, symbol: "waveform", tint: .purple, title: "Обработка голоса (ГС и звонки)", label: NetherhillVoicePreset.current.title))
     entries.append(.footer(id: 694, section: .security, text: "При включённой видимости другие пользователи NETHERHILL видят фирменный значок и свечение в вашем профиле."))
 
     entries.append(.header(id: 700, section: .support, text: s("Ayu.SupportSection")))
