@@ -888,7 +888,12 @@ public class Window1 {
         self.hostView.containerView.addGestureRecognizer(recognizer)
         self.hostView.containerView.addSubview(self.badgeView)
         self.ayuIconObserver = NotificationCenter.default.addObserver(forName: Notification.Name("AyuGram.AppIcon.didChange"), object: nil, queue: .main) { [weak self] _ in
-            self?.badgeView.image = ayuGramAppBadgeImage()
+            guard let self else { return }
+            self.badgeView.image = ayuGramAppBadgeImage()
+            if let image = self.badgeView.image {
+                self.badgeView.frame = CGRect(origin: CGPoint(x: floorToScreenPixels((self.windowLayout.size.width - image.size.width) / 2.0), y: self.deviceMetrics.sgAppBadgeOffset()), size: image.size)
+            }
+            self.updateBadgeVisibility()
         }
         let _ = NotificationCenter.default.addObserver(forName: AyuGramPersonalization.didChange, object: nil, queue: .main) { [weak self] _ in
             guard let self else {
@@ -966,10 +971,11 @@ public class Window1 {
     }
     
     private func updateBadgeVisibility() {
-        let badgeIsHidden = !self.deviceMetrics.showAppBadge || self.forceBadgeHidden || self.windowLayout.size.width > self.windowLayout.size.height
+        let nhDisabled = UserDefaults.standard.integer(forKey: "netherhill.topBadge.mode") == 2
+        let badgeIsHidden = nhDisabled || !self.deviceMetrics.showAppBadge || self.forceBadgeHidden || self.windowLayout.size.width > self.windowLayout.size.height
         if badgeIsHidden != self.badgeView.isHidden && !badgeIsHidden {
             Queue.mainQueue().after(0.4) {
-                let badgeShouldBeHidden = !self.deviceMetrics.showAppBadge || self.forceBadgeHidden || self.windowLayout.size.width > self.windowLayout.size.height
+                let badgeShouldBeHidden = (UserDefaults.standard.integer(forKey: "netherhill.topBadge.mode") == 2) || !self.deviceMetrics.showAppBadge || self.forceBadgeHidden || self.windowLayout.size.width > self.windowLayout.size.height
                 if badgeShouldBeHidden == badgeIsHidden {
                     self.badgeView.isHidden = badgeIsHidden
                 }

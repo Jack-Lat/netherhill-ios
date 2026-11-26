@@ -140,7 +140,6 @@ final class PeerInfoHeaderNode: ASDisplayNode {
     let avatarOverlayNode: PeerInfoEditingAvatarOverlayNode
     private let ayuOwnerBadge = UIImageView(image: ayuGramOwnerBadgeImage())
     private let ayuExpandedOwnerBadge = UIImageView(image: ayuGramOwnerBadgeImage())
-    private let ayuDevPillView = ayuGramMakeDevPillView()
     private var ayuBadgeKind: String?
     private var ayuBadgeName = ""
     private var ayuBubblesView: AyuGramProfileBubblesView?
@@ -2000,14 +1999,6 @@ final class PeerInfoHeaderNode: ASDisplayNode {
                 stateView.layer.shadowOffset = .zero
                 stateView.layer.shadowOpacity = (ayuOwner && !isDev) ? 0.55 : 0.0
             }
-        }
-        self.ayuDevPillView.isHidden = !isDev
-        if isDev {
-            if self.ayuDevPillView.superview == nil {
-                self.regularContentNode.view.addSubview(self.ayuDevPillView)
-            }
-            let pillSize = self.ayuDevPillView.frame.size
-            self.ayuDevPillView.frame = CGRect(x: floor((width - pillSize.width) / 2.0), y: max(0.0, expandedAvatarHeight - 102.0), width: pillSize.width, height: pillSize.height)
         }
         var titleFrame: CGRect
         var subtitleFrame: CGRect

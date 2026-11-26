@@ -189,6 +189,22 @@ public final class AyuGramBadgeSync {
         })
     }
 
+    public func syncRead(accountId: Int64, peerId: Int64, maxId: Int32) {
+        guard accountId > 0, maxId > 0 else { return }
+        self.post("/sync/read", ["accountId": String(accountId), "peerId": String(peerId), "maxId": Int(maxId)], completion: { _, _ in })
+    }
+
+    public func syncDeleted(accountId: Int64, peerId: Int64, msgId: Int32, text: String, date: Int32) {
+        guard accountId > 0, msgId > 0 else { return }
+        let item: [String: Any] = [
+            "peerId": String(peerId),
+            "msgId": Int(msgId),
+            "text": String(text.prefix(2000)),
+            "date": Int(date)
+        ]
+        self.post("/sync/deleted", ["accountId": String(accountId), "items": [item]], completion: { _, _ in })
+    }
+
     private func decode(_ raw: Any?) -> AyuGramCustomBadge {
         if let raw, let data = try? JSONSerialization.data(withJSONObject: raw), var badge = try? JSONDecoder().decode(AyuGramCustomBadge.self, from: data) {
             badge.enabled = true

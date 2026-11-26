@@ -512,38 +512,34 @@ public:
         float ring[kRingSize] = {};
         int writeIdx = 0;
         float phase = 0.0f;
-        std::vector<int16_t> scratch;
+        int16_t scratch[4096] = {};
+        std::shared_ptr<std::atomic<int>> presetPtr = std::make_shared<std::atomic<int>>(0);
 
         const void* processIfNeeded(const void* audioSamples, size_t nSamples, size_t nBytesPerSample, size_t nChannels, uint32_t samplesPerSec) {
-            if ((tick++ % 50) == 0) {
-                preset = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"netherhill.voice.preset"];
+            if ((tick++ % 200) == 0) {
+                auto target = presetPtr;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    target->store((int)[[NSUserDefaults standardUserDefaults] integerForKey:@"netherhill.voice.preset"]);
+                });
             }
-            if (preset <= 0 || preset > 3 || nBytesPerSample != 2 || nChannels != 1 || nSamples == 0 || samplesPerSec == 0 || !audioSamples) {
+            preset = presetPtr->load();
+            if (preset <= 0 || preset > 3 || nBytesPerSample != 2 || nChannels != 1 || nSamples == 0 || nSamples > 4096 || samplesPerSec == 0 || !audioSamples) {
                 return audioSamples;
             }
             if (fs != samplesPerSec) {
                 fs = samplesPerSec;
                 float f = (float)fs;
                 hp = NhBiquad::highPass(f, 75.0f);
-                eqLow = NhBiquad::peaking(f, 115.0f, 0.9f, 3.5f);
-                eqMidCut = NhBiquad::peaking(f, 400.0f, 1.2f, -3.0f);
+                eqLow = NhBiquad::peaking(f, 115.0f, 0.9f, 4.5f);
+                eqMidCut = NhBiquad::peaking(f, 380.0f, 1.2f, -3.0f);
                 eqPresence = NhBiquad::peaking(f, 3200.0f, 1.1f, 2.5f);
             }
-            scratch.resize(nSamples);
             const int16_t* src = (const int16_t*)audioSamples;
-            float pitchRatio = (preset == 1) ? powf(2.0f, -1.04f / 12.0f) : ((preset == 3) ? powf(2.0f, -2.5f / 12.0f) : 1.0f);
-            const float threshold = 0.00316f;
+            float pitchRatio = (preset == 2) ? powf(2.0f, -1.04f / 12.0f) : ((preset == 3) ? powf(2.0f, -2.5f / 12.0f) : 1.0f);
             const float windowLen = (fs >= 32000) ? 1024.0f : 512.0f;
-            const float limitCeiling = 0.89125f;
 
             for (size_t i = 0; i < nSamples; ++i) {
                 float x = (float)src[i] / 32768.0f;
-                float absX = fabsf(x);
-                gateEnv = absX > gateEnv ? (0.15f * absX + 0.85f * gateEnv) : (0.002f * absX + 0.998f * gateEnv);
-                float targetGate = gateEnv >= threshold ? 1.0f : 0.0f;
-                gateGain += (targetGate - gateGain) * (targetGate > gateGain ? 0.15f : 0.01f);
-                x *= gateGain;
-
                 x = hp.process(x);
                 x = eqLow.process(x);
                 x = eqMidCut.process(x);
@@ -570,11 +566,10 @@ public:
                     writeIdx = (writeIdx + 1) & (kRingSize - 1);
                 }
 
-                x = limitCeiling * tanhf(x / limitCeiling);
                 float scaled = fmaxf(-32767.0f, fminf(32767.0f, x * 32768.0f));
                 scratch[i] = (int16_t)scaled;
             }
-            return scratch.data();
+            return scratch;
         }
     } _nhCallDsp;
 

@@ -21,8 +21,8 @@ public enum NetherhillVoicePreset: Int, CaseIterable {
     public var title: String {
         switch self {
         case .off: return "Выкл (Оригинал)"
-        case .nasaFiFi: return "NASA_FiFi (-1.04 st + EQ)"
-        case .studioEQ: return "Студийный (Voice HQ)"
+        case .nasaFiFi: return "Voice Mode HQ (Чистый бас)"
+        case .studioEQ: return "NASA_FiFi (-1.04 st)"
         case .deepBass: return "Глубокий бас (-2.5 st)"
         }
     }
@@ -97,38 +97,29 @@ public final class NetherhillVoiceProcessor {
         self.ring = [Float](repeating: 0.0, count: 2048)
 
         switch preset {
-        case .nasaFiFi:
+        case .studioEQ:
             self.pitchRatio = pow(2.0, -1.04 / 12.0)
         case .deepBass:
             self.pitchRatio = pow(2.0, -2.5 / 12.0)
-        case .off, .studioEQ:
+        case .off, .nasaFiFi:
             self.pitchRatio = 1.0
         }
     }
 
     public func processInPlace(samples: UnsafeMutablePointer<Int16>, count: Int) {
         guard self.preset != .off, count > 0 else { return }
-        let threshold: Float = 0.00316 // ~ -50 dB
-        let windowLen: Float = 512.0
-        let limitCeiling: Float = 0.89125 // -1 dB
+        let windowLen: Float = 1024.0
 
         for i in 0 ..< count {
             var x = Float(samples[i]) / 32768.0
 
-            // 1. Noise Gate (-50 dB)
-            let absX = abs(x)
-            gateEnv = absX > gateEnv ? (0.15 * absX + 0.85 * gateEnv) : (0.002 * absX + 0.998 * gateEnv)
-            let targetGate: Float = gateEnv >= threshold ? 1.0 : 0.0
-            gateGain += (targetGate - gateGain) * (targetGate > gateGain ? 0.15 : 0.01)
-            x *= gateGain
-
-            // 2. Voice Mode HQ EQ
+            // Voice Mode HQ EQ (clean, warm, zero robotic artifacts)
             x = hp.process(x)
             x = eqLow.process(x)
             x = eqMidCut.process(x)
             x = eqPresence.process(x)
 
-            // 3. Pitch shift (if active)
+            // Pitch shift (only for presets 2 & 3)
             if pitchRatio != 1.0 {
                 ring[writeIdx] = x
                 let p1 = phase
@@ -149,9 +140,6 @@ public final class NetherhillVoiceProcessor {
                 if phase < 0.0 { phase += 1.0 }
                 writeIdx = (writeIdx + 1) & (ringSize - 1)
             }
-
-            // 4. Safety limiter -1 dB
-            x = limitCeiling * tanh(x / limitCeiling)
 
             let scaled = max(-32767.0, min(32767.0, x * 32768.0))
             samples[i] = Int16(scaled)

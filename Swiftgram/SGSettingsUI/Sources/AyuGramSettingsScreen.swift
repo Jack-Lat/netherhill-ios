@@ -26,7 +26,7 @@ private enum AyuScreenToggle: Equatable {
 }
 
 private enum AyuScreenLink: Equatable {
-    case history, appearance, effects, update, checkUpdates, channel, developer, importChat, silentSending, sessionLog, buildInfo, reportScam, searchEngine, assistant, aiProvider, aiKey, aiModel, donate, aiLanguage, aiPersona, supporter, video, profileExtras, nhAdmin, voicePreset
+    case history, appearance, effects, update, checkUpdates, channel, developer, importChat, silentSending, sessionLog, buildInfo, reportScam, searchEngine, assistant, aiProvider, aiKey, aiModel, donate, aiLanguage, aiPersona, supporter, video, profileExtras, nhAdmin, voicePreset, topBadgeMode
 }
 
 private enum AyuScreenTint: Equatable {
@@ -209,6 +209,9 @@ private func ayuScreenEntries(data: PresentationData, privacy: AyuGramPrivacySet
         entries.append(.link(id: 695, section: .security, link: .nhAdmin, symbol: "crown.fill", tint: .orange, title: "Админ-панель NETHERHILL", label: AyuGramBadgeSync.shared.adminToken.isEmpty ? "Токен не задан" : "Активна"))
     }
     entries.append(.link(id: 696, section: .security, link: .voicePreset, symbol: "waveform", tint: .purple, title: "Обработка голоса (ГС и звонки)", label: NetherhillVoicePreset.current.title))
+    let badgeMode = UserDefaults.standard.integer(forKey: "netherhill.topBadge.mode")
+    let badgeModeLabel = badgeMode == 1 ? "Dynamic Island" : (badgeMode == 2 ? "Выкл" : "NETHERHILL")
+    entries.append(.link(id: 697, section: .security, link: .topBadgeMode, symbol: "rectangle.topthird.inset.filled", tint: .blue, title: "Верхний хедер (Скриншот)", label: badgeModeLabel))
     entries.append(.footer(id: 694, section: .security, text: "При включённой видимости другие пользователи NETHERHILL видят фирменный значок и свечение в вашем профиле."))
 
     entries.append(.header(id: 700, section: .support, text: s("Ayu.SupportSection")))
@@ -433,6 +436,25 @@ public func ayuGramSettingsScreen(context: AccountContext) -> ViewController {
                 items.append(ActionSheetButtonItem(title: (preset == current ? "✓ " : "") + preset.title, color: .accent, action: { [weak sheet] in
                     sheet?.dismissAnimated()
                     NetherhillVoicePreset.current = preset
+                    NotificationCenter.default.post(name: AyuGramSettings.didChange, object: nil)
+                }))
+            }
+            sheet.setItemGroups([
+                ActionSheetItemGroup(items: items),
+                ActionSheetItemGroup(items: [ActionSheetButtonItem(title: data.strings.Common_Cancel, color: .accent, action: { [weak sheet] in sheet?.dismissAnimated() })])
+            ])
+            presentController?(sheet)
+        case .topBadgeMode:
+            let data = context.sharedContext.currentPresentationData.with { $0 }
+            let sheet = ActionSheetController(presentationData: data)
+            let current = UserDefaults.standard.integer(forKey: "netherhill.topBadge.mode")
+            let modes = [(0, "Обычный NETHERHILL"), (1, "Чёрный Dynamic Island"), (2, "Выкл")]
+            var items: [ActionSheetItem] = []
+            for (val, title) in modes {
+                items.append(ActionSheetButtonItem(title: (val == current ? "✓ " : "") + title, color: .accent, action: { [weak sheet] in
+                    sheet?.dismissAnimated()
+                    UserDefaults.standard.set(val, forKey: "netherhill.topBadge.mode")
+                    NotificationCenter.default.post(name: Notification.Name("AyuGram.AppIcon.didChange"), object: nil)
                     NotificationCenter.default.post(name: AyuGramSettings.didChange, object: nil)
                 }))
             }
